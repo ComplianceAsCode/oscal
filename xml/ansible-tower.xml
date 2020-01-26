@@ -1,0 +1,3335 @@
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
+  <metadata>
+    <title>FedRAMP System Security Plan (SSP)</title>
+    <last-modified>2020-01-26T15:14:40.42+01:00</last-modified>
+    <version>0.0.1</version>
+    <oscal-version>1.0.0-milestone2</oscal-version>
+  </metadata>
+  <import-profile href="https://raw.githubusercontent.com/usnistgov/OSCAL/master/content/fedramp.gov/xml/FedRAMP_MODERATE-baseline_profile.xml"></import-profile>
+  <system-characteristics>
+    <system-id identifier-type="https://fedramp.gov">F00000000</system-id>
+    <system-name>Ansible Tower</system-name>
+    <system-name-short>ansible-tower</system-name-short>
+    <description><p>Automatically generated OSCAL SSP from OpenControl guidance for Ansible Tower</p></description>
+    <security-sensitivity-level>low</security-sensitivity-level>
+    <system-information>
+      <information-type name="Information Type Name">
+        <description><p>This item is useless nevertheless required.</p></description>
+        <confidentiality-impact>
+          <base>fips-199-moderate</base>
+        </confidentiality-impact>
+        <integrity-impact>
+          <base>fips-199-moderate</base>
+        </integrity-impact>
+        <availability-impact>
+          <base>fips-199-moderate</base>
+        </availability-impact>
+      </information-type>
+    </system-information>
+    <security-impact-level>
+      <security-objective-confidentiality>fips-199-moderate</security-objective-confidentiality>
+      <security-objective-integrity>fips-199-moderate</security-objective-integrity>
+      <security-objective-availability>fips-199-moderate</security-objective-availability>
+    </security-impact-level>
+    <status state="operational"></status>
+    <authorization-boundary>
+      <description><p>A holistic, top-level explanation of the FedRAMP authorization boundary.</p></description>
+    </authorization-boundary>
+  </system-characteristics>
+  <control-implementation>
+    <description><p>FedRAMP SSP Template Section 13</p></description>
+    <implemented-requirement control-id="ac-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-1_stmt.a">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ac-1_stmt.b">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <statement statement-id="ac-2_stmt.a">
+        <description><p>Ansible Tower's Role-based Access Control (RBAC) implementation
+offers multiple types of information system accounts, each
+with differing access and administrative roles.
+
+- "Normal User," an individual would have read and write
+access limited to the resources (such as inventory, projects, and
+job templates) for which that user has been granted appropriate
+roles and privileges.
+
+- "System Auditor," an individual would implicitly inherit
+the read-only capability for all objects within the Ansible Tower
+environment.
+
+- "System Administrator," also known as a Superuser, an
+individual has full system administration privileges for Tower -- with full
+read and write privileges over the entire Ansible Tower installation. A
+System Administrator is typically responsible for managing all aspects of
+Ansible Tower and delegating responsibilities for day-to-day work to various
+Users. Assign with caution!
+
+Role-based Access Controls (RBAC) are built into Ansible Tower and allow
+Ansible Tower administrators to delegate access to server inventories, organizations,
+and more. Administrators can also centralize the management of various credentials,
+allowing end users to leverage a needed secret without ever exposing that secret to the
+end user. RBAC controls allow Ansible Tower to help you increase security and streamline
+management.
+
+Documentation of Ansible Tower's RBAC system is available in the Ansible Tower User Guide:
+https://docs.ansible.com/ansible-tower/latest/html/userguide/security.html#role-based-access-controls
+</p></description>
+      </statement>
+      <statement statement-id="ac-2_stmt.b">
+        <description><p>Assigning Ansible Tower account managers is an organizational
+process outside the scope of Ansible Tower configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ac-2_stmt.c">
+        <description><p>Establishing conditions for group and role membership is an
+organizational process outside the scope of Ansible Tower
+configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ac-2_stmt.d">
+        <description><p>To specify authorized users of Ansible Tower, group and role
+membership, and access authorizations, refer to the
+Ansible Tower User Guide:
+
+https://docs.ansible.com/ansible-tower/latest/html/userguide/users.html
+</p></description>
+      </statement>
+      <statement statement-id="ac-2_stmt.e">
+        <description><p>Organizational processes regarding account creation requests
+are outside the scope of Ansible Tower configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ac-2_stmt.f">
+        <description><p>Organizational processes regarding administration of Ansible Tower
+accounts are outside the scope of Ansible Tower configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ac-2_stmt.g">
+        <description><p>The Ansible Tower logging subsystems can assist with monitoring the use of Ansible Tower
+accounts. Logging is a standalone feature introduced in Ansible Tower that provides
+the capability to send detailed logs to several kinds of 3rd party external log
+aggregation services.
+
+For full details of the logging subsystem, including technical documentation and
+data schema details, refer to the "Tower Logging and Aggregation" chapter of the
+Ansible Tower Administration Guide:
+
+https://docs.ansible.com/ansible-tower/latest/html/administration/logging.html
+</p></description>
+      </statement>
+      <statement statement-id="ac-2_stmt.h">
+        <description><p>Organizational processes regarding account termination or need-to-know
+changes are outside the scope of Ansible Tower configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ac-2_stmt.i">
+        <description><p>Organizational processes regarding access authorization are outside
+the scope of Ansible Tower configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ac-2_stmt.j">
+        <description><p>Organizational processes regarding the review of account management policies
+are outside the scope of Ansible Tower configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ac-2_stmt.k">
+        <description><p>Organizational processes for reissuing shared/group account credentials
+are outside the scope of Ansible Tower configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-2.1_stmt">
+        <description><p>Ansible Tower offers supported integrations with many account management
+systems, such as Kerberos, Azure Active Directory, LDAP, RADIUS, SAML, TACACS+,
+and many others.
+
+Refer to the Ansible Tower Administration Guide for guidance on connecting
+Ansible Tower into an automated account management system:
+
+https://docs.ansible.com/ansible-tower/latest/html/administration/ent_auth.html
+
+NOTE: To meet many account management requirements, such as those dealing with
+password complexity, an external account management system MUST be used!
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <statement statement-id="ac-2.2_stmt">
+        <description><p>Ansible Tower does not natively have the capability to automatically
+remove or disable temporary and emergency accounts.
+
+When Ansible Tower is configured to authenticate users against an external
+authentication service (e.g. Red Hat IdM), the external provider would be
+responsible for removal and disablement of temporary and emergency accounts.
+In such scenarios, Ansible Tower would inherit satisfaction of this control
+from the external authentication service.
+
+A fringe case does exist in which an organizational user is temporarily
+given access to Ansible Tower (e.g. temporary team member joining for a
+sprint). In such cases, Ansible Tower does not have the ability to automatically
+remove or disable the account after an organizationally-defined time period. An
+Ansible Tower administrator would need to manually remove
+or disable the account.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <statement statement-id="ac-2.3_stmt">
+        <description><p>Ansible Tower does not natively have the capability to automatically
+disable inactive accounts after an organization-defined time period.
+
+When Ansible Tower is configured to authenticate users against an external
+authentication service (e.g. Red Hat IdM), the external provider would be
+responsible for automatic disablement of accounts. In such scenarios,
+Ansible Tower would inherit satisfaction of this control from the
+external authentication service.
+
+However, a fringe case does exist when:
+- Ansible Tower is configured to use an external authentication service, such as
+a corporate Red Hat IdM or Active Directory instance; and,
+- An organizational user is added to Ansible Tower however does not login
+for a time period that exceeds the organization-defined threshhold; and,
+- During that time period the user logins to other corporate services, thus
+the external authentication provider shows the account is being actively used.
+
+In such a scenario, Ansible Tower does not currently have the capability to
+automatically disable the account. An Ansible Tower administrator would need to manually
+remove or disable the account.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-2.5_stmt">
+        <description><p>Introduced in Ansible Tower 2.4 is a feature which adds an Auth-Token-Timeout
+to every response that includes a valid user-supplied token. This setting
+changed to Session-Timeout in Ansible Tower 3.3. The value of Session-Timeout
+is determined by the configuration (time expressed in seconds) of the
+SESSION_COOKIE_AGE.
+
+The value of Session-Timeout indicates the length of time, in seconds,
+that the supplied token is valid, from the moment the request was initiated.
+Starting in Ansible Tower 3.2, this setting can be changed as documented in
+the "Changing Default Timeout for Authentication" section of the
+Ansible Tower Administration documentation:
+
+https://docs.ansible.com/ansible-tower/latest/html/administration/authentication_timeout.html
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="unknown"></annotation>
+      <statement statement-id="ac-2.6_stmt">
+        <description><p>This control has not been evaluated in the context of
+Ansible Tower.
+
+The following ticket is being used to track control
+response status:
+
+https://github.com/ComplianceAsCode/redhat/issues/727
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-2.7_stmt.a">
+        <description><p>Ansible Tower's Role-based Access Control (RBAC) implementation
+offers multiple types of information system accounts, each
+with differing access and administrative roles.
+
+- "Normal User," an individual would have read and write
+access limited to the resources (such as inventory, projects, and
+job templates) for which that user has been granted appropriate
+roles and privileges.
+
+- "System Auditor," an individual would implicitly inherit
+the read-only capability for all objects within the Ansible Tower
+environment.
+
+- "System Administrator," also known as a Superuser, an
+individual has full system administration privileges for Tower -- with full
+read and write privileges over the entire Ansible Tower installation. A
+System Administrator is typically responsible for managing all aspects of
+Ansible Tower and delegating responsibilities for day-to-day work to various
+Users. Assign with caution!
+
+Role-based Access Controls (RBAC) are built into Ansible Tower and allow
+Ansible Tower administrators to delegate access to server inventories, organizations,
+and more. Administrators can also centralize the management of various credentials,
+allowing end users to leverage a needed secret without ever exposing that secret to the
+end user. RBAC controls allow Ansible Tower to help you increase security and streamline
+management.
+
+Documentation of Ansible Tower's RBAC system is available in the Ansible Tower User Guide:
+https://docs.ansible.com/ansible-tower/latest/html/userguide/security.html#role-based-access-controls
+</p></description>
+      </statement>
+      <statement statement-id="ac-2.7_stmt.b">
+        <description><p>Ansible Tower automatically logs creation, modification,
+and removal of Role-based Access Control (RBAC) privileges.
+This is non-configurable default behavior.
+</p></description>
+      </statement>
+      <statement statement-id="ac-2.7_stmt.c">
+        <description><p>This is an organizational process control
+outside the scope of Ansible Tower configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-3_stmt">
+        <description><p>'There are three types of Tower users that can be assigned:
+
+- Normal User
+Normal Users have read and write access limited to the resources
+(such as inventory, projects, and job templates) for which that user
+has been granted the appropriate roles and privileges.
+
+- System Auditor
+Auditors implicitly inherit the read-only capability for all objects
+within the Tower environment.
+
+- System Adminisrator
+A Tower System Administrator (also known as a Superuser) has admin,
+read, and write privileges over the entire Tower installation. A
+System Administrator is typically responsible for managing all
+aspects of Tower and delegating responsibilities for day-to-day
+work to various Users.
+
+Ansible Tower uses role-based access control to provide the ability
+to read, modify, and administer projects, inventories, job templates,
+and other Ansible Tower elements. The role-based access control policies
+can be defined per-user, or per user type as indicated above.
+
+Additional detail can be found in the Ansible Tower documentation:
+
+https://docs.ansible.com/ansible-tower/latest/html/userguide/users.html'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-3.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-3.1_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-3.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-3.6_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-4.16">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-4.16_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <statement statement-id="ac-7_stmt.a">
+        <description><p>'Ansible Tower does not currently have the capability to enforce limits
+on consecutive logon attempts.
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+      <statement statement-id="ac-7_stmt.b">
+        <description><p>'Ansible Tower does not currently have the capability automatically
+lock an account for an organizationally-defined time period, nor
+does Ansible Tower have the capability to lock an account until
+released by an administrator.
+
+To satisfy those elemenets of this control an external
+authentication service, such as Red Hat IdM, must be used.
+Those two elements of this control are not applicable to
+Ansible Tower when an external authentication service
+is used.
+
+Ansible Tower does not currently have the ability to delay
+logon prompts according to an organizationally-defined delay
+algorithm when the maximum number of unsuccessful attempts is
+exceeded. Ansible Tower cannot be configured to perform
+this functionality; delay of further logon prompts is a permanent
+finding.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-7.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-7.1_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-8_stmt.a">
+        <description><p>'Ansible Tower supports configuration of custom system use
+notifications.
+
+From within the Tower web interface:
+
+(1) Select "Settings", which is the gear icon in the top right corner
+
+(2) Select "Configure Tower," which is the second icon in the third
+row
+
+(3) Select "User Interface"
+
+(4) Enter your system use notification in the "CUSTOM LOGIN INFO"
+field. Note breaks must use "\n"'
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.b">
+        <description><p>'Custom system use notifications are displayed on the logon screen
+prior to the "login" button. This is default, non-configurable
+behavior.'
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.c">
+        <description><p>'Ansible Tower does not differentiate logon screens between private and
+publicly accessible instances. Custom system use notifications
+for publicly accessible systems can be implemented using the
+procedures from AC-8(a).'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-13">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-13_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-14">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-14_stmt">
+        <description><p>'Regardless of access mechanism, such as the Ansible Tower
+console, unauthenticated users will only be shown the
+system use notifications (as defined in AC-8) and login prompt. This is
+non-configurable behavior.
+
+External service APIs also require authentication
+prior to granting resource access.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-17">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-17_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-18">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-18_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-19">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-19_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-20">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-20_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-22">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-22_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-1_stmt.a">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-1_stmt.b">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-2_stmt.a">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-2_stmt.b">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-2_stmt.c">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-2.1_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-2.2_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-3_stmt.a">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-3_stmt.b">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-3_stmt.c">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-3.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-3.1_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-3.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-3.2_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-3.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-3.3_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-3.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-3.4_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-4_stmt.a">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-4_stmt.b">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-5_stmt">
+        <description><p>As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into PM-15.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-3_stmt">
+        <description><p>'By default Ansible Tower generates audit records containing
+information that establishes what type of event occured,
+when the event occured, where the event occured, the source
+of the event, the outcome of the event, and the identity
+of individuals or subjects associated with the event.
+
+Ansible Tower cannot be configured to be out of compliance
+with this control.
+
+A sample audit record is provided below.
+
+TYPE OF EVENT:
+The "operation" field identifies the type of event recorded.
+In this case, a new user was created.
+
+WHEN THE EVENT OCCURED:
+The "timestamp" field indicates the system time of
+when the event occured. In this example the event happened
+at 2018-06-19T00:46:45.337458Z.
+
+WHERE THE EVENT OCCURED:
+The "X-API-Node" field indicates where the event occured. In
+this example, the host was tower.redhatgov.io.
+
+SOURCE OF EVENT:
+The "actor" field indicates the "alice" username initiated
+this event.
+
+OUTCOME OF EVENT:
+The "changes" field indicate the user was created with
+associated metadata such as first_name and last_name.
+
+IDENTITY OF INDIVIDUALS/OBJECTS INVOLVED:
+The "summary_fields" indicates an actor with the username "alice"
+created a new user with the username "bob."
+
+Full documentation of all available fields is
+available in the Ansible Tower product documentation:
+
+https://docs.ansible.com/ansible-tower/latest/html/towerapi/activity_stream.html
+
+
+---
+     HTTP 200 OK
+     Allow: GET, HEAD, OPTIONS
+     Content-Type: application/json
+     Vary: Accept
+     X-API-Node: tower.redhatgov.io
+     X-API-Time: 0.739s
+     ....
+     {
+         "id": 25,
+         "type": "activity_stream",
+         "url": "/api/v1/activity_stream/25/",
+         "related": {
+             "user": [
+                 "/api/v1/users/4/"
+             ],
+             "actor": "/api/v1/users/1/"
+         },
+         "summary_fields": {
+             "user": [
+                 {
+                     "username": "bob",
+                     "first_name": "Bob",
+                     "last_name": "Ross",
+                     "id": 4
+                 }
+             ],
+             "actor": {
+                 "username": "alice",
+                 "first_name": "Alice",
+                 "last_name": "Liddel",
+                 "id": 1
+             }
+         },
+         "timestamp": "2018-06-19T00:46:45.337458Z",
+         "operation": "create",
+         "changes": {
+             "username": "bob",
+             "first_name": "Bob",
+             "last_name": "Ross",
+             "is_active": true,
+             "id": 4,
+             "is_superuser": false,
+             "is_staff": false,
+             "password": "hidden",
+             "email": "bob@ross.com",
+             "date_joined": "2018-06-19 00:46:45.314590+00:00"
+         },
+         "object1": "user",
+         "object2": "",
+         "object_association": ""
+     }
+---'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-5_stmt.a">
+        <description><p>'Ansible Tower utilizes the audit and syslog subsystems of the
+underlying operating system. Responses to audit subsystem
+failures is configured in the operating system and not
+Ansible Tower.'
+</p></description>
+      </statement>
+      <statement statement-id="au-5_stmt.b">
+        <description><p>'Ansible Tower utilizes the audit and syslog subsystems of the
+underlying operating system. Responses to audit subsystem
+failures is configured in the operating system and not
+Ansible Tower.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-8_stmt.a">
+        <description><p>'Ansible Tower relies on the time services
+provided by the underlying operating system. Utilization of
+platform-provided time services is default, non-configurable
+behavior.'
+</p></description>
+      </statement>
+      <statement statement-id="au-8_stmt.b">
+        <description><p>'Ansible Tower utilizes the time zone settings of the underlying
+operating system. This is default, non-configurable behavior.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-9_stmt">
+        <description><p>'Ansible Tower logfiles have been consolidated and can be easily
+accessed from two centralized locations:
+
+- /var/log/tower/
+- /var/log/supervisor/
+
+Each directory is protected by operating system-level
+mandatory access control settings and require administrative (root)
+privilege to access.
+
+Log data kept within Ansible Tower, such as the Activity Stream,
+is presented only when the accessing user has permissions over the
+audited object (e.g. shows audit logs only of system groups belonging
+to the accessing user).'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-11_stmt">
+        <description><p>'For locally retained logs, such as those recorded to
+/var/log/ansible, Ansible Tower utilizes the audit subsystems
+of the host operating system. Retention of local logs is
+reflective of the operating system settings and not Ansible Tower.
+
+Retention of audit logs sent to an aggregation service, such
+as Elastic, is configured by the central aggregation service and
+outside the scope of configuring Ansible Tower.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-12_stmt.a">
+        <description><p>'By default, Ansible Tower audits the following events.
+Audit of these events is automatic and not user configurable.
+
+- Audit User &amp; Group Management Events,
+User modify (Success and Failure)
+- Audit User &amp; Group Management Events,
+User add (Success and Failure)
+- Audit User &amp; Group Management Events,
+User delete (Success and Failure)
+- Audit User &amp; Group Management Events,
+Group/Role add (Success and Failure)
+- Audit User &amp; Group Management Events,
+Group/Role delete (Success and Failure)
+- Audit User &amp; Group Management Events,
+Group/Role modify (Success and Failure)
+
+
+The following BugZillas track feature creation for Ansible Tower
+to audit certain events:
+
+- Audit Logons (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/345
+
+- Audit Logoff (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/346
+
+- Audit File &amp; Object Creation (Success and Failure):
+
+- Audit File &amp; Object Access (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/348
+
+- Audit File &amp; Object Deletion (Success and Failure)
+
+- Audit File &amp; Object Modification (Success and Failure)
+
+- Audit File &amp; Object Permission Changes (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/351
+
+- Audit File &amp; Object Ownership Modifications (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/352
+
+- Audit User &amp; Group Management Events, User suspend (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/451
+
+- Audit User &amp; Group Management Events, User lock (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/452
+
+- Audit Use of Privileged/Special Rights, security or policy changes (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/456
+
+- Audit Use of Privileged/Special Rights, configuration changes (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/457
+
+- Audit Use of Privileged/Special Rights, Admin or root-level access (Success and Failure):
+- Audit Privilege/Role Escalation (Success and Failure):
+
+- Audit and Log Data Access (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/460
+
+- Export of Information (Success and Failure):
+https://github.com/ComplianceAsCode/redhat/issues/461 Information within
+Ansible Tower pertains to the Ansible Tower configuration. While
+Playbooks/Projects may be created within Tower locally and can be
+exported, the best practices recommend that the actual automation
+functions be maintained outside of Tower - in a version controlled
+repository and/or a CMDB for instance. The Ansible Tower specific
+data can be exported using 2 methods:
+
+- The first method is to use the "setup.sh" script to back up the
+  system:
+  https://docs.ansible.com/ansible-tower/latest/html/administration/backup_restore.html
+  This will successfully export all the Tower specific data including
+  - the database
+  - the SECRET_KEY file
+  The per-system backups include:
+  - custom user config files
+  - job stdout
+  - manual projects (if external version control systems are not being used to store playbooks)
+
+  OS level controls methods (such as tripwire) could be used to check
+  who ran the setup.sh script and when.
+
+- Information about Tower may be also gleaned via the APIs. For instance
+  a list of users configured can be obtained from the following API endpoint: `GET /api/v2/users/`
+  Example:
+    ```
+            {
+    "id": 15,
+    "type": "user",
+    "url": "/api/v2/users/15/",
+    "related": {
+        "admin_of_organizations": "/api/v2/users/15/admin_of_organizations/",
+        "organizations": "/api/v2/users/15/organizations/",
+        "roles": "/api/v2/users/15/roles/",
+        "access_list": "/api/v2/users/15/access_list/",
+        "teams": "/api/v2/users/15/teams/",
+        "credentials": "/api/v2/users/15/credentials/",
+        "activity_stream": "/api/v2/users/15/activity_stream/",
+        "projects": "/api/v2/users/15/projects/"
+    },
+    "summary_fields": {
+        "user_capabilities": {
+            "edit": true,
+            "delete": true
+        }
+    },
+    "created": "2018-08-15T10:30:39.041Z",
+    "username": "sysops2",
+    "first_name": "Sysops2",
+    "last_name": "Sysops2",
+    "email": "sys@ops.com",
+    "is_superuser": false,
+    "is_system_auditor": false,
+    "ldap_dn": "",
+    "external_account": null,
+    "auth": []
+    },
+    ```
+
+   An export of all changes made to the system can be obtained at the
+   API end-point: `/api/v2/activity_stream`. For example the following
+   output indicates that a new project was created:
+     ```
+        "operation": "create",
+    "changes": {
+        "credential": null,
+        "scm_branch": "",
+        "name": "Meetup Demos",
+        "scm_update_cache_timeout": 0,
+        "scm_clean": false,
+        "scm_url": "https://github.com/termlen0/meetups",
+        "scm_delete_on_update": false,
+        "local_path": "",
+        "scm_type": "git",
+        "timeout": 0,
+        "scm_update_on_launch": false,
+        "organization": "Default",
+        "id": 29,
+        "description": ""
+    },
+    ```
+
+   The APIs themselves are available to all Tower users. However, the
+   APIs are scoped to whatever that particular user is able to
+   accomplish over the GUI. This is normal since all GUI components are
+   built off of the API and there is a 1-1 relationship between the two.
+   While the activity stream keeps track of the changes made, user
+   clicks across the different APIs are not logged.
+
+- Import of Information (Success and Failure):
+
+Certain events, such as updating Projects, may pull data
+from a SCM. In such cases the audit event includes the content
+defined in AU-3 as well as the URL if the information being imported.
+
+A sample audit event for updating a "Demo Project" with content from
+GitHub is below. The "scm_url" field reflects source of information
+being imported and "status" field indicates succes or failure:
+
+    {
+        "count": 1,
+        "next": null,
+        "previous": null,
+        "results": [
+            {
+                "id": 2,
+                "type": "project_update",
+                "url": "/api/v1/project_updates/2/",
+                "related": {
+                    "created_by": "/api/v1/users/1/",
+                    "unified_job_template": "/api/v1/projects/4/",
+                    "stdout": "/api/v1/project_updates/2/stdout/",
+                    "project": "/api/v1/projects/4/",
+                    "cancel": "/api/v1/project_updates/2/cancel/",
+                    "notifications": "/api/v1/project_updates/2/notifications/",
+                    "scm_inventory_updates": "/api/v1/project_updates/2/scm_inventory_updates/"
+                },
+                "summary_fields": {
+                    "instance_group": {
+                        "id": 1,
+                        "name": "tower"
+                    },
+                    "unified_job_template": {
+                        "id": 4,
+                        "name": "Demo Project",
+                        "description": "",
+                        "unified_job_type": "project_update"
+                    },
+                    "project": {
+                        "id": 4,
+                        "name": "Demo Project",
+                        "description": "",
+                        "status": "successful",
+                        "scm_type": "git"
+                    },
+                    "created_by": {
+                        "id": 1,
+                        "username": "admin",
+                        "first_name": "",
+                        "last_name": ""
+                    },
+                    "user_capabilities": {
+                        "start": true,
+                        "delete": true
+                    }
+                },
+                "created": "2018-06-29T16:31:37.862Z",
+                "modified": "2018-06-29T16:31:38.111Z",
+                "name": "Demo Project",
+                "description": "",
+                "unified_job_template": 4,
+                "launch_type": "manual",
+                "status": "successful",
+                "failed": false,
+                "started": "2018-06-29T16:31:38.190595Z",
+                "finished": "2018-06-29T16:31:41.932635Z",
+                "elapsed": 3.742,
+                "job_explanation": "",
+                "execution_node": "localhost",
+                "local_path": "_4__demo_project",
+                "scm_type": "git",
+                "scm_url": "https://github.com/ansible/ansible-tower-samples",
+                "scm_branch": "",
+                "scm_clean": false,
+                "scm_delete_on_update": false,
+                "credential": null,
+                "timeout": 0,
+                "project": 4,
+                "job_type": "check"
+            }
+</p></description>
+      </statement>
+      <statement statement-id="au-12_stmt.b">
+        <description><p>'Customers are required to allow defined personnel or roles to select
+which auditable events are to be audited by specific components of the
+information system. A successful control response will discuss how
+audit generation is implemented, and who selects and configures
+auditable events on the information system. Approved personnel or
+roles are defined in AU-9(4).
+
+Documentation/guidance on satisfying this control is being
+tracked on GitHub:
+
+https://github.com/ComplianceAsCode/redhat/issues/296'
+</p></description>
+      </statement>
+      <statement statement-id="au-12_stmt.c">
+        <description><p>'Customers are required to generate audit records for the events
+defined in AU-2d with the content defined in AU-3. A successful control
+response will discuss how audit records are generated, and how they meet
+the requirements defined in AU-2 and AU-3.
+
+Documentation/guidance on satisfying this control is being
+tracked on GitHub:
+
+https://github.com/ComplianceAsCode/redhat/issues/297'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-2.1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-3_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-5_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-6_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-7_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-9_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="cm-6_stmt.a">
+        <description><p>'This is an organizational control outside the scope of configuring
+Ansible Tower. Use of the NIST National Checklist
+for Ansible Tower is suggested as a supported,
+US Government recognized, vendor supported, baseline.'
+</p></description>
+      </statement>
+      <statement statement-id="cm-6_stmt.b">
+        <description><p>'The customer will be responsible for implementing configuration
+settings as defined in CM-6(a). A successful control response will
+describe how mandatory configuration settings are implemented. This can
+include the process or documentation followed.
+
+Creation of a Ansible Tower configuration baseline
+is being tracked on GitHub:
+
+https://github.com/ComplianceAsCode/redhat/issues/299'
+</p></description>
+      </statement>
+      <statement statement-id="cm-6_stmt.c">
+        <description><p>'This is an organizational control outside the scope of configuring
+Ansible Tower.'
+</p></description>
+      </statement>
+      <statement statement-id="cm-6_stmt.d">
+        <description><p>'The customer will be responsible for monitoring and controlling
+changes to the configuration settings in accordance with organization
+policies and procedures. A successful control response will describe
+how changes are controlled and monitored. This can include limitations
+to privileges, how these changes are audited, and any tools in place to
+track and approve changes.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="cm-7_stmt">
+        <description><p>'Ensuring Ansible Tower is deployed in a minimal configuration
+is being tracked through GitHub:
+
+https://github.com/ComplianceAsCode/redhat/issues/300'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-8_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-10_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-11_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-1_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2.1_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cp-2.2_stmt">
+        <description><p>The Ansible Tower capacity system determines how many jobs can run on an instance
+given the amount of resources available to the instance and the size of the jobs that
+are running.
+
+The "Ansible Tower Capacity Determination and Job Impact" section of the
+Ansible Tower User's Guide outlines resource determination factors relevant
+to capacity planning. That document can be found online at:
+
+https://docs.ansible.com/ansible-tower/latest/html/userguide/jobs.html#at-capacity-determination-and-job-impact
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2.3_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2.4_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2.5_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cp-2.6_stmt">
+        <description><p>Ansible Tower installations can occur in a High Availabiltiy (HA) configuration.
+In this configuration, Tower runs with a single active node, called the Primary
+Instance, and any number of inactive nodes, called Secondary Instances.
+
+Secondary Instances can become Primary Instances at any time, with certain
+caveats. Running in a high-availability setup requires any database that
+Ansible Tower uses to be external -- Postgres and MongoDB must be installed
+on a machine that is not one of the primary or secondary Ansible Tower nodes.
+
+Ansible Tower's HA mode offers a standby Ansible Tower infrastructure that
+can become active in case of infrastructure failure -- avoiding single points of
+failure. HA mode is not meant to run in an active/passive or multi-master mode, and
+is not a mechanism for horizontally scaling the Ansible Tower service. Further,
+failover to a secondary instance is not automatic and must be user triggered.
+
+For instructions on how to install Ansible Tower into an HA configuration,
+refer to the Ansible Tower Installation and Reference Guide:
+
+https://docs.ansible.com/ansible-tower/
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2.7_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2.8_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-3_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-3.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-3.1_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-3.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-3.2_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-4_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-4.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-4.1_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-4.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-4.2_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-4.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-4.3_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-4.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-4.4_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-5_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-6_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-6.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-6.1_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-6.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-6.2_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-6.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-6.3_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7.1_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7.2_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7.3_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7.4_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7.5_stmt">
+        <description><p>This is control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7.6_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-8_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-8.1_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-8.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-8.2_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-8.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-8.3_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-8.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-8.4_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-8.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-8.5_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cp-9_stmt.a">
+        <description><p>As a procedural control, the process of backing up Ansible Tower
+is outside the scope of a configuration guide.
+
+The customer will be responsible for conducting daily incremental and
+weekly full backups of user-level information contained in
+Ansible Tower. Additional FISMA requirements and guidance include
+maintaining at least three backup copies of user-level information (at
+least one of which is available online) or provides an equivalent
+alternative. A successful control response will detail how backups of
+user-level information occures, and how three backup copies are
+maintained.
+
+Documentation on backing up and restoring Ansible Tower data
+can be found in the Ansible Tower Administration guide:
+
+https://docs.ansible.com/ansible-tower/latest/html/administration/backup_restore.html
+</p></description>
+      </statement>
+      <statement statement-id="cp-9_stmt.b">
+        <description><p>As a procedural control, the process of backing up Ansible Tower
+is outside the scope of a configuration guide.
+
+The customer will be responsible for conducting daily incremental and
+weekly full backups of user-level information contained in
+Ansible Tower. Additional FISMA requirements and guidance include
+maintaining at least three backup copies of user-level information (at
+least one of which is available online) or provides an equivalent
+alternative. A successful control response will detail how backups of
+user-level information occures, and how three backup copies are
+maintained.
+
+Documentation on backing up and restoring Ansible Tower data
+can be found in the Ansible Tower Administration guide:
+
+https://docs.ansible.com/ansible-tower/latest/html/administration/backup_restore.html
+</p></description>
+      </statement>
+      <statement statement-id="cp-9_stmt.c">
+        <description><p>As a procedural control, the process of backing up Ansible Tower
+is outside the scope of a configuration guide.
+
+The customer will be responsible for conducting daily incremental and
+weekly full backups of user-level information contained in
+Ansible Tower. Additional FISMA requirements and guidance include
+maintaining at least three backup copies of user-level information (at
+least one of which is available online) or provides an equivalent
+alternative. A successful control response will detail how backups of
+user-level information occures, and how three backup copies are
+maintained.
+
+Documentation on backing up and restoring Ansible Tower data
+can be found in the Ansible Tower Administration guide:
+
+https://docs.ansible.com/ansible-tower/latest/html/administration/backup_restore.html
+</p></description>
+      </statement>
+      <statement statement-id="cp-9_stmt.d">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-9.1_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cp-9.2_stmt">
+        <description><p>The ability to backup and restore Ansible Tower systems has been integrated into the
+Tower setup playbook.
+
+For further details on testing Ansible Tower backups,
+refer to the "Backing Up and Restoring Tower"
+section of the Ansible Tower Administration Guide:
+
+https://docs.ansible.com/ansible-tower/latest/html/administration/backup_restore.html
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-9.3_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-9.4_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-9.5_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cp-9.6_stmt">
+        <description><p>Ansible Tower introduced Clustering as an alternate approach to redundancy,
+replacing the redundancy solution configured with the active-passive nodes
+that involves primary and secondary instances.
+
+Clustering is sharing load between hosts. Each instance should be able to act
+as an entry point for UI and API access. This should enable Ansible Tower
+administrators to use load balancers in front of as many instances of Ansible Tower
+as desired and maintain good data visibility.
+
+Details of this approach are documented in the "Clustering" section of the
+Ansible Tower Administration Guide:
+
+https://docs.ansible.com/ansible-tower/latest/html/administration/clustering.html
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-9.7_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cp-10_stmt">
+        <description><p>'Guidance on establishing backup procedures can be found in the
+Ansible Tower Administration Guide:
+
+https://docs.ansible.com/ansible-tower/latest/html/administration/backup_restore.html
+
+Note that backup of the Ansible Tower database and Ansible Tower playbooks
+reflects two distinct processes.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-10.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-10.1_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-10.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-10.2_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-10.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-10.3_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-10.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cp-10.4_stmt">
+        <description><p>The ability to backup and restore Ansible Tower systems has been integrated into the
+Tower setup playbook.
+
+For further details on testing Ansible Tower backups,
+refer to the "Backing Up and Restoring Tower"
+section of the Ansible Tower Administration Guide:
+
+https://docs.ansible.com/ansible-tower/latest/html/administration/backup_restore.html
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-10.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-10.5_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-10.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-10.6_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-11_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-12_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-13">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-13_stmt">
+        <description><p>This is an organizational control outside the scope of
+component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ia-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ia-2_stmt">
+        <description><p>'Ansible Tower does not have the capability to uniquely identify and
+authenticate organizational users (or processes acting on
+behalf of organizational users).
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-2.1_stmt">
+        <description><p>'The customer will be responsible for implementing multifactor
+authentication for network access to privileged accounts.
+
+A successful control response will need to address all network-
+accessible privileged account types and the means by which
+multifactor authentication is enforced for each.
+
+Documentation/guidance is being tracked through GitHub:
+https://github.com/ComplianceAsCode/redhat/issues/305'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-2.12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-2.12_stmt">
+        <description><p>'Personal Identity Verification (PIV) credentials are those credentials
+issued by federal agencies that conform to FIPS Publication 201 and
+supporting guidance documents. Customers will not be expected to perform
+this credential verification for government agencies. A mechanism for
+allowing government agencies to perform credential verification in a way
+that can be trusted by the customer system is through Active Directory
+Federation Services (ADFS).
+
+Documentation/guidance for this control is being tracked on GitHub:
+
+https://github.com/ComplianceAsCode/redhat/issues/306'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ia-4_stmt.a">
+        <description><p>'This is an organizational control outside the scope of configuring
+Ansible Tower.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-4_stmt.b">
+        <description><p>'This is an organizational control outside the scope of configuring
+Ansible Tower.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-4_stmt.c">
+        <description><p>'This is an organizational control outside the scope of configuring
+Ansible Tower.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-4_stmt.d">
+        <description><p>'Ansible Tower does not have the capability to prevent the
+reuse of identifiers for an organizationally-defined time period.
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-4_stmt.e">
+        <description><p>'Ansible Tower does not have the capability to disable an identifier
+after an organizationally-defined time period of inactivity.
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ia-5_stmt.a">
+        <description><p>'This is an organizational control outside the scope of configuring
+Ansible Tower.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.b">
+        <description><p>'Ansible Tower does not have the capability to establish initial
+authenticator content for authenticators defined by the organization
+(e.g. complexity requirements in IA-4).
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.c">
+        <description><p>'Ansible Tower does not have the capability to ensure that
+authenticators have sufficient strength of mechanism for their
+intended use.
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.d">
+        <description><p>'This is an organizational control outside the scope of configuring
+Ansible Tower.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.e">
+        <description><p>'Ansible Tower does not have default account authenticators.
+Authenticators used during the installation of Ansible Tower,
+such as passwords for the embeded database, are created by the
+system administratur during the Ansible Tower installation.
+This is non-configurable behavior.
+
+This requirement is not applicable to the
+configuration of Ansible Tower.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.f">
+        <description><p>'Ansible Tower does not have the capability to establish
+minimum and maximum lifetime restrictions and reuse
+conditions for authenticators.
+
+To satisfy this control an external authentication service,
+such as Red Hat IdM, must be used. This control is not
+applicable to Ansible Tower when an external authentication
+service is used.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.g">
+        <description><p>'Ansible Tower does not have the capability to change/refresh
+authenticators after an organizationally-defined time period
+by authenticator type.
+
+To satisfy this control an external authentication service,
+such as Red Hat IdM, must be used. This control is not
+applicable to Ansible Tower when an external authentication
+service is used.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.h">
+        <description><p>'Ansible Tower uses SSH to connect to remote hosts (or the Windows
+equivalent). In order to pass the key from Tower to SSH, the key must
+be decrypted before it can be written to a named pipe. Tower then uses
+that pipe to send the key to SSH (so that it is never written to disk).
+
+If passwords are used, Ansible Tower handles those by responding
+directly to the password prompt and decrypting the password before
+writing it to the prompt.
+
+The encryption/decryption algorithm uses a variation of Fernet: a
+symmetric encryption cipher utilizing AES-256 in CBC mode alongside
+a SHA-256 HMAC. Specific, sensitive, Model fields in Tower are
+encrypted and include:
+
+CREDENTIAL
+  - password
+  - ssh_key_data
+  - ssh_key_unlock
+  - become_password
+  - vault_password
+
+UNIFIED JOB:
+  - start_args
+
+Data is encrypted before it is saved to the database and it is
+decrypted as needed in Tower. The encryption/decryption process
+derives the AES-256 bit encryption key from
+&lt;SECRET_KEY, field_name, primary_key> where field_name is the
+field_name of the Model field and primary_key is the database assigned
+auto-incremented record ID. Thus, if any attribute used in the key
+generation process changes, Tower fails to correctly decrypt the
+secret.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.i">
+        <description><p>'This is an organizational control outside the scope of configuring
+Ansible Tower.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.j">
+        <description><p>'This is an organizational control outside the scope of configuring
+Ansible Tower.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-5.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ia-5.1_stmt.a">
+        <description><p>'Ansible Tower does not have the capability to enforce minimum
+password complexity requirements.
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5.1_stmt.b">
+        <description><p>'Ansible Tower does not have the capability to enforce at least
+an organizationally-defined number of characters be changed
+when new passwords are created.
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5.1_stmt.c">
+        <description><p>'If passwords are used, Ansible Tower handles those by responding
+directly to the password prompt and decrypting the password before
+writing it to the prompt.
+
+The encryption/decryption algorithm uses a variation of Fernet: a
+symmetric encryption cipher utilizing AES-256 in CBC mode alongside
+a SHA-256 HMAC. Specific, sensitive, Model fields in Tower are
+encrypted and include:
+
+CREDENTIAL
+  - password
+  - ssh_key_data
+  - ssh_key_unlock
+  - become_password
+  - vault_password
+
+UNIFIED JOB:
+  - start_args
+
+Data is encrypted before it is saved to the database and it is
+decrypted as needed in Tower. The encryption/decryption process
+derives the AES-256 bit encryption key from
+&lt;SECRET_KEY, field_name, primary_key> where field_name is the
+field_name of the Model field and primary_key is the database assigned
+auto-incremented record ID. Thus, if any attribute used in the key
+generation process changes, Tower fails to correctly decrypt the
+secret.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5.1_stmt.d">
+        <description><p>'Ansible Tower does not have the capability to enforce password
+minimum and maximum lifetime restrictions.
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5.1_stmt.e">
+        <description><p>'Ansible Tower does not have the capability prohibit password
+reuse.
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5.1_stmt.f">
+        <description><p>'Ansible Tower does not have the capability allow the use of a
+temporary password for system logons with an immediate change
+to a permanent password.
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-5.11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ia-5.11_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ia-6_stmt">
+        <description><p>'Ansible Tower natively obscures such information.
+Ansible Tower cannot be configured to be out of
+compliance with this requirement.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="none"></annotation>
+      <statement statement-id="ia-7_stmt">
+        <description><p>'It is currently not possible to configure Ansible Tower to use
+appropriate cryptographic modules. This is a permanent finding.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ia-8_stmt">
+        <description><p>'Ansible Tower does not have the capability to uniquely
+identify and authenticate non-organizational users (or
+processes acting on behalf of non-organizational users).
+
+To satisfy this control an external authentication service, such
+as Red Hat IdM, must be used. This control is not applicable to
+Ansible Tower when an external authentication service is used.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-8.1_stmt">
+        <description><p>'Personal Identity Verificiation (PIV) credentials are those
+credentials issued by federal agencies that conform to FIPS Publication
+201 and supporting guidance documents. Customers will not be expected
+to perform this credential verification for government agencies. A
+mechanism for allowing government agencies to perform credential
+verification in a way that can be trusted by the customer system is
+through Active Directory Federation Services (ADFS) or Red Hat IdM.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-8.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ia-8.2_stmt">
+        <description><p>'FICAM approved credentials are those credentials issued by nonfederal
+government entities approved by the Federal Identity, Credential, and
+Access Management (FICAM) Trust Framework Solutions Initiative.
+Customers iwill not be expected to perform credential veritification for
+government agencies. A mechanism for allowing government agencies to
+perform credential verification in a way that can be trusted by the
+customer system is through Active Directory Federation Services
+(ADFS) or Red Hat IdM.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-8.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ia-8.3_stmt">
+        <description><p>'FICAM approved credentials are those credentials issued by nonfederal
+government entities approved by the Federal Identity, Credential, and
+Access Management (FICAM) Trust Framework Solutions Initiative.
+Customers iwill not be expected to perform credential veritification for
+government agencies. A mechanism for allowing government agencies to
+perform credential verification in a way that can be trusted by the
+customer system is through Active Directory Federation Services
+(ADFS) or Red Hat IdM.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-8.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ia-8.4_stmt">
+        <description><p>'FICAM approved credentials are those credentials issued by nonfederal
+government entities approved by the Federal Identity, Credential, and
+Access Management (FICAM) Trust Framework Solutions Initiative.
+Customers will not be expected to perform credential veritification for
+government agencies. A mechanism for allowing government agencies to
+perform credential verification in a way that can be trusted by the
+customer system is through Active Directory Federation Services
+(ADFS) or Red Hat IdM.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-2.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-2.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-3.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-3.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-3.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-3.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.5_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.6_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.7_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.8_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.9_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.10_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-5_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-5.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-5.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-6_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-6.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-6.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-6.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-6.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-6.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-6.3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-7_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-7.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-7.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-7.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-7.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-8_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-9_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-9.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-9.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-9.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-9.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-9.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-9.3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-9.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-9.4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-10_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-5_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-6_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-7_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-2_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-2.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-2.2_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-2.3_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-3_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-3.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-3.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-3.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-3.2_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-3.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-3.3_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-3.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-3.4_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-3.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-3.5_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-3.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-3.6_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-4_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-5_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-5.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-5.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-5.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-5.2_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-5.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-5.3_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-6_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-6.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-6.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-6.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-6.2_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-6.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-6.3_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-6.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-6.4_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-7_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-8_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-8.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-8.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-8.2_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-9_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-9.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-9.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-9.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-9.2_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-10_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-10.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-10.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-11_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-11.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-11.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-11.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-11.2_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-12_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-12.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-12.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-13">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-13_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-13.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-13.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-13.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-13.2_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-13.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-13.3_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-13.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-13.4_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-14">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-14_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-14.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-14.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-14.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-14.2_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-15">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-15_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-15.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-15.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-16">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-16_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-17">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-17_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-18">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-18_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-18.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-18.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-19">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-19_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-19.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-19.1_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-20">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-20_stmt">
+        <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-2.1_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into PL-7.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-2.2_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into PL-8.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-2.3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-3_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into PL-2.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-4.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-4.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-5_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into Appendix J, AR-2.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-6_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into PL-2.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-7_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-8_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-8.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-8.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-8.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-9_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-3_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-5_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-6_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-7_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-8_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ra-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ra-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ra-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ra-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ra-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ra-3_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ra-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ra-5_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.1_stmt">
+        <description><p>'A control response to SA-4 (1) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.2_stmt">
+        <description><p>'A control response to SA-4 (2) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.3_stmt">
+        <description><p>'A control response to SA-4 (3) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-4.4_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into CM-8 (9).'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.5_stmt">
+        <description><p>'A control response to SA-4 (5) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.6_stmt">
+        <description><p>'A control response to SA-4 (6) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.7_stmt">
+        <description><p>'A control response to SA-4 (7) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.8_stmt">
+        <description><p>'A control response to SA-4 (8) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.9_stmt">
+        <description><p>'A control response to SA-4 (9) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-4.10_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-5_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-5.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-5.1_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into SA-4 (1).'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-5.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-5.2_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into SA-4 (2).'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-5.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-5.3_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into SA-4 (3).'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-5.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-5.4_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into SA-4 (4).'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-5.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-5.5_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into SA-4 (5).'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-6_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into CM-10 and SI-7.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-7_stmt">
+        <description><p>'As of NIST 800-53 rev4 this control was withdrawn
+and incorporated into CM-11 and SI-7.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-8_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9.3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9.4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9.5_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-10_stmt.a">
+        <description><p>'A control response to SA-10 (a) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-10_stmt.b">
+        <description><p>'A control response to SA-10 (b) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-10_stmt.c">
+        <description><p>'A control response to SA-10 (c) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-10_stmt.d">
+        <description><p>'A control response to SA-10 (d) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-10_stmt.e">
+        <description><p>'A control response to SA-10 (e) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-10.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-10.1_stmt">
+        <description><p>'A control response to SA-10 (1) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-10.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-10.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-10.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-10.3_stmt">
+        <description><p>'A control response to SA-10 (1) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-10.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-10.4_stmt">
+        <description><p>'A control response to SA-10 (4) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-10.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-10.5_stmt">
+        <description><p>'A control response to SA-10 (5) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-10.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-10.6_stmt">
+        <description><p>'A control response to SA-10 (6) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-5_stmt">
+        <description><p>'Documentation of anti-dential of service capabilities is being
+tracked on GitHub:
+
+https://github.com/ComplianceAsCode/redhat/issues/333'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-7_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-12_stmt">
+        <description><p>'Documentation regarding how Ansible Tower generates,
+distributes, stores,
+accesses, and desctructs, cryptographic keys is forthcoming. This
+activity is being tracked in GitHub:
+
+https://github.com/ComplianceAsCode/redhat/issues/334'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-13">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-13_stmt">
+        <description><p>'Documentation regarding Ansible Tower's usage of
+cryptography and applicability to Federal laws is forthcoming. This
+activity is being tracked in GitHub:
+
+https://github.com/ComplianceAsCode/redhat/issues/335'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-15">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-15_stmt">
+        <description><p>''
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-20">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-20_stmt">
+        <description><p>''
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-21">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-21_stmt">
+        <description><p>''
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-22">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-22_stmt">
+        <description><p>''
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-39">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-39_stmt">
+        <description><p>'Documentation on ensuring this functionality is
+configured is forthcoming.
+This activity is being tracked in GitHub:
+
+https://github.com/ComplianceAsCode/redhat/issues/336'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-3_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-5_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="si-12_stmt">
+        <description><p>'The customer will be responsible for handling and retaining
+information within, or hosted by, Ansible Tower in
+accordance with applicable federal laws, Executive Orders,
+directives, policies, regulations, standards, and operational
+requirements. A successful control response will need to outline
+the specific requirements applicable to customer information
+handling and retention, and the means by which those requirements
+are met.
+
+Documentation and suggestions on protecting customer information
+hosted within the Ansible Tower environment
+is forthcoming. This activity
+is being tracked in GitHub:
+
+https://github.com/ComplianceAsCode/redhat/issues/337'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-16">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-16_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+  </control-implementation>
+</system-security-plan>
