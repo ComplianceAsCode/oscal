@@ -1,0 +1,37 @@
+name: Build
+on:
+  schedule:
+  - cron: "0 0 * * *"
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Go
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.13
+      - uses: actions/checkout@v2
+      - name: Get oscalkit
+        run: |
+          git clone --depth 1 https://github.com/isimluk/oscalkit
+          pushd oscalkit
+          go get ./...
+          go build -o oscalkit ./cli/
+          popd
+      - name: Convert opencontrol
+        run: |
+          oscalkit/oscalkit convert opencontrol https://github.com/ComplianceAsCode/redhat xml/
+      - name: Install dependencies
+        uses: mstksg/get-package@v1
+        with:
+                apt-get: libxml2-utils
+      - name: Validate opencontrol
+        run: |
+          oscalkit/oscalkit validate xml/*
+      - name: Clean-up oscalkit
+        run: |
+          rm -rf oscalkit
+      - name: Push to master
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

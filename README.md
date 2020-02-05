@@ -3,7 +3,7 @@
 At this point of time, this repository contains OSCAL formatted SSPs (System Security Plans) generated
 automatically out of [opencontrol data](https://github.com/ComplianceAsCode/redhat).
 
-Last time data was regenerated was 2020-01-26. We are working on automated periodic re-builds.
+This repository is on periodical refresh.
 
 ### Developer information.
 
