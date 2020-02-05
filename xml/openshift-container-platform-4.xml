@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-01-26T15:14:40.42+01:00</last-modified>
+    <last-modified>2020-02-05T11:47:13.95+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -977,156 +977,348 @@ and incorporated into PM-15.
     </implemented-requirement>
     <implemented-requirement control-id="au-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-1_stmt">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of OpenShift.'
+      <statement statement-id="au-1_stmt.a">
+        <description><p>Developing an organization-level audit and accountability
+policy is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+      <statement statement-id="au-1_stmt.b">
+        <description><p>Review and updating an organizational-level audit and
+accountability policy is outside the scope of OpenShift
+configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-2_stmt">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of OpenShift.
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <statement statement-id="au-2_stmt.a">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-NOTE: The organization-defined auditable events are configured in
-OpenShift through actions specified in AU-12.'
+https://issues.redhat.com/browse/CMP-155
+</p></description>
+      </statement>
+      <statement statement-id="au-2_stmt.b">
+        <description><p>Coordinating the security audit function with other
+organizational entities is outside the scope of
+system configuration.
+</p></description>
+      </statement>
+      <statement statement-id="au-2_stmt.c">
+        <description><p>For rationale regarding why the auditable events are deemed to be
+adequate to support after-the-fact investigations of security incidents,
+please contact your countries Common Criteria representative:
+https://www.commoncriteriaportal.org/ccra/members/
+</p></description>
+      </statement>
+      <statement statement-id="au-2_stmt.d">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-155
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-2.1_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-2.2_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-2.3_stmt">
+        <description><p>Organizational review and updates to the audited events are
+outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-2.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-2.4_stmt">
+        <description><p>This control was withdrawn by NIST.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-3">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-3_stmt">
-        <description><p>'OpenShift audit records contain this information by default. No
-additional configuration is required.'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-156
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-3.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-3.1_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-157
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-3.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <statement statement-id="au-3.2_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-158
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-4">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="au-4_stmt">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of OpenShift. This control is reflected
-in proper disk partitioning of the underlying Operating System.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-Within OpenShift, the Elasticsearch, Fluentd, and Kibana (EFK) stack
-aggregates logs from nodes and applications running inside your OpenShift
-Enterprise installation. Once deployed it uses Fluentd to aggregate logs
-from all nodes, projects, and pods into Elasticsearch. OpenShift also
-provides a centralized Kibana web UI where users and administrators can
-create rich visualizations and dashboards with aggregated data.
-
-To properly plan for audit log retention, refer to "Storage Considerations"
-of the OpenShift installation and configuration guide. Production
-installations often generate in excess of 50GB/day of audit information.
-
-OpenShift Documentation:
-
-https://docs.openshift.com/enterprise/3.2/install_config/aggregate_logging_sizing.html#install-config-aggregate-logging-sizing-guidelines-storage'
+https://issues.redhat.com/browse/CMP-159
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-4.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-4.1_stmt">
-        <description><p>'OpenShift Administrators are responsible for configuring the
-offloading of audit records to a central facility. A successful
-control response will outline how audit records are dispatched
-to aggregation points.'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-160
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-5_stmt.a">
-        <description><p>'OpenShift Administrators  are responsible for alerting personnel
-or roles in the event of an audit processing failure. A successful
-control response will outline the process taken to alert personnel
-when an auditing failure occures.'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-161
 </p></description>
       </statement>
       <statement statement-id="au-5_stmt.b">
-        <description><p>'In the event of an audit processing failure, OpenShift Administrators
-are responsible for: overwriting the oldest audit records for low
-impact systems and shutting down moderate impact systems. A successful
-control response will outline the actions taken when an auditing
-failure occurs.'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-161
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-5.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-5.1_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-162
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-5.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-5.2_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-163
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-5.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <statement statement-id="au-5.3_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-164
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-5.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-5.4_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-165
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-6_stmt">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of OpenShift.'
+      <statement statement-id="au-6_stmt.a">
+        <description><p>Organizational review and analysis of information system
+audit records for indications of organization-defined
+inappropriate or unusual activity is outside the scope
+of OpenShift configuration.
+</p></description>
+      </statement>
+      <statement statement-id="au-6_stmt.b">
+        <description><p>Reporting findings of organization-defined inappropriate or
+unusual activity to organization-defined personnel or roles is
+outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-6.1_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-167
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.2_stmt">
+        <description><p>This control was withdrawn by NIST.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.3_stmt">
+        <description><p>Organizational analysis and correlation of audit records across
+different repositories to gain organization-wide
+situational awareness is outside the scope
+of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.4_stmt">
+        <description><p>Organizational capability to centrally review and analyze
+audit records from multiple components within the system
+is outside the scope of OpenShift configuration.
+
+Note: When AU-4 (1) is enforced OpenShift will be configured
+to off-load audit records onto a different system
+or media than the system being audited. In practice this correlates
+to offloading audit records to a SIEM (e.g. Elastic). However,
+this control is specifically about centralized review and analysis,
+and not offloading records, thus AU-6 (4) is marked as not
+applicable.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.5_stmt">
+        <description><p>Organizational capability to integrate analysis or audit
+records with analysis of additional organization-defined
+data/information collected from other sources to further
+enhance the ability to identify inappropriate or unusual
+activity is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.6_stmt">
+        <description><p>Organizational capability to correlate information from
+OpenShift audit records with information obtained from monitoring
+physical access to further enhanced the ability to identify
+suspicious, inappropriate, unusual, or malevolent activity
+is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.7_stmt">
+        <description><p>Organizational specification of permitted actions for
+information system processes, roles, and/or users, associated
+with the review, analysis, and reporting of audit
+information is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.8_stmt">
+        <description><p>Organizational processes to perform full text analysis or audited
+privileged commands in a physically distinct component or subsystem
+of the information system, or other information system that is
+dedicated to that analysis, is outside the scope of OpenShift
+configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.9_stmt">
+        <description><p>Organizational processes to correlate information
+from nontechnical sources with audit information to enhance
+organization-wide situational awareness is outside
+the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.10_stmt">
+        <description><p>Organizational adjustment of the level of audit review, analysis, and
+reporting within the information system when there is a change in risk
+based on law enforcement information, intelligence information, or other
+credible sources of information, is outside the scope of OpenShift
+configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-7">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-7_stmt.a">
-        <description><p>'OpenShift embeds the Elasticsearch, Fluentd, and Kibana (EFK) stack.
-This pre-integrated audit reduction capability aggregates logs from
-nodes and applications running inside your OpenShift Container Platform.
-Once deployed it uses Fluentd to aggregate log events from all the
-nodes, projects, and pods into Elasticsearch (ES). It also provides a
-centralized Kibana web UI where users and administrators can create
-rich visualizations and dashboards with the aggregated data. Triggers
-may be setup to detect atypical use.'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-227
 </p></description>
       </statement>
       <statement statement-id="au-7_stmt.b">
-        <description><p>'OpenShift logging subsystems do not alter the original contents
-or time ordering of audit records.'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-227
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-7.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-7.1_stmt">
-        <description><p>'Customers are responsible for ensuring that the information system
-provides the capability to process audit records for events of interest
-based on defined fields within audit records. Those fields are generally
-defined at an organizational level through AU-3.  A successful control
-response will discuss how audit records can be queried based on these
-fields.'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-228
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-7.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <statement statement-id="au-7.2_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-229
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-8">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-8_stmt.a">
-        <description><p>'OpenShift logs are generated using the internal system clock by
-default. This is non-configurable behavior.'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-230
 </p></description>
       </statement>
       <statement statement-id="au-8_stmt.b">
-        <description><p>'OpenShift time keeping relies on the time services provided by the
-underlying operating system. When running on Red Hat Enterprise Linux,
-the system time is always kept in Coordinated Universal Time (UTC) and
-converted in applications to local time as needed. Local time is the
-actual time on your current time zone, taking into account daylight
-savings time.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-OpenShift hosts are configured to use UTC by default. To manually
-verify this, the timedatectl command may be used:
-
-$ timedatectl set-local-rtc no
-
-ADMINISTRATORS NOTE FOR AU-8(b)
-
-Refer to the RHEL7 Administrators Guide for additional information on
-configuring time on OpenShift nodes:
-
-https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/chap-Configuring_the_Date_and_Time.html#sect-Configuring_the_Date_and_Time-timedatectl-Time_Zone'
+https://issues.redhat.com/browse/CMP-230
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-8.1">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-8.1_stmt.a">
-        <description><p>'OpenShift utilizes the time services of the underlying operating
-system. This control is not applicable to OpenShift.'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-232
 </p></description>
       </statement>
       <statement statement-id="au-8.1_stmt.b">
@@ -1134,92 +1326,323 @@ system. This control is not applicable to OpenShift.'
 operating system. This control is not applicable to OpenShift.'
 </p></description>
       </statement>
-      <statement statement-id="au-8.1_stmt.b.1">
-        <description><p>'OpenShift utilizes the time services of the underyling operating
-operating system. This control is not applicable to OpenShift.'
-</p></description>
-      </statement>
-      <statement statement-id="au-8.1_stmt.b.2">
-        <description><p>'OpenShift utilizes the time services of the underyling operating
-operating system. This control is not applicable to OpenShift.'
+    </implemented-requirement>
+    <implemented-requirement control-id="au-8.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-8.2_stmt">
+        <description><p>A complete control response is planned. Progress can be tracked
+via:
+
+https://github.com/ComplianceAsCode/redhat/issues/859
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-9_stmt">
-        <description><p>'Customers are required to protect the audit information and audit
-tools from unauthorized access, modification, and deletion. A successful
-control response will discuss the way that audit information and tools
-are protected. This can include how access is controlled to audit
-information and tools.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-Documentation/instructions on protecting OpenShift audit information
-is being tracked in Jira:
-
-https://securitycentral.atlassian.net/secure/RapidBoard.jspa?rapidView=3&amp;projectKey=OFO&amp;view=planning&amp;selectedIssue=OFO-6'
+https://issues.redhat.com/browse/CMP-232
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-9.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-9.1_stmt">
+        <description><p>Writing audit trails to hardware enforced, write-once media,
+is outside the scope of OpenShift configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-9.2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="au-9.2_stmt">
-        <description><p>'Customers are required to back up audit records at least weekly to a
-physically different system or component than the system being audited.
-A successful control response will discuss the way that audit records
-are backed up to a system other than the one being audited. This can
-include a centralized repository for all audit records.
+        <description><p>Backup of audit records onto a physically different system or
+system component than the component being audited is the
+responsibility of the centralized audit facility defined in
+AU-4 (1), "Transfer to Alternate Storage," and outside
+the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-9.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <statement statement-id="au-9.3_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-To satisfy this control, many information system components offload
-audit records to a central service via AU-4(1).'
+https://issues.redhat.com/browse/CMP-236
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-9.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-9.4_stmt">
+        <description><p>A complete control response is planned. Progress can be tracked
+via:
+
+https://github.com/ComplianceAsCode/redhat/issues/863
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-9.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-9.5_stmt">
+        <description><p>Per AU-4 (1), OpenShift will be configured to offload audit records
+to a centralized audit facility. Enforcement of dual authorization
+for movement and/or deletion of organization-defined audit
+information is the responsibility of the centralized audit
+facility, and outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-9.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <statement statement-id="au-9.6_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-237
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-10_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-232
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-10.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-10.1_stmt.a">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-239
+</p></description>
+      </statement>
+      <statement statement-id="au-10.1_stmt.b">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-239
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-10.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-10.2_stmt.a">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-240
+</p></description>
+      </statement>
+      <statement statement-id="au-10.2_stmt.b">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-240
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-10.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-10.3_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-241
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-10.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-10.4_stmt.a">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-242
+</p></description>
+      </statement>
+      <statement statement-id="au-10.4_stmt.b">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-242
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-10.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-10.5_stmt">
+        <description><p>This control was withdrawn by NIST.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-11_stmt">
-        <description><p>'Documentation/instructions on audit retention is being tracked
-in Jira:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://securitycentral.atlassian.net/secure/RapidBoard.jspa?rapidView=3&amp;projectKey=OFO&amp;view=planning&amp;selectedIssue=OFO-7'
+https://issues.redhat.com/browse/CMP-243
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-11.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-11.1_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-244
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-12_stmt.a">
-        <description><p>'//*
-Customers are required to provide record generation capability for the
-events defined in AU-2a at all information system components where audit
-capability is available. A successful control response will discuss the
-coniguration of all system components to capture the events that were
-defined in AU-2.
-*/'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-245
 </p></description>
       </statement>
       <statement statement-id="au-12_stmt.b">
-        <description><p>'//*
-Customers are required to allow defined personnel or roles to select
-which auditable events are to be audited by specific components of the
-information system. A successful control response will discuss how
-audit generation is implemented, and who selects and configures
-auditable events on the information system. Approved personnel or
-roles are defined in AU-9(4).
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-Audit rules may be added/removed through modifying the
-/etc/audit/audit.rules or applicable file under /etc/audit/rules.d/. It
-is recommended that OpenShift specific audit rules be added to
-/etc/audit/rules.d/openshift.rules.
-*/'
+https://issues.redhat.com/browse/CMP-245
 </p></description>
       </statement>
       <statement statement-id="au-12_stmt.c">
-        <description><p>'//*
-Customers are required to generate audit records for the events
-defined in AU-2d with the content defined in AU-3. A successful control
-response will discuss how audit records are generated, and how they meet
-the requirements defined in AU-2 and AU-3.
-*/'
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-245
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-12.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-12.1_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-181
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-12.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-12.2_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-246
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-12.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-12.3_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-247
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-13">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-13_stmt">
+        <description><p>Monitoring of organization-defined open source information
+and/or information sites at an organization-defined frequency for
+evidence of unauthorized disclosure of organizational information
+is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-13.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-13.1_stmt">
+        <description><p>Employment of automated mechanisms to determine if
+organizational information has been disclosed in an
+unauthorized manner is outside the scope of
+OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-13.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-13.2_stmt">
+        <description><p>Reviews of the open source information sites being monitored
+at an organization-defined frequency is outside the scope
+of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-14">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-14_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-248
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-14.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-14.1_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-249
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-14.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-14.2_stmt">
+        <description><p>A complete control response is planned. Progress can be tracked
+via:
+
+https://github.com/ComplianceAsCode/redhat/issues/878
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-14.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-14.3_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-250
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-15">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-15_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-251
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-16">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-16_stmt">
+        <description><p>Employment of organization-defined methods for coordinating
+organization-defined audit information among external
+organizations when audit information is transmitted
+across organizational boundaries is outside the scope
+of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-16.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-16.1_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-2252
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-16.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-16.2_stmt">
+        <description><p>Providing cross-organizational audit information to
+organization-defined organizations based on
+organization-defined cross-organizational sharing
+agreements is outside the scope of OpenShift
+configuration.
 </p></description>
       </statement>
     </implemented-requirement>

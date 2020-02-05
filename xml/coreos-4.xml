@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-01-26T15:14:40.42+01:00</last-modified>
+    <last-modified>2020-02-05T11:47:13.95+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -1613,8 +1613,9 @@ and incorporated into PM-15.
     <implemented-requirement control-id="au-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="au-1_stmt.a">
-        <description><p>Developing an organization-level audit and accountability
-policy is outside the scope of CoreOS configuration.
+        <description><p>Developing, documenting, and disseminating an organization-level
+audit and accountability policy is outside the scope of CoreOS
+configuration.
 </p></description>
       </statement>
       <statement statement-id="au-1_stmt.b">
@@ -1625,45 +1626,90 @@ configuration.
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-2_stmt.a">
         <description><p>CoreOS was designed to satisfy the audit requirements outlined
 in the Configuration Annex to the Protection Profile for General
-Purpose Operating Systems available at https://www.niap-ccevs.org/Profile/PP.cfm.
+Purpose Operating Systems available at
+https://www.niap-ccevs.org/Profile/PP.cfm.
 
-It is possible to extend CoreOS auditing beyond the events
-outlined in the Configuration Annex. A control response
-outlining the events CoreOS is capable of auditing is planned.
-Progress can be tracked via:
+Specifically, the minimum auditable events included:
 
-https://github.com/ComplianceAsCode/redhat/issues/841
+| Configuration Action | CNSSI 1253 Value or DoD-specific Value | NIAP Reference |
+| Audit All Logons (Success/Failure) and Logoffs (Successful) | Authentication events: (1) Logons (Success/Failure); (2) Logoffs (Success) | FAU_GEN.1.1.c |
+| Audit File and Object Events (Unsuccessful) | File and Objects events: (1) Create (Success/Failure); (2) Access (Success/Failure); (3) Delete (Success/Failure); (4) Modify (Success/Failure); (5) Permission Modification (Success/Failure); (6) Ownership Modification (Success/Failure) | FAU_GEN.1.1.c |
+| Audit User and Group Management Events (Success/Failure) | User and Group Management events: (1) User add, delete, modify, disable, enable (Success/Failure); (2) Group/Role add, delete, modify (Success/Failure) | FAU_GEN.1.1.c |
+| Audit Privilege or Role Escalation Events (Success/Failure) | Privilege/Role escalation (Success/Failure) | FAU_GEN.1.1.c |
+| Audit All Audit and Log Data Accesses (Success/Failure) | Audit and log data access (Success/Failure) | FAU_GEN.1.1.c |
+| Audit Cryptographic Verification of Software (Success/Failure) | - | FAU_GEN.1.1.c |
+| Audit Program Initiations (Success/Failure) | Application (e.g., Firefox, Internet Explorer, MS Office Suite, etc.) initialization (Success/Failure) | FAU_GEN.1.1.c |
+| Audit System Reboot, Restart, and Shutdown Events (Success/Failure) | System reboot, restart and shutdown (Success/Failure) | FAU_GEN.1.1.c |
+| Audit Kernel Module Loading and Unloading Events (Success/Failure) | - | FAU_GEN.1.1.c |
+
+Additionally, CoreOS was designed to satisfy the audit requirements
+outlined in Intelligence Community Standard Number 500-27, "Collection
+and Sharing of Audit Data" (ICS 500-27) that were found to be applicable
+to operating systems performing as a container host. A copy of ICS 500-27
+can be found at
+https://www.dni.gov/files/documents/FOIA/DF-2016-00213.pdf
+
+Selected audit events from ICS 500-27 include:
+  * Authentication events
+    * Logons (Success/Failure)
+    * Logoffs (Success)
+  * File &amp; Object Events
+    * Create (Success/Failure)
+    * Access (Success/Failure)
+    * Delete (Success/Failure)
+    * Modify (Success/Failure)
+    * Permission Modifications (Success/Failure)
+    * Ownership Modifications (Success/Failure)
+  * User &amp; Group Management events
+    * User add, delete, modify, suspend, lock (Success/Failure)
+    * Group/Role add, delete, modify (Success/Failure)
+  * Use of Privileged/Special Rights events
+    * Security or audit policy changes (Success/Failure)
+    * Configuration changes (Success/Failure)
+  * Admin or root-level access (Success/Failure)
+  * Privilege/Role escalation (Success/Failure)
+  * Audit and log data accesses (Success/Failure)
+  * System Reboot, Restart &amp; Shutdown (Success/Failure)
+  * Application (e.g. Netscape, IE, Lotus Notes, etc) initialization
+    (Success/Failure)
 </p></description>
       </statement>
       <statement statement-id="au-2_stmt.b">
         <description><p>Coordinating the security audit function with other
 organizational entities is outside the scope of
-CoreOS configuration.
+system configuration.
 </p></description>
       </statement>
       <statement statement-id="au-2_stmt.c">
-        <description><p>For rationale regarding why the auditable events are deemed to be
-adequate to support after-the-fact investigations of security incidents,
-please contact your countries Common Criteria representative:
+        <description><p>Red Hat did not express judgement in the rationale for why auditable
+events are deemed to be adequate to support after-the-fact
+investigations of security incidents.
+
+For rationale regarding why the auditable events are deemed to be
+adequate to support after-the-fact investigations of security
+incidents, please contact your countries Common Criteria
+representative:
 
 https://www.commoncriteriaportal.org/ccra/members/
 </p></description>
       </statement>
       <statement statement-id="au-2_stmt.d">
-        <description><p>CoreOS was designed to satisfy the audit requirements outlined
-in the Configuration Annex to the Protection Profile for General
-Purpose Operating Systems available at https://www.niap-ccevs.org/Profile/PP.cfm.
+        <description><p>Determination of which events are to be audited within CoreOS from
+the subset of auditable events defined in AU-2(a) is an organizational
+control outside the scope of CoreOS configuration guidance.
 
-It is possible to extend CoreOS auditing beyond the events
-outlined in the Configuration Annex. A control response
-outlining the events CoreOS is capable of auditing is planned.
-Progress can be tracked via:
+Should system operators decide to use the NIST National Checklist for
+OpenShift 4.x, all events identified in AU-2(c) are selected to be
+audited.
 
-https://github.com/ComplianceAsCode/redhat/issues/841
+Additionally, in regards to the AU-2(d) requirement of defining
+"the frequency" of auditing for each identified event, it should be
+noted that the CoreOS audit subsystem generates audit events in
+realtime (e.g. immediately upon an audited event occuring).
 </p></description>
       </statement>
     </implemented-requirement>
@@ -1697,134 +1743,101 @@ outside the scope of CoreOS configuration.
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-3">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-3_stmt">
-        <description><p>A control response is planned. Progress can be tracked via:
+        <description><p>AU-3 is satisfied when the following configuration checks have been
+implemented:
+   * CCE-82463-1: Enable auditd Service
 
-https://github.com/ComplianceAsCode/redhat/issues/842
+These configuration checks are enabled in the NIST National Checklist
+for OpenShift 4.x.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-3.1">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-3.1_stmt">
-        <description><p>CoreOS offers a robust audit subsystem capable of generating
-audit records containing very detailed information. Satisfaction
-of this control will be deployment specific, determined by
-organization-defined additional, more detailed information.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-157
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-3.2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="au-3.2_stmt">
-        <description><p>CoreOS provides centralized management and configuration of the
-content to be captured in audit records. A complete control
-response is planned. Progress can be tracked via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/843
+https://issues.redhat.com/browse/CMP-158
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-4">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="au-4_stmt">
-        <description><p>CoreOS can be configured to allocate dedicated audit storage
-capacity for audit record storage (e.g. /var/log/audit partition).
-A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/844
+https://issues.redhat.com/browse/CMP-159
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-4.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-4.1_stmt">
-        <description><p>CoreOS can be configured to off-load audit records onto
-a different system or media than the system being audited.
-Progress towards a complete control response can be tracked via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/845
+https://issues.redhat.com/browse/CMP-160
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-5_stmt.a">
-        <description><p>CoreOS can be configured to alert organization-defined
-personnel or roles in the event of an audit processing
-failure. A complete control response is planned. Progress
-can be tracked via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/846
+https://issues.redhat.com/browse/CMP-161
 </p></description>
       </statement>
       <statement statement-id="au-5_stmt.b">
-        <description><p>CoreOS can be configured to take an organization-defined
-action (e.g. shut down) upon an audit processing failure.
-A complete control response is planned. Progress
-can be tracked via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/846
+https://issues.redhat.com/browse/CMP-161
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-5.1">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-5.1_stmt">
-        <description><p>CoreOS can be configured to provide a warning to
-organization-defined personnel, roles, and/or locations
-within an organization-defined time period when allocated
-audit record storate volume reaches an organization-defined
-threshold of repository maximum audit record storage
-capacity.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-A complete control response is planned. Progress can be
-tracked via:
-
-https://github.com/ComplianceAsCode/redhat/issues/847
+https://issues.redhat.com/browse/CMP-162
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-5.2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-5.2_stmt">
-        <description><p>CoreOS can be configured to provide an alert when audit
-failure events occure.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-A complete control response is planned. Progress can be
-tracked via:
-
-https://github.com/ComplianceAsCode/redhat/issues/848
+https://issues.redhat.com/browse/CMP-163
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-5.3">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="au-5.3_stmt">
-        <description><p>CoreOS can be configured to enforce configurable network
-communications traffic volume thresholds reflecting limits
-on auditing capacity and reject or delay network traffic
-above those thresholds.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-A complete control response is planned. Progress can be
-tracked via:
-
-https://github.com/ComplianceAsCode/redhat/issues/849
+https://issues.redhat.com/browse/CMP-164
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-5.4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-5.4_stmt">
-        <description><p>CoreOS can be configured to shutdown on failure of the
-audit subsystem.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-A complete control response is planned. Progress can be
-tracked via:
-
-https://github.com/ComplianceAsCode/redhat/issues/850
+https://issues.redhat.com/browse/CMP-165
 </p></description>
       </statement>
     </implemented-requirement>
@@ -1847,16 +1860,9 @@ outside the scope of CoreOS configuration.
     <implemented-requirement control-id="au-6.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-6.1_stmt">
-        <description><p>CoreOS can be configured to enhance organizational
-capabilities regarding automated mechanisms to integrate
-audit review, analysis, and reporting processes to support
-organizational processes for investigation and response
-to suspicious activities.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-A complete control response is planned. Progress can be
-tracked via:
-
-https://github.com/ComplianceAsCode/redhat/issues/851
+https://issues.redhat.com/browse/CMP-167
 </p></description>
       </statement>
     </implemented-requirement>
@@ -1961,93 +1967,68 @@ configuration.
     <implemented-requirement control-id="au-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-7_stmt.a">
-        <description><p>A control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/852
+https://issues.redhat.com/browse/CMP-227
 </p></description>
       </statement>
       <statement statement-id="au-7_stmt.b">
-        <description><p>A control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/852
+https://issues.redhat.com/browse/CMP-227
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-7.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-7.1_stmt">
-        <description><p>CoreOS does provide the capability to process audit records for
-events of interest based on organization-defined audit fields within
-audit records.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-A complete control response is planned. Progress can be tracked
-via:
-
-https://github.com/ComplianceAsCode/redhat/issues/853
+https://issues.redhat.com/browse/CMP-228
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-7.2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="au-7.2_stmt">
-        <description><p>CoreOS does provide the capability to sort and search audit records for
-events of interest based on the content of organization-defined audit
-fields within audit records.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-A complete control response is planned. Progress can be tracked
-via:
-
-https://github.com/ComplianceAsCode/redhat/issues/854
+https://issues.redhat.com/browse/CMP-229
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-8_stmt.a">
-        <description><p>CoreOS uses internal system clocks to generate time stamps for
-audit records. This is non-configurable, default behavior.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-230
 </p></description>
       </statement>
       <statement statement-id="au-8_stmt.b">
-        <description><p>CoreOS records time stamps for audit records that can be mapped to
-Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT) and can
-be configured to an organization-defined granularity of time measurement.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-A complete control response is planned. Progress can be tracked via:
-
-https://github.com/ComplianceAsCode/redhat/issues/855
+https://issues.redhat.com/browse/CMP-230
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-8.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-8.1_stmt.a">
-        <description><p>CoreOS can be configured to compare the internal system clock(s)
-at an organization-defined frequency with an organization-defined
-authoritative time source.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-A complete control response is planned. Progress can be tracked
-via:
-
-https://github.com/ComplianceAsCode/redhat/issues/856
+https://issues.redhat.com/browse/CMP-232
 </p></description>
       </statement>
       <statement statement-id="au-8.1_stmt.b">
-        <description><p>CoreOS can be configured to synchronize the internal system
-clock(s) to the authoritative time source when the time difference is
-greated than an organization-defined time period.
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-A complete control response is planned. Progress can be tracked
-via:
-
-https://github.com/ComplianceAsCode/redhat/issues/856
+https://issues.redhat.com/browse/CMP-232
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-8.2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-8.2_stmt">
         <description><p>A complete control response is planned. Progress can be tracked
 via:
@@ -2059,10 +2040,9 @@ https://github.com/ComplianceAsCode/redhat/issues/859
     <implemented-requirement control-id="au-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-9_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/860
+https://issues.redhat.com/browse/CMP-232
 </p></description>
       </statement>
     </implemented-requirement>
@@ -2086,17 +2066,16 @@ the scope of CoreOS configuration.
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-9.3">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="au-9.3_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/862
+https://issues.redhat.com/browse/CMP-236
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-9.4">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-9.4_stmt">
         <description><p>A complete control response is planned. Progress can be tracked
 via:
@@ -2106,7 +2085,7 @@ https://github.com/ComplianceAsCode/redhat/issues/863
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-9.5">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-9.5_stmt">
         <description><p>Per AU-4 (1), CoreOS will be configured to offload audit records
 to a centralized audit facility. Enforcement of dual authorization
@@ -2117,62 +2096,74 @@ facility, and outside the scope of CoreOS configuration.
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-9.6">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="au-9.6_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/864
+https://issues.redhat.com/browse/CMP-237
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-10_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/865
+https://issues.redhat.com/browse/CMP-232
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-10.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-10.1_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+      <statement statement-id="au-10.1_stmt.a">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/866
+https://issues.redhat.com/browse/CMP-239
+</p></description>
+      </statement>
+      <statement statement-id="au-10.1_stmt.b">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-239
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-10.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-10.2_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+      <statement statement-id="au-10.2_stmt.a">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/867
+https://issues.redhat.com/browse/CMP-240
+</p></description>
+      </statement>
+      <statement statement-id="au-10.2_stmt.b">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-240
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-10.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-10.3_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/868
+https://issues.redhat.com/browse/CMP-241
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-10.4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-10.4_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+      <statement statement-id="au-10.4_stmt.a">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/869
+https://issues.redhat.com/browse/CMP-242
+</p></description>
+      </statement>
+      <statement statement-id="au-10.4_stmt.b">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-242
 </p></description>
       </statement>
     </implemented-requirement>
@@ -2186,60 +2177,66 @@ https://github.com/ComplianceAsCode/redhat/issues/869
     <implemented-requirement control-id="au-11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-11_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/870
+https://issues.redhat.com/browse/CMP-243
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-11.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-11.1_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/871
+https://issues.redhat.com/browse/CMP-244
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-12_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+      <statement statement-id="au-12_stmt.a">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/872
+https://issues.redhat.com/browse/CMP-245
+</p></description>
+      </statement>
+      <statement statement-id="au-12_stmt.b">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-245
+</p></description>
+      </statement>
+      <statement statement-id="au-12_stmt.c">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-245
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-12.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-12.1_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/873
+https://issues.redhat.com/browse/CMP-181
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-12.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-12.2_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/874
+https://issues.redhat.com/browse/CMP-246
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-12.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-12.3_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/875
+https://issues.redhat.com/browse/CMP-247
 </p></description>
       </statement>
     </implemented-requirement>
@@ -2275,25 +2272,23 @@ of CoreOS configuration.
     <implemented-requirement control-id="au-14">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-14_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/876
+https://issues.redhat.com/browse/CMP-248
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-14.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-14.1_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/877
+https://issues.redhat.com/browse/CMP-249
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-14.2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-14.2_stmt">
         <description><p>A complete control response is planned. Progress can be tracked
 via:
@@ -2305,20 +2300,18 @@ https://github.com/ComplianceAsCode/redhat/issues/878
     <implemented-requirement control-id="au-14.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-14.3_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/879
+https://issues.redhat.com/browse/CMP-250
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-15">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-15_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/880
+https://issues.redhat.com/browse/CMP-251
 </p></description>
       </statement>
     </implemented-requirement>
@@ -2336,10 +2329,9 @@ of CoreOS configuration.
     <implemented-requirement control-id="au-16.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-16.1_stmt">
-        <description><p>A complete control response is planned. Progress can be tracked
-via:
+        <description><p>A control response is planned. Engineering progress can be tracked via:
 
-https://github.com/ComplianceAsCode/redhat/issues/881
+https://issues.redhat.com/browse/CMP-2252
 </p></description>
       </statement>
     </implemented-requirement>
