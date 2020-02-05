@@ -31,6 +31,9 @@ jobs:
       - name: Clean-up oscalkit
         run: |
           rm -rf oscalkit
+      - name: Disregard timestamp-only changes
+        run: |
+          .github/disregard-timestamp-changes.sh
       - name: Push to master
         uses: mikeal/publish-to-github-action@master
         env:
