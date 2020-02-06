@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-02-05T11:47:13.95+00:00</last-modified>
+    <last-modified>2020-02-06T00:04:51.24+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -97,7 +97,7 @@
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-2.1">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="ac-2.1_stmt">
         <description><p>OpenShift components of the system support automated
 management through monitoring of accounts and system
@@ -107,33 +107,34 @@ While OpenShift can generate audit data, and securely
 transport the data to a SIEM, OpenShift does not provide
 automated mechanisms (e.g. email, text messages) after
 system events. This functionality would fall to third
-party software, and therefore, this control is partial,
-and will only be partially satisfied when implemented by
-third party software such as an Identity Provider (IdP),
-Active Directory (MSAD), LDAP, etc.</p></description>
+party software such as an Identity Provider (IdP),
+Active Directory (MSAD), LDAP, etc.
+
+To configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/identity_providers/configuring-ldap-identity-provider.html#configuring-ldap-identity-provider</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-2.2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="ac-2.2_stmt">
         <description><p>OpenShift does not have the capability to create
 guest/anonymous accounts or temporary accounts. Any
 external emergency or temporary accounts will be
 inherited from, and managed by, an external
 identity service (e.g. Active Directory, LDAP, etc.)
-This control will only be partially satisfied when
-OpenShift is configured to connect to an Identity Provider (IdP).</p></description>
+
+To configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/identity_providers/configuring-ldap-identity-provider.html#configuring-ldap-identity-provider</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-2.3">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="ac-2.3_stmt">
         <description><p>OpenShift end-user account management is inherited from
 the hosting environment. Automatic disabling of these
 accounts must happen at the centralized account
 management level; for example, within LDAP, Red Hat
-IdM, or Active Directory. This control will only be partially
-met when OpenShift is configured to connect to an Identity Provider (IdP).</p></description>
+IdM, or Active Directory.
+
+To configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/identity_providers/configuring-ldap-identity-provider.html#configuring-ldap-identity-provider</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-2.4">
