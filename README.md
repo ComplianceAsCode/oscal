@@ -7,9 +7,14 @@ This repository is on periodical refresh.
 
 ### Developer information.
 
-[Custom build](https://github.com/docker/oscalkit/pull/88) of oscalkit was used to generate this data.
+`oscalkit` tool was used to generate files available here.
 
-Commands used:
+Commands to install `oscalkit` tool:
+
+    $ git clone https://github.com/docker/oscalkit
+    $ pushd oscalkit ; go build -o oscalkit ./cli ; popd
+
+Commands to re-generate OSCAL files:
 
     $ oscalkit convert opencontrol https://github.com/ComplianceAsCode/redhat xml/
     $ oscalkit validate xml/*
