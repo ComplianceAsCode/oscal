@@ -8,26 +8,24 @@ jobs:
         uses: actions/setup-go@v1
         with:
           go-version: 1.13
-      - uses: actions/checkout@v2
-      - name: Get oscalkit
-        run: |
-          git clone --depth 1 https://github.com/docker/oscalkit
-          pushd oscalkit
-          go build -o oscalkit ./cli/
-          popd
-      - name: Convert opencontrol
-        run: |
-          oscalkit/oscalkit convert opencontrol https://github.com/ComplianceAsCode/redhat xml/
       - name: Install dependencies
         uses: mstksg/get-package@v1
         with:
                 apt-get: libxml2-utils
-      - name: Validate opencontrol
+      - uses: actions/checkout@v2
+      - name: Get fedramp tool
         run: |
-          oscalkit/oscalkit validate xml/*
-      - name: Clean-up oscalkit
+          export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
+          git clone --depth 1 https://github.com/GoComply/fedramp
+          pushd fedramp
+          make build
+          popd
+      - name: Convert opencontrol
         run: |
-          rm -rf oscalkit
+          fedramp/fedramp opencontrol https://github.com/ComplianceAsCode/redhat xml/
+      - name: Clean-up fedramp tool
+        run: |
+          rm -rf fedramp
       - name: Disregard timestamp-only changes
         run: |
           .github/disregard-timestamp-changes.sh

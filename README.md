@@ -7,14 +7,13 @@ This repository is on periodical refresh.
 
 ### Developer information.
 
-`oscalkit` tool was used to generate files available here.
+`fedramp` tool was used to generate files available here.
 
-Commands to install `oscalkit` tool:
+Commands to install `fedramp` tool:
 
-    $ git clone https://github.com/docker/oscalkit
-    $ pushd oscalkit ; go build -o oscalkit ./cli ; popd
+    $ git clone https://github.com/GoComply/fedramp
+    $ pushd fedramp ; make build  ; popd
 
-Commands to re-generate OSCAL files:
+Command to re-generate OSCAL files:
 
-    $ oscalkit convert opencontrol https://github.com/ComplianceAsCode/redhat xml/
-    $ oscalkit validate xml/*
+    $ fedramp opencontrol https://github.com/ComplianceAsCode/redhat xml/
