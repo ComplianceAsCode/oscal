@@ -1,0 +1,1999 @@
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
+  <metadata>
+    <title>FedRAMP System Security Plan (SSP)</title>
+    <last-modified>2020-02-12T11:53:40.13+01:00</last-modified>
+    <version>0.0.1</version>
+    <oscal-version>1.0.0-milestone2</oscal-version>
+  </metadata>
+  <import-profile href="https://raw.githubusercontent.com/usnistgov/OSCAL/master/content/fedramp.gov/xml/FedRAMP_HIGH-baseline_profile.xml"></import-profile>
+  <system-characteristics>
+    <system-id identifier-type="https://fedramp.gov">F00000000</system-id>
+    <system-name>Red Hat Virtualization Manager</system-name>
+    <system-name-short>virtualization-manager</system-name-short>
+    <description><p>Automatically generated OSCAL SSP from OpenControl guidance for Red Hat Virtualization Manager</p></description>
+    <security-sensitivity-level>low</security-sensitivity-level>
+    <system-information>
+      <information-type>
+        <title>Information Type Name</title>
+        <description><p>This item is useless nevertheless required.</p></description>
+        <confidentiality-impact>
+          <base>fips-199-moderate</base>
+        </confidentiality-impact>
+        <integrity-impact>
+          <base>fips-199-moderate</base>
+        </integrity-impact>
+        <availability-impact>
+          <base>fips-199-moderate</base>
+        </availability-impact>
+      </information-type>
+    </system-information>
+    <security-impact-level>
+      <security-objective-confidentiality>fips-199-moderate</security-objective-confidentiality>
+      <security-objective-integrity>fips-199-moderate</security-objective-integrity>
+      <security-objective-availability>fips-199-moderate</security-objective-availability>
+    </security-impact-level>
+    <status state="operational"></status>
+    <authorization-boundary>
+      <description><p>A holistic, top-level explanation of the FedRAMP authorization boundary.</p></description>
+    </authorization-boundary>
+  </system-characteristics>
+  <control-implementation>
+    <description><p>FedRAMP SSP Template Section 13</p></description>
+    <implemented-requirement control-id="ac-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-3_stmt">
+        <description><p>'Documentation/guidance for satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-7_stmt.a">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ac-7_stmt.b">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-8_stmt.a">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.b">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.c">
+        <description><p>'The banner text, as identified in AC-8(a), and banner acknowledgement,
+as defined in AC-8(b), will be the same regardless of what network(s)
+the system component console is accessed from. This control
+is not applicable.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-14">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-14_stmt">
+        <description><p>'Regardless of access mechanism, such as component management
+console, unauthenticated users will only be shown the
+system use notifications (as defined in AC-8) and login prompt. This is
+non-configurable behavior.
+
+External service APIs also require authentication
+prior to granting resource access.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-17">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-17_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-18">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-18_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-19">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-19_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-20">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-20_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-22">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-22_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-1_stmt.a">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-1_stmt.b">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-2_stmt.a">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-2_stmt.b">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-2_stmt.c">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-2.2_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-3_stmt.a">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-3_stmt.b">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-3_stmt.c">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-3.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-3.3_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-3.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-3.4_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="at-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="at-4_stmt.a">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+      <statement statement-id="at-4_stmt.b">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-3_stmt">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-5_stmt.a">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="au-5_stmt.b">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-8_stmt.a">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="au-8_stmt.b">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-9_stmt">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-11_stmt">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-12_stmt.a">
+        <description><p>'Customers are required to provide record generation capability for the
+events defined in AU-2a at all information system components where audit
+capability is available. A successful control response will discuss the
+coniguration of all system components to capture the events that were
+defined in AU-2.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="au-12_stmt.b">
+        <description><p>'Customers are required to allow defined personnel or roles to select
+which auditable events are to be audited by specific components of the
+information system. A successful control response will discuss how
+audit generation is implemented, and who selects and configures
+auditable events on the information system. Approved personnel or
+roles are defined in AU-9(4).
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="au-12_stmt.c">
+        <description><p>'Customers are required to generate audit records for the events
+defined in AU-2d with the content defined in AU-3. A successful control
+response will discuss how audit records are generated, and how they meet
+the requirements defined in AU-2 and AU-3.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-2.1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-3_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-5_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-6_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-7_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-9_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="cm-6_stmt.a">
+        <description><p>'This is an organizational control outside the scope of configuring
+this system component. Use of the NIST National Checklist
+for this system component is suggested as a supported,
+US Government recognized, vendor supported, baseline.'
+</p></description>
+      </statement>
+      <statement statement-id="cm-6_stmt.b">
+        <description><p>'The customer will be responsible for implementing configuration
+settings as defined in CM-6(a). A successful control response will
+describe how mandatory configuration settings are implemented. This can
+include the process or documentation followed.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="cm-6_stmt.c">
+        <description><p>'This is an organizational control outside the scope of configuring
+this system component.'
+</p></description>
+      </statement>
+      <statement statement-id="cm-6_stmt.d">
+        <description><p>'The customer will be responsible for monitoring and controlling
+changes to the configuration settings in accordance with organization
+policies and procedures. A successful control response will describe
+how changes are controlled and monitored. This can include limitations
+to privileges, how these changes are audited, and any tools in place to
+track and approve changes.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="cm-7_stmt">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-8_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-10_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cm-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-11_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-3_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="cp-9_stmt.a">
+        <description><p>'The customer will be responsible for conducting daily incremental and
+weekly full backups of user-level information contained in the
+information system. Additional FedRAMP requirements and guidance include
+maintaining at least three backup copies of user-level information (at
+least one of which is available online) or provides an equivalent
+alternative. A successful control response will detail how backups of
+user-level information occures, and how three backup copies are
+maintained.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="cp-9_stmt.b">
+        <description><p>'The customer will be responsible for conducting daily incremental and
+weekly full backups of system-level information contained in the
+information system. Additional FedRAMP requirements and guidance include
+maintaining at least three backup copies of user-level information (at
+least one of which is available online) or provides an equivalent
+alternative. A successful control response will detail how backups of
+user-level information occures, and how three backup copies are
+maintained.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="cp-9_stmt.c">
+        <description><p>'The customer will be responsible for conducting daily incremental and
+weekly full backups of information system documentation including
+security-related documentation. Additional FedRAMP requirements and
+guidance include maintaining at least three backup copies of user-level
+information (at least one of which is available online) or provides an
+equivalent alternative. A successful control response will detail how
+backups of user-level information occures, and how three backup copies
+are maintained.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="cp-9_stmt.d">
+        <description><p>'The customer will be responsible for protecting the confidentiality,
+integrity, and available of backup information at storage locations.
+Additional FedRAMP requirements and guidance include determining
+what elements of the cloud environment require the Information System
+Backup control. The customer will determine how Information System
+Backup is going to be verified and appropriate periodicity of the
+check.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="cp-10_stmt">
+        <description><p>'The customer will be responsible for documenting how to reconstitute
+their environment. A successful control
+response will detail
+processes used to fully recover/restore the system component.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ia-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-2_stmt">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-2.1_stmt">
+        <description><p>'The customer will be responsible for implementing multifactor
+authentication for network access to privileged accounts.
+
+A successful control response will need to address all network-
+accessible privileged account types and the means by which
+multifactor authentication is enforced for each.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-2.12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-2.12_stmt">
+        <description><p>'Personal Identity Verification (PIV) credentials are those credentials
+issued by federal agencies that conform to FIPS Publication 201 and
+supporting guidance documents. Customers will not be expected to perform
+this credential verification for government agencies. A mechanism for
+allowing government agencies to perform credential verification in a way
+that can be trusted by the customer system is through Active Directory
+Federation Services (ADFS).
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-4_stmt.a">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-4_stmt.b">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-4_stmt.c">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-4_stmt.d">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-4_stmt.e">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-5_stmt.a">
+        <description><p>'This is an organizational control outside the scope of configuring
+Red Hat Identity Management.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.b">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.c">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.d">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.e">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.f">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.g">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.h">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.i">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5_stmt.j">
+        <description><p>'This is an organizational control outside the scope of configuring
+this system component.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-5.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-5.1_stmt.a">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5.1_stmt.b">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5.1_stmt.c">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5.1_stmt.d">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5.1_stmt.e">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="ia-5.1_stmt.f">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-5.11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ia-5.11_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ia-6_stmt">
+        <description><p>'The system component natively obscures such information and cannot be
+configured to be out of compliance with this requirement.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-7_stmt">
+        <description><p>'Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-8_stmt">
+        <description><p>'The customer will be responsible for identifying and authenticating
+non-organizational users accessing the customer application. A
+successful control response will need to address how non-organizational
+users are defined and the process by which identification
+and authentication takes place, including any differences from
+identification and authentication for organizational users.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-8.1_stmt">
+        <description><p>'Personal Identity Verificiation (PIV) credentials are those
+credentials issued by federal agencies that conform to FIPS Publication
+201 and supporting guidance documents. Customers will not be expected
+to perform this credential verification for government agencies. A
+mechanism for allowing government agencies to perform credential
+verification in a way that can be trusted by the customer system is
+through Active Directory Federation Services (ADFS) or Red Hat IdM.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-8.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-8.2_stmt">
+        <description><p>'FICAM approved credentials are those credentials issued by nonfederal
+government entities approved by the Federal Identity, Credential, and
+Access Management (FICAM) Trust Framework Solutions Initiative.
+Customers iwill not be expected to perform credential veritification for
+government agencies. A mechanism for allowing government agencies to
+perform credential verification in a way that can be trusted by the
+customer system is through Active Directory Federation Services
+(ADFS) or Red Hat IdM.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-8.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-8.3_stmt">
+        <description><p>'FICAM approved credentials are those credentials issued by nonfederal
+government entities approved by the Federal Identity, Credential, and
+Access Management (FICAM) Trust Framework Solutions Initiative.
+Customers iwill not be expected to perform credential veritification for
+government agencies. A mechanism for allowing government agencies to
+perform credential verification in a way that can be trusted by the
+customer system is through Active Directory Federation Services
+(ADFS) or Red Hat IdM.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ia-8.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ia-8.4_stmt">
+        <description><p>'FICAM approved credentials are those credentials issued by nonfederal
+government entities approved by the Federal Identity, Credential, and
+Access Management (FICAM) Trust Framework Solutions Initiative.
+Customers iwill not be expected to perform credential veritification for
+government agencies. A mechanism for allowing government agencies to
+perform credential verification in a way that can be trusted by the
+customer system is through Active Directory Federation Services
+(ADFS) or Red Hat IdM.
+
+Documentation/guidance on satisfying this control is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-2.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-2.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-3.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-3.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.6_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-4.8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-4.8_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-5_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-5.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-5.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-6_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-6.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-6.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-7_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-7.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-7.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-7.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-7.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-8_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-9_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-9.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-9.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-9.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-9.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-9.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-9.3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ir-9.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ir-9.4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-5_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-6_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-7_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-3_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-3.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="pe-3.1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-5_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-6_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-6.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-6.1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-6.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-6.4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-8_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-8.1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-9_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-10_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-11_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-11.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-11.1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-12_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-13">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-13_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-13.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-13.1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-13.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-13.2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-13.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-13.3_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-14">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-14_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-14.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-14.2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-15">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-15_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-15.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-15.1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-16">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-16_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-17">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-17_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pe-18">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pe-18_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-2.3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-4.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-4.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="pl-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="pl-8_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-3_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-4_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-5_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-6_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-7_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-8_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ra-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ra-1_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ra-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ra-2_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ra-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ra-3_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ra-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ra-5_stmt">
+        <description><p></p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.1_stmt">
+        <description><p>'A control response to SA-4 (1) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.2_stmt">
+        <description><p>'A control response to SA-4 (2) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.8_stmt">
+        <description><p>'A control response to SA-4 (8) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-4.9_stmt">
+        <description><p>'A control response to SA-4 (9) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-4.10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-4.10_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-5_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-8_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9.4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-9.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sa-9.5_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-10_stmt.a">
+        <description><p>'A control response to SA-10 (a) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-10_stmt.b">
+        <description><p>'A control response to SA-10 (b) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-10_stmt.c">
+        <description><p>'A control response to SA-10 (c) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-10_stmt.d">
+        <description><p>'A control response to SA-10 (d) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-10_stmt.e">
+        <description><p>'A control response to SA-10 (e) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-10.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-10.1_stmt">
+        <description><p>'A control response to SA-10 (1) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-11_stmt.a">
+        <description><p>'A control response to SA-11 is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-11_stmt.b">
+        <description><p>'A control response to SA-11 is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-11_stmt.c">
+        <description><p>'A control response to SA-11 is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-11_stmt.d">
+        <description><p>'A control response to SA-11 is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-11_stmt.e">
+        <description><p>'A control response to SA-11 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-11.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-11.1_stmt">
+        <description><p>'A control response to SA-11 (1) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-11.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-11.2_stmt">
+        <description><p>'A control response to SA-11 (2) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-11.8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-11.8_stmt">
+        <description><p>'A control response to SA-11 (8) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-12_stmt">
+        <description><p>'A control response to SA-12 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-15">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-15_stmt.a">
+        <description><p>'A control response to SA-15 (a) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-15_stmt.b">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-16">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-16_stmt">
+        <description><p>'A control response to SA-16 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sa-17">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sa-17_stmt.a">
+        <description><p>'A control response to SA-17(a) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-17_stmt.b">
+        <description><p>'A control response to SA-17(b) is planned.'
+</p></description>
+      </statement>
+      <statement statement-id="sa-17_stmt.c">
+        <description><p>'A control response to SA-17(c) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-2_stmt">
+        <description><p>'A control response to SC-2 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-3_stmt">
+        <description><p>'A control response to SC-3 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-4_stmt">
+        <description><p>'A control response to SC-4 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-5_stmt">
+        <description><p>'A control response to SC-5 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-6_stmt">
+        <description><p>'A control response to SC-6 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-7_stmt">
+        <description><p>'A control response to SC-7 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-7.3_stmt">
+        <description><p>'A control response to SC-7 (3) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-7.4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-7.5_stmt">
+        <description><p>'A control response to SC-7 (5) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-7.7_stmt">
+        <description><p>'A control response to SC-7 (7) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-7.8_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-7.10_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-7.12_stmt">
+        <description><p>'A control response to SC-7 (12) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.13">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-7.13_stmt">
+        <description><p>'A control response to SC-7 (13) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.18">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="sc-7.18_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.20">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-7.20_stmt">
+        <description><p>'A control response to SC-7 (20) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-7.21">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-7.21_stmt">
+        <description><p>'A control response to SC-7 (21) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-8_stmt">
+        <description><p>'A control response to SC-8 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-8.1_stmt">
+        <description><p>'A control response to SC-8 (1) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="sc-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="sc-10_stmt">
+        <description><p>'A control response to SC-10 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-2.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-2.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-2.3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-3_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-3.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-3.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-3.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-3.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-3.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-3.7_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4.4_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="si-4.5_stmt">
+        <description><p>'A control response to SI-4 (5) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4.11_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.14">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4.14_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.16">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4.16_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.18">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4.18_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.19">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="si-4.19_stmt">
+        <description><p>'A control response to SI-4 (19) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.20">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="si-4.20_stmt">
+        <description><p>'A control response to SI-4 (20) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.22">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4.22_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.23">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-4.23_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-4.24">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="si-4.24_stmt">
+        <description><p>'A control response to SI-4 (24) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-5_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-5.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-5.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="si-6_stmt">
+        <description><p>'A control response to SI-6 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-7_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-7.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="si-7.1_stmt">
+        <description><p>'A control response to SI-7 (1) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-7.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-7.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-7.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="si-7.5_stmt">
+        <description><p>'A control response to SI-7 (5) is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-7.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-7.7_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-7.14">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-7.14_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-8_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-8.1_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-8.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-8.2_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="si-10_stmt">
+        <description><p>'A control response to SI-10 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="si-11_stmt">
+        <description><p>'A control response to SI-11 is planned.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-12_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="si-16">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="si-16_stmt">
+        <description><p>'This control reflects organizational procedure/policy and is not
+applicable to component-level configuration.'
+</p></description>
+      </statement>
+    </implemented-requirement>
+  </control-implementation>
+</system-security-plan>
