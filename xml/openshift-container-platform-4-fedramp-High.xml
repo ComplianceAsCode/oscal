@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-02-12T11:53:40.13+01:00</last-modified>
+    <last-modified>2020-02-13T00:08:45.43+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -206,15 +206,16 @@ of operating the shared identity service and not OpenShift.</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-2.11">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ac-2.11_stmt">
-        <description><p>This control will only be partially satisfied when OpenShift is
-configured to connect to an Identity Provider (IdP).
+        <description><p>Enforcement of organization-defined circumstances and/or usage
+conditions is the responsibility of third party identity
+management software such as Red Hat Identity Management (Red Hat IdM),
+Active Directory (MSAD), LDAP, etc.
 
-More work is being done to address this control. Engineering
-progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-210</p></description>
+To configure an Identity Provider (IdP), refer to the "Authentication"
+chapter of the OpenShift Container Platform documentation at
+https://docs.openshift.com/container-platform/latest/authentication/understanding-authentication.html</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-2.12">
@@ -285,18 +286,36 @@ https://issues.redhat.com/browse/CMP-113</p></description>
       <statement statement-id="ac-5_stmt.a">
         <description><p>Separation of duties is an organizational process outside the
 scope of OpenShift configuration.
+
+However, to aide in such processes, note that OpenShift provides the capability to
+implement Role-based Access Control (RBAC) which determine whether a
+user is allowed to perform a given action. Documentation on the OpenShift RBAC
+capabilities can be found at
+https://docs.openshift.com/container-platform/latest/authentication/using-rbac.html
 </p></description>
       </statement>
       <statement statement-id="ac-5_stmt.b">
         <description><p>Documentation of the seperation of duties of individuals
 is an organizational control outside the scope of OpenShift
 configuration.
+
+However, to aide in such processes, note that OpenShift provides the capability to
+implement Role-based access control (RBAC) objects which determine whether a
+user is allowed to perform a given action. Documentation on the OpenShift RBAC
+capabilities can be found at
+https://docs.openshift.com/container-platform/latest/authentication/using-rbac.html
 </p></description>
       </statement>
       <statement statement-id="ac-5_stmt.c">
         <description><p>Organizational processes which define information system access
 authorizations to support separation of duties is outside
 the scope of OpenShift configuration.
+
+However, to aide in such processes, note that OpenShift provides the capability to
+implement Role-based access control (RBAC) objects which determine whether a
+user is allowed to perform a given action. Documentation on the OpenShift RBAC
+capabilities can be found at
+https://docs.openshift.com/container-platform/latest/authentication/using-rbac.html
 </p></description>
       </statement>
     </implemented-requirement>
