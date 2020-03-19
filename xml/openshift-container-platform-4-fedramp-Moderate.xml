@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-03-03T00:09:20.64+00:00</last-modified>
+    <last-modified>2020-03-19T00:09:22.66+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -2178,11 +2178,12 @@ https://access.redhat.com/documentation/en-us/openshift_container_platform/lates
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ia-2.3">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ia-2.3_stmt">
-        <description><p>A control response is planned. Engineering progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-302
+        <description><p>OpenShift, as a web application, is managed remotely through
+a web console and/or API endpoints. The implementation
+of multifactor authentication for local access to privileged accounts
+is not applicable to OpenShift.
 </p></description>
       </statement>
     </implemented-requirement>
