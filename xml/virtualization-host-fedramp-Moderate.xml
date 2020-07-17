@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-04-22T00:07:28.25+00:00</last-modified>
+    <last-modified>2020-07-17T00:19:15.04+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -42,50 +42,42 @@
     <implemented-requirement control-id="ac-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ac-1_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-1(a) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-1_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-1(b) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ac-2_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-2(a) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-2_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-2(b) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-2_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-2(c) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-2_stmt.d">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-2(d) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-2_stmt.e">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-2(e) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-2_stmt.f">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-2(f) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-2_stmt.g">
-        <description><p>'The audit subsystem must be enabled to ensure audit and monitoring
+        <description><p>The audit subsystem must be enabled to ensure audit and monitoring
 of Red Hat Virtualization Host (RHVH) information system accounts.
 
 The following configuration checks must be satisfied to meet AC-2(g):
@@ -93,34 +85,137 @@ The following configuration checks must be satisfied to meet AC-2(g):
 - CCE-27407-6: Enable auditd Service
 
 Additional controls, such as AU-2, provide organizational-defined
-events that the audit subsystem will be responsible for capturing.'
+events that the audit subsystem will be responsible for capturing.
 </p></description>
       </statement>
       <statement statement-id="ac-2_stmt.h">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-2(h) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-2_stmt.i">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-2(i) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-2_stmt.j">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-2(j) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-2_stmt.k">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>AC-2(k) is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-2.1_stmt">
+        <description><p>Red Hat Virtualization Host (RHVH) components of the system support automated
+management through monitoring of accounts and system
+activity by logging of related information.
+
+While Red Hat Virtualization Host (RHVH) can generate audit data, and securely
+transport the data to a SIEM, Red Hat Virtualization Host (RHVH) does not provide
+automated mechanisms (e.g. email, text messages) after
+system events. This functionality would fall to third
+party software such as an Identity Provider (IdP),
+Active Directory (MSAD), LDAP, etc.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-19937</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-2.2_stmt">
+        <description><p>Red Hat Virtualization Host (RHVH) does not have the capability to automatically
+delete guest/anonymous accounts or temporary accounts. Any
+external emergency or temporary accounts will be
+inherited from, and managed by, an external
+identity service (e.g. Active Directory, LDAP, etc.)</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-2.3_stmt">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-19938</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-2.4_stmt">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-19939</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-2.5_stmt">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-19941</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-2.7_stmt.a">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-19943</p></description>
+      </statement>
+      <statement statement-id="ac-2.7_stmt.b">
+        <description><p>This is an organizational control and not applicable to the configuration
+of Red Hat Virtualization Host (RHVH).</p></description>
+      </statement>
+      <statement statement-id="ac-2.7_stmt.c">
+        <description><p>This is an organizational control and not applicable to the configuration
+of Red Hat Virtualization Host (RHVH).</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-2.9_stmt">
+        <description><p>This control is applicable to the identity service provider
+and outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+By default, Red Hat Virtualization Host (RHVH) does not allow for this type
+of configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-2.10_stmt">
+        <description><p>This control is applicable to the identity service provider
+and outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+By default, Red Hat Virtualization Host (RHVH) does not allow for this type
+of configuration.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-2.12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-2.12_stmt.a">
+        <description><p>A control response for AC-2(12)(a) is planned. Engineering
+progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-259</p></description>
+      </statement>
+      <statement statement-id="ac-2.12_stmt.b">
+        <description><p>A control response for AC-2(12)(b) is planned. Engineering
+progress can be tracked via:
+
+https://issues.redhat.com/browse/CMP-259</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="ac-3_stmt">
-        <description><p>'The following configuration checks are required to ensure
+        <description><p>The following configuration checks are required to ensure
 Red Hat Virtualization Host (RHVH) is capable of enforcing
 approved authorizations for logical access:
 
@@ -146,14 +241,155 @@ approved authorizations for logical access:
 
 - CCE-27471-2: Disable SSH Access via Empty Passwords
 
-- CCE-80219-9: Limit Users SSH Access'
+- CCE-80219-9: Limit Users SSH Access</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-4_stmt">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-19975</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-4.21">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-4.21_stmt">
+        <description><p>The customer will be responsible for separating information flows
+within the customer application. A successful control response will
+need to address the customer organizational requirements for
+the separation of information flows, and the mechanisms and
+techniques used to accomplish this separation.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20102</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-5_stmt.a">
+        <description><p>Separation of duties is an organizational process outside the
+scope of Red Hat Virtualization Host (RHVH) configuration.
+
+However, to aide in such processes, note that Red Hat Virtualization Host (RHVH) provides the capability to
+implement Role-based Access Control (RBAC) which determine whether a
+user is allowed to perform a given action.
+</p></description>
+      </statement>
+      <statement statement-id="ac-5_stmt.b">
+        <description><p>Documentation of the seperation of duties of individuals
+is an organizational control outside the scope of Red Hat Virtualization Host (RHVH)
+configuration.
+
+However, to aide in such processes, note that Red Hat Virtualization Host (RHVH) provides the capability to
+implement Role-based access control (RBAC) objects which determine whether a
+user is allowed to perform a given action.
+</p></description>
+      </statement>
+      <statement statement-id="ac-5_stmt.c">
+        <description><p>Organizational processes which define information system access
+authorizations to support separation of duties is outside
+the scope of Red Hat Virtualization Host (RHVH) configuration.
+
+However, to aide in such processes, note that Red Hat Virtualization Host (RHVH) provides the capability to
+implement Role-based access control (RBAC) objects which determine whether a
+user is allowed to perform a given action.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-6_stmt">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20104
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-6.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-6.1_stmt">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20105
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-6.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-6.2_stmt">
+        <description><p>This is an organizational/procedural control outside the scope of
+Red Hat Virtualization Host (RHVH) configuration.
+
+The customer will be responsible for requiring users to use the
+lowest level of access required to perform any given function. In
+terms of Red Hat Virtualization Host (RHVH), this may require creation of multiple logon
+accounts per user. When users require access to privileged functions
+or capability, they will need to logout from the unprivileged account
+and login with an account that has received appropriate RBAC rights.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20126
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-6.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-6.5_stmt">
+        <description><p>This is an organizational/procedural control outside the scope of
+Red Hat Virtualization Host (RHVH) configuration.
+
+The customer will be responsible for requiring users to use the
+lowest level of access required to perform any given function. In
+terms of Red Hat Virtualization Host (RHVH), this may require creation of multiple logon
+accounts per user. When users require access to privileged functions
+or capability, they will need to logout from the unprivileged account
+and login with an account that has received appropriate RBAC rights.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-6.9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-6.9_stmt">
+        <description><p>The customer will be responsible for auditing the execution of
+privileged functions. A successful control response will need
+to relate this requirement to the general auditing requirements
+of the AU control family.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20149
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-6.10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-6.10_stmt">
+        <description><p>The customer will be responsible for ensuring that non-privileged
+users cannot execute privileged functions. A successful control
+response will need to discuss the use of centralized authentication
+and authorization and any other means of enforcement of privilege
+levels.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="ac-7_stmt.a">
-        <description><p>'The following configuration checks are required to ensure
+        <description><p>The following configuration checks are required to ensure
 Red Hat Virtualization Host (RHVH) enforces an organization-defined
 number of consecutive logon attempts during an organization-defined
 time period:
@@ -162,11 +398,15 @@ time period:
 
 - CCE-27297-1: Set Interval for Counting Failed Password Attempts
 
-- CCE-80353-6: Configure the root Account for Failed Password Attempts'
-</p></description>
+- CCE-80353-6: Configure the root Account for Failed Password Attempts
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20201</p></description>
       </statement>
       <statement statement-id="ac-7_stmt.b">
-        <description><p>'The following configuration checks are required to automatically
+        <description><p>The following configuration checks are required to automatically
 lock an account for an organization-defined time period, or to lock
 the account until released by an administrator:
 
@@ -179,135 +419,472 @@ sequential logon prompts after a failed login (regardless of number
 of attempts). If that behavior is desired, the following configuration
 checks are required:
 
-- CCE-80352-8: Ensure the Logon Failure Delay is Set Correctly in login.defs'
-</p></description>
+- CCE-80352-8: Ensure the Logon Failure Delay is Set Correctly in login.defs
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20201</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="ac-8_stmt.a">
-        <description><p>'The following configuration checks are required to display an
+        <description><p>The following configuration checks are required to display an
 organization-defined system use notification message or banner before
 granting access to the system:
 
 - CCE-27303-7: Modify the System Login Banner
 
-- CCE-27314-4: Enable SSH Warning Banner'
+- CCE-27314-4: Enable SSH Warning Banner
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20204
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.a.1">
+        <description><p>The following configuration checks are required to display an
+organization-defined system use notification message or banner before
+granting access to the system:
+
+- CCE-27303-7: Modify the System Login Banner
+
+- CCE-27314-4: Enable SSH Warning Banner
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20204
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.a.2">
+        <description><p>The following configuration checks are required to display an
+organization-defined system use notification message or banner before
+granting access to the system:
+
+- CCE-27303-7: Modify the System Login Banner
+
+- CCE-27314-4: Enable SSH Warning Banner
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20204
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.a.3">
+        <description><p>The following configuration checks are required to display an
+organization-defined system use notification message or banner before
+granting access to the system:
+
+- CCE-27303-7: Modify the System Login Banner
+
+- CCE-27314-4: Enable SSH Warning Banner
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20204
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.a.4">
+        <description><p>The following configuration checks are required to display an
+organization-defined system use notification message or banner before
+granting access to the system:
+
+- CCE-27303-7: Modify the System Login Banner
+
+- CCE-27314-4: Enable SSH Warning Banner
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20204
 </p></description>
       </statement>
       <statement statement-id="ac-8_stmt.b">
-        <description><p>'When CCE-27303-7 and CCE-27314-4 are implemented, Red Hat
+        <description><p>When CCE-27303-7 and CCE-27314-4 are implemented, Red Hat
 Virtualization Host (RHVH) will retain the notification message
 on the screen until users take explicit action to log on. This
-is non-configurable default behavior.'
+is non-configurable default behavior.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20204
 </p></description>
       </statement>
       <statement statement-id="ac-8_stmt.c">
-        <description><p>'When CCE-27303-7 and CCE-27314-4 are implemented, Red Hat
+        <description><p>When CCE-27303-7 and CCE-27314-4 are implemented, Red Hat
 Virtualization Host (RHVH) will display system use information
 before granting further access. Exact wording of the system use
-message is defined through CCE-27303-7.'
+message is defined through CCE-27303-7.
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20204
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.c.1">
+        <description><p>The customer will be responsible for determining the conditions
+under which the system use notification will be displayed.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20204
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.c.2">
+        <description><p>The customer will be responsible for how the system use notification
+will be verified and how often it should be re-displayed and
+re-verified.
+
+        A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20204
+</p></description>
+      </statement>
+      <statement statement-id="ac-8_stmt.c.3">
+        <description><p>The customer will be responsible for verifying that the system use
+notification is being displayed as required, either through a
+configuration baseline check or via other means. If this verification
+does not happen through a configuration baseline check, the JAB must
+review and accept the process used to perform the verification.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20204
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-10_stmt">
+        <description><p>The customer will be responsible for limiting the number of
+concurrent sessions to the customer application as required.
+A successful control implemented will need to address the technical
+mechanism used to enforce this limit.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20220
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-11_stmt.a">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20311
+</p></description>
+      </statement>
+      <statement statement-id="ac-11_stmt.b">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20311
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-11.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-11.1_stmt">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20312
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-12_stmt">
+        <description><p>The customer will be responsible for defining events or conditions
+requiring disconnection (for example, user requesting logout), and for
+terminating the session when those events or conditions arise. A
+successful control response will need to outline the qualifying events
+or conditions.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20313
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-14">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="ac-14_stmt">
-        <description><p>'There are no user actions that can be performed on
+        <description><p>There are no user actions that can be performed on
 Red Hat Virtualization Host (RHVH) without identification
 or authentication. This is non-configurable default
-behavior.'
+behavior.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-17">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-17_stmt">
-        <description><p>Administrative connections to Red Hat Virtualization Host (RHVH) are performed over SSH. The following configuration checks are highly encouraged to harden remote access over SSH:
+      <statement statement-id="ac-17_stmt.a">
+        <description><p>Administrative connections to Red Hat Virtualization Host (RHVH)
+are performed over SSH. The following configuration checks are highly
+encouraged to harden remote access over SSH:
+
 - CCE-27485-2: Verify Permissions on SSH Server Private *_key Key Files
+
 - CCE-27311-0: Verify Permissions on SSH Server Public *.pub Key Files
+
 - CCE-27413-4: Disable Host-based Authentication
+
 - CCE-80361-9: Enable SSH Server firewalld Firewall Exception
+
 - CCE-27320-1: Allow Only SSH Protocol 2
+
 - CCE-80224-9: Disable Compression Or Set Compression to delayed
+
 - CCE-27471-2: Disable SSH Access via Empty Passwords
+
 - CCE-80220-7: Disable GSSAPI Authentication
+
 - CCE-80221-5: Disable Kerberos Authentication
+
 - CCE-27377-1: Disable SSH Support for .rhost Files
+
 - CCE-80373-4: Disable SSH Support for Rhosts RSA Authentication
+
 - CCE-27445-6: Disable SSH Root Login
+
 - CCE-80372-6: Disable SSH Support for User Known Hosts
+
 - CCE-27363-1: Do Not Allow SSH Environment Options
+
 - CCE-80222-3: Enable Use of Strict Mode Checking
+
 - CCE-27314-4: Enable SSH Warning Banner
+
 - CCE-80225-6: Enable SSH PrintLastLog
+
 - CCE-27433-2: Enable SSH Idle Timeout Interval
+
 - CCE-27082-7: Set SSH ClientAliveMaxCount
+
 - CCE-80645-5: Set LogLevel to INFO
+
 - CCE-27295-5: Use Only FIPS 140-2 Validated Ciphers
+
 - CCE-27455-5: Use Only FIPS 140-2 Validated Ciphers
-- CCE-80223-1: Enable Use of Privilege Separation</p></description>
+
+- CCE-80223-1: Enable Use of Privilege Separation
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20372
+</p></description>
+      </statement>
+      <statement statement-id="ac-17_stmt.b">
+        <description><p>This is an organizational control outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-17.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-17.1_stmt">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20373
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-17.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-17.2_stmt">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20374
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-17.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-17.3_stmt">
+        <description><p>The customer will be responsible for requiring remote access
+connections to the customer application to be routed through
+customer-defined network access control points. A successful control
+response will need to address the nature, number, and location of
+such access control points, as well as the security controls in place
+to protect those access control points.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20375
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-17.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ac-17.4_stmt.a">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20376
+</p></description>
+      </statement>
+      <statement statement-id="ac-17.4_stmt.b">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20376
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-17.9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-17.9_stmt">
+        <description><p>Red Hat Virtualization Host (RHVH) utilizes the firewall technology named firewalld
+that allows a system administrator to configure host-based rules which take effect
+immediately. This gives an Red Hat Virtualization Host (RHVH) operator the ability
+to immediately drop all remote connections.
+
+A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20377
+</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-18">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ac-18_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes regarding the establishment of wireless
+access usage restrictions are outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-18_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes regarding wireless access to the information
+system are outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-18.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-18.1_stmt">
+        <description><p>Configuration of wireless networking is outside the scope of
+Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-19">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ac-19_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Establishing organizational usage restrictions for mobile devices is outside
+the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-19_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Authorization of mobile devices is outside the scope of Red Hat Virtualization Host (RHVH)
+configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-19.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-19.5_stmt">
+        <description><p>Encryption strategies for mobile devices is outside
+the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-20">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ac-20_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes for establishing terms and conditions
+for accessing the information system from external information
+systems is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-20_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes for establishing terms and conditions
+for the processing, storage, or transmission of organization-controlled
+information using external information systems is outside the scope
+of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-20.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-20.1_stmt.a">
+        <description><p>Verification of security control implementation on external systems
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ac-20.1_stmt.b">
+        <description><p>Retention of approved information system connection or processing
+agreements with organizational entities hosting the external
+information system is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-20.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-20.2_stmt">
+        <description><p>Organizational processes regarding the restriction or
+prohibiting of the use of organization-controled portable
+storage devices by authorized individuals on external information
+systems is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ac-21">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-21_stmt.a">
+        <description><p>Facilitation of information sharing is outside the scope
+of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ac-21_stmt.b">
+        <description><p>Employment of technology or processes to assist users in making
+information sharing/collaboration decisions is outside
+the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ac-22">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ac-22_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes regarding the designation of individuals
+authorized to post information onto a publicly accessible information
+system is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-22_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Training authorized individuals to ensure that publicly accessible
+information does not contain nonpublic information is outside the
+scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-22_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Reviewing the proposed content of information prior to posting onto
+the publicly accessible information system to ensure that nonpublic
+information is not included is outside the scope of Red Hat Virtualization Host (RHVH)
+configuration.
 </p></description>
       </statement>
       <statement statement-id="ac-22_stmt.d">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Reviewing content on the publicly accessible information system
+for nonpublic information at an organization-defined frequency and
+removal of such information, if discovered, is outside the scope of
+Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
@@ -384,20 +961,21 @@ applicable to component-level configuration.
     <implemented-requirement control-id="au-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="au-1_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Developing an organization-level audit and accountability
+policy is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="au-1_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Review and updating an organizational-level audit and
+accountability policy is outside the scope of Red Hat Virtualization Host (RHVH)
+configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="au-2_stmt.a">
-        <description><p>'The selection of organization-defined auditable events is not applicable
+        <description><p>The selection of organization-defined auditable events is not applicable
 to the configuration of Red Hat Virtualization Host (RHVH).
 
 However, as supplementary information, RHVH was designed to audit events
@@ -424,51 +1002,77 @@ suggested to be audited:
     - Admin or root-level access (Success/Failure)
     - Privilege/Role escalation (Success/Failure)
     - Audit and log data access (Success/Failure)
-    - System Reboot, Restart &amp; Shutdown (Success/Failure)'
-</p></description>
+    - System Reboot, Restart &amp; Shutdown (Success/Failure)</p></description>
       </statement>
       <statement statement-id="au-2_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Coordinating the security audit function with other
+organizational entities is outside the scope of
+system configuration.
 </p></description>
       </statement>
       <statement statement-id="au-2_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>For rationale regarding why the auditable events are deemed to be
+adequate to support after-the-fact investigations of security incidents,
+please contact your countries Common Criteria representative:
+https://www.commoncriteriaportal.org/ccra/members/
 </p></description>
       </statement>
       <statement statement-id="au-2_stmt.d">
-        <description><p>'The frequency (or situation requiring) the audit of events identified
+        <description><p>The frequency (or situation requiring) the audit of events identified
 in AU-2(a) is not applicable to the configuration of Red Hat
 Virtualization Host (RHVH).
 
 As supplementary information, RHVH is capable of auditing the success and
-failure, in realtime, of events identified in AU-2(a).'
+failure, in realtime, of events identified in AU-2(a).
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-2.3_stmt">
+        <description><p>Organizational review and updates to the audited events are
+outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-3_stmt">
-        <description><p>Red Hat Virtualization Host (RHVH) audit records contain the required information and cannot be configured to be out of compliance with this control.</p></description>
+        <description><p>Red Hat Virtualization Host (RHVH) audit records contain
+the required information and cannot be configured to be out of
+compliance with this control.</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-3.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-3.1_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-
+</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="au-4_stmt">
-        <description><p>This control reflects organizational procedures/policies, and is not applicable to the configuration of Red Hat Virtualization Host (RHVH).</p></description>
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20419</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-5_stmt.a">
-        <description><p>'The audit subsystem was designed to uniquely identify multiple causes
+        <description><p>The audit subsystem was designed to uniquely identify multiple causes
 of audit processing failures. Configuring the audit subsystem to alert,
-or take alternative actions such as shutdown, is detailed in AC-5(b). '
-</p></description>
+or take alternative actions such as shutdown, is detailed in AC-5(b).
+
+A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20421</p></description>
       </statement>
       <statement statement-id="au-5_stmt.b">
-        <description><p>'To shutdown a Red Hat Virtualization Host (RHVH) node upon
+        <description><p>To shutdown a Red Hat Virtualization Host (RHVH) node upon
 an audit processing failure, which includes software/hardware errors,
 failures in audit capturing mechanisms, or audit storage capacity being
 reached or exceeded, the following configuration check must
@@ -480,83 +1084,210 @@ To configure the system to take action upon detecting a disk error,
 such as errors writing to disk or rotating audit logs, the following
 configuration check must be enabled:
 
-- CCE-80501-0: Configure auditd Disk Error Action on Disk Error'
-</p></description>
+- CCE-80501-0: Configure auditd Disk Error Action on Disk Error
+
+A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20421</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="au-6_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational review and analysis of information system
+audit records for indications of organization-defined
+inappropriate or unusual activity is outside the scope
+of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="au-6_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Reporting findings of organization-defined inappropriate or
+unusual activity to organization-defined personnel or roles is
+outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.1_stmt">
+        <description><p>Organizational use of automated mechanisms to integrate audit review,
+analysis, and reporting processes to support organizational processes for
+investigation and response to suspicious activities is outside the scope
+of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-6.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-6.3_stmt">
+        <description><p>Organizational analysis and correlation of audit records across
+different repositories to gain organization-wide
+situational awareness is outside the scope
+of Red Hat Virtualization Host (RHVH) configuration.
+
+To aide in such organizational processes, note that Red Hat Virtualization Host (RHVH)'s
+cluster loggging "Log Forward" feature enables Red Hat Virtualization Host (RHVH)
+administrators to configure custom pipelines to send container
+logs to remote destinations. These remote destinations, such as
+Elastic or Splunk endpoints, could be used for information
+system-wide correlation.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-7_stmt.a">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20424
+</p></description>
+      </statement>
+      <statement statement-id="au-7_stmt.b">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20424
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-7.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-7.1_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20425
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-8_stmt.a">
-        <description><p>'By default the audit subsystem utilizes the system clock and cannot be
-configured to be out of compliance with this control.'
+        <description><p>By default the audit subsystem utilizes the system clock and cannot be
+configured to be out of compliance with this control.
 </p></description>
       </statement>
       <statement statement-id="au-8_stmt.b">
-        <description><p>'The audit subsystem is hard coded to only accept internationally recognized
+        <description><p>The audit subsystem is hard coded to only accept internationally recognized
 timezone settings. This ensures audit log timestamps can be mapped to
 Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT).
 
 To ensure the underlying system clocks are accurate within an
 organization-defined granularity of time measurement, the system must be
 configured to synchronize with an authoritative time source. Such
-configuration is detailed in AU-8(1).'
+configuration is detailed in AU-8(1).
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="au-8.1_stmt.a">
+        <description><p>The following configuration checks ensure that the Red Hat Virtualization Host (RHVH) syncs time
+with an authoritative time source:
+- CCE-82875-6: The Chronyd service is enabled
+- CCE-82873-1: A remote time server for Chrony is configured</p></description>
+      </statement>
+      <statement statement-id="au-8.1_stmt.b">
+        <description><p>The following configuration checks ensure that the Red Hat Virtualization Host (RHVH) syncs time
+with an authoritative time source at regular polling intervals:
+- 80439-3: Configure Time Service Maxpoll Interval
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-9_stmt">
-        <description><p>The following configuration checks ensure the audit records are protected by appropriate file permission, user, and group ownership settings:
+        <description><p>The following configuration checks ensure the audit records are
+protected by appropriate file permission, user, and group ownership settings:
+
 - CCE-27205-4: System Audit Logs Must Have Mode 0640 or Less Permissive
+
 - CCE-80125-8: System Audit Logs Must Be Owned By Root
-The /var/log/audit/ directory is provided by the audit subsystem packaging. The following configuration checks ensure /var/log/audit/ directory permissions, as well as permissions of audit tooling, have not deviated from the secure defaults:
+
+The /var/log/audit/ directory is provided by the audit subsystem
+packaging. The following configuration checks ensure
+/var/log/audit/ directory permissions, as well as permissions of
+audit tooling, have not deviated from the secure defaults:
+
 - CCE-27209-6: Verify and Correct File Permissions with RPM
+
 - CCE-80545-7: Verify and Correct Ownership with RPM
-The following configuration check is required to cryptographically verify the audit subsystem binaries and associated tooling has not been modified/tampered with:
+
+The following configuration check is required to cryptographically
+verify the audit subsystem binaries and associated tooling has not
+been modified/tampered with:
+
 - CCE-27157-7: Verify File Hashes with RPM</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-11">
+    <implemented-requirement control-id="au-9.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-9.2_stmt">
+        <description><p>Backup of audit records onto a physically different system or
+system component than the component being audited is the
+responsibility of the centralized audit facility defined in
+AU-4 (1), "Transfer to Alternate Storage," and outside
+the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-9.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-9.4_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked
+via:
+
+https://projects.engineering.redhat.com/browse/RHV-20506
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="au-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-11_stmt">
-        <description><p>This control reflects organizational procedures/policies, and is not applicable to the configuration of Red Hat Virtualization Host (RHVH).
-However, once an organization-defined time period record retention is created, and audit logs are being kept locally on the system, it is important to ensure the audit logs will not automatically be rotated or discarded after exceeding a certain file size.
-To tailor log retention (based on log size, not age), the following configuration check may be helpful:
-- CCE-27348-2: Configure auditd Number of Logs Retained</p></description>
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
+
+However, once an organization-defined time period record retention is
+created, and audit logs are being kept locally on the system, it
+is important to ensure the audit logs will not automatically be rotated
+or discarded after exceeding a certain file size.
+
+To tailor log retention (based on log size, not age), the following
+configuration check may be helpful:
+
+- CCE-27348-2: Configure auditd Number of Logs Retained
+
+A control response is planned. Engineering progress can be tracked
+via:
+
+https://projects.engineering.redhat.com/browse/RHV-20509</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="au-12_stmt.a">
-        <description><p>'To ensure Red Hat Virtualization Host (RHVH) nodes provide audit
+        <description><p>To ensure Red Hat Virtualization Host (RHVH) nodes provide audit
 record generation capability, the underlying audit subsystem
 must be enabled through the following configuration checks:
 
 - CCE-27407-6: Enable auditd Service
 
-- CCE-27212-0: Enable Auditing for Processes Which Start Priot to the Audit Daemon'
-</p></description>
+- CCE-27212-0: Enable Auditing for Processes Which Start Priot to the Audit Daemon
+
+A control response is planned. Engineering progress can be tracked
+via:
+
+https://projects.engineering.redhat.com/browse/RHV-20513</p></description>
       </statement>
       <statement statement-id="au-12_stmt.b">
-        <description><p>'System administrators may customize audit rules by editing the
-appropriate files under /etc/audit/audit.d/.'
-</p></description>
+        <description><p>System administrators may customize audit rules by editing the
+appropriate files under /etc/audit/audit.d/.
+
+A control response is planned. Engineering progress can be tracked
+via:
+
+https://projects.engineering.redhat.com/browse/RHV-20513</p></description>
       </statement>
       <statement statement-id="au-12_stmt.c">
-        <description><p>'The following configuration checks correlate to recommended
+        <description><p>The following configuration checks correlate to recommended
 audit events:
 
 - CCE-27212-0: Enable Auditing for Processes Which Start Prior to the Audit Daemon
@@ -685,61 +1416,85 @@ audit events:
 
 - CCE-27447-2: Ensure auditd Collects Information on Exporting to Media (successful)
 
-- CCE-27461-3: Ensure auditd Collects System Administrator Actions'
-</p></description>
+- CCE-27461-3: Ensure auditd Collects System Administrator Actions</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ca-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ca-1_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Establishing organizational security assessment and
+authorization policy and procedures is outside
+the scope of Red Hat Virtualization Host (RHVH) configuration guidance.
 </p></description>
       </statement>
       <statement statement-id="ca-1_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Establishing organizational security assessment and
+authorization policy and procedures is outside
+the scope of Red Hat Virtualization Host (RHVH) configuration guidance.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ca-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ca-2_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Development of an organizational security assessment plan
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration guidance.
 </p></description>
       </statement>
       <statement statement-id="ca-2_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Development of an organizational security assessment plan
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration guidance.
 </p></description>
       </statement>
       <statement statement-id="ca-2_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Development of an organizational security assessment plan
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration guidance.
 </p></description>
       </statement>
       <statement statement-id="ca-2_stmt.d">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Development of an organizational security assessment plan
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration guidance.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ca-2.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ca-2.1_stmt">
-        <description><p>This control reflects organizational procedures/policies, and is not applicable to the configuration of Red Hat Virtualization Host (RHVH).</p></description>
+        <description><p>Employment of independent assessors or assessment teams
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration guidance.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-2.2_stmt">
+        <description><p>Specialized security assessments are outside the scope
+of Red Hat Virtualization Host (RHVH) configuration guidance.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-2.3_stmt">
+        <description><p>Organizational acceptance of the results of an assessment
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ca-3">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ca-3_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Establishment of organizational system interconnection
+agreements is outside the scope of Red Hat Virtualization Host (RHVH) configuration
+guidance.
 </p></description>
       </statement>
       <statement statement-id="ca-3_stmt.b">
-        <description><p>'Red Hat Enterprise Linux hosts and Red Hat Virtualization Hosts (RHVH)
+        <description><p>Establishment of organizational system interconnection
+agreements is outside the scope of Red Hat Virtualization Host (RHVH) configuration
+guidance.
+
+Red Hat Enterprise Linux hosts and Red Hat Virtualization Hosts (RHVH)
 require a number of ports to be opened to allow network traffic through
 the system firewall. The firewall rules are automatically configured
 by default when adding a new host to the Manager, overwriting any
@@ -748,88 +1503,143 @@ pre-existing firewall configuration.
 Documentation on RHVH interconnections is available in the
 Red Hat Virtualization Installation Guide available at:
 
-https://access.redhat.com/documentation/en-us/red_hat_virtualization/'
+https://access.redhat.com/documentation/en-us/red_hat_virtualization/
 </p></description>
       </statement>
       <statement statement-id="ca-3_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Establishment of organizational system interconnection
+agreements is outside the scope of Red Hat Virtualization Host (RHVH) configuration
+guidance.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-3.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-3.3_stmt">
+        <description><p>This is an organizational control outside the scope of
+Red Hat Virtualization Host (RHVH) configuration guidance.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-3.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="ca-3.5_stmt">
+        <description><p>This control is applicable to Red Hat Virtualization Host (RHVH) and applicable
+through host-level firewall rules.
+
+Engineering progress can be tracked at:
+
+https://projects.engineering.redhat.com/browse/RHV-20516
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ca-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ca-5_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Creating an information system-level Plan of Action
+and Milestones (POA&amp;M) is outside the scope of Red Hat Virtualization Host (RHVH)
+configuration processes.
 </p></description>
       </statement>
       <statement statement-id="ca-5_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes relating to updating and the maintenance
+of an information system-level Plan of Action and Milestones (POA&amp;M)
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration processes.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ca-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ca-6_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational processes outside the scope
+of Red Hat Virtualization Host (RHVH) configuration guidance.
 </p></description>
       </statement>
       <statement statement-id="ca-6_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational processes outside the scope
+of Red Hat Virtualization Host (RHVH) configuration guidance.
 </p></description>
       </statement>
       <statement statement-id="ca-6_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational processes outside the scope
+of Red Hat Virtualization Host (RHVH) configuration guidance.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ca-7">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="ca-7_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Engineering progress can be tracked at:
+
+https://projects.engineering.redhat.com/browse/RHV-20517
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Engineering progress can be tracked at:
+
+https://projects.engineering.redhat.com/browse/RHV-20517
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Engineering progress can be tracked at:
+
+https://projects.engineering.redhat.com/browse/RHV-20517
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.d">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Engineering progress can be tracked at:
+
+https://projects.engineering.redhat.com/browse/RHV-20517
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.e">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Engineering progress can be tracked at:
+
+https://projects.engineering.redhat.com/browse/RHV-20517
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.f">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Engineering progress can be tracked at:
+
+https://projects.engineering.redhat.com/browse/RHV-20517
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.g">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Engineering progress can be tracked at:
+
+https://projects.engineering.redhat.com/browse/RHV-20517
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-7.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-7.1_stmt">
+        <description><p>Employment of assessors or assessment teams is outside the
+scope of Red Hat Virtualization Host (RHVH) configuration guidance.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-8_stmt">
+        <description><p>Penetration testing is outside the scope of
+Red Hat Virtualization Host (RHVH) configuration guidance.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ca-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ca-8.1_stmt">
+        <description><p>Employment of independent penetration testers
+is out of scope for Red Hat Virtualization Host (RHVH) configuration
+guidance.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ca-9">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="ca-9_stmt.a">
-        <description><p>'Red Hat Enterprise Linux hosts and Red Hat Virtualization Hosts (RHVH)
+        <description><p>Red Hat Enterprise Linux hosts and Red Hat Virtualization Hosts (RHVH)
 require a number of ports to be opened to allow network traffic through
 the system firewall. The firewall rules are automatically configured
 by default when adding a new host to the Manager, overwriting any
@@ -838,11 +1648,14 @@ pre-existing firewall configuration.
 Documentation on RHVH interconnections is available in the
 Red Hat Virtualization Installation Guide available at:
 
-https://access.redhat.com/documentation/en-us/red_hat_virtualization/'
-</p></description>
+https://access.redhat.com/documentation/en-us/red_hat_virtualization/
+
+Engineering progress can be tracked at:
+
+https://projects.engineering.redhat.com/browse/RHV-20518</p></description>
       </statement>
       <statement statement-id="ca-9_stmt.b">
-        <description><p>'Red Hat Enterprise Linux hosts and Red Hat Virtualization Hosts (RHVH)
+        <description><p>Red Hat Enterprise Linux hosts and Red Hat Virtualization Hosts (RHVH)
 require a number of ports to be opened to allow network traffic through
 the system firewall. The firewall rules are automatically configured
 by default when adding a new host to the Manager, overwriting any
@@ -851,7 +1664,11 @@ pre-existing firewall configuration.
 Documentation on RHVH interconnections is available in the
 Red Hat Virtualization Installation Guide available at:
 
-https://access.redhat.com/documentation/en-us/red_hat_virtualization/'
+https://access.redhat.com/documentation/en-us/red_hat_virtualization/
+
+Engineering progress can be tracked at:
+
+https://projects.engineering.redhat.com/browse/RHV-20518
 </p></description>
       </statement>
     </implemented-requirement>
@@ -991,112 +1808,375 @@ applicable to the configuration of Red Hat Virtualization Host (RHVH).'
     <implemented-requirement control-id="cp-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="cp-1_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Developing an organization-level contingency planning policy is
+outside the scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-1_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Review and updating an organizational-level contingency planning
+policy is outside the scope of OpenShift configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="cp-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="cp-2_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Developing an organization-level contingency planning policy is
+outside the scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-2_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Distribution of an organizational-level contingency planning
+policy is outside the scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-2_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Coordinating contingency planning activities with incident handling
+activities is outside the scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-2_stmt.d">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Reviewing organizational contingency plans for the information system
+at an organization-defined frequency is outside the scope of
+OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-2_stmt.e">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes to update the contingency plan are outside the
+scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-2_stmt.f">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational communication plans regarding the contingency plan are outside
+the scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-2_stmt.g">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Protection of the contingency plan from unauthorized disclosure and
+modification is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2.1_stmt">
+        <description><p>Coordinating contingency plan development with organizational elements
+responsible for related plans is outside the scope of OpenShift
+configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2.2_stmt">
+        <description><p>To assist with this organizational control, documentation is being
+planned. Progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20781
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2.3_stmt">
+        <description><p>Planning for the resumption of essential missions and business
+functions within an organization-defined time period of contingency
+plan activation is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-2.8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-2.8_stmt">
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of OpenShift.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="cp-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="cp-3_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Providing contingency training to information system users consistent
+with assigned roles and responsibilities within an organization-defined
+time period of assuming a contingency role or responsibility is outside
+the scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-3_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Providing contingency training to information system users consistent
+with assigned roles and responsibilities when required by information
+system changes is outside the scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-3_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Providing contingency training to information system users consistent
+with assigned roles and responsibilities at an organization-defined
+frequency is outside the scope of OpenShift configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="cp-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="cp-4_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Testing the contingency plan for the information system at an
+organization-defined frequency using organization-defined tests
+to determine the effectiveness of the plan and the organizational
+readiness to execute the plan is outside the scope of
+OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-4_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational reviews of the contingency plan test results is outside
+the scope of OpenShift configuration.
+</p></description>
+      </statement>
+      <statement statement-id="cp-4_stmt.c">
+        <description><p>Organizational process to intiate corrective actions, if needed,
+are outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-4.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-4.1_stmt">
+        <description><p>Coordinating contingency plan testing with organizational
+elements responsible for related plans is outside the scope
+of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-6_stmt.a">
+        <description><p>Establishment of an alternative storate site including
+necessary agreements to permit the storage and retrieval
+of information system backup information is outside
+the scope of OpenShift configuration.
+</p></description>
+      </statement>
+      <statement statement-id="cp-6_stmt.b">
+        <description><p>Ensuring that the alternative storage site provides information
+security safeguards equivalent to that of the primary site
+is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-6.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-6.1_stmt">
+        <description><p>Identification of an alternate storage site that is
+separated from the primary storage site to reduce
+susceptibility to the same threats is outside the scope
+of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-6.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-6.3_stmt">
+        <description><p>Identification of potential accessibility problems to the alternate
+storage site in an event of an area-wide disruption or disaster and
+the outline of explicit mitigation actions is outside the scope
+of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7_stmt.a">
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of OpenShift.
+</p></description>
+      </statement>
+      <statement statement-id="cp-7_stmt.b">
+        <description><p>To assist with this organizational control, documentation is being
+planned. Progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20598
+</p></description>
+      </statement>
+      <statement statement-id="cp-7_stmt.c">
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of OpenShift.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7.1_stmt">
+        <description><p>Identification of an alternate processing site that is
+separated from the primary processing site to reduce
+susceptibility to the same threats is outside the
+scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7.2_stmt">
+        <description><p>Identification of potential accessibility problems to the
+alternate processing site in the event of an area-wide
+disruption or disaster and outline of explicit mitigation
+actions is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-7.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-7.3_stmt">
+        <description><p>Development of alternate processing site agreements that contain
+priority-of-service provisions in accordance with organizational
+availability requirements (including recovery time objectives)
+is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-8_stmt">
+        <description><p>Establishment of alternate telecommunications services
+is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-8.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-8.1_stmt.a">
+        <description><p>Development of primary and alternate telecommunications service
+agreements that contain priority-of-service provisions in accordance
+with organizational availability requirements (including recovery
+time objectives) is outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+      <statement statement-id="cp-8.1_stmt.b">
+        <description><p>Requests for Telecommunications Service Priority for all
+telecommunucations services used for national security emergency
+preparedness in the event that the primary and/or alternate
+telecommunications services are provided by a common carrier
+are outside the scope of OpenShift configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-8.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-8.2_stmt">
+        <description><p>Obtaining alternate telecommunications services to reduce
+the likelihood of sharing a single point of failure with
+primary telecommunications services is outside the scope
+of OpenShift configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="cp-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="cp-9_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>The customer will be responsible for conducting daily incremental and
+weekly full backups of user-level information contained in the
+information system. Additional requirements and guidance include
+maintaining at least three backup copies of user-level information (at
+least one of which is available online) or provides an equivalent
+alternative. A successful control response will detail how backups of
+user-level information occures, and how three backup copies are
+maintained.
+
+To assist with this organizational control, documentation is being
+planned. Progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20600
 </p></description>
       </statement>
       <statement statement-id="cp-9_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>The customer will be responsible for conducting daily incremental and
+weekly full backups of system-level information contained in the
+information system. Additional requirements and guidance include
+maintaining at least three backup copies of user-level information (at
+least one of which is available online) or provides an equivalent
+alternative. A successful control response will detail how backups of
+user-level information occures, and how three backup copies are
+maintained.
+
+To assist with this organizational control, documentation is being
+planned. Progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20600
 </p></description>
       </statement>
       <statement statement-id="cp-9_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>The customer will be responsible for conducting daily incremental and
+weekly full backups of information system documentation including
+security-related documentation. Additional requirements and
+guidance include maintaining at least three backup copies of user-level
+information (at least one of which is available online) or provides an
+equivalent alternative. A successful control response will detail how
+backups of user-level information occures, and how three backup copies
+are maintained.
+
+To assist with this organizational control, documentation is being
+planned. Progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20600
 </p></description>
       </statement>
       <statement statement-id="cp-9_stmt.d">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>The customer will be responsible for protecting the confidentiality,
+integrity, and available of backup information at storage locations.
+Additional requirements and guidance include determining
+what elements of the cloud environment require the Information System
+Backup control. The customer will determine how Information System
+Backup is going to be verified and appropriate periodicity of the
+check.
+
+To assist with this organizational control, documentation is being
+planned. Progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20600
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-9.1_stmt">
+        <description><p>Testing backup information for reliability and information integrity
+is an organizational control outside the scope of Openshift
+configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-9.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-9.3_stmt">
+        <description><p>Storing backup copies of organization-defined critical information
+system software and other security-related information in a separate
+facility or in a fire-rated container that is not collocated with the
+operational system is outside the scope of OpenShift configuration.
+
+To assist with this organizational control, documentation is being
+planned. Progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20782
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="cp-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="cp-10_stmt">
-        <description><p>This control reflects organizational procedures/policies, and is not applicable to the configuration of Red Hat Virtualization Host (RHVH).</p></description>
+        <description><p>The customer will be responsible for documenting how to reconstitute
+their OpenShift environment. A successful control response will detail
+processes used to fully recover/restore the OpenShift environment.
+
+To assist with this organizational control, documentation is being
+planned. Progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-20601
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="cp-10.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cp-10.2_stmt">
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of OpenShift.
+</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ia-1">
@@ -1675,134 +2755,330 @@ applicable to Red Hat Virtualization Host (RHVH) configuration.
     <implemented-requirement control-id="ma-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ma-1_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
       <statement statement-id="ma-1_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ma-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ma-2_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
       <statement statement-id="ma-2_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
       <statement statement-id="ma-2_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
       <statement statement-id="ma-2_stmt.d">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
       <statement statement-id="ma-2_stmt.e">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
       <statement statement-id="ma-2_stmt.f">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-3_stmt">
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-3.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-3.1_stmt">
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-3.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-3.2_stmt">
+        <description><p>Checking media containing diagnostic and test programs for
+malicious code before the media are used in the information
+system is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-3.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-3.3_stmt.a">
+        <description><p>Preventing the unauthorized removal of maintenance equipment containing
+organizational information by verifying that there is no organizational
+information contained on the equipment is outside the scope of
+Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ma-3.3_stmt.b">
+        <description><p>Preventing the unauthorized removal of maintenance equipment containing
+organizational information by sanitizing or destroying the equipment is
+outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ma-3.3_stmt.c">
+        <description><p>Preventing the unauthorized removal of maintenance equipment containing
+organizational information by retaining the equipment within the
+facility is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ma-3.3_stmt.d">
+        <description><p>Preventing the unauthorized removal of maintenance equipment containing
+organizational information by obtaining an exception from
+organization-defined personnel or roles explicity authorizing removal
+of the equipment from the facility is outside the scope of Red Hat Virtualization Host (RHVH)
+configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ma-4">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="ma-4_stmt.a">
-        <description><p>'From the perspective of Red Hat Virtualization Host (RHVH), all
+        <description><p>From the perspective of Red Hat Virtualization Host (RHVH), all
 maintenance and diagnostic activities are monitored regardless
 of local (e.g. physical console) or nonlocal (e.g. over SSH)
-access mechanism.'
+access mechanism.
 </p></description>
       </statement>
       <statement statement-id="ma-4_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
       <statement statement-id="ma-4_stmt.c">
-        <description><p>'From the perspective of Red Hat Virtualization Host (RHVH), both
+        <description><p>From the perspective of Red Hat Virtualization Host (RHVH), both
 local and nonlocal maintenance and diagnostic sessions will require
-the same authenticators (as configured to controls in the AC section).'
+the same authenticators (as configured to controls in the AC section).
+
+A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-21013
 </p></description>
       </statement>
       <statement statement-id="ma-4_stmt.d">
-        <description><p>'From the perspective of Red Hat Virtualization Host (RHVH), session
+        <description><p>From the perspective of Red Hat Virtualization Host (RHVH), session
 and network connections terminate in the same manner (e.g. once user logs out)
-regardless of local or nonlocal access mechanism used.'
+regardless of local or nonlocal access mechanism used.
+
+A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-21013
+</p></description>
+      </statement>
+      <statement statement-id="ma-4_stmt.e">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-21013
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-4.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-4.2_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-21014
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ma-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ma-5_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Establishing a process for maintenance personnel authorization and
+maintaining a list of authorized maintenance organizations or personnel
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ma-5_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Ensuring that non-escorted personnel performing maintenance on
+the information system have required access authorizations is
+outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ma-5_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Designating organizational personnel with required access
+authorizations and technical competence to supervise the
+maintenance activities of personnel who do not possess
+the required access authorizations is outside the
+scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-5.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-5.1_stmt.a">
+        <description><p>Implementing organizational procedures for the use of maintenance
+personnel that lack appropriate security clearances or are not U.S.
+citizens is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ma-5.1_stmt.b">
+        <description><p>Development and implementation of alternate security safeguards
+in the event an information system component cannot be sanitized,
+removed, or disconnected from the system, is outside the scope
+of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ma-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ma-6_stmt">
+        <description><p>A control response is planned. Engineering progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-21052
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="mp-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="mp-1_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
       <statement statement-id="mp-1_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="mp-2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="mp-2_stmt">
-        <description><p>This control reflects organizational procedures/policies, and is not applicable to the configuration of Red Hat Virtualization Host (RHVH).</p></description>
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-21053</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-3_stmt.a">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="mp-3_stmt.b">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <statement statement-id="mp-4_stmt.a">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-21054
+</p></description>
+      </statement>
+      <statement statement-id="mp-4_stmt.b">
+        <description><p>A control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-21054
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-5_stmt.a">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="mp-5_stmt.b">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="mp-5_stmt.c">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="mp-5_stmt.d">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-5.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-5.4_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to Red Hat Virtualization Host (RHVH) configuration.</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="mp-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="mp-6_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
       </statement>
       <statement statement-id="mp-6_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>This control reflects organizational procedures/policies, and is not
+applicable to the configuration of Red Hat Virtualization Host (RHVH).
 </p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-6.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-6.2_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to Red Hat Virtualization Host (RHVH) configuration.</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="mp-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="mp-7_stmt">
-        <description><p>To prohibit the use of USB storage devices on Red Hat Virtualization Host (RHVH) nodes, the following configuration check must be enabled:
+        <description><p>To prohibit the use of USB storage devices on Red Hat Virtualization
+Host (RHVH) nodes, the following configuration check must be enabled:
+
 - CCE-27277-3: Disable Modprobe Loading of USB Storage Driver
-To disable support for bluetooth connections, the following configuration checks must be enabled:
+
+To disable support for bluetooth connections, the following
+configuration checks must be enabled:
+
 - CCE-27327-6: Disable Bluetooth Kenrel Modules
-- CCE-27328-4: Disable Bluetooth Service</p></description>
+
+- CCE-27328-4: Disable Bluetooth Service
+
+A complete control response is planned. Engineering
+progress can be tracked via:
+
+https://projects.engineering.redhat.com/browse/RHV-21055</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="mp-7.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="mp-7.1_stmt">
+        <description><p>This control reflects organizational procedure/policy and is not
+applicable to Red Hat Virtualization Host (RHVH) configuration.</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="pe-1">
@@ -2173,159 +3449,253 @@ applicable to the configuration of Red Hat Virtualization Host (RHVH).
     <implemented-requirement control-id="ps-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ps-1_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational development, documentation, and dissemination of
+a personnel security policy to organization-defined personnel
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ps-1_stmt.a.1">
+        <description><p>Organizational development, documentation, and dissemination of
+a personnel security policy to organization-defined personnel
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ps-1_stmt.a.2">
+        <description><p>Organizational development, documentation, and dissemination of
+a personnel security policy to organization-defined personnel
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-1_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational reviews and updates to the personnel security policy
+and personnel security procedures at an organization-defined frequency
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ps-1_stmt.b.1">
+        <description><p>Organizational development, documentation, and dissemination of
+a personnel security policy to organization-defined personnel
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ps-1_stmt.b.2">
+        <description><p>Organizational development, documentation, and dissemination of
+a personnel security policy to organization-defined personnel
+is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ps-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ps-2_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational assignment of a risk designation to all organizational
+positions is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-2_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational establishment of screening criteria for individuals
+filling those positions is outside the scope of Red Hat Virtualization Host (RHVH)
+configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-2_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational review and updating of position risk
+designations at an organization-defined frequency is outside the scope
+of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ps-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ps-3_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational screening of individuals prior to authorizing access
+to the information system is outside the scope of Red Hat Virtualization Host (RHVH)
+configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-3_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes to rescreen individuals according to
+organization-defined conditions requiring rescreening and,
+where rescreening is so indicated, the frequency of such
+rescreening, is outside the scope of Red Hat Virtualization Host (RHVH)
+configuration.
+</p></description>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement control-id="ps-3.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ps-3.3_stmt.a">
+        <description><p>Organizational processes ensuring that individuals accessing an
+information system processing, storing, or transmitting information
+requiring special protection have valid access authorizations that are
+demonstrated by assigned official government dutues, are outside the
+scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ps-3.3_stmt.b">
+        <description><p>Organizational processes ensuring that individuals accessing an
+information system processing, storing, or transmitting information
+requiring special protection satisgy organization-defined additional
+personnel screening criteria, are outside the scope of Red Hat Virtualization Host (RHVH)
+configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ps-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ps-4_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes ensuring that, upon termination of individual
+employment, information system access is disabled within an
+organization-defined time period, are outside the scope of
+Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-4_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes ensuring that, upon termination of individual
+employment, any authenticators/credentials associated with the individual
+are terminated/revoked, are outside the scope of
+Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-4_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes ensuring that, upon termination of individual
+employment, exit interviews are conducted that include a discussion of
+organization-defined information security topics, are outside the scope
+of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-4_stmt.d">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes ensuring that, upon termination of individual
+employment, all security-related organizational information
+system-related property is retrieved, are outside the scope
+of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-4_stmt.e">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes ensuring that, upon termination of individual
+employment, the organization retains access to organizational
+information systems formerly controlled by the terminated individual,
+are outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-4_stmt.f">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes ensuring that, upon termination of individual
+employment, the organization notifies organization-defined personnel
+or roles within an organization-defined time period, are outside
+the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ps-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ps-5_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes to review and confirm ongoing operational
+need for current logical and physical access authorizations to
+information systems/facilities when individuals are reassigned or
+transferred to other positions within the organization are
+outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-5_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes to initiate organization-defined transfer
+or reassignment actions within organization-defined time period
+following the formal transfer action are outside the scope of
+Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-5_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes to modify access authorizations as needed to
+correspond with any changes in oeprational need due to reassignment
+or transfer are outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-5_stmt.d">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational notifications of organization-defined personnel
+or roles within an organization-defined time period are outside
+the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ps-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ps-6_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational process to develop and document access agreements for
+organizational information systems are outside the scope of
+Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-6_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational reviews and updates to the access agreements at an
+organization-defined frequency are outside the scope of
+Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-6_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes that ensure individuals requiring access to
+organizational information and information systems sign and re-sign
+access agreements are outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ps-6_stmt.c.1">
+        <description><p>Organizational processes that ensure individuals requiring access to
+organizational information and information systems sign and re-sign
+access agreements are outside the scope of Red Hat Virtualization Host (RHVH) configuration.
+</p></description>
+      </statement>
+      <statement statement-id="ps-6_stmt.c.2">
+        <description><p>Organizational processes that ensure individuals requiring access to
+organizational information and information systems sign and re-sign
+access agreements are outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ps-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ps-7_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes to establish security requirements including
+security roles and responsibilities for third-party providers are
+outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-7_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes requiring third-party providers to comply
+with personnel security polocies and procedures established by
+the organization are outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-7_stmt.c">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes to document presonnel security requirements
+are outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-7_stmt.d">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational processes to require third-party providers to notify
+organization-defined personnel or roles of any personnel transfers or
+terminations of third-party personnel who possess organizational
+credentials and/or badges, or who have information system privileges
+within an organization-defined time period, are outside the
+scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-7_stmt.e">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational monitoring of provider compliance is outside
+the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ps-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ps-8_stmt.a">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational employment of a formal sanctions process for individuals
+failing to comply with established information security policies
+and procedures is outside the scope of Red Hat Virtualization Host (RHVH) configuration.
 </p></description>
       </statement>
       <statement statement-id="ps-8_stmt.b">
-        <description><p>'This control reflects organizational procedures/policies, and is not
-applicable to the configuration of Red Hat Virtualization Host (RHVH).'
+        <description><p>Organizational notification of organization-defined personnel
+or roles within an organization-defined time period when a formal
+employee santions process is initiated, identifying the individual
+sanctioned and the reason for the sanction.
 </p></description>
       </statement>
     </implemented-requirement>
