@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-07-22T00:19:09.46+00:00</last-modified>
+    <last-modified>2020-07-25T00:20:21.17+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -703,9 +703,30 @@ management policy is outside the scope of OpenShift configuration.
     <implemented-requirement control-id="cm-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="cm-2_stmt">
-        <description><p>A complete control response is planned. Engineering progress can be
-tracked via:
+        <description><p>Configuration management is enforced through Ignition configurations
+and Operators.
 
+Ignition is the utility that is used by Red Hat Enterprise Linux CoreOS (RHCOS)
+to manipulate disks during initial configuration, confirming all new machines
+meet the declared configuration.
+
+Ignition is meant to initialize systems, not change existing systems. After
+a machine initializes and the kernel is running from the installed system, the
+Machine Config Operator from the OpenShift Container Platform cluster completes
+all future machine configuration.
+
+Operators are a method of packaging, deploying, and managing a Kubernetes
+application. Watching over the Kubernetes environment, using its current
+state to make decisions in real time. The Machine Config Operator (MCO)
+manages updates and configuration changes to essentially everything between
+the kernel and kubelet.
+
+For additional information:
+https://docs.openshift.com/container-platform/latest/architecture/architecture-rhcos.html#rhcos-about-ignition_architecture-rhcos
+https://docs.openshift.com/container-platform/latest/operators/olm-what-operators-are.html
+https://github.com/openshift/machine-config-operator
+
+tracked via:
 https://issues.redhat.com/browse/CMP-260
 </p></description>
       </statement>

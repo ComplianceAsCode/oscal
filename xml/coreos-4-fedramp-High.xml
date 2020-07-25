@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-03-11T00:10:28.32+00:00</last-modified>
+    <last-modified>2020-07-25T00:20:21.17+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -4358,10 +4358,14 @@ https://issues.redhat.com/browse/CMP-354
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ra-5.5">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="ra-5.5_stmt">
-        <description><p>A control response is planned. Progress can be tracked via:
+        <description><p>CoreOS allows for privileged scans to be performed using appropriate credentials, as
+determined by organizational policy and procedures for vulnerability management.
+Active OpenShift pods and the OpenShift interface should be scanned using appropriate
+OpenShift credentials. OpenShift credentials are out of scope for CoreOS configuration.
 
+Documentation and control progress can be tracked at:
 https://issues.redhat.com/browse/CMP-355
 </p></description>
       </statement>
@@ -5091,11 +5095,11 @@ https://issues.redhat.com/browse/CMP-424
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="sc-7.7">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="sc-7.7_stmt">
-        <description><p>The customer will be responsible for implementing mechanisms to
-ensure CoreOS nodes to not act as proxy or relay servers between
-internal and external networks.
+        <description><p>CoreOS it not intended to be installed on remote devices. Preventing split tunneling
+is an organizational responsibility, and not the responsibility of the CoreOS
+Container Linux operating system.
 
 To assist with this organizational control, documentation is being
 planned. Progress can be tracked via:
