@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-08-05T00:21:05.64+00:00</last-modified>
+    <last-modified>2020-08-06T00:21:27.63+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -2043,42 +2043,41 @@ alternative. A successful control response will detail how backups of
 user-level information occures, and how three backup copies are
 maintained.
 
-To assist with this organizational control, documentation is being
-planned. Progress can be tracked via:
+Conducting backups of user-level information to include the backups of
+a centralized identity provider is an organizational control outside the
+scope of OpenShift configuration. To assist System Administrators and
+organizations in their control response, documentation about backing
+up user-level information stored in etcd in OpenShift can be viewed at:
 
-https://issues.redhat.com/browse/CMP-291
+https://docs.openshift.com/container-platform/latest/backup_and_restore/backing-up-etcd.html
 </p></description>
       </statement>
       <statement statement-id="cp-9_stmt.b">
         <description><p>The customer will be responsible for conducting daily incremental and
 weekly full backups of system-level information contained in the
 information system. Additional requirements and guidance include
-maintaining at least three backup copies of user-level information (at
+maintaining at least three backup copies of system-level information (at
 least one of which is available online) or provides an equivalent
 alternative. A successful control response will detail how backups of
 user-level information occures, and how three backup copies are
 maintained.
 
-To assist with this organizational control, documentation is being
-planned. Progress can be tracked via:
+Conducting backups of system-level information is an organizational
+control outside the scope of OpenShift configuration. To assist System
+Administrators and organizations in their control response,
+documentation about disaster recovery procedures in OpenShift can be
+viewed at:
 
-https://issues.redhat.com/browse/CMP-291
+https://docs.openshift.com/container-platform/latest/backup_and_restore/disaster_recovery/about-disaster-recovery.html
 </p></description>
       </statement>
       <statement statement-id="cp-9_stmt.c">
         <description><p>The customer will be responsible for conducting daily incremental and
 weekly full backups of information system documentation including
-security-related documentation. Additional requirements and
-guidance include maintaining at least three backup copies of user-level
-information (at least one of which is available online) or provides an
-equivalent alternative. A successful control response will detail how
-backups of user-level information occures, and how three backup copies
-are maintained.
+security-related documentation.
 
-To assist with this organizational control, documentation is being
-planned. Progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-291
+Conducting backups on information system and security-related documentation
+is an organizational control outside the scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-9_stmt.d">
@@ -2090,20 +2089,18 @@ Backup control. The customer will determine how Information System
 Backup is going to be verified and appropriate periodicity of the
 check.
 
-To assist with this organizational control, documentation is being
-planned. Progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-294
+Protecting the confidentiality, integrity, and availability of backup
+information at separate storage locations an organizational control outside the
+scope of OpenShift configuration.
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="cp-9.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="cp-9.1_stmt">
-        <description><p>To assist with this organizational control, documentation is being
-planned. Progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-292
+        <description><p>The testing of backup information to verify media reliability
+and information integrity is an organizational control outside the scope
+of OpenShift configuration.
 </p></description>
       </statement>
     </implemented-requirement>
