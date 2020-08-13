@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-03-11T00:10:28.32+00:00</last-modified>
+    <last-modified>2020-08-13T00:21:47.00+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -523,18 +523,30 @@ outside the scope of CoreOS configuration.
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-8">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-8_stmt.a">
-        <description><p>A control response is planned. Engineering progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-230
-</p></description>
+        <description><p>By default, CoreOS auditing uses the internal system clocks to generate
+time stamps for audit records. At the code level, this is accomplished
+through the use of the C programming language time.h which is part of the
+C Standard Library.</p></description>
       </statement>
       <statement statement-id="au-8_stmt.b">
-        <description><p>A control response is planned. Engineering progress can be tracked via:
+        <description><p>By default, the CoreOS auditing records time stamps for audit records
+that can be mapped to Coordinated Universal Time (UTC). For example
+in the following node audit record:
 
-https://issues.redhat.com/browse/CMP-230
-</p></description>
+type=SYSCALL msg=audit(1364481363.243:24287): arch=c000003e syscall=2 success=no exit=-13 a0=7fffd19c5592 a1=0 a2=7fffd19c4b50 a3=a items=1 ppid=2686 pid=3538 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=1 comm="cat" exe="/bin/cat" subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key="sshd_config"
+type=CWD msg=audit(1364481363.243:24287):  cwd="/home/shadowman"
+type=PATH msg=audit(1364481363.243:24287): item=0 name="/etc/ssh/sshd_config" inode=409248 dev=fd:00 mode=0100600 ouid=0 ogid=0 rdev=00:00 obj=system_u:object_r:etc_t:s0  nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1364481363.243:24287) : proctitle=636174002F6574632F7373682F737368645F636F6E666967
+
+The msg field records a time stamp and a unique ID of the record in the form audit(time_stamp:ID).
+Multiple records can share the same time stamp and ID if they were generated
+as part of the same Audit event. The time stamp is using the Unix time
+format - seconds since 00:00:00 UTC on 1 January 1970.
+
+See https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/security_hardening/auditing-the-system_security-hardening
+for more example and explanation of auditing.</p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-9">
@@ -1002,42 +1014,62 @@ alternative. A successful control response will detail how backups of
 user-level information occures, and how three backup copies are
 maintained.
 
-To assist with this organizational control, documentation is being
-planned. Progress can be tracked via:
+Conducting backups of user-level information to include the backups of
+a centralized identity provider is an organizational control outside the
+scope of CoreOS configuration.
 
-https://issues.redhat.com/browse/CMP-291
+CoreOS nodes should not contain any stateful information as stateful information
+should exist only in etcd and get persisted to OCP nodes via operators.
+Because of this, CoreOS nodes can be added/removed as necessary to fully
+recover/restore the CoreOS environment.
+
+To assist System Administrators and organizations in their control response,
+documentation about backing up CoreOS user-level information stored in etcd in OpenShift nodes
+can be viewed at:
+
+https://docs.openshift.com/container-platform/latest/backup_and_restore/backing-up-etcd.html
+
+Node handling such as adding and removing CoreOS nodes can be viewed at:
+
+https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-working.html
 </p></description>
       </statement>
       <statement statement-id="cp-9_stmt.b">
         <description><p>The customer will be responsible for conducting daily incremental and
 weekly full backups of system-level information contained in the
 information system. Additional requirements and guidance include
-maintaining at least three backup copies of user-level information (at
+maintaining at least three backup copies of system-level information (at
 least one of which is available online) or provides an equivalent
 alternative. A successful control response will detail how backups of
 user-level information occures, and how three backup copies are
 maintained.
 
-To assist with this organizational control, documentation is being
-planned. Progress can be tracked via:
+Conducting backups of system-level information is an organizational
+control outside the scope of CoreOS configuration.
 
-https://issues.redhat.com/browse/CMP-291
+CoreOS nodes should not contain any stateful information as stateful information
+should exist only in etcd and get persisted to OCP nodes via operators.
+Because of this, CoreOS nodes can be added/removed as necessary to fully
+recover/restore the CoreOS environment.
+
+To assist System Administrators and organizations in their control response,
+documentation about backing up CoreOS system-level information stored in etcd in OpenShift nodes
+can be viewed at:
+
+https://docs.openshift.com/container-platform/latest/backup_and_restore/disaster_recovery/about-disaster-recovery.html
+
+Node handling such as adding and removing CoreOS nodes can be viewed at:
+
+https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-working.html
 </p></description>
       </statement>
       <statement statement-id="cp-9_stmt.c">
         <description><p>The customer will be responsible for conducting daily incremental and
 weekly full backups of information system documentation including
-security-related documentation. Additional requirements and
-guidance include maintaining at least three backup copies of user-level
-information (at least one of which is available online) or provides an
-equivalent alternative. A successful control response will detail how
-backups of user-level information occures, and how three backup copies
-are maintained.
+security-related documentation.
 
-To assist with this organizational control, documentation is being
-planned. Progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-291
+Conducting backups on information system and security-related documentation
+is an organizational control outside the scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="cp-9_stmt.d">
@@ -1049,10 +1081,9 @@ Backup control. The customer will determine how Information System
 Backup is going to be verified and appropriate periodicity of the
 check.
 
-To assist with this organizational control, documentation is being
-planned. Progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-294
+Protecting the confidentiality, integrity, and availability of backup
+information at separate storage locations an organizational control outside the
+scope of OpenShift configuration.
 </p></description>
       </statement>
     </implemented-requirement>
@@ -1062,6 +1093,21 @@ https://issues.redhat.com/browse/CMP-294
         <description><p>The customer will be responsible for documenting how to reconstitute
 their CoreOS environment. A successful control response will detail
 processes used to fully recover/restore the CoreOS environment.
+
+CoreOS nodes should not contain any stateful information as stateful information
+should exist only in etcd and get persisted to OCP nodes via operators.
+Because of this, CoreOS nodes can be added/removed as necessary to fully
+recover/restore the CoreOS environment.
+
+To assist System Administrators and organizations in their control response,
+documentation about disaster recovery procedures for CoreOS nodes in OpenShift can be
+viewed at:
+
+https://docs.openshift.com/container-platform/latest/backup_and_restore/disaster_recovery/about-disaster-recovery.html
+
+Node handling such as adding and removing CoreOS nodes can be viewed at:
+
+https://docs.openshift.com/container-platform/4.5/nodes/nodes/nodes-nodes-working.html
 </p></description>
       </statement>
     </implemented-requirement>
