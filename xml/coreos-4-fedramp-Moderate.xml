@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-08-13T00:21:47.00+00:00</last-modified>
+    <last-modified>2020-08-14T00:21:54.39+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -1000,21 +1000,42 @@ https://issues.redhat.com/browse/CMP-167
 different repositories to gain organization-wide
 situational awareness is outside the scope
 of CoreOS configuration.
+
+To aide in such organizational processes, note that OpenShift's
+Cluster Logging Operator enables OpenShift administrators to
+configure custom pipelines to send node logs to remote
+log stores. These remote destinations, such as Elastic or
+Splunk endpoints, could be used for information system-wide correlation.
+
+Documentation regarding how to forward cluster logs using the
+Cluster Logging Operator to specific endpoints can be found at:
+
+https://docs.openshift.com/container-platform/latest/logging/cluster-logging.html
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="au-7">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="au-7_stmt.a">
-        <description><p>A control response is planned. Engineering progress can be tracked via:
+        <description><p>CoreOS supports an audit reduction and report generation capability that
+supports on-demand audit review, analysis, and reporting
+requirements and after-the-fact investigations of security incidents
+only when CoreOS is configured in an OpenShift cluster and the OpenShift
+Cluster Logging Operator is configured to send
+logs to a remote log store such as Elastic or Splunk.
+It is then the responsiblity of the 3rd party tools such as Elastic or Splunk
+to then provide the support and capability for audit review, analysis, and
+reporting requirements and after-the-fact investigations of security incidents.
 
-https://issues.redhat.com/browse/CMP-227
+To configure node logging to aide in audit reduction, review, analysis, and
+reporting, the OpenShift Cluster Logging Operator can be configured via:
+
+https://docs.openshift.com/container-platform/4.5/logging/cluster-logging-deploying.html
 </p></description>
       </statement>
       <statement statement-id="au-7_stmt.b">
-        <description><p>A control response is planned. Engineering progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-227
+        <description><p>When OpenShift's Cluster Logging Operator sends CoreOS node logs to a remote log store,
+the operator does not alter the original content or time ordering of audit records.
 </p></description>
       </statement>
     </implemented-requirement>
@@ -1739,26 +1760,41 @@ of CoreOS configuration guidance.
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="cm-10">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="cm-10_stmt.a">
-        <description><p>A complete control response is planned. Progress can be
-tracked via:
-
-https://issues.redhat.com/browse/CMP-284
+        <description><p>Ensuring that the organization uses software and associated
+documentation in accordance with contract agreements and copyright laws
+is the complete responsiblity of the organization. Red Hat's
+responsibilities to assist with the tracking of software licensing and
+usage of software provided by Red Hat will be fulfilled in accordance
+with all applicable contracts and agreements established for the
+project with the organization.
 </p></description>
       </statement>
       <statement statement-id="cm-10_stmt.b">
-        <description><p>A complete control response is planned. Progress can be
-tracked via:
+        <description><p>Tracking the use of software and associated documentation protected by
+quantity licenses to control copying and distribution is an
+organizational control outside the scope of CoreOS.
 
-https://issues.redhat.com/browse/CMP-284
+For CoreOS nodes operating in an OpenShift environment, the OpenShift
+Cluster Manager (OCM) service acts as a bridge to Red Hat Subscription Manager.
+A cluster connected to the internet can send telemetry to OpenShift Cluster
+Manager at https://cloud.redhat.com/openshift/, which then handles
+integration with Red Hat Subscription Manager to track subscriptions
+for OpenShift clusters.
+
+For disconnected clusters utilizing CoreOS, there is no way to send telemetry data to
+OpenShift Cluster Manager. In this case, the organization must manually
+register their disconnected clusters with OpenShift Cluster Manager
+following the instructions at https://access.redhat.com/solutions/4930131
 </p></description>
       </statement>
       <statement statement-id="cm-10_stmt.c">
-        <description><p>A complete control response is planned. Progress can be
-tracked via:
-
-https://issues.redhat.com/browse/CMP-284
+        <description><p>Controlling and documenting the use of peer-to-peer file sharing
+technology to ensure that this capability is not used for the
+unauthorized distribution, display, performance, or reproduction
+of copyrighted work is an organizational control outside the scope
+of CoreOS configuration.
 </p></description>
       </statement>
     </implemented-requirement>
