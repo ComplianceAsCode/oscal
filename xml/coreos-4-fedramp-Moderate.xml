@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-08-19T00:23:02.99+00:00</last-modified>
+    <last-modified>2020-08-21T00:23:02.57+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -1302,17 +1302,19 @@ of CoreOS configuration guidance.
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ca-7">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ca-7_stmt.a">
-        <description><p>Engineering progress can be tracked at:
-
-https://issues.redhat.com/browse/CMP-255
+        <description><p>The development and implementation of a continuous monitoring program
+that includes the establishement of organization-defined metrics to be
+monitored is an organizational control outside the scope of CoreOS
+configuration.
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.b">
-        <description><p>Engineering progress can be tracked at:
-
-https://issues.redhat.com/browse/CMP-255
+        <description><p>The development and implementation of a continuous monitoring program
+that includes the establishement of organization-defined frequencies for
+monitoring and assessment of such monitoring is an organizational control
+outside the scope of CoreOS configuration.
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.c">
@@ -1334,15 +1336,15 @@ https://issues.redhat.com/browse/CMP-255
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.f">
-        <description><p>Engineering progress can be tracked at:
-
-https://issues.redhat.com/browse/CMP-255
+        <description><p>Response actions to address results of the analysis of security-related
+information is an organizational control outside the scope of CoreOS
+configuration.
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.g">
-        <description><p>Engineering progress can be tracked at:
-
-https://issues.redhat.com/browse/CMP-255
+        <description><p>Reporting the security status of organization and the information system
+to organization-defined personnel or roles at a specified organization-defined
+frequency is outside the scope of CoreOS configuration.
 </p></description>
       </statement>
     </implemented-requirement>
@@ -1402,34 +1404,73 @@ management policy is outside the scope of CoreOS configuration.
     <implemented-requirement control-id="cm-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="cm-2_stmt">
-        <description><p>A complete control response is planned. Engineering progress can be
-tracked via:
+        <description><p>Configuration management is enforced through Ignition configurations
+and Operators.
 
-https://issues.redhat.com/browse/CMP-260
+Ignition is the utility that is used by Red Hat Enterprise Linux CoreOS (RHCOS)
+to manipulate disks during initial configuration, confirming all new machines
+meet the declared configuration.
+
+Ignition is meant to initialize systems, not change existing systems. After
+a machine initializes and the kernel is running from the installed system, the
+Machine Config Operator from the OpenShift Container Platform cluster completes
+all future machine configuration.
+
+Operators are a method of packaging, deploying, and managing a Kubernetes
+application. Watching over the CoreOS environment, using its current
+state to make decisions in real time, the Machine Config Operator (MCO)
+manages updates and configuration changes to essentially everything between
+the kernel and kubelet.
+
+For additional information:
+https://docs.openshift.com/container-platform/latest/architecture/architecture-rhcos.html#rhcos-about_architecture-rhcos
+https://docs.openshift.com/container-platform/latest/operators/olm-what-operators-are.html
+https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-managing.html
+https://docs.openshift.com/container-platform/latest/installing/install_config/installing-customizing.html
 </p></description>
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="cm-2.1">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="cm-2.1_stmt.a">
-        <description><p>A complete control response is planned. Engineering progress can be
-tracked via:
+        <description><p>The organization reviewing and updating the baseline configuration of
+CoreOS per an organization-defined frequency is outside the scope of
+CoreOS configuration.
 
-https://issues.redhat.com/browse/CMP-261
+However to assist in formulating a control response,
+Machine Config Operators (MCO) allow for periodic update to the CoreOS baseline
+configuration using MachineConfig objects. For more on MachineConfig, see:
+
+https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-managing.html
+https://docs.openshift.com/container-platform/latest/installing/install_config/installing-customizing.html
 </p></description>
       </statement>
       <statement statement-id="cm-2.1_stmt.b">
-        <description><p>A complete control response is planned. Engineering progress can be
-tracked via:
+        <description><p>The organization reviewing and updating the baseline configuration of
+CoreOS when required due to organization-defined circumstances is outside the scope of
+CoreOS configuration.
 
-https://issues.redhat.com/browse/CMP-261
+However to assist in formulating a control response, updates can be
+made as needed through the use of MachineConfig objects.
+For more on MachineConfig, see:
+
+https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-managing.html
+https://docs.openshift.com/container-platform/latest/installing/install_config/installing-customizing.html
 </p></description>
       </statement>
       <statement statement-id="cm-2.1_stmt.c">
-        <description><p>A complete control response is planned. Engineering progress can be
-tracked via:
+        <description><p>The organization reviewing and updating the baseline configuration of
+CoreOS as an integral part of CoreOS component installations and upgrades
+is outside the scope of CoreOS configuration.
 
-https://issues.redhat.com/browse/CMP-261
+However to assist in formulating a control response, after a primary or
+compute/worker node initializes, the Machine Config Operator (MCO) from the
+OpenShift Container Platform completes all future CoreOS configuration.
+The Machine Config Operator manages updates and configuration changes to
+for all subsystems, including the operating system kernel through OpenShift components.
+
+https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-managing.html
+https://docs.openshift.com/container-platform/latest/installing/install_config/installing-customizing.html
 </p></description>
       </statement>
     </implemented-requirement>
@@ -1849,6 +1890,12 @@ policy is outside the scope of CoreOS configuration.
       <statement statement-id="cp-2_stmt.a">
         <description><p>Developing an organization-level contingency planning policy is
 outside the scope of CoreOS configuration.
+
+To facilitate a control response and assist in contingency planning,
+CoreOS nodes should not contain any stateful information as stateful information
+should exist only in etcd and get persisted to OCP nodes via operators.
+Because of this, CoreOS nodes can be added/removed as necessary to fully
+recover/restore the CoreOS environment.
 </p></description>
       </statement>
       <statement statement-id="cp-2_stmt.b">

@@ -1,7 +1,7 @@
 <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-08-14T00:21:54.39+00:00</last-modified>
+    <last-modified>2020-08-21T00:23:02.57+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -646,17 +646,19 @@ of OpenShift configuration guidance.
       </statement>
     </implemented-requirement>
     <implemented-requirement control-id="ca-7">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ca-7_stmt.a">
-        <description><p>Engineering progress can be tracked at:
-
-https://issues.redhat.com/browse/CMP-255
+        <description><p>The development and implementation of a continuous monitoring program
+that includes the establishement of organization-defined metrics to be
+monitored is an organizational control outside the scope of OpenShift
+configuration.
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.b">
-        <description><p>Engineering progress can be tracked at:
-
-https://issues.redhat.com/browse/CMP-255
+        <description><p>The development and implementation of a continuous monitoring program
+that includes the establishement of organization-defined frequencies for
+monitoring and assessment of such monitoring is an organizational control
+outside the scope of OpenShift configuration.
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.c">
@@ -678,15 +680,15 @@ https://issues.redhat.com/browse/CMP-255
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.f">
-        <description><p>Engineering progress can be tracked at:
-
-https://issues.redhat.com/browse/CMP-255
+        <description><p>Response actions to address results of the analysis of security-related
+information is an organizational control outside the scope of OpenShift
+configuration.
 </p></description>
       </statement>
       <statement statement-id="ca-7_stmt.g">
-        <description><p>Engineering progress can be tracked at:
-
-https://issues.redhat.com/browse/CMP-255
+        <description><p>Reporting the security status of organization and the information system
+to organization-defined personnel or roles at a specified organization-defined
+frequency is outside the scope of OpenShift configuration.
 </p></description>
       </statement>
     </implemented-requirement>
@@ -721,31 +723,29 @@ management policy is outside the scope of OpenShift configuration.
     <implemented-requirement control-id="cm-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
       <statement statement-id="cm-2_stmt">
-        <description><p>Configuration management is enforced through Ignition configurations
-and Operators.
+        <description><p>The recommended approach for configuration management in the OpenShift Container
+platform is to implement the principles and patterns of GitOps
 
-Ignition is the utility that is used by Red Hat Enterprise Linux CoreOS (RHCOS)
-to manipulate disks during initial configuration, confirming all new machines
-meet the declared configuration.
-
-Ignition is meant to initialize systems, not change existing systems. After
-a machine initializes and the kernel is running from the installed system, the
-Machine Config Operator from the OpenShift Container Platform cluster completes
-all future machine configuration.
+GitOps uses Git pull requests to manage infrastructure and application configurations.
+The Git repository is considered the only source of truth and contains the
+entire state of the system so that the trail of changes to the system state are
+visible and auditable.
 
 Operators are a method of packaging, deploying, and managing a Kubernetes
-application. Watching over the Kubernetes environment, using its current
+application. Watching over the OpenShift environment, using its current
 state to make decisions in real time. The Machine Config Operator (MCO)
 manages updates and configuration changes to essentially everything between
 the kernel and kubelet.
 
 For additional information:
-https://docs.openshift.com/container-platform/latest/architecture/architecture-rhcos.html#rhcos-about-ignition_architecture-rhcos
+https://docs.openshift.com/container-platform/latest/architecture/cicd_gitops.html
 https://docs.openshift.com/container-platform/latest/operators/olm-what-operators-are.html
-https://github.com/openshift/machine-config-operator
 
-tracked via:
-https://issues.redhat.com/browse/CMP-260
+Red Hat Advanced Cluster Management for Kubernetes (RHACM) is the preferred way of implementing
+and managing GitOps for OpenShift clusters. For more information on creating and managing
+channels for GitOps approaches using RHACM, see:
+
+https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.0/html-single/manage_applications/index#creating-and-managing-channels
 </p></description>
       </statement>
     </implemented-requirement>
@@ -905,6 +905,11 @@ policy is outside the scope of OpenShift configuration.
       <statement statement-id="cp-2_stmt.a">
         <description><p>Developing an organization-level contingency planning policy is
 outside the scope of OpenShift configuration.
+
+To facilitate a control response and assist in contingency planning,
+Backup and Restore of an Openshift cluster can be viewed at:
+
+https://docs.openshift.com/container-platform/latest/backup_and_restore/disaster_recovery/about-disaster-recovery.html
 </p></description>
       </statement>
       <statement statement-id="cp-2_stmt.b">
