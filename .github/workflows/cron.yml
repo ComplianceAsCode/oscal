@@ -17,17 +17,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Get fedramp tool
         run: |
-          export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
-          git clone --depth 1 https://github.com/GoComply/fedramp
-          pushd fedramp
-          make build
-          popd
+          go get -u -v github.com/gocomply/fedramp/cli/gocomply_fedramp
       - name: Convert opencontrol
         run: |
-          fedramp/fedramp opencontrol https://github.com/ComplianceAsCode/redhat xml/
-      - name: Clean-up fedramp tool
-        run: |
-          rm -rf fedramp
+          export PATH="$HOME/go/bin:$PATH"
+          gocomply_fedramp opencontrol https://github.com/ComplianceAsCode/redhat xml/
       - name: Disregard timestamp-only changes
         run: |
           .github/disregard-timestamp-changes.sh
