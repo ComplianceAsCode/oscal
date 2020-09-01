@@ -9,7 +9,7 @@ This repository is on periodical refresh. ![Build](https://github.com/Compliance
 
 [gocomply_fedramp](https://github.com/gocomply/fedramp) tool was used to generate files available here.
 
-Commands to install `fedramp` tool:
+Commands to install `gocomply_fedramp` tool:
 
     $ get -u -v github.com/gocomply/fedramp/cli/gocomply_fedramp
 
