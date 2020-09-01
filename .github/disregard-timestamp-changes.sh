@@ -9,7 +9,7 @@ for f in `ls`; do
 	if ! git ls-files --error-unmatch $f; then
 		git add $f
 	fi
-	if ! git diff $f|grep -v last-modified.*last-modified | grep '^+\s'; then
+	if ! git diff $f|grep -v last-modified.*last-modified | grep -v ' uuid="' | grep '^+\s'; then
 		git checkout $f;
 	fi
 done
