@@ -1,7 +1,7 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="1f01bda3-7352-42de-86b2-12fc8686f4cb">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-02-12T11:53:40.13+01:00</last-modified>
+    <last-modified>2020-09-01T00:26:08.90+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -37,23 +37,28 @@
       <description><p>A holistic, top-level explanation of the FedRAMP authorization boundary.</p></description>
     </authorization-boundary>
   </system-characteristics>
+  <system-implementation>
+    <user uuid="6c61610a-f7e4-45e2-9f2a-44b9c8d319a8">
+      <role-id>generator</role-id>
+    </user>
+  </system-implementation>
   <control-implementation>
     <description><p>FedRAMP SSP Template Section 13</p></description>
-    <implemented-requirement control-id="ac-1">
+    <implemented-requirement uuid="00ce22a8-5cd3-435b-8653-688074f49135" control-id="ac-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-1_stmt">
+      <statement statement-id="ac-1_stmt" uuid="7dd13f2e-be49-49cc-9634-f8d20ac1098d">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-2">
+    <implemented-requirement uuid="52ba8eea-faa6-4ad9-b7bb-bc7d92111223" control-id="ac-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-2_stmt">
+      <statement statement-id="ac-2_stmt" uuid="d877a73b-6c6d-4eff-af99-2940164edc80">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-3">
+    <implemented-requirement uuid="8f1ad443-ad92-45de-a441-288a7839d3d4" control-id="ac-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-3_stmt">
+      <statement statement-id="ac-3_stmt" uuid="debc8b24-b579-4d89-8163-3732d72b23f4">
         <description><p>'The OpenStack Identity service supports the notion of groups and roles.
 Users belong to groups while a group has a list of roles. OpenStack
 service reference the roles of the user attempting to access the service.
@@ -63,16 +68,16 @@ and association to determine if access is allowed to the requested resource.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-7">
+    <implemented-requirement uuid="bfd58e3b-ddec-4226-9013-b2254bad87d5" control-id="ac-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-7_stmt.a">
+      <statement statement-id="ac-7_stmt.a" uuid="3da1024d-9310-4495-90e3-2809b9a8a442">
         <description><p>'It is recommended that OpenStack be integrated with an external
 identity service, such as Active Directory, Red Hat IdM, or generic
 LDAP. When configured in such a manner, this control is not applicable
 to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
-      <statement statement-id="ac-7_stmt.b">
+      <statement statement-id="ac-7_stmt.b" uuid="a3b39db8-1298-48ee-8c4c-19cff1c7569c">
         <description><p>'It is recommended that OpenStack be integrated with an external
 identity service, such as Active Directory, Red Hat IdM, or generic
 LDAP. When configured in such a manner, this control is not applicable
@@ -80,9 +85,9 @@ to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-8">
+    <implemented-requirement uuid="b2bd94ca-36fa-4757-8d67-01aa5989d18d" control-id="ac-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-8_stmt.a">
+      <statement statement-id="ac-8_stmt.a" uuid="e7cf9532-7630-4f66-a7d0-ff6cfc13617c">
         <description><p>'The customer will be responsible for displaying a system use
 notification banner to users. A successful control response will need
 to address the conditions under which the banner will be displayed
@@ -99,7 +104,7 @@ through Jira:
 https://securitycentral.atlassian.net/secure/RapidBoard.jspa?rapidView=4&amp;projectKey=OFB&amp;modal=detail&amp;selectedIssue=OFB-3'
 </p></description>
       </statement>
-      <statement statement-id="ac-8_stmt.b">
+      <statement statement-id="ac-8_stmt.b" uuid="400f6902-cdfa-49c9-8914-69466553507f">
         <description><p>'The customer will be responsible for displaying the use notification
 banner until the user acknowledges the usage condition and takes
 explicit actions to further access the system. A successful control
@@ -111,7 +116,7 @@ through Jira:
 https://securitycentral.atlassian.net/secure/RapidBoard.jspa?rapidView=4&amp;projectKey=OFB&amp;modal=detail&amp;selectedIssue=OFB-4'
 </p></description>
       </statement>
-      <statement statement-id="ac-8_stmt.c">
+      <statement statement-id="ac-8_stmt.c" uuid="412a81fd-a495-4389-8c94-d6f8a18020d9">
         <description><p>'The customer will be responsible for displaying a system use
 information message to users. A successful control response will need
 to address the conditions under which the message will be
@@ -125,9 +130,9 @@ It is recommended the same banner be displayed as configured in AC-8(a).'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-14">
+    <implemented-requirement uuid="9d07eabc-d0c9-4d6f-85c2-73074016529f" control-id="ac-14">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-14_stmt">
+      <statement statement-id="ac-14_stmt" uuid="cc30fab0-5d35-49fd-9348-786a8564ff07">
         <description><p>'Regardless of access mechanism, such as the Red Hat OpenStack Platform Console or remote
 access attempts through SSH, unauthenticated users will only be shown the
 system use notifications (as defined in AC-8) and login prompt. This is
@@ -138,119 +143,119 @@ prior to granting resource access.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-17">
+    <implemented-requirement uuid="f9d12e55-197e-43af-88dd-1af5abb987ee" control-id="ac-17">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-17_stmt">
+      <statement statement-id="ac-17_stmt" uuid="426e5be5-ee00-40b2-ba31-1a0bc80b1efe">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-18">
+    <implemented-requirement uuid="b4713d7e-cd13-48ec-abef-def9944d9a60" control-id="ac-18">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-18_stmt">
+      <statement statement-id="ac-18_stmt" uuid="7e4a45a6-00ef-4875-ad75-ecd1a3985187">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-19">
+    <implemented-requirement uuid="2d9a0183-5168-4cad-8464-e7b6c6ea6fb1" control-id="ac-19">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-19_stmt">
+      <statement statement-id="ac-19_stmt" uuid="1deb8653-f152-43e2-a9ea-c01907cc2d94">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-20">
+    <implemented-requirement uuid="15bfa83e-df09-4adc-968f-cb251f57f90b" control-id="ac-20">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-20_stmt">
+      <statement statement-id="ac-20_stmt" uuid="b657e5c4-839b-4305-97d6-d3143ab4c86d">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-22">
+    <implemented-requirement uuid="41e336b0-f17e-4cf5-89af-6fdc1d9b6bb5" control-id="ac-22">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-22_stmt">
+      <statement statement-id="ac-22_stmt" uuid="14f784f4-063b-4d4f-880d-ee82e412a256">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-1">
+    <implemented-requirement uuid="9c8021e3-4091-4dda-92ec-eff7233112f3" control-id="at-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-1_stmt.a">
+      <statement statement-id="at-1_stmt.a" uuid="27c08b73-1777-4273-b9fa-0c3ce8579af7">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-1_stmt.b">
+      <statement statement-id="at-1_stmt.b" uuid="d573298f-2b0c-4788-8975-eed4e0bc2cea">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-2">
+    <implemented-requirement uuid="18d15140-7ad2-401e-bdb3-9ea485a66e00" control-id="at-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-2_stmt.a">
+      <statement statement-id="at-2_stmt.a" uuid="6e5bad3a-880d-4cda-896b-691e633d55c6">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-2_stmt.b">
+      <statement statement-id="at-2_stmt.b" uuid="797b091b-1a03-4296-a67a-1c117bf3326c">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-2_stmt.c">
+      <statement statement-id="at-2_stmt.c" uuid="70124898-0058-4f2d-8b05-6936cffbbe4d">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-3">
+    <implemented-requirement uuid="091998a0-d80e-41ee-979a-8a7167c5380e" control-id="at-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-3_stmt.a">
+      <statement statement-id="at-3_stmt.a" uuid="2c459027-3fb8-4c5b-baa8-08942f92a3bc">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-3_stmt.b">
+      <statement statement-id="at-3_stmt.b" uuid="7b2d0601-67f5-4444-82be-f2073a4961a8">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-3_stmt.c">
+      <statement statement-id="at-3_stmt.c" uuid="e2d8ba4e-79be-48df-ac9a-32f50698deb2">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-4">
+    <implemented-requirement uuid="96aea7ad-12a7-4ffa-94b3-5b0ab1722157" control-id="at-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-4_stmt.a">
+      <statement statement-id="at-4_stmt.a" uuid="06bfc3b5-b8f7-4607-9e3d-f2d45138b1e2">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-4_stmt.b">
+      <statement statement-id="at-4_stmt.b" uuid="9f95f54e-0b94-44bd-9862-8f2929dd21cb">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-1">
+    <implemented-requirement uuid="dc1b9b3d-2d90-45cc-a34a-de49763b8636" control-id="au-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-1_stmt">
+      <statement statement-id="au-1_stmt" uuid="033331bf-dcf6-47ba-a61e-d481543c374f">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-2">
+    <implemented-requirement uuid="b73f35d2-cd9e-4dea-a0e2-b03fec8f13d4" control-id="au-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-2_stmt">
+      <statement statement-id="au-2_stmt" uuid="27380a2c-1088-4ccc-89e6-1eadbc6057d2">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.
 
@@ -259,26 +264,26 @@ Red Hat OpenStack Platform through actions specified in AU-12.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-3">
+    <implemented-requirement uuid="96445d20-0bef-43b5-a8ed-68b7301e7d3d" control-id="au-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="au-3_stmt">
+      <statement statement-id="au-3_stmt" uuid="90a2e576-a209-4464-b181-c59dbf07fe2d">
         <description><p>'Red Hat OpenStack Platform audit records contain this information by default. No
 additional configuration is required.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-4">
+    <implemented-requirement uuid="9a2396ce-d9cc-4ed5-8463-cbac177846d4" control-id="au-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-4_stmt">
+      <statement statement-id="au-4_stmt" uuid="0578e237-ee29-4bca-ab3f-9401742ecbb4">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform. This control is reflected
 in proper disk partitioning of the underlying Operating System.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-5">
+    <implemented-requirement uuid="ef232b02-9f15-45c4-90ac-053791b7e58d" control-id="au-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-5_stmt.a">
+      <statement statement-id="au-5_stmt.a" uuid="a93fe565-a093-46d2-8893-7fc40c90ac46">
         <description><p>'Red Hat OpenStack Platform Administrators  are responsible for alerting personnel
 or roles in the event of an audit processing failure. A successful
 control response will outline the process taken to alert personnel
@@ -290,7 +295,7 @@ in Jira:
 https://securitycentral.atlassian.net/secure/RapidBoard.jspa?rapidView=4&amp;projectKey=OFB&amp;selectedIssue=OFB-7'
 </p></description>
       </statement>
-      <statement statement-id="au-5_stmt.b">
+      <statement statement-id="au-5_stmt.b" uuid="149ec18a-f785-4d04-9bf1-9debc0173cd5">
         <description><p>'In the event of an audit processing failure, Red Hat OpenStack Platform Administrators
 are responsible for: overwriting the oldest audit records for low
 impact systems and shutting down moderate impact systems. A successful
@@ -299,32 +304,32 @@ failure occurs.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-6">
+    <implemented-requirement uuid="2aaf6fb5-e8e4-40fe-b587-88fe557cff52" control-id="au-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-6_stmt">
+      <statement statement-id="au-6_stmt" uuid="1344c794-57b8-47d7-b2cf-31598b0e8c7c">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-8">
+    <implemented-requirement uuid="4033e25a-584d-485e-9bea-a1409f8bf582" control-id="au-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="au-8_stmt.a">
+      <statement statement-id="au-8_stmt.a" uuid="34ecc73e-fcc1-424e-b79c-ce862abe1923">
         <description><p>'Red Hat OpenStack Platform time keeping relies on the time services provided by the
 underlying operating system. This control is not applicable to the configuration
 of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
-      <statement statement-id="au-8_stmt.b">
+      <statement statement-id="au-8_stmt.b" uuid="4f65efeb-f1d2-4dfe-a973-1fbc8442617e">
         <description><p>'Red Hat OpenStack Platform time keeping relies on the time services provided by the
 underlying operating system. This control is not applicable to the configuration
 of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-9">
+    <implemented-requirement uuid="9304eebb-2b78-45ae-a0dd-3470b0b32600" control-id="au-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-9_stmt">
+      <statement statement-id="au-9_stmt" uuid="73100e2a-4094-4962-8c8d-838737e06861">
         <description><p>'Customers are required to protect the audit information and audit
 tools from unauthorized access, modification, and deletion. A successful
 control response will discuss the way that audit information and tools
@@ -338,9 +343,9 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-11">
+    <implemented-requirement uuid="de7d8e17-1423-4fd9-b80c-5bbd39dc3341" control-id="au-11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-11_stmt">
+      <statement statement-id="au-11_stmt" uuid="a78de7b3-9a1d-494d-8564-4e2b35e91187">
         <description><p>'Documentation/instructions on audit retention is being tracked
 in GitHub:
 
@@ -348,9 +353,9 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-12">
+    <implemented-requirement uuid="212f2f6c-131a-4e9f-ac25-9c68c4880a47" control-id="au-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-12_stmt.a">
+      <statement statement-id="au-12_stmt.a" uuid="d1a2f352-53b6-4de4-9f5e-c81221e22a3b">
         <description><p>'//*
 Customers are required to provide record generation capability for the
 events defined in AU-2a at all information system components where audit
@@ -360,7 +365,7 @@ defined in AU-2.
 */'
 </p></description>
       </statement>
-      <statement statement-id="au-12_stmt.b">
+      <statement statement-id="au-12_stmt.b" uuid="eb3521c0-c543-490a-aa40-ca3fda3652a9">
         <description><p>'//*
 Customers are required to allow defined personnel or roles to select
 which auditable events are to be audited by specific components of the
@@ -376,7 +381,7 @@ is recommended that Red Hat OpenStack Platform specific audit rules be added to
 */'
 </p></description>
       </statement>
-      <statement statement-id="au-12_stmt.c">
+      <statement statement-id="au-12_stmt.c" uuid="e4323cce-4c0c-4044-99e6-9b3591d98874">
         <description><p>'//*
 Customers are required to generate audit records for the events
 defined in AU-2d with the content defined in AU-3. A successful control
@@ -386,104 +391,104 @@ the requirements defined in AU-2 and AU-3.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-1">
+    <implemented-requirement uuid="3e4ef479-8bbb-4e82-8f6d-4455a6035afa" control-id="ca-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-1_stmt">
+      <statement statement-id="ca-1_stmt" uuid="7bb57d6b-c7b2-4f26-86b7-f66b05a00b16">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-2">
+    <implemented-requirement uuid="0cfc5f41-38cf-4523-9e9a-6cb3016fae5b" control-id="ca-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-2_stmt">
+      <statement statement-id="ca-2_stmt" uuid="8b74393c-a87c-483d-8267-d15570b8deb9">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-2.1">
+    <implemented-requirement uuid="eabc9262-a6ca-440c-ab59-a06c59c1c60d" control-id="ca-2.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-2.1_stmt">
+      <statement statement-id="ca-2.1_stmt" uuid="e0c80f5c-8bf2-4cbf-aa46-ce51a06a113c">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-3">
+    <implemented-requirement uuid="6a3150da-4759-4b51-ad19-d520365060f1" control-id="ca-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-3_stmt">
+      <statement statement-id="ca-3_stmt" uuid="2439ae31-9621-4773-9ddb-0eff9d24b353">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-5">
+    <implemented-requirement uuid="9ba1a4fe-c87c-4564-8738-58d3d8c40226" control-id="ca-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-5_stmt">
+      <statement statement-id="ca-5_stmt" uuid="2eaa4986-67b2-45ea-8dd5-822a3a1207a2">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-6">
+    <implemented-requirement uuid="44e37ccd-4742-41b4-b301-773b436de57a" control-id="ca-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-6_stmt">
+      <statement statement-id="ca-6_stmt" uuid="79e74a60-18e4-4103-bd2a-64aace61610d">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-7">
+    <implemented-requirement uuid="c22a547d-1f6c-4084-b9a0-6be9672bbf43" control-id="ca-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-7_stmt">
+      <statement statement-id="ca-7_stmt" uuid="2fd48773-0610-4e65-96f0-358e7ee8f19a">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-9">
+    <implemented-requirement uuid="09fd8f30-686c-4469-a6ca-feba2c51033e" control-id="ca-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-9_stmt">
+      <statement statement-id="ca-9_stmt" uuid="79d3a530-6c50-43dc-9e51-9bc041b9a62a">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'##
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-1">
+    <implemented-requirement uuid="9e4896aa-869a-437b-843a-14f9dd2a05e3" control-id="cm-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-1_stmt">
+      <statement statement-id="cm-1_stmt" uuid="ccec36c8-57d3-4f0e-a69d-3b746fceece9">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-2">
+    <implemented-requirement uuid="caf0ad37-858c-4685-97af-a0a5c6f96d4f" control-id="cm-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-2_stmt">
+      <statement statement-id="cm-2_stmt" uuid="c811617c-64dd-4f43-80e8-f7670c0e7acd">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-4">
+    <implemented-requirement uuid="6afaed17-26ef-4eca-8f2d-c6f85b1abfdb" control-id="cm-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-4_stmt">
+      <statement statement-id="cm-4_stmt" uuid="70322d5c-73aa-4e56-a333-af6f038e9f0c">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-6">
+    <implemented-requirement uuid="cdfbf3bb-e447-4b05-a450-c015da4a855d" control-id="cm-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-6_stmt.b">
+      <statement statement-id="cm-6_stmt.b" uuid="44f4416c-0444-4035-967f-1f318d3c70b8">
         <description><p>'The customer will be responsible for implementing configuration
 settings as defined in CM-6(a). A successful control response will
 describe how mandatory configuration settings are implemented. This can
 include the process or documentation followed.'
 </p></description>
       </statement>
-      <statement statement-id="cm-6_stmt.d">
+      <statement statement-id="cm-6_stmt.d" uuid="d95d9cfb-bf4e-402f-a65f-ecb3e91a6727">
         <description><p>'The customer will be responsible for monitoring and controlling
 changes to the configuration settings in accordance with organization
 policies and procedures. A successful control response will describe
@@ -493,9 +498,9 @@ track and approve changes.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-7">
+    <implemented-requirement uuid="3e4ce4d0-1a1e-4477-a514-a106ffc67fd6" control-id="cm-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-7_stmt">
+      <statement statement-id="cm-7_stmt" uuid="a96c20dd-e62c-487b-bede-9a8f91318865">
         <description><p>'OpenStack provides many capabilities, ranging from elastic compute,
 software defined networking, and storage subsystems. A successful
 control response will outline which OpenStack services are enabled
@@ -503,65 +508,65 @@ and their mission purpose.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-8">
+    <implemented-requirement uuid="1f650fdf-e04d-404d-8c90-c5a1c5d1cdd9" control-id="cm-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-8_stmt">
+      <statement statement-id="cm-8_stmt" uuid="b701750f-d326-4fa1-8ab2-34b40338b141">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-10">
+    <implemented-requirement uuid="2b3e8970-12d1-416a-a2fe-64fed6fafee9" control-id="cm-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-10_stmt">
+      <statement statement-id="cm-10_stmt" uuid="bd3fca95-8e65-48e1-9cb0-500a3c4f4d23">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-11">
+    <implemented-requirement uuid="46a18c5e-76a8-4056-87a9-9ee686214392" control-id="cm-11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-11_stmt">
+      <statement statement-id="cm-11_stmt" uuid="9fa42256-e969-47ec-909e-12b07d564d39">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-1">
+    <implemented-requirement uuid="8736e898-01ce-44ec-a43a-e1166e06086e" control-id="cp-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-1_stmt">
+      <statement statement-id="cp-1_stmt" uuid="ba8b232b-d8cc-46cc-9054-23f0ee001d93">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-2">
+    <implemented-requirement uuid="7f74148d-fe43-43d3-8e9c-e2d46675d5c7" control-id="cp-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-2_stmt">
+      <statement statement-id="cp-2_stmt" uuid="df2993a0-72b2-4a74-a073-11b817ab76bd">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-3">
+    <implemented-requirement uuid="1976eb12-c78d-4738-ac01-da6948f19734" control-id="cp-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-3_stmt">
+      <statement statement-id="cp-3_stmt" uuid="4bc87d52-c25b-4091-b5df-f2d8130c20b2">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-4">
+    <implemented-requirement uuid="ffeacfc7-137f-4d8a-ab27-b6b6011d74d1" control-id="cp-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-4_stmt">
+      <statement statement-id="cp-4_stmt" uuid="59f31a33-9d32-4165-880f-86b97a963b05">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-9">
+    <implemented-requirement uuid="50f67682-6e75-494b-9753-325541fd82d0" control-id="cp-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cp-9_stmt.a">
+      <statement statement-id="cp-9_stmt.a" uuid="bbd52b85-45e2-4d03-bebd-975cf13be601">
         <description><p>'The customer will be responsible for conducting daily incremental and
 weekly full backups of user-level information contained in the
 information system. Additional FedRAMP requirements and guidance include
@@ -576,7 +581,7 @@ Guidance on establishing such backups is being tracked in GitHub:
 https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
-      <statement statement-id="cp-9_stmt.b">
+      <statement statement-id="cp-9_stmt.b" uuid="c65638e7-fb24-49a4-bc79-ef146f21c50d">
         <description><p>'The customer will be responsible for conducting daily incremental and
 weekly full backups of system-level information contained in the
 information system. Additional FedRAMP requirements and guidance include
@@ -591,7 +596,7 @@ Guidance on establishing such backups is being tracked in GitHub:
 https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
-      <statement statement-id="cp-9_stmt.c">
+      <statement statement-id="cp-9_stmt.c" uuid="631f5211-d07a-457e-96bb-ab72efd0f4a2">
         <description><p>'The customer will be responsible for conducting daily incremental and
 weekly full backups of information system documentation including
 security-related documentation. Additional FedRAMP requirements and
@@ -605,7 +610,7 @@ Guidance on establishing such backups is being tracked in GitHub:
 https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
-      <statement statement-id="cp-9_stmt.d">
+      <statement statement-id="cp-9_stmt.d" uuid="b4a4e23f-6e84-40db-bb46-31a82116582e">
         <description><p>'The customer will be responsible for protecting the confidentiality,
 integrity, and available of backup information at storage locations.
 Additional FedRAMP requirements and guidance include determining
@@ -619,34 +624,34 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-10">
+    <implemented-requirement uuid="8377989f-3206-4366-b293-0ea64c55c674" control-id="cp-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cp-10_stmt">
+      <statement statement-id="cp-10_stmt" uuid="340b2f31-336a-4596-bcb1-1a48873416b5">
         <description><p>'The customer will be responsible for documenting how to reconstitute 
 their Red Hat OpenStack Platform environment. A successful control response will detail
 processes used to fully recover/restore the Red Hat OpenStack Platform environment.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-1">
+    <implemented-requirement uuid="061f104e-6be6-4e53-b3b6-f0cec06db0f0" control-id="ia-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-1_stmt">
+      <statement statement-id="ia-1_stmt" uuid="1c89eae8-5019-4148-8659-937f82e18de5">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-2">
+    <implemented-requirement uuid="9f43ff63-752a-4f0a-880a-b1c0a5a2b944" control-id="ia-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ia-2_stmt">
+      <statement statement-id="ia-2_stmt" uuid="b45c593e-801e-4356-823e-43fd249a5f90">
         <description><p>'Red Hat OpenStack Platform assigns unique identifies to users, groups, and processes
 acting on behalf of these categories. This is non-configurable behavior.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-2.1">
+    <implemented-requirement uuid="32cee572-0957-4f97-aa40-a6d4c6a8c1b2" control-id="ia-2.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-2.1_stmt">
+      <statement statement-id="ia-2.1_stmt" uuid="90458bf3-788b-4624-8fc4-012d703be679">
         <description><p>'The customer will be responsible for implementing multifactor
 authentication for network access to privileged accounts.
 
@@ -667,9 +672,9 @@ Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-2.12">
+    <implemented-requirement uuid="dbe3ec33-4272-4837-af80-d414f2b9b98e" control-id="ia-2.12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-2.12_stmt">
+      <statement statement-id="ia-2.12_stmt" uuid="ff5958ab-6c31-4f2c-bd03-a1bb5d36d1d1">
         <description><p>'Personal Identity Verification (PIV) credentials are those credentials
 issued by federal agencies that conform to FIPS Publication 201 and
 supporting guidance documents. Customers will not be expected to perform
@@ -680,9 +685,9 @@ Federation Services (ADFS).'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-4">
+    <implemented-requirement uuid="b1adaa54-4203-4494-8563-dd657ef399f8" control-id="ia-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-4_stmt">
+      <statement statement-id="ia-4_stmt" uuid="2bce08de-4c47-4467-8da5-b1a2a4c764d5">
         <description><p>'To meet NIST 800-53 identity and authorization requirements, Red Hat OpenStack Platform
 must be configured to use an external identity system (such as Red Hat
 IdM or Microsoft Active Directory). This control is applicable to the
@@ -690,9 +695,9 @@ identity provider, not Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-5">
+    <implemented-requirement uuid="bc24e86c-690a-44b7-990e-f1e5bff59928" control-id="ia-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-5_stmt">
+      <statement statement-id="ia-5_stmt" uuid="14933882-f71d-4ee0-886b-a35d050de53a">
         <description><p>'To meet NIST 800-53 identity and authorization requirements, Red Hat OpenStack Platform
 must be configured to use an external identity system (such as Red Hat
 IdM or Microsoft Active Directory). This control is applicable to the
@@ -700,9 +705,9 @@ identity provider, not Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-5.1">
+    <implemented-requirement uuid="ed1045b2-6235-446e-bb8d-ef78fcb42efc" control-id="ia-5.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-5.1_stmt">
+      <statement statement-id="ia-5.1_stmt" uuid="8bf06099-3d84-41ff-9c08-7a8838e6b6ce">
         <description><p>'To meet NIST 800-53 identity and authorization requirements, Red Hat OpenStack Platform
 must be configured to use an external identity system (such as Red Hat
 IdM or Microsoft Active Directory). This control is applicable to the
@@ -710,9 +715,9 @@ identity provider, not Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-5.11">
+    <implemented-requirement uuid="899fdefd-5b85-43c9-9339-9129b0bef669" control-id="ia-5.11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-5.11_stmt">
+      <statement statement-id="ia-5.11_stmt" uuid="263734e3-abce-4de5-ae21-bfd6be44778b">
         <description><p>'To meet NIST 800-53 identity and authorization requirements, Red Hat OpenStack Platform
 must be configured to use an external identity system (such as Red Hat
 IdM or Microsoft Active Directory). This control is applicable to the
@@ -720,17 +725,17 @@ identity provider, not Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-6">
+    <implemented-requirement uuid="d93572cc-f0a7-470b-993f-ad5404974977" control-id="ia-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ia-6_stmt">
+      <statement statement-id="ia-6_stmt" uuid="bb2b53e4-13ac-44aa-ba19-30d5f89af815">
         <description><p>'Red Hat OpenStack Platform natively obscures such information. Red Hat OpenStack Platform cannot be
 configured to be out of compliance with this requirement.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-7">
+    <implemented-requirement uuid="cf17c676-24c9-4d11-9601-32152794fec3" control-id="ia-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-7_stmt">
+      <statement statement-id="ia-7_stmt" uuid="e3c8d73c-5e12-4269-8c34-067d21b6259a">
         <description><p>'Administrative access to Red Hat OpenStack Platform nodes is performed over SSH. To
 limit SSH ciphers to those algorithms which are FIPS-approved, update
 the following line in /etc/ssh/sshd_config:
@@ -750,9 +755,9 @@ FIPS 140-2 certification for enabled modules.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8">
+    <implemented-requirement uuid="1f005d05-1725-4b7a-b182-7d5682e5f71d" control-id="ia-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8_stmt">
+      <statement statement-id="ia-8_stmt" uuid="f201c5e1-ca42-467a-ba53-139c4162d8e0">
         <description><p>'The customer will be responsible for identifying and authenticating
 non-organizational users accessing the customer application. A
 successful control response will need to address how non-organizational
@@ -762,9 +767,9 @@ identification and authentication for organizational users.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.1">
+    <implemented-requirement uuid="44a30ba0-44c2-4f54-a86a-d96bd8e18b73" control-id="ia-8.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8.1_stmt">
+      <statement statement-id="ia-8.1_stmt" uuid="981c3924-19bb-4329-a14c-6e0856a7affe">
         <description><p>'Personal Identity Verificiation (PIV) credentials are those
 credentials issued by federal agencies that conform to FIPS Publication
 201 and supporting guidance documents. Customers will not be expected
@@ -775,9 +780,9 @@ through Active Directory Federation Services (ADFS) or Red Hat IdM.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.2">
+    <implemented-requirement uuid="9b3437db-08d9-4f48-b3c1-19cb078b9e2d" control-id="ia-8.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8.2_stmt">
+      <statement statement-id="ia-8.2_stmt" uuid="38d17548-5a6b-4565-ad26-9547eff0819a">
         <description><p>'FICAM approved credentials are those credentials issued by nonfederal
 government entities approved by the Federal Identity, Credential, and
 Access Management (FICAM) Trust Framework Solutions Initiative.
@@ -789,9 +794,9 @@ customer system is through Active Directory Federation Services
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.3">
+    <implemented-requirement uuid="00858f75-050a-4b5b-a17e-8a1529b3a97b" control-id="ia-8.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8.3_stmt">
+      <statement statement-id="ia-8.3_stmt" uuid="0cc130aa-3ee1-48c8-bf18-abb0cc584551">
         <description><p>'FICAM approved credentials are those credentials issued by nonfederal
 government entities approved by the Federal Identity, Credential, and
 Access Management (FICAM) Trust Framework Solutions Initiative.
@@ -803,9 +808,9 @@ customer system is through Active Directory Federation Services
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.4">
+    <implemented-requirement uuid="5807db9b-ca5e-41e0-8905-a242c6d99b90" control-id="ia-8.4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8.4_stmt">
+      <statement statement-id="ia-8.4_stmt" uuid="3f6f2cfa-8110-4814-8c50-2c65d74bed31">
         <description><p>'FICAM approved credentials are those credentials issued by nonfederal
 government entities approved by the Federal Identity, Credential, and
 Access Management (FICAM) Trust Framework Solutions Initiative.
@@ -817,91 +822,91 @@ customer system is through Active Directory Federation Services
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-1">
+    <implemented-requirement uuid="5d04aba7-4f41-4f92-a86b-fc8d296236c3" control-id="ir-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-1_stmt">
+      <statement statement-id="ir-1_stmt" uuid="0d0e4e20-9dc5-470c-9890-58e3e068079d">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-2">
+    <implemented-requirement uuid="81948c9f-301e-438a-9195-b31dd0c30a27" control-id="ir-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-2_stmt">
+      <statement statement-id="ir-2_stmt" uuid="622ea8cf-c187-4c4c-851b-47ec3b881534">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-4">
+    <implemented-requirement uuid="85f7d5a6-b34e-488a-b5fb-1fb1e7e44136" control-id="ir-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-4_stmt">
+      <statement statement-id="ir-4_stmt" uuid="8da518fa-5b3e-4dae-ab8f-8d1b89f3a418">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-5">
+    <implemented-requirement uuid="e9587ab4-fa72-4a65-b1b7-c5bdbcb7a44f" control-id="ir-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-5_stmt">
+      <statement statement-id="ir-5_stmt" uuid="389060fb-3ca2-49c7-aed6-989025c0cf27">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-6">
+    <implemented-requirement uuid="f0349a07-3975-4a1f-b719-33d01b62fa25" control-id="ir-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-6_stmt">
+      <statement statement-id="ir-6_stmt" uuid="198c5674-e917-4461-a9c2-0225e66d7ccc">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-7">
+    <implemented-requirement uuid="9c1985a0-732b-4f1a-bda1-fcd615fb14c6" control-id="ir-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-7_stmt">
+      <statement statement-id="ir-7_stmt" uuid="d5993fe6-a8b1-47ee-a761-6f37c69a8851">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-8">
+    <implemented-requirement uuid="77863125-8c26-4d25-90aa-23ecfdb66276" control-id="ir-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-8_stmt">
+      <statement statement-id="ir-8_stmt" uuid="a47cbcff-4b61-415c-9168-789ee1abdcfe">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-1">
+    <implemented-requirement uuid="797cc035-fabe-4118-8468-4eeb5351dec1" control-id="ma-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-1_stmt">
+      <statement statement-id="ma-1_stmt" uuid="399189b7-e19a-4673-a880-9374e1219ac4">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-2">
+    <implemented-requirement uuid="4b5379d5-d9ee-4483-87d2-05a6f6708761" control-id="ma-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-2_stmt">
+      <statement statement-id="ma-2_stmt" uuid="8fb32301-9a17-4b8e-beca-a32b4c7160fe">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-4">
+    <implemented-requirement uuid="c2c7e973-c1fa-4414-af98-f0d539cc7c56" control-id="ma-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ma-4_stmt.a">
+      <statement statement-id="ma-4_stmt.a" uuid="044e11f6-11ad-4cc0-a99e-fd6998bc7c69">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
-      <statement statement-id="ma-4_stmt.b">
+      <statement statement-id="ma-4_stmt.b" uuid="30843015-3c0f-4f17-8433-cb756778f039">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
-      <statement statement-id="ma-4_stmt.c">
+      <statement statement-id="ma-4_stmt.c" uuid="051db9bc-225f-43c3-830a-c3553fea3055">
         <description><p>'This control is not applicable to Red Hat OpenStack Platform.
 
 With the exception of access established through physical presense 
@@ -911,7 +916,7 @@ authentication controls selected and verified from the IA family apply
 to this control; no independant control response is required.'
 </p></description>
       </statement>
-      <statement statement-id="ma-4_stmt.d">
+      <statement statement-id="ma-4_stmt.d" uuid="73675f6b-926f-4283-becf-b86d0823e511">
         <description><p>'With the exception of access established through physical presense 
 at the hardware and underlying operating system layers, connections to
 Red Hat OpenStack Platform are treated as remote connections. Authorization and
@@ -919,7 +924,7 @@ authentication controls selected and verified from the IA family apply
 to this control; no independant control response is required.'
 </p></description>
       </statement>
-      <statement statement-id="ma-4_stmt.e">
+      <statement statement-id="ma-4_stmt.e" uuid="7efe03ae-d15d-4046-adc5-2fb968bdb7d5">
         <description><p>'The customer will be responsible for terminating the session and
 network connections when non-local maintenance and diagnostic activities
 are completed. A successful control response will need to address
@@ -931,313 +936,313 @@ underlying operating system.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-5">
+    <implemented-requirement uuid="2002daab-0c7a-48fa-b93e-eda57a4ec369" control-id="ma-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-5_stmt">
+      <statement statement-id="ma-5_stmt" uuid="4bef5bef-fe72-4909-8ddd-a2dd620b326d">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-1">
+    <implemented-requirement uuid="1cd24671-6d16-462c-ade8-4c406a6c3d04" control-id="mp-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-1_stmt">
+      <statement statement-id="mp-1_stmt" uuid="b93c1916-cd46-47ef-bb11-7c414773b6f5">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-2">
+    <implemented-requirement uuid="f0da7934-6804-47b6-9bcd-820c70a3d7c9" control-id="mp-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-2_stmt">
+      <statement statement-id="mp-2_stmt" uuid="297afbc4-9138-45e9-985e-3b57eb791ddb">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-6">
+    <implemented-requirement uuid="c67a9fa7-cd4b-4e3a-9b69-3279fcb0d4c1" control-id="mp-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-6_stmt">
+      <statement statement-id="mp-6_stmt" uuid="2bf34ab5-e039-44dd-870e-30b399982cbc">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-7">
+    <implemented-requirement uuid="6f31204f-7235-4996-aa0c-9452482b9e78" control-id="mp-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-7_stmt">
+      <statement statement-id="mp-7_stmt" uuid="457de917-20f2-42ec-89c6-47c28b73e51f">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-1">
+    <implemented-requirement uuid="795e3ae5-93b4-41a8-ae9b-c148333470a2" control-id="pe-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-1_stmt">
+      <statement statement-id="pe-1_stmt" uuid="9a38265e-e3a4-4d87-a066-0140a40178b3">
         <description><p>'This control is outside the scope of Red Hat OpenStack Platform
 configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-2">
+    <implemented-requirement uuid="1d801a69-32ff-414c-9917-db706eb4c54b" control-id="pe-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-2_stmt">
+      <statement statement-id="pe-2_stmt" uuid="4068f6cf-2759-496c-92de-e3efe148df8f">
         <description><p>'This control is outside the scope of Red Hat OpenStack Platform
 configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-3">
+    <implemented-requirement uuid="78517113-09c4-43b0-a164-e4285f185407" control-id="pe-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-3_stmt">
+      <statement statement-id="pe-3_stmt" uuid="f32f404c-1da0-4317-881d-1c15ae22abbd">
         <description><p>'This control is outside the scope of Red Hat OpenStack Platform
 configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-6">
+    <implemented-requirement uuid="71967d33-97ed-46b2-bbe6-289f1a591bc9" control-id="pe-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-6_stmt">
+      <statement statement-id="pe-6_stmt" uuid="117d16ad-b33f-4d21-827c-429b3c417170">
         <description><p>'This control is outside the scope of Red Hat OpenStack Platform
 configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-8">
+    <implemented-requirement uuid="c2e69887-20cd-49bd-9a40-173cc3a6e25c" control-id="pe-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-8_stmt">
+      <statement statement-id="pe-8_stmt" uuid="de038a75-ab81-49cd-b34f-d50cdbb11f2e">
         <description><p>'This control is outside the scope of Red Hat OpenStack Platform
 configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-12">
+    <implemented-requirement uuid="9eb814e4-8302-4291-9fa8-85f088e097a9" control-id="pe-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-12_stmt">
+      <statement statement-id="pe-12_stmt" uuid="8306ec77-9113-475a-8fd8-570292b0a70f">
         <description><p>'This control is outside the scope of Red Hat OpenStack Platform
 configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-13">
+    <implemented-requirement uuid="2a608ecb-aaf6-4a0c-978d-4dc27a5b334b" control-id="pe-13">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-13_stmt">
+      <statement statement-id="pe-13_stmt" uuid="b5e78906-91fa-4f34-a9a4-d9c55865c6c1">
         <description><p>'This control is outside the scope of Red Hat OpenStack Platform
 configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-14">
+    <implemented-requirement uuid="193a0ee6-43ac-46d0-a7de-27e374b488d1" control-id="pe-14">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-14_stmt">
+      <statement statement-id="pe-14_stmt" uuid="a2f0e39e-0a16-4ff7-830b-0f5c517db76d">
         <description><p>'This control is outside the scope of Red Hat OpenStack Platform
 configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-15">
+    <implemented-requirement uuid="36f3f85d-823d-450e-9481-caae78de535e" control-id="pe-15">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-15_stmt">
+      <statement statement-id="pe-15_stmt" uuid="cb8aaf0e-1af4-4e94-a3c9-bec436764c78">
         <description><p>'This control is outside the scope of Red Hat OpenStack Platform
 configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-16">
+    <implemented-requirement uuid="3c115f04-4655-4f8e-ac09-1f4affc7bfca" control-id="pe-16">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-16_stmt">
+      <statement statement-id="pe-16_stmt" uuid="357f834b-4a4b-4319-8e31-cf1e21230f54">
         <description><p>'This control is outside the scope of Red Hat OpenStack Platform
 configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-1">
+    <implemented-requirement uuid="14a05cdd-281f-4b37-8135-89d5bf595c23" control-id="pl-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-1_stmt">
+      <statement statement-id="pl-1_stmt" uuid="98b285a1-6d20-4a54-bb22-af38432fff20">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-2">
+    <implemented-requirement uuid="90751c08-f6cd-4ac7-8b76-bb6217e92f56" control-id="pl-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-2_stmt">
+      <statement statement-id="pl-2_stmt" uuid="5959fe53-1d84-4f37-942e-a59399440f40">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-4">
+    <implemented-requirement uuid="95d12fb6-7389-4688-935d-be0b75b75079" control-id="pl-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-4_stmt">
+      <statement statement-id="pl-4_stmt" uuid="60fbe26f-a746-4971-b127-6b879f15f1e7">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-1">
+    <implemented-requirement uuid="ea8a7f4e-bc13-4916-be97-1f37787caff3" control-id="ps-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-1_stmt">
+      <statement statement-id="ps-1_stmt" uuid="5d498c6a-9496-4691-b703-944142a35816">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-2">
+    <implemented-requirement uuid="5e78ec92-aafa-429a-8777-6943f0f9993a" control-id="ps-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-2_stmt">
+      <statement statement-id="ps-2_stmt" uuid="aca03658-5337-4274-a386-8149d1e552d7">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-3">
+    <implemented-requirement uuid="f28136c8-d2f4-4bea-8e95-ccebeb9903af" control-id="ps-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-3_stmt">
+      <statement statement-id="ps-3_stmt" uuid="eec7bbec-b88a-441f-b592-673f83805636">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-4">
+    <implemented-requirement uuid="b66fbbd2-495e-428b-81af-59704bc9decc" control-id="ps-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-4_stmt">
+      <statement statement-id="ps-4_stmt" uuid="d1196c48-f64f-4887-8cdc-777958b2fa66">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-5">
+    <implemented-requirement uuid="392d0576-e29c-435d-8665-926c5e7f2441" control-id="ps-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-5_stmt">
+      <statement statement-id="ps-5_stmt" uuid="17f812c1-4aab-41bb-85cf-6e54f00d25f0">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-6">
+    <implemented-requirement uuid="e1d4090b-dda7-4d53-bfc9-6d58bbee04c3" control-id="ps-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-6_stmt">
+      <statement statement-id="ps-6_stmt" uuid="b6745b7d-49e7-4eac-96ed-236803208968">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-7">
+    <implemented-requirement uuid="3911df1b-e19f-4f5e-9f25-59ae3dc18792" control-id="ps-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-7_stmt">
+      <statement statement-id="ps-7_stmt" uuid="d1ed7742-240f-4d8e-b33f-9c35d06111b0">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-8">
+    <implemented-requirement uuid="83ff98e3-5712-41ad-a5e9-f7911478eb49" control-id="ps-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-8_stmt">
+      <statement statement-id="ps-8_stmt" uuid="fbbc119a-c565-4d28-bb49-8b1a5858075f">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'##
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-1">
+    <implemented-requirement uuid="6451cc23-5262-49d3-9257-60a4cae7def1" control-id="ra-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-1_stmt">
+      <statement statement-id="ra-1_stmt" uuid="44881d37-894d-4c34-9fba-582e678ba431">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-2">
+    <implemented-requirement uuid="50c86317-4d1c-4270-9b00-c5ac27fe810d" control-id="ra-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-2_stmt">
+      <statement statement-id="ra-2_stmt" uuid="aa3bc9bd-b38a-44b0-b744-57d232e50681">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-3">
+    <implemented-requirement uuid="2737ce05-2fde-4e19-a53e-a75e3bc3692d" control-id="ra-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-3_stmt">
+      <statement statement-id="ra-3_stmt" uuid="3b14b785-10bc-4226-8479-12ee5cc74bda">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-5">
+    <implemented-requirement uuid="272b8d5a-3615-4d9d-bb74-40711a034e83" control-id="ra-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-5_stmt">
+      <statement statement-id="ra-5_stmt" uuid="3a3476c1-bcf1-4201-8f81-1e09da8fa0ea">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-1">
+    <implemented-requirement uuid="1d0902ad-b79b-4fcb-b830-85e390367a54" control-id="sa-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-1_stmt">
+      <statement statement-id="sa-1_stmt" uuid="49b753c5-57ee-4d37-b7f7-1566a9191f2c">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-2">
+    <implemented-requirement uuid="3a1694aa-922b-40e4-ad60-2d5f44da9f3c" control-id="sa-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-2_stmt">
+      <statement statement-id="sa-2_stmt" uuid="29791f02-c50a-4454-9739-c81c7036082e">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-3">
+    <implemented-requirement uuid="e2b6238c-dba3-42ab-9b38-a2fe55ebb8fb" control-id="sa-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-3_stmt">
+      <statement statement-id="sa-3_stmt" uuid="f824690d-d56d-4e83-bf22-feafe1a3b63b">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-4">
+    <implemented-requirement uuid="231a463a-7493-4a6a-815c-7495463e030c" control-id="sa-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-4_stmt">
+      <statement statement-id="sa-4_stmt" uuid="8b9da5c1-dc44-4b74-9d3c-f7c8863b0fbe">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-5">
+    <implemented-requirement uuid="22cfc7d7-baad-42e2-b38a-8870398fcbfc" control-id="sa-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-5_stmt">
+      <statement statement-id="sa-5_stmt" uuid="138bb3a5-b7b5-4761-a684-d35a7ccf98bf">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-9">
+    <implemented-requirement uuid="cd9bf6d7-873f-4f89-bb80-5ba1705fb4a1" control-id="sa-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-9_stmt">
+      <statement statement-id="sa-9_stmt" uuid="6677765f-bf73-47d1-a289-6b3688bcfd8a">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-1">
+    <implemented-requirement uuid="f3555b5b-b684-4164-b3c7-748e006cdbf3" control-id="sc-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-1_stmt">
+      <statement statement-id="sc-1_stmt" uuid="1d907fac-4ace-4482-a8dc-564b0b066ba2">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-5">
+    <implemented-requirement uuid="dd82e629-7f7c-4411-b6aa-a4af7956c2b3" control-id="sc-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-5_stmt">
+      <statement statement-id="sc-5_stmt" uuid="086116e8-9c3c-427b-8045-c7c0baaf1630">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-7">
+    <implemented-requirement uuid="0f9548f3-d3b9-4dd3-b171-1065de149ca6" control-id="sc-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-7_stmt.a">
+      <statement statement-id="sc-7_stmt.a" uuid="a8e07946-3045-4080-9893-6f93864a40fc">
         <description><p>'Documentation on how communications at key internal boundaries of
 OpenStack can be monitored is forthcoming. This activity is being
 tracked in GitHub:
@@ -1245,7 +1250,7 @@ tracked in GitHub:
 https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
-      <statement statement-id="sc-7_stmt.b">
+      <statement statement-id="sc-7_stmt.b" uuid="498a85d9-979d-4b5a-822d-7ce00bd084e1">
         <description><p>'Documentation regarding how Red Hat OpenStack Platform can implement subnetworks
 for publicly accessible system components is forthcoming. This
 activity is being tracked in GitHub:
@@ -1253,7 +1258,7 @@ activity is being tracked in GitHub:
 https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
-      <statement statement-id="sc-7_stmt.c">
+      <statement statement-id="sc-7_stmt.c" uuid="bf5b0a2b-f051-4e74-a653-d0c6d1249ee1">
         <description><p>'Documentation regarding how Red Hat OpenStack Platform can route connections to external
 systems through a managed interface is forthcoming. This
 activity is being trackedin GitHub:
@@ -1262,9 +1267,9 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-12">
+    <implemented-requirement uuid="6ff64849-a2bc-4832-84d9-ae6bbf1ea72e" control-id="sc-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-12_stmt">
+      <statement statement-id="sc-12_stmt" uuid="7d49b09d-ba97-4e1d-a207-6b6c5862e446">
         <description><p>'Documentation regarding how Red Hat OpenStack Platform generates, distributes, stores,
 accesses, and desctructs, cryptographic keys is forthcoming. This
 activity is being tracked in GitHub:
@@ -1273,9 +1278,9 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-13">
+    <implemented-requirement uuid="ec4cce2d-f759-406a-8688-a05f3e09f6a5" control-id="sc-13">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-13_stmt">
+      <statement statement-id="sc-13_stmt" uuid="312fd16a-26df-4676-adeb-37c03d3ea834">
         <description><p>'Documentation regarding Red Hat OpenStack Platform's usage of cryptography
 and applicability to Federal laws is forthcoming. This
 activity is being tracked in GitHub:
@@ -1284,23 +1289,23 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-15">
+    <implemented-requirement uuid="de5151f7-e992-458b-83f9-233a98c6d4fb" control-id="sc-15">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-15_stmt.a">
+      <statement statement-id="sc-15_stmt.a" uuid="f79c3b50-3ecd-4971-9217-5674cedbeb07">
         <description><p>'Examples of collaborative computing devices include networked white
 boards, TV conference cameras, and remote video systems. This control
 is not applicable because Red Hat Red Hat OpenStack Platform Container Platform is not
 a collaborative computing device.'
 </p></description>
       </statement>
-      <statement statement-id="sc-15_stmt.b">
+      <statement statement-id="sc-15_stmt.b" uuid="d1ca912f-76c2-4fa7-970a-b33319d6a295">
         <description><p>'Examples of collaborative computing devices include networked white
 boards, TV conference cameras, and remote video systems. This control
 is not applicable because Red Hat Red Hat OpenStack Platform Container Platform is not
 a collaborative computing device.'
 </p></description>
       </statement>
-      <statement statement-id="sc-15_stmt.b.1">
+      <statement statement-id="sc-15_stmt.b.1" uuid="db18e0a2-768f-4c2e-b738-c054803a8cc5">
         <description><p>'Examples of collaborative computing devices include networked white
 boards, TV conference cameras, and remote video systems. This control
 is not applicable because Red Hat Red Hat OpenStack Platform Container Platform is not
@@ -1308,9 +1313,9 @@ a collaborative computing device.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-20">
+    <implemented-requirement uuid="dc9bea95-0a93-42e0-a55c-e0907156e773" control-id="sc-20">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-20_stmt.a">
+      <statement statement-id="sc-20_stmt.a" uuid="11928e91-19c0-40ca-9fee-e2f10081362c">
         <description><p>'Red Hat OpenStack Platform has a built-in DNS so that services can be reached by
 the service DNS as well as the service IP/port. Red Hat OpenStack Platform supports
 split DNS by running SkyDNS on the master that answers DNS queries
@@ -1329,7 +1334,7 @@ That activity is being tracked GitHub:
 https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
-      <statement statement-id="sc-20_stmt.b">
+      <statement statement-id="sc-20_stmt.b" uuid="cd0d076e-44ad-4f7b-9f2b-1caa27095661">
         <description><p>'Red Hat OpenStack Platform has a built-in DNS so that services can be reached by
 the service DNS as well as the service IP/port. Red Hat OpenStack Platform supports
 split DNS by running SkyDNS on the master that answers DNS queries
@@ -1349,9 +1354,9 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-21">
+    <implemented-requirement uuid="aeb6ccf6-8bbb-44a9-9222-65a87feb3ea1" control-id="sc-21">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-21_stmt">
+      <statement statement-id="sc-21_stmt" uuid="899fc414-72d9-4cb8-b5ce-7f607e141307">
         <description><p>'Red Hat OpenStack Platform has a built-in DNS so that services can be reached by
 the service DNS as well as the service IP/port. Red Hat OpenStack Platform supports
 split DNS by running SkyDNS on the master that answers DNS queries
@@ -1368,9 +1373,9 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-22">
+    <implemented-requirement uuid="652bcda9-799f-4ee9-8dee-1df541c4e7e1" control-id="sc-22">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-22_stmt">
+      <statement statement-id="sc-22_stmt" uuid="8c6ec981-a00c-46e6-aacb-b07589037b8e">
         <description><p>'Red Hat OpenStack Platform has a built-in DNS so that services can be reached by
 the service DNS as well as the service IP/port. Red Hat OpenStack Platform supports
 split DNS by running SkyDNS on the master that answers DNS queries
@@ -1387,9 +1392,9 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-39">
+    <implemented-requirement uuid="91fd235e-ddda-4a3f-a48c-89576a542669" control-id="sc-39">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-39_stmt">
+      <statement statement-id="sc-39_stmt" uuid="5b2b1b69-b551-462e-b7de-b4d955b6c7ee">
         <description><p>'When Red Hat OpenStack Platform runs on Red Hat Enterprise Linux, 
 Red Hat OpenStack Platform maintains separate execution domains for each executing process by
 assigning a private virtual address space to each process.
@@ -1401,17 +1406,17 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-1">
+    <implemented-requirement uuid="5a4f77fa-82ef-466a-82e7-c3b3bb80d888" control-id="si-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-1_stmt">
+      <statement statement-id="si-1_stmt" uuid="221bf24d-14f5-439a-b7e2-7d25a9df5d3f">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-2">
+    <implemented-requirement uuid="7259f15e-c30f-472c-8f1c-19d6d4e4be03" control-id="si-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="si-2_stmt.a">
+      <statement statement-id="si-2_stmt.a" uuid="fa2528fa-8b77-49d4-930d-96ef36e90cc5">
         <description><p>'The customer will be responsible for analyzing their Red Hat OpenStack Platform deployment for
 flaws, reporting on those flaws, and correcting them. A successful
 control response will include a discussion of the process by which
@@ -1424,7 +1429,7 @@ patching is forthcoming. This work is being tracked in GitHub:
 https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
-      <statement statement-id="si-2_stmt.b">
+      <statement statement-id="si-2_stmt.b" uuid="0d28e80c-d754-464a-bcb7-021dcb12f10d">
         <description><p>'The customer will be responsible for testing Red Hat OpenStack Platform updates
 related to flaw remediation prior to installation. A successful
 control response will discuss the testing process (e.g. the
@@ -1437,20 +1442,20 @@ This work is being tracked in GitHub:
 https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
-      <statement statement-id="si-2_stmt.c">
+      <statement statement-id="si-2_stmt.c" uuid="a714b423-e16c-4b8f-a90f-ff20ab823e30">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
-      <statement statement-id="si-2_stmt.d">
+      <statement statement-id="si-2_stmt.d" uuid="cddc8b2e-0c79-46f2-85a0-fb2b72462dd0">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-3">
+    <implemented-requirement uuid="81080bb1-1e7a-4d50-b017-8f82b45094c5" control-id="si-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="si-3_stmt.a">
+      <statement statement-id="si-3_stmt.a" uuid="82b9112f-0a63-40f1-8862-a764ec789e7d">
         <description><p>'The customer is responsible for ensuring that they employ malicious
 code protection at information system entry, and exit points to detect
 and eradicate malicious code. A successful control response will need
@@ -1465,40 +1470,40 @@ This work is being tracked in GitHub:
 https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
-      <statement statement-id="si-3_stmt.b">
+      <statement statement-id="si-3_stmt.b" uuid="d46ffc50-6cdb-4b03-9e67-5a3f20ebb87f">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
-      <statement statement-id="si-3_stmt.c">
+      <statement statement-id="si-3_stmt.c" uuid="cc371689-0f9f-425f-886e-b031bcfc1ca0">
         <description><p>'In the scope of Red Hat OpenStack Platform, this control is duplicative of SI-3(a).'
 </p></description>
       </statement>
-      <statement statement-id="si-3_stmt.d">
+      <statement statement-id="si-3_stmt.d" uuid="423bbab9-7b83-4ede-9f19-62f86f8820bb">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-4">
+    <implemented-requirement uuid="6fa0d0f2-c342-4289-b06b-10c044002ff6" control-id="si-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-4_stmt">
+      <statement statement-id="si-4_stmt" uuid="0a556f00-dd18-4b9c-a65c-1a969c20cded">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-5">
+    <implemented-requirement uuid="68c17411-cd5b-4840-8176-dabf8026dc4e" control-id="si-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-5_stmt">
+      <statement statement-id="si-5_stmt" uuid="0627f70b-92b7-4771-8e05-425ce32c9c96">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat OpenStack Platform.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-12">
+    <implemented-requirement uuid="4cca7414-d37d-40ed-94bd-f1aa9e94f0ed" control-id="si-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="si-12_stmt">
+      <statement statement-id="si-12_stmt" uuid="3fc16e53-d058-4d13-8799-54151042a3e2">
         <description><p>'The customer will be responsible for handling and retaining
 information within, or hosted by, Red Hat OpenStack Platform in
 accordance with applicable federal laws, Executive Orders,
@@ -1516,9 +1521,9 @@ https://github.com/SecurityCentral/redhat-openstack-platform-13/projects/1'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-16">
+    <implemented-requirement uuid="ce5c7fc1-f1c6-49b5-8f4b-634a8ced7ded" control-id="si-16">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-16_stmt">
+      <statement statement-id="si-16_stmt" uuid="b58b7110-e27f-4aff-874b-ba6773f5a4b9">
         <description><p>'Red Hat OpenStack inherits many memory protections provided
 by the underlying operating system. When running on Red Hat
 Enterprise Linux, such kernel-level memory protections

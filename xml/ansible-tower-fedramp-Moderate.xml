@@ -1,7 +1,7 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="e8722b6d-504b-4470-b14d-71ad7dffb56f">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-02-12T11:53:40.13+01:00</last-modified>
+    <last-modified>2020-09-01T00:26:08.90+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -37,24 +37,29 @@
       <description><p>A holistic, top-level explanation of the FedRAMP authorization boundary.</p></description>
     </authorization-boundary>
   </system-characteristics>
+  <system-implementation>
+    <user uuid="fbe2be90-9ad7-45f3-bdca-70b920b9c59a">
+      <role-id>generator</role-id>
+    </user>
+  </system-implementation>
   <control-implementation>
     <description><p>FedRAMP SSP Template Section 13</p></description>
-    <implemented-requirement control-id="ac-1">
+    <implemented-requirement uuid="e5c3ae7d-e92a-4097-8312-58eccc1cf6f1" control-id="ac-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-1_stmt.a">
+      <statement statement-id="ac-1_stmt.a" uuid="32b5d0d3-2270-4e86-b887-13d450a20340">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="ac-1_stmt.b">
+      <statement statement-id="ac-1_stmt.b" uuid="1bcf273c-87d6-42d3-a00c-44b60356d8ab">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-2">
+    <implemented-requirement uuid="8a132caa-e74a-4b8c-ab89-037944f11130" control-id="ac-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
-      <statement statement-id="ac-2_stmt.a">
+      <statement statement-id="ac-2_stmt.a" uuid="56c165e7-c3c6-412f-993f-a576d998efca">
         <description><p>Ansible Tower's Role-based Access Control (RBAC) implementation
 offers multiple types of information system accounts, each
 with differing access and administrative roles.
@@ -86,18 +91,18 @@ Documentation of Ansible Tower's RBAC system is available in the Ansible Tower U
 https://docs.ansible.com/ansible-tower/latest/html/userguide/security.html#role-based-access-controls
 </p></description>
       </statement>
-      <statement statement-id="ac-2_stmt.b">
+      <statement statement-id="ac-2_stmt.b" uuid="0bfad548-5bbc-4201-b2cd-08aa00d8179c">
         <description><p>Assigning Ansible Tower account managers is an organizational
 process outside the scope of Ansible Tower configuration.
 </p></description>
       </statement>
-      <statement statement-id="ac-2_stmt.c">
+      <statement statement-id="ac-2_stmt.c" uuid="863fab26-3cc3-45b8-b247-449ca77482c9">
         <description><p>Establishing conditions for group and role membership is an
 organizational process outside the scope of Ansible Tower
 configuration.
 </p></description>
       </statement>
-      <statement statement-id="ac-2_stmt.d">
+      <statement statement-id="ac-2_stmt.d" uuid="f0266b34-d5ec-41b3-bada-c7c1a72187b3">
         <description><p>To specify authorized users of Ansible Tower, group and role
 membership, and access authorizations, refer to the
 Ansible Tower User Guide:
@@ -105,17 +110,17 @@ Ansible Tower User Guide:
 https://docs.ansible.com/ansible-tower/latest/html/userguide/users.html
 </p></description>
       </statement>
-      <statement statement-id="ac-2_stmt.e">
+      <statement statement-id="ac-2_stmt.e" uuid="51716c7f-8a20-45cd-9f3c-a00907460054">
         <description><p>Organizational processes regarding account creation requests
 are outside the scope of Ansible Tower configuration.
 </p></description>
       </statement>
-      <statement statement-id="ac-2_stmt.f">
+      <statement statement-id="ac-2_stmt.f" uuid="87bf1cb2-2505-4812-856e-1be546915653">
         <description><p>Organizational processes regarding administration of Ansible Tower
 accounts are outside the scope of Ansible Tower configuration.
 </p></description>
       </statement>
-      <statement statement-id="ac-2_stmt.g">
+      <statement statement-id="ac-2_stmt.g" uuid="43e2e448-e7fd-4532-a529-b927499b955d">
         <description><p>The Ansible Tower logging subsystems can assist with monitoring the use of Ansible Tower
 accounts. Logging is a standalone feature introduced in Ansible Tower that provides
 the capability to send detailed logs to several kinds of 3rd party external log
@@ -128,30 +133,30 @@ Ansible Tower Administration Guide:
 https://docs.ansible.com/ansible-tower/latest/html/administration/logging.html
 </p></description>
       </statement>
-      <statement statement-id="ac-2_stmt.h">
+      <statement statement-id="ac-2_stmt.h" uuid="7334f5e8-14f5-42d1-852e-d5a8b868d71e">
         <description><p>Organizational processes regarding account termination or need-to-know
 changes are outside the scope of Ansible Tower configuration.
 </p></description>
       </statement>
-      <statement statement-id="ac-2_stmt.i">
+      <statement statement-id="ac-2_stmt.i" uuid="877e3947-80d8-43a3-9f8b-dbf5d632cc3a">
         <description><p>Organizational processes regarding access authorization are outside
 the scope of Ansible Tower configuration.
 </p></description>
       </statement>
-      <statement statement-id="ac-2_stmt.j">
+      <statement statement-id="ac-2_stmt.j" uuid="e7c8c7bd-ec02-4814-ba05-15efbf82823d">
         <description><p>Organizational processes regarding the review of account management policies
 are outside the scope of Ansible Tower configuration.
 </p></description>
       </statement>
-      <statement statement-id="ac-2_stmt.k">
+      <statement statement-id="ac-2_stmt.k" uuid="2a31c621-0cfb-495d-9611-1aa551ae63a7">
         <description><p>Organizational processes for reissuing shared/group account credentials
 are outside the scope of Ansible Tower configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-2.1">
+    <implemented-requirement uuid="bb76298c-de0f-4bc3-8f23-dbdd4bf7ec66" control-id="ac-2.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-2.1_stmt">
+      <statement statement-id="ac-2.1_stmt" uuid="67175a42-3f13-4ce1-9773-7e808859c3b4">
         <description><p>Ansible Tower offers supported integrations with many account management
 systems, such as Kerberos, Azure Active Directory, LDAP, RADIUS, SAML, TACACS+,
 and many others.
@@ -166,9 +171,9 @@ password complexity, an external account management system MUST be used!
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-2.2">
+    <implemented-requirement uuid="0a1223c9-b454-4f2f-97b4-89f36337f6bd" control-id="ac-2.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
-      <statement statement-id="ac-2.2_stmt">
+      <statement statement-id="ac-2.2_stmt" uuid="11d6f38f-61e8-4a32-8851-c53e64832c89">
         <description><p>Ansible Tower does not natively have the capability to automatically
 remove or disable temporary and emergency accounts.
 
@@ -187,9 +192,9 @@ or disable the account.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-2.3">
+    <implemented-requirement uuid="37e77fa3-f4f9-4ddc-9643-b878c3c7cfbb" control-id="ac-2.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
-      <statement statement-id="ac-2.3_stmt">
+      <statement statement-id="ac-2.3_stmt" uuid="6b6b62eb-c07a-40f9-be20-59c89470813a">
         <description><p>Ansible Tower does not natively have the capability to automatically
 disable inactive accounts after an organization-defined time period.
 
@@ -213,9 +218,9 @@ remove or disable the account.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-2.5">
+    <implemented-requirement uuid="79467277-1aa1-4979-baab-5f527f8a2003" control-id="ac-2.5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-2.5_stmt">
+      <statement statement-id="ac-2.5_stmt" uuid="e5c43983-c28d-4629-9f03-b04179d41156">
         <description><p>Introduced in Ansible Tower 2.4 is a feature which adds an Auth-Token-Timeout
 to every response that includes a valid user-supplied token. This setting
 changed to Session-Timeout in Ansible Tower 3.3. The value of Session-Timeout
@@ -232,9 +237,9 @@ https://docs.ansible.com/ansible-tower/latest/html/administration/authentication
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-2.7">
+    <implemented-requirement uuid="4b440feb-1060-4328-a830-42ee0f2d0241" control-id="ac-2.7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-2.7_stmt.a">
+      <statement statement-id="ac-2.7_stmt.a" uuid="93d8da0b-a6c4-4240-96cc-324260b213f9">
         <description><p>Ansible Tower's Role-based Access Control (RBAC) implementation
 offers multiple types of information system accounts, each
 with differing access and administrative roles.
@@ -266,21 +271,21 @@ Documentation of Ansible Tower's RBAC system is available in the Ansible Tower U
 https://docs.ansible.com/ansible-tower/latest/html/userguide/security.html#role-based-access-controls
 </p></description>
       </statement>
-      <statement statement-id="ac-2.7_stmt.b">
+      <statement statement-id="ac-2.7_stmt.b" uuid="688efa77-e33c-49f6-96d4-5704151690fb">
         <description><p>Ansible Tower automatically logs creation, modification,
 and removal of Role-based Access Control (RBAC) privileges.
 This is non-configurable default behavior.
 </p></description>
       </statement>
-      <statement statement-id="ac-2.7_stmt.c">
+      <statement statement-id="ac-2.7_stmt.c" uuid="a4c77683-addf-4d5a-a5e0-08882a6f7847">
         <description><p>This is an organizational process control
 outside the scope of Ansible Tower configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-3">
+    <implemented-requirement uuid="6ddfe14a-e8dc-44a9-a0c4-01a42c40ea33" control-id="ac-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-3_stmt">
+      <statement statement-id="ac-3_stmt" uuid="c9e8defd-44f7-4254-845f-3cff74719c90">
         <description><p>'There are three types of Tower users that can be assigned:
 
 - Normal User
@@ -310,9 +315,9 @@ https://docs.ansible.com/ansible-tower/latest/html/userguide/users.html'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-7">
+    <implemented-requirement uuid="a97d1746-22bd-49b9-acd0-941ab6b897d4" control-id="ac-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
-      <statement statement-id="ac-7_stmt.a">
+      <statement statement-id="ac-7_stmt.a" uuid="ebfa467f-5585-41b0-972e-4afc0fce202a">
         <description><p>'Ansible Tower does not currently have the capability to enforce limits
 on consecutive logon attempts.
 
@@ -321,7 +326,7 @@ as Red Hat IdM, must be used. This control is not applicable to
 Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
-      <statement statement-id="ac-7_stmt.b">
+      <statement statement-id="ac-7_stmt.b" uuid="d9a97c66-e34c-4cda-bc30-15c1e0611623">
         <description><p>'Ansible Tower does not currently have the capability automatically
 lock an account for an organizationally-defined time period, nor
 does Ansible Tower have the capability to lock an account until
@@ -342,9 +347,9 @@ finding.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-8">
+    <implemented-requirement uuid="5ad6c985-33c6-4317-b74c-16eb3d7d4f75" control-id="ac-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-8_stmt.a">
+      <statement statement-id="ac-8_stmt.a" uuid="67daa6da-33aa-4ae2-99a4-88cfe3068d0b">
         <description><p>'Ansible Tower supports configuration of custom system use
 notifications.
 
@@ -361,13 +366,13 @@ row
 field. Note breaks must use "\n"'
 </p></description>
       </statement>
-      <statement statement-id="ac-8_stmt.b">
+      <statement statement-id="ac-8_stmt.b" uuid="73518a26-48da-46d6-be15-8e1072729c38">
         <description><p>'Custom system use notifications are displayed on the logon screen
 prior to the "login" button. This is default, non-configurable
 behavior.'
 </p></description>
       </statement>
-      <statement statement-id="ac-8_stmt.c">
+      <statement statement-id="ac-8_stmt.c" uuid="5dec33be-9821-48e6-a109-50e07fb979c5">
         <description><p>'Ansible Tower does not differentiate logon screens between private and
 publicly accessible instances. Custom system use notifications
 for publicly accessible systems can be implemented using the
@@ -375,9 +380,9 @@ procedures from AC-8(a).'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-14">
+    <implemented-requirement uuid="0b13a45f-8021-4174-a8a0-5b3c2b1df765" control-id="ac-14">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-14_stmt">
+      <statement statement-id="ac-14_stmt" uuid="07137530-b147-4b20-8070-ed8b25d5b4af">
         <description><p>'Regardless of access mechanism, such as the Ansible Tower
 console, unauthenticated users will only be shown the
 system use notifications (as defined in AC-8) and login prompt. This is
@@ -388,121 +393,121 @@ prior to granting resource access.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-17">
+    <implemented-requirement uuid="4373b091-0137-407f-862f-f652125b43cb" control-id="ac-17">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-17_stmt">
+      <statement statement-id="ac-17_stmt" uuid="ebca32ba-47a1-46a4-86a4-7b9b17863423">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-18">
+    <implemented-requirement uuid="c0324c44-a820-448f-b578-ca0d284c046e" control-id="ac-18">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-18_stmt">
+      <statement statement-id="ac-18_stmt" uuid="cfa37ad7-a7d3-4583-a3a5-42de53c91d25">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-19">
+    <implemented-requirement uuid="ba737698-94e3-4008-a829-629ffe7b5c11" control-id="ac-19">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-19_stmt">
+      <statement statement-id="ac-19_stmt" uuid="12c74d50-6b95-4af5-9212-8cc2b5a555d1">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-20">
+    <implemented-requirement uuid="b0ec4bb3-9f09-495e-81f9-944435af6081" control-id="ac-20">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-20_stmt">
+      <statement statement-id="ac-20_stmt" uuid="5a5e981f-88b4-407b-afd0-0e426c66beaf">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-22">
+    <implemented-requirement uuid="cd267fcf-0f09-4894-844c-b990e43bb790" control-id="ac-22">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-22_stmt">
+      <statement statement-id="ac-22_stmt" uuid="00bcb737-2107-40e8-a983-0407d4b8b975">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-1">
+    <implemented-requirement uuid="daa9428d-8f40-4a7d-a6e6-a9663aa6ca5e" control-id="at-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-1_stmt.a">
+      <statement statement-id="at-1_stmt.a" uuid="f0d05a52-b241-4052-9776-5afcf3820d1c">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-1_stmt.b">
+      <statement statement-id="at-1_stmt.b" uuid="6d8de1dd-3899-4f2c-b505-4f6be182c18a">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-2">
+    <implemented-requirement uuid="f76e1ba0-a43a-4e2e-a0ce-06045d5050c3" control-id="at-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-2_stmt.a">
+      <statement statement-id="at-2_stmt.a" uuid="e4d38b53-d8f8-4068-8473-c011460a1efe">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-2_stmt.b">
+      <statement statement-id="at-2_stmt.b" uuid="e1411a84-37db-425a-8074-b1b17d8e2113">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-2_stmt.c">
+      <statement statement-id="at-2_stmt.c" uuid="4aa48bd5-ad7a-4364-b4d7-8287bae95d5a">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-2.2">
+    <implemented-requirement uuid="202e94f8-23f1-4cde-bb89-1e3934fa4659" control-id="at-2.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-2.2_stmt">
+      <statement statement-id="at-2.2_stmt" uuid="ef43a8b8-879f-48b1-af1d-9ce134fa37e2">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-3">
+    <implemented-requirement uuid="cb149af2-b68b-4e03-97c2-ac1d2957b612" control-id="at-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-3_stmt.a">
+      <statement statement-id="at-3_stmt.a" uuid="f8436b65-5ef3-49a0-a449-4fd5afb4df32">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-3_stmt.b">
+      <statement statement-id="at-3_stmt.b" uuid="cb18ecf6-54a0-4a9a-a252-db593aac0b6d">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-3_stmt.c">
+      <statement statement-id="at-3_stmt.c" uuid="43a437f0-3a8a-4dfa-b4cc-a36352cd4de0">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-4">
+    <implemented-requirement uuid="43723a8e-60d1-4f04-919a-6f6c98e077f9" control-id="at-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-4_stmt.a">
+      <statement statement-id="at-4_stmt.a" uuid="3386e49c-0f8f-454c-a9ad-e216baa9ccd2">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-4_stmt.b">
+      <statement statement-id="at-4_stmt.b" uuid="6544ac74-69e7-471c-b6b1-fce3af7871ff">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-1">
+    <implemented-requirement uuid="a7c1acd9-a6d7-4ff2-b640-b520764b8f72" control-id="au-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-1_stmt">
+      <statement statement-id="au-1_stmt" uuid="f9ed5272-5fe3-4703-bc87-e8fc1df726d5">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-2">
+    <implemented-requirement uuid="ab939e66-4a08-4023-b7c5-4e287cbc4bc3" control-id="au-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-2_stmt">
+      <statement statement-id="au-2_stmt" uuid="187a20ed-f196-4e26-ac1b-2e97fa52ffde">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-3">
+    <implemented-requirement uuid="a817c616-bf06-4033-964c-7d352411d11d" control-id="au-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="au-3_stmt">
+      <statement statement-id="au-3_stmt" uuid="a2aabf07-b3c1-445a-b7f3-dc2c9f8b7826">
         <description><p>'By default Ansible Tower generates audit records containing
 information that establishes what type of event occured,
 when the event occured, where the event occured, the source
@@ -601,22 +606,22 @@ https://docs.ansible.com/ansible-tower/latest/html/towerapi/activity_stream.html
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-4">
+    <implemented-requirement uuid="c9500f38-67e2-4719-93b3-49b1a37f8785" control-id="au-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-4_stmt">
+      <statement statement-id="au-4_stmt" uuid="d595a1d9-e0b5-41f6-a692-6786d7964174">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-5">
+    <implemented-requirement uuid="86a12e1a-248b-4439-9ce8-9e8f5c1237ec" control-id="au-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-5_stmt.a">
+      <statement statement-id="au-5_stmt.a" uuid="b90bdc45-4d7d-4baf-9883-cf96785a63a1">
         <description><p>'Ansible Tower utilizes the audit and syslog subsystems of the
 underlying operating system. Responses to audit subsystem
 failures is configured in the operating system and not
 Ansible Tower.'
 </p></description>
       </statement>
-      <statement statement-id="au-5_stmt.b">
+      <statement statement-id="au-5_stmt.b" uuid="36a4df24-d40f-4253-bd21-29a014b80309">
         <description><p>'Ansible Tower utilizes the audit and syslog subsystems of the
 underlying operating system. Responses to audit subsystem
 failures is configured in the operating system and not
@@ -624,30 +629,30 @@ Ansible Tower.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-6">
+    <implemented-requirement uuid="85d3ce72-6fe0-4582-9cf2-9533b6f0c627" control-id="au-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-6_stmt">
+      <statement statement-id="au-6_stmt" uuid="b21cb79a-21fc-4f73-8e15-0712058a1852">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-8">
+    <implemented-requirement uuid="ec68d894-3838-410e-89ed-d7d9fa7b679a" control-id="au-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="au-8_stmt.a">
+      <statement statement-id="au-8_stmt.a" uuid="da458c63-2a70-47bd-a4fd-ea8538347c7b">
         <description><p>'Ansible Tower relies on the time services
 provided by the underlying operating system. Utilization of
 platform-provided time services is default, non-configurable
 behavior.'
 </p></description>
       </statement>
-      <statement statement-id="au-8_stmt.b">
+      <statement statement-id="au-8_stmt.b" uuid="1184bd0b-3d58-42c6-8867-0e338e5b8b4f">
         <description><p>'Ansible Tower utilizes the time zone settings of the underlying
 operating system. This is default, non-configurable behavior.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-9">
+    <implemented-requirement uuid="5e962120-8238-4f70-9561-b7837cf3836e" control-id="au-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="au-9_stmt">
+      <statement statement-id="au-9_stmt" uuid="0822a115-d273-4522-bbf5-b4c072cf6a45">
         <description><p>'Ansible Tower logfiles have been consolidated and can be easily
 accessed from two centralized locations:
 
@@ -665,9 +670,9 @@ to the accessing user).'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-11">
+    <implemented-requirement uuid="ec480f14-3739-4dd9-a12d-640b4e2ee3e1" control-id="au-11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-11_stmt">
+      <statement statement-id="au-11_stmt" uuid="d0280635-24af-42bc-a519-3be0e1b30afe">
         <description><p>'For locally retained logs, such as those recorded to
 /var/log/ansible, Ansible Tower utilizes the audit subsystems
 of the host operating system. Retention of local logs is
@@ -679,9 +684,9 @@ outside the scope of configuring Ansible Tower.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-12">
+    <implemented-requirement uuid="9cab2b71-6b99-4d1d-bb09-c057e4ec123e" control-id="au-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-12_stmt.a">
+      <statement statement-id="au-12_stmt.a" uuid="9e3c23d2-d2bb-4a76-b08d-73535d214119">
         <description><p>'By default, Ansible Tower audits the following events.
 Audit of these events is automatic and not user configurable.
 
@@ -914,7 +919,7 @@ being imported and "status" field indicates succes or failure:
             }
 </p></description>
       </statement>
-      <statement statement-id="au-12_stmt.b">
+      <statement statement-id="au-12_stmt.b" uuid="97a426ed-6412-4ffa-ba60-35ac458e533d">
         <description><p>'Customers are required to allow defined personnel or roles to select
 which auditable events are to be audited by specific components of the
 information system. A successful control response will discuss how
@@ -928,7 +933,7 @@ tracked on GitHub:
 https://github.com/ComplianceAsCode/redhat/issues/296'
 </p></description>
       </statement>
-      <statement statement-id="au-12_stmt.c">
+      <statement statement-id="au-12_stmt.c" uuid="6a913351-1b9c-446a-8683-5e5bcf6c09d9">
         <description><p>'Customers are required to generate audit records for the events
 defined in AU-2d with the content defined in AU-3. A successful control
 response will discuss how audit records are generated, and how they meet
@@ -941,82 +946,82 @@ https://github.com/ComplianceAsCode/redhat/issues/297'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-1">
+    <implemented-requirement uuid="fb5cacaf-b491-4709-8d6e-6f17706d1e95" control-id="ca-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-1_stmt">
+      <statement statement-id="ca-1_stmt" uuid="54c78e27-439b-4bcd-9cc3-fcbadf7ee1d7">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-2">
+    <implemented-requirement uuid="72f3e205-660a-41d0-a1b8-fce2004aa607" control-id="ca-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-2_stmt">
+      <statement statement-id="ca-2_stmt" uuid="eb2e7b00-8c8d-4552-a99d-308fd911c336">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-2.1">
+    <implemented-requirement uuid="a16cdd15-6521-4f48-84a2-23f3ef0a38a9" control-id="ca-2.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-2.1_stmt">
+      <statement statement-id="ca-2.1_stmt" uuid="24839d69-e25a-47f8-88f2-cda64cb27d03">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-3">
+    <implemented-requirement uuid="8e6d4984-1553-4b63-877e-d0fe07288e80" control-id="ca-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-3_stmt">
+      <statement statement-id="ca-3_stmt" uuid="41cc2eb7-4985-41d6-886a-747864f36fdf">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-5">
+    <implemented-requirement uuid="80665df2-579a-46e3-83f2-63bc8f5fc2a2" control-id="ca-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-5_stmt">
+      <statement statement-id="ca-5_stmt" uuid="c1428fac-0b68-4254-8d09-90b83409d2e9">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-6">
+    <implemented-requirement uuid="cddf6546-4f0d-4ff2-b6c6-1717c8e5c452" control-id="ca-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-6_stmt">
+      <statement statement-id="ca-6_stmt" uuid="4d546004-cdee-4adb-9e69-79fc20b38edf">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-7">
+    <implemented-requirement uuid="42065986-dd02-4cf1-ba7b-da515ec67d95" control-id="ca-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-7_stmt">
+      <statement statement-id="ca-7_stmt" uuid="9309c31f-3dea-4817-a232-d118217fb07c">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-9">
+    <implemented-requirement uuid="f2f7e00c-b95e-4f24-9b10-453b423b5ccf" control-id="ca-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-9_stmt">
+      <statement statement-id="ca-9_stmt" uuid="c3d40eea-e9e8-4f9d-a9f4-c43ac1ef26f1">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-1">
+    <implemented-requirement uuid="6667dd94-e9f5-468d-8cd8-55b460d7bb70" control-id="cm-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-1_stmt">
+      <statement statement-id="cm-1_stmt" uuid="8719ca0f-1c1b-40ed-8adc-b70c681297c2">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-2">
+    <implemented-requirement uuid="c9c1e47a-278a-477c-bbe8-cd98e071483c" control-id="cm-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-2_stmt">
+      <statement statement-id="cm-2_stmt" uuid="fbc4c4ac-ec8d-4e90-bed5-0bed68afa5d7">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-4">
+    <implemented-requirement uuid="287e79d8-40d8-42ce-b0e0-d022f6095a56" control-id="cm-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-4_stmt">
+      <statement statement-id="cm-4_stmt" uuid="fc1d7a6a-322c-4778-9c81-adfc7e4b837e">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-6">
+    <implemented-requirement uuid="b4a1dd7c-9cc0-4acc-bc49-1f757ff91cb2" control-id="cm-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-6_stmt.a">
+      <statement statement-id="cm-6_stmt.a" uuid="974a87ee-d6bf-4bde-a107-d1797039beec">
         <description><p>'This is an organizational control outside the scope of configuring
 Ansible Tower. Use of the NIST National Checklist
 for Ansible Tower is suggested as a supported,
 US Government recognized, vendor supported, baseline.'
 </p></description>
       </statement>
-      <statement statement-id="cm-6_stmt.b">
+      <statement statement-id="cm-6_stmt.b" uuid="882cc4d6-1e47-4312-8433-7e6b146098d4">
         <description><p>'The customer will be responsible for implementing configuration
 settings as defined in CM-6(a). A successful control response will
 describe how mandatory configuration settings are implemented. This can
@@ -1028,12 +1033,12 @@ is being tracked on GitHub:
 https://github.com/ComplianceAsCode/redhat/issues/299'
 </p></description>
       </statement>
-      <statement statement-id="cm-6_stmt.c">
+      <statement statement-id="cm-6_stmt.c" uuid="2f9e928b-b48f-4731-88cb-b2f35c40db31">
         <description><p>'This is an organizational control outside the scope of configuring
 Ansible Tower.'
 </p></description>
       </statement>
-      <statement statement-id="cm-6_stmt.d">
+      <statement statement-id="cm-6_stmt.d" uuid="129864e6-5d47-4a7a-8647-dd4eb503abe5">
         <description><p>'The customer will be responsible for monitoring and controlling
 changes to the configuration settings in accordance with organization
 policies and procedures. A successful control response will describe
@@ -1043,9 +1048,9 @@ track and approve changes.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-7">
+    <implemented-requirement uuid="2dde282b-d2c4-4602-abd2-8f255fd2abe6" control-id="cm-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-7_stmt">
+      <statement statement-id="cm-7_stmt" uuid="ca27f9ed-25e8-442c-a303-35ff1e5b28cb">
         <description><p>'Ensuring Ansible Tower is deployed in a minimal configuration
 is being tracked through GitHub:
 
@@ -1053,51 +1058,51 @@ https://github.com/ComplianceAsCode/redhat/issues/300'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-8">
+    <implemented-requirement uuid="9fe242dd-6f9e-4664-9c9a-c8ad6ce03c16" control-id="cm-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-8_stmt">
+      <statement statement-id="cm-8_stmt" uuid="c18aa3b9-6839-4169-8a45-c9142bac7ca9">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-10">
+    <implemented-requirement uuid="0f4b6b58-8d66-4261-bd66-7d9bb4787b65" control-id="cm-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-10_stmt">
+      <statement statement-id="cm-10_stmt" uuid="ec5158f7-d44b-4e71-be64-dc0ca5ea4be6">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-11">
+    <implemented-requirement uuid="220c2799-b5a8-45e1-81a1-d9cafe0b62ac" control-id="cm-11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-11_stmt">
+      <statement statement-id="cm-11_stmt" uuid="7658b51d-c015-44e1-9636-01cae9b8ab15">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-1">
+    <implemented-requirement uuid="a0efd2a0-6566-4d82-af09-b5ebdbf312f1" control-id="cp-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-1_stmt">
+      <statement statement-id="cp-1_stmt" uuid="807cb2d2-267d-449b-b31f-f217f02e507a">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-2">
+    <implemented-requirement uuid="4778f00e-3092-41bc-8762-fc9b3b4f8af8" control-id="cp-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-2_stmt">
+      <statement statement-id="cp-2_stmt" uuid="e697ca2b-be8a-48f0-acfc-0df3baca4f79">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-2.1">
+    <implemented-requirement uuid="cc96d237-a3ba-4346-802e-f2d9da35dea4" control-id="cp-2.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-2.1_stmt">
+      <statement statement-id="cp-2.1_stmt" uuid="ee15f7cb-ac5f-4db5-974d-f5030565ad77">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-2.2">
+    <implemented-requirement uuid="d19dd242-0b49-4753-a2f1-4cbd83769554" control-id="cp-2.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="cp-2.2_stmt">
+      <statement statement-id="cp-2.2_stmt" uuid="a87da66c-c79e-4e3a-97df-16c4557b598f">
         <description><p>The Ansible Tower capacity system determines how many jobs can run on an instance
 given the amount of resources available to the instance and the size of the jobs that
 are running.
@@ -1110,129 +1115,129 @@ https://docs.ansible.com/ansible-tower/latest/html/userguide/jobs.html#at-capaci
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-2.3">
+    <implemented-requirement uuid="34789425-98e4-4089-9fed-6951b60d597d" control-id="cp-2.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-2.3_stmt">
+      <statement statement-id="cp-2.3_stmt" uuid="1f2c1b09-6c10-4de8-b1fb-5cd450072693">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-2.8">
+    <implemented-requirement uuid="a748408a-ce8d-4fb2-b8be-f133862b9f96" control-id="cp-2.8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-2.8_stmt">
+      <statement statement-id="cp-2.8_stmt" uuid="0170778d-b35e-4d09-a37f-cccb0950bfe7">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-3">
+    <implemented-requirement uuid="95d86dd6-d5e0-459d-af66-5cf60edb46bd" control-id="cp-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-3_stmt">
+      <statement statement-id="cp-3_stmt" uuid="a5669b73-cb85-4d37-a9eb-9325c3868cc3">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-4">
+    <implemented-requirement uuid="5835da3a-2f0d-4f20-af8e-07f46e91254e" control-id="cp-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-4_stmt">
+      <statement statement-id="cp-4_stmt" uuid="e2fbd55a-5c00-44c3-b48c-1cfc48ab12c3">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-4.1">
+    <implemented-requirement uuid="c7a2f9a2-cd8c-4d53-ab29-b5f854027a2b" control-id="cp-4.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-4.1_stmt">
+      <statement statement-id="cp-4.1_stmt" uuid="49837763-805f-491c-8734-dfd256318667">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-6">
+    <implemented-requirement uuid="b6cc7584-ee30-44ac-81ee-a7f6dff63782" control-id="cp-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-6_stmt">
+      <statement statement-id="cp-6_stmt" uuid="423f232c-977f-426a-acac-738e5bdee0f8">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-6.1">
+    <implemented-requirement uuid="7b12b0b2-4161-46c9-a7fe-b8a32b4a1020" control-id="cp-6.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-6.1_stmt">
+      <statement statement-id="cp-6.1_stmt" uuid="e605e4e5-2e55-45ff-abb2-9ed43f6c7ec1">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-6.3">
+    <implemented-requirement uuid="e2cfb385-922f-4182-8536-4c7fa3e744bc" control-id="cp-6.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-6.3_stmt">
+      <statement statement-id="cp-6.3_stmt" uuid="17d6565b-1bec-4761-a471-4ea5d0619175">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-7">
+    <implemented-requirement uuid="121cafd5-da0a-4a05-b571-1a73bb266e1b" control-id="cp-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-7_stmt">
+      <statement statement-id="cp-7_stmt" uuid="ea851a79-ce65-4e12-8f44-cf70064e005d">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-7.1">
+    <implemented-requirement uuid="c5dfe5a7-7f22-479f-9a96-b3694403bcb5" control-id="cp-7.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-7.1_stmt">
+      <statement statement-id="cp-7.1_stmt" uuid="df2bd3f0-3569-4e0d-9bf5-0545661f5c57">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-7.2">
+    <implemented-requirement uuid="fc9324fa-2ca1-4148-acb7-3aa5d8923ea2" control-id="cp-7.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-7.2_stmt">
+      <statement statement-id="cp-7.2_stmt" uuid="af04e6ae-4a58-430a-8401-1a5f1eaf2e1c">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-7.3">
+    <implemented-requirement uuid="e120ba7b-2be2-4328-8f1e-245bb7cf0560" control-id="cp-7.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-7.3_stmt">
+      <statement statement-id="cp-7.3_stmt" uuid="ae614540-87c2-4f76-a202-c3c8aa1e1550">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-8">
+    <implemented-requirement uuid="01178167-4cc5-413a-8f4e-41843f4d34fa" control-id="cp-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-8_stmt">
+      <statement statement-id="cp-8_stmt" uuid="d2bb439c-0cf4-4c14-933f-46b4280bf9aa">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-8.1">
+    <implemented-requirement uuid="1ef7b7c4-2e41-4dc6-9e89-6e8684613b8c" control-id="cp-8.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-8.1_stmt">
+      <statement statement-id="cp-8.1_stmt" uuid="7948032d-d198-4d19-926b-9e1c771f7297">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-8.2">
+    <implemented-requirement uuid="d8f8137c-80a8-4665-91b2-90c34ce532d5" control-id="cp-8.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-8.2_stmt">
+      <statement statement-id="cp-8.2_stmt" uuid="29c6acee-e6a9-4204-a344-6a5f2b03b6eb">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-9">
+    <implemented-requirement uuid="85eee0ef-749a-49a6-8679-bca37f11658d" control-id="cp-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="cp-9_stmt.a">
+      <statement statement-id="cp-9_stmt.a" uuid="013e23c5-9fe9-4bbe-b1d9-beae2dafb64b">
         <description><p>As a procedural control, the process of backing up Ansible Tower
 is outside the scope of a configuration guide.
 
@@ -1251,7 +1256,7 @@ can be found in the Ansible Tower Administration guide:
 https://docs.ansible.com/ansible-tower/latest/html/administration/backup_restore.html
 </p></description>
       </statement>
-      <statement statement-id="cp-9_stmt.b">
+      <statement statement-id="cp-9_stmt.b" uuid="7b043ffb-f3b8-4f19-bc5b-a619c8c1ec94">
         <description><p>As a procedural control, the process of backing up Ansible Tower
 is outside the scope of a configuration guide.
 
@@ -1270,7 +1275,7 @@ can be found in the Ansible Tower Administration guide:
 https://docs.ansible.com/ansible-tower/latest/html/administration/backup_restore.html
 </p></description>
       </statement>
-      <statement statement-id="cp-9_stmt.c">
+      <statement statement-id="cp-9_stmt.c" uuid="64f70db2-a448-4716-b3a3-db6cd460a92a">
         <description><p>As a procedural control, the process of backing up Ansible Tower
 is outside the scope of a configuration guide.
 
@@ -1289,31 +1294,31 @@ can be found in the Ansible Tower Administration guide:
 https://docs.ansible.com/ansible-tower/latest/html/administration/backup_restore.html
 </p></description>
       </statement>
-      <statement statement-id="cp-9_stmt.d">
+      <statement statement-id="cp-9_stmt.d" uuid="98cfa648-9c5d-4b9a-bc60-47504154263e">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-9.1">
+    <implemented-requirement uuid="90f1aa00-5354-4900-803f-7492caa2b019" control-id="cp-9.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-9.1_stmt">
+      <statement statement-id="cp-9.1_stmt" uuid="7d955d44-db48-4428-a17e-783484be4e72">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-9.3">
+    <implemented-requirement uuid="cf582d3b-fd4f-478c-89e9-55ccae7b9262" control-id="cp-9.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-9.3_stmt">
+      <statement statement-id="cp-9.3_stmt" uuid="9cfb9bad-9b16-4efa-8080-97da80339e71">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-10">
+    <implemented-requirement uuid="d3326fad-deb1-430d-ad46-7460f66cd087" control-id="cp-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="cp-10_stmt">
+      <statement statement-id="cp-10_stmt" uuid="d2c682b9-7e39-4dd1-994c-276bc5838068">
         <description><p>'Guidance on establishing backup procedures can be found in the
 Ansible Tower Administration Guide:
 
@@ -1324,23 +1329,23 @@ reflects two distinct processes.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-10.2">
+    <implemented-requirement uuid="500e0275-9d97-45a0-be99-9c083dc0e7ed" control-id="cp-10.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-10.2_stmt">
+      <statement statement-id="cp-10.2_stmt" uuid="2f9d74ad-7341-4bd4-883f-ecbdd649f728">
         <description><p>This is an organizational control outside the scope of
 component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-1">
+    <implemented-requirement uuid="2b5fff96-d473-4807-9977-e1b2f2730fe8" control-id="ia-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-1_stmt">
+      <statement statement-id="ia-1_stmt" uuid="09b040de-6ecd-4871-b1e8-6cfaaa92a5bf">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-2">
+    <implemented-requirement uuid="c62b60f5-b09b-4042-b096-2329c6b7fa56" control-id="ia-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-2_stmt">
+      <statement statement-id="ia-2_stmt" uuid="c365ec91-cd74-4bc6-bcdc-6968d038b72d">
         <description><p>'Ansible Tower does not have the capability to uniquely identify and
 authenticate organizational users (or processes acting on
 behalf of organizational users).
@@ -1351,9 +1356,9 @@ Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-2.1">
+    <implemented-requirement uuid="44477d70-75ce-45e5-b148-c055e0d0aacb" control-id="ia-2.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-2.1_stmt">
+      <statement statement-id="ia-2.1_stmt" uuid="254b75b2-db02-4323-b074-8417f247145f">
         <description><p>'The customer will be responsible for implementing multifactor
 authentication for network access to privileged accounts.
 
@@ -1366,9 +1371,9 @@ https://github.com/ComplianceAsCode/redhat/issues/305'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-2.12">
+    <implemented-requirement uuid="cd79c793-266c-4325-bf64-9efd6e321a5a" control-id="ia-2.12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-2.12_stmt">
+      <statement statement-id="ia-2.12_stmt" uuid="41515484-f88c-4d96-9170-53b5cc1ebbba">
         <description><p>'Personal Identity Verification (PIV) credentials are those credentials
 issued by federal agencies that conform to FIPS Publication 201 and
 supporting guidance documents. Customers will not be expected to perform
@@ -1383,24 +1388,24 @@ https://github.com/ComplianceAsCode/redhat/issues/306'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-4">
+    <implemented-requirement uuid="c6a59d30-6dcf-43e6-9b00-a90a333edc9b" control-id="ia-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-4_stmt.a">
+      <statement statement-id="ia-4_stmt.a" uuid="b933aa34-5345-45cd-85bd-f4d3844f49b3">
         <description><p>'This is an organizational control outside the scope of configuring
 Ansible Tower.'
 </p></description>
       </statement>
-      <statement statement-id="ia-4_stmt.b">
+      <statement statement-id="ia-4_stmt.b" uuid="3897cb58-3865-4b1f-94cf-7edd20b37f06">
         <description><p>'This is an organizational control outside the scope of configuring
 Ansible Tower.'
 </p></description>
       </statement>
-      <statement statement-id="ia-4_stmt.c">
+      <statement statement-id="ia-4_stmt.c" uuid="c1bab347-16ae-4b17-aae2-09ab81452c7b">
         <description><p>'This is an organizational control outside the scope of configuring
 Ansible Tower.'
 </p></description>
       </statement>
-      <statement statement-id="ia-4_stmt.d">
+      <statement statement-id="ia-4_stmt.d" uuid="be0e6769-c45e-46fe-8f97-29e1dd1359d6">
         <description><p>'Ansible Tower does not have the capability to prevent the
 reuse of identifiers for an organizationally-defined time period.
 
@@ -1409,7 +1414,7 @@ as Red Hat IdM, must be used. This control is not applicable to
 Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
-      <statement statement-id="ia-4_stmt.e">
+      <statement statement-id="ia-4_stmt.e" uuid="a8bc7ebb-04d6-4ebf-ab44-a19fe889cf47">
         <description><p>'Ansible Tower does not have the capability to disable an identifier
 after an organizationally-defined time period of inactivity.
 
@@ -1419,14 +1424,14 @@ Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-5">
+    <implemented-requirement uuid="bd79457d-601d-44ab-9374-cdf2c98e3719" control-id="ia-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ia-5_stmt.a">
+      <statement statement-id="ia-5_stmt.a" uuid="7718d672-b167-4eaa-9c5e-ed7c873e09db">
         <description><p>'This is an organizational control outside the scope of configuring
 Ansible Tower.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.b">
+      <statement statement-id="ia-5_stmt.b" uuid="9c6ea19b-c081-478e-88c4-74911b657ec0">
         <description><p>'Ansible Tower does not have the capability to establish initial
 authenticator content for authenticators defined by the organization
 (e.g. complexity requirements in IA-4).
@@ -1436,7 +1441,7 @@ as Red Hat IdM, must be used. This control is not applicable to
 Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.c">
+      <statement statement-id="ia-5_stmt.c" uuid="9d6bbe6f-b751-4a00-898c-24491049b823">
         <description><p>'Ansible Tower does not have the capability to ensure that
 authenticators have sufficient strength of mechanism for their
 intended use.
@@ -1446,12 +1451,12 @@ as Red Hat IdM, must be used. This control is not applicable to
 Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.d">
+      <statement statement-id="ia-5_stmt.d" uuid="7d1a9c0f-5dc2-4276-98ed-587f6955ce53">
         <description><p>'This is an organizational control outside the scope of configuring
 Ansible Tower.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.e">
+      <statement statement-id="ia-5_stmt.e" uuid="8b7a58be-78ad-48f1-a40a-d691f0cd2523">
         <description><p>'Ansible Tower does not have default account authenticators.
 Authenticators used during the installation of Ansible Tower,
 such as passwords for the embeded database, are created by the
@@ -1462,7 +1467,7 @@ This requirement is not applicable to the
 configuration of Ansible Tower.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.f">
+      <statement statement-id="ia-5_stmt.f" uuid="6c219d10-7519-4964-9d75-0e1796bb7d17">
         <description><p>'Ansible Tower does not have the capability to establish
 minimum and maximum lifetime restrictions and reuse
 conditions for authenticators.
@@ -1473,7 +1478,7 @@ applicable to Ansible Tower when an external authentication
 service is used.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.g">
+      <statement statement-id="ia-5_stmt.g" uuid="9f8ad641-0cc2-4e44-b6b5-3cf238d4ad71">
         <description><p>'Ansible Tower does not have the capability to change/refresh
 authenticators after an organizationally-defined time period
 by authenticator type.
@@ -1484,7 +1489,7 @@ applicable to Ansible Tower when an external authentication
 service is used.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.h">
+      <statement statement-id="ia-5_stmt.h" uuid="389f8f0c-cbf6-4b17-b58f-9cccbd3fb2bd">
         <description><p>'Ansible Tower uses SSH to connect to remote hosts (or the Windows
 equivalent). In order to pass the key from Tower to SSH, the key must
 be decrypted before it can be written to a named pipe. Tower then uses
@@ -1519,20 +1524,20 @@ generation process changes, Tower fails to correctly decrypt the
 secret.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.i">
+      <statement statement-id="ia-5_stmt.i" uuid="cd219679-cff2-4303-af51-e70221b2d2e4">
         <description><p>'This is an organizational control outside the scope of configuring
 Ansible Tower.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.j">
+      <statement statement-id="ia-5_stmt.j" uuid="863e95fd-d9e2-47d1-a912-1c22d863e027">
         <description><p>'This is an organizational control outside the scope of configuring
 Ansible Tower.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-5.1">
+    <implemented-requirement uuid="daa1dcb7-e871-40a9-b51a-1d57d10fa8ad" control-id="ia-5.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ia-5.1_stmt.a">
+      <statement statement-id="ia-5.1_stmt.a" uuid="50c6d4f4-aec9-4979-b367-930857d73369">
         <description><p>'Ansible Tower does not have the capability to enforce minimum
 password complexity requirements.
 
@@ -1541,7 +1546,7 @@ as Red Hat IdM, must be used. This control is not applicable to
 Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5.1_stmt.b">
+      <statement statement-id="ia-5.1_stmt.b" uuid="834dd7e6-0f9e-436d-8d26-624436a3d888">
         <description><p>'Ansible Tower does not have the capability to enforce at least
 an organizationally-defined number of characters be changed
 when new passwords are created.
@@ -1551,7 +1556,7 @@ as Red Hat IdM, must be used. This control is not applicable to
 Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5.1_stmt.c">
+      <statement statement-id="ia-5.1_stmt.c" uuid="66d2a493-c8d7-433b-9868-62149650706c">
         <description><p>'If passwords are used, Ansible Tower handles those by responding
 directly to the password prompt and decrypting the password before
 writing it to the prompt.
@@ -1581,7 +1586,7 @@ generation process changes, Tower fails to correctly decrypt the
 secret.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5.1_stmt.d">
+      <statement statement-id="ia-5.1_stmt.d" uuid="b20a64e1-e732-46f9-8a47-ef28743938bf">
         <description><p>'Ansible Tower does not have the capability to enforce password
 minimum and maximum lifetime restrictions.
 
@@ -1590,7 +1595,7 @@ as Red Hat IdM, must be used. This control is not applicable to
 Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5.1_stmt.e">
+      <statement statement-id="ia-5.1_stmt.e" uuid="b30fed3c-487d-4637-bf0c-389b70bf33e3">
         <description><p>'Ansible Tower does not have the capability prohibit password
 reuse.
 
@@ -1599,7 +1604,7 @@ as Red Hat IdM, must be used. This control is not applicable to
 Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5.1_stmt.f">
+      <statement statement-id="ia-5.1_stmt.f" uuid="89cf5154-8946-4406-a7d0-3d4b54ccae39">
         <description><p>'Ansible Tower does not have the capability allow the use of a
 temporary password for system logons with an immediate change
 to a permanent password.
@@ -1610,32 +1615,32 @@ Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-5.11">
+    <implemented-requirement uuid="0d1fe003-de71-4fa9-b06b-ece5df467c59" control-id="ia-5.11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-5.11_stmt">
+      <statement statement-id="ia-5.11_stmt" uuid="faedb27f-d8bb-4e30-b567-098e914760f8">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-6">
+    <implemented-requirement uuid="de2f7efc-bd7d-4ffa-90b3-f111a063c370" control-id="ia-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ia-6_stmt">
+      <statement statement-id="ia-6_stmt" uuid="aa1c62cc-4664-4583-8949-786515e77e5a">
         <description><p>'Ansible Tower natively obscures such information.
 Ansible Tower cannot be configured to be out of
 compliance with this requirement.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-7">
+    <implemented-requirement uuid="5ead4f93-7abb-4c70-86c0-7eefa7d8580d" control-id="ia-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="none"></annotation>
-      <statement statement-id="ia-7_stmt">
+      <statement statement-id="ia-7_stmt" uuid="0fe841bd-2be4-4146-8890-0308afc60db6">
         <description><p>'It is currently not possible to configure Ansible Tower to use
 appropriate cryptographic modules. This is a permanent finding.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8">
+    <implemented-requirement uuid="1803ba11-b817-4f4a-a1e7-b52d415ad764" control-id="ia-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-8_stmt">
+      <statement statement-id="ia-8_stmt" uuid="ad88d58a-7660-4079-bc5e-6a74c6539fde">
         <description><p>'Ansible Tower does not have the capability to uniquely
 identify and authenticate non-organizational users (or
 processes acting on behalf of non-organizational users).
@@ -1646,9 +1651,9 @@ Ansible Tower when an external authentication service is used.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.1">
+    <implemented-requirement uuid="44f7f94d-3a0c-4f45-bca7-a628b9958329" control-id="ia-8.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8.1_stmt">
+      <statement statement-id="ia-8.1_stmt" uuid="5b1f4a86-a768-42e1-904d-95d50a08ac52">
         <description><p>'Personal Identity Verificiation (PIV) credentials are those
 credentials issued by federal agencies that conform to FIPS Publication
 201 and supporting guidance documents. Customers will not be expected
@@ -1659,9 +1664,9 @@ through Active Directory Federation Services (ADFS) or Red Hat IdM.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.2">
+    <implemented-requirement uuid="2df4d01b-ada7-45e5-a2e7-2c0b4258830c" control-id="ia-8.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-8.2_stmt">
+      <statement statement-id="ia-8.2_stmt" uuid="c7e116c0-208d-42e0-895a-9c19ef7c20c6">
         <description><p>'FICAM approved credentials are those credentials issued by nonfederal
 government entities approved by the Federal Identity, Credential, and
 Access Management (FICAM) Trust Framework Solutions Initiative.
@@ -1673,9 +1678,9 @@ customer system is through Active Directory Federation Services
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.3">
+    <implemented-requirement uuid="0715563d-a3c2-4c0b-af9d-34433362a608" control-id="ia-8.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-8.3_stmt">
+      <statement statement-id="ia-8.3_stmt" uuid="da495fb7-e0be-47dd-9d4e-470f63deb948">
         <description><p>'FICAM approved credentials are those credentials issued by nonfederal
 government entities approved by the Federal Identity, Credential, and
 Access Management (FICAM) Trust Framework Solutions Initiative.
@@ -1687,9 +1692,9 @@ customer system is through Active Directory Federation Services
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.4">
+    <implemented-requirement uuid="a52f39a3-072d-4c1d-88a1-8f3c8c005665" control-id="ia-8.4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-8.4_stmt">
+      <statement statement-id="ia-8.4_stmt" uuid="ead00609-1e1b-4447-9e8f-a3a04cd2f458">
         <description><p>'FICAM approved credentials are those credentials issued by nonfederal
 government entities approved by the Federal Identity, Credential, and
 Access Management (FICAM) Trust Framework Solutions Initiative.
@@ -1701,601 +1706,601 @@ customer system is through Active Directory Federation Services
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-1">
+    <implemented-requirement uuid="1383b6bc-04f1-4339-85f6-ac9e88f619e3" control-id="ir-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-1_stmt">
+      <statement statement-id="ir-1_stmt" uuid="b014df33-b3b4-4ae8-a35c-23965d68a247">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-2">
+    <implemented-requirement uuid="fa267102-5da9-4035-bfe9-16a45e21c9d2" control-id="ir-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-2_stmt">
+      <statement statement-id="ir-2_stmt" uuid="65d3f8c5-6674-459b-a51c-d35124235600">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-3">
+    <implemented-requirement uuid="3b8281b0-cc46-41b3-a023-f86b5c84cfc8" control-id="ir-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-3_stmt">
+      <statement statement-id="ir-3_stmt" uuid="44c69421-fd6e-4b51-a70b-f2c0dd2a0eca">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-3.2">
+    <implemented-requirement uuid="f3726168-2cac-4383-9841-bb0c38b691a5" control-id="ir-3.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-3.2_stmt">
+      <statement statement-id="ir-3.2_stmt" uuid="4bdc064a-52d0-4760-8549-b2fd56fbfbd5">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-4">
+    <implemented-requirement uuid="68d698cf-b139-4914-bc70-718d3dbef321" control-id="ir-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-4_stmt">
+      <statement statement-id="ir-4_stmt" uuid="32c55a16-0dc1-4f7c-a8fe-4f5a9aaec915">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-4.1">
+    <implemented-requirement uuid="06fb66b5-22f4-4386-a0f2-48bd94d0898d" control-id="ir-4.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-4.1_stmt">
+      <statement statement-id="ir-4.1_stmt" uuid="b6771850-76f7-4099-99e6-377c881654be">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-5">
+    <implemented-requirement uuid="ed848b4c-c8e7-4dee-9b77-99531b507acc" control-id="ir-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-5_stmt">
+      <statement statement-id="ir-5_stmt" uuid="c986e978-82f0-4ab0-94cc-72254f181700">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-6">
+    <implemented-requirement uuid="19b77581-d54c-4af4-8d0c-3f616693e41d" control-id="ir-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-6_stmt">
+      <statement statement-id="ir-6_stmt" uuid="665dcdab-6e0f-4331-9097-a93f3da1c2ea">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-6.1">
+    <implemented-requirement uuid="f5b989c5-1547-431a-bcfc-375329d2caf2" control-id="ir-6.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-6.1_stmt">
+      <statement statement-id="ir-6.1_stmt" uuid="7049a17e-4469-4cfe-b07e-b4e7a3657fd5">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-7">
+    <implemented-requirement uuid="09db90ae-4ea8-4949-8730-cce84d4ef7f7" control-id="ir-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-7_stmt">
+      <statement statement-id="ir-7_stmt" uuid="ac2a8a27-f93b-4eae-a158-785bd6aeecce">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-7.1">
+    <implemented-requirement uuid="9b911554-c892-47f7-9b0d-2266474936e5" control-id="ir-7.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-7.1_stmt">
+      <statement statement-id="ir-7.1_stmt" uuid="c690ab5a-fe0f-48de-849a-a2880983506e">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-7.2">
+    <implemented-requirement uuid="6c04562d-23cb-468d-8827-9d04532e91f0" control-id="ir-7.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-7.2_stmt">
+      <statement statement-id="ir-7.2_stmt" uuid="02d050d4-a06f-4fb6-990b-f0378ae5480f">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-8">
+    <implemented-requirement uuid="04cd5f4a-35f9-4e74-975f-834466f029e1" control-id="ir-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-8_stmt">
+      <statement statement-id="ir-8_stmt" uuid="741c8c03-e58d-4624-9992-010e343dd7ba">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-9">
+    <implemented-requirement uuid="a1f3ef4f-615a-4c70-a6c8-15bf568e7a45" control-id="ir-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-9_stmt">
+      <statement statement-id="ir-9_stmt" uuid="08622ae3-8fba-43f4-8d60-fb906784802b">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-9.1">
+    <implemented-requirement uuid="fa3981f7-1541-4c7c-b459-9c47730332a0" control-id="ir-9.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-9.1_stmt">
+      <statement statement-id="ir-9.1_stmt" uuid="67cd3571-319b-4778-b596-97dd1320a25e">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-9.2">
+    <implemented-requirement uuid="a224d7f2-ceaf-4ec5-b936-986c68c0500e" control-id="ir-9.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-9.2_stmt">
+      <statement statement-id="ir-9.2_stmt" uuid="cfe64b31-2fae-4e3e-9ab4-17d6d069f689">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-9.3">
+    <implemented-requirement uuid="067f6442-1350-4a4d-be59-4f7df0313f7b" control-id="ir-9.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-9.3_stmt">
+      <statement statement-id="ir-9.3_stmt" uuid="a3c65763-faed-46f6-833f-5643042a3736">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-9.4">
+    <implemented-requirement uuid="d23fa77c-6aa2-4161-a00e-1e2b4415d1bb" control-id="ir-9.4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-9.4_stmt">
+      <statement statement-id="ir-9.4_stmt" uuid="919c42f1-16b9-47df-b0be-4113fa4f468a">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-1">
+    <implemented-requirement uuid="f2365d53-37db-42bd-9baa-e08d12575533" control-id="ma-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-1_stmt">
+      <statement statement-id="ma-1_stmt" uuid="68bbd35f-93d4-4d88-9fd1-bc6d6880ac55">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-2">
+    <implemented-requirement uuid="a7c57560-549b-45b3-976d-7933d9c2c062" control-id="ma-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-2_stmt">
+      <statement statement-id="ma-2_stmt" uuid="66634085-cac0-40dd-b971-96fe6ba8cfbc">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-4">
+    <implemented-requirement uuid="c577d11c-e6ed-46ac-9e23-3442bacf2514" control-id="ma-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-4_stmt">
+      <statement statement-id="ma-4_stmt" uuid="8b961f09-cd36-4b40-bcf7-113628d65964">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-5">
+    <implemented-requirement uuid="d33dcfaa-a92c-44dd-870a-e491503e8d4d" control-id="ma-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-5_stmt">
+      <statement statement-id="ma-5_stmt" uuid="7ed61b42-2d33-4891-980c-78d86d180cc8">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-1">
+    <implemented-requirement uuid="03b24950-0ac4-46ca-a261-b9a688af17dd" control-id="mp-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-1_stmt">
+      <statement statement-id="mp-1_stmt" uuid="faa86052-52d5-4f5e-a7ad-ee3a4166df38">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-2">
+    <implemented-requirement uuid="8df716c9-fef0-4862-acdd-23641dc04801" control-id="mp-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-2_stmt">
+      <statement statement-id="mp-2_stmt" uuid="77e2cc2a-ecdc-445f-98a5-c11eba68b5cc">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-6">
+    <implemented-requirement uuid="b7647417-832b-4b7e-b991-618c7a0d3d57" control-id="mp-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-6_stmt">
+      <statement statement-id="mp-6_stmt" uuid="901c6eef-c813-499e-b0e2-d188634cc338">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-7">
+    <implemented-requirement uuid="39dc3fc1-6c98-4598-a670-ae37f5a57566" control-id="mp-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-7_stmt">
+      <statement statement-id="mp-7_stmt" uuid="d20ec756-9a2e-44a0-88b4-04de43efc4c8">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-1">
+    <implemented-requirement uuid="6a62adce-333e-4307-af94-3a50b1382294" control-id="pe-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-1_stmt">
+      <statement statement-id="pe-1_stmt" uuid="085fd8e1-4de9-46da-8455-75dbb7a641ac">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-2">
+    <implemented-requirement uuid="199c85e2-6d10-4203-b3f2-5933fb273a9e" control-id="pe-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-2_stmt">
+      <statement statement-id="pe-2_stmt" uuid="01509365-2850-44d0-aad6-057d2d80fb3d">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-3">
+    <implemented-requirement uuid="e623e24d-c883-4ef6-92ce-67e8f7f834ed" control-id="pe-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-3_stmt">
+      <statement statement-id="pe-3_stmt" uuid="6247cfe5-5593-4d16-b9f1-a8615a3bfc87">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-4">
+    <implemented-requirement uuid="8f9edc41-27b9-4f40-ba56-e8bf84fb8937" control-id="pe-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-4_stmt">
+      <statement statement-id="pe-4_stmt" uuid="711ba13c-0b81-47ae-89ef-240f46e2b9d3">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-5">
+    <implemented-requirement uuid="d4b047c4-f2ab-4761-a33a-e1ef77dc68cd" control-id="pe-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-5_stmt">
+      <statement statement-id="pe-5_stmt" uuid="d12b26a5-96ee-4ba7-8a92-a6b0acd0ab9d">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-6">
+    <implemented-requirement uuid="40b52bb2-8fce-42fd-8752-2d45676ebd23" control-id="pe-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-6_stmt">
+      <statement statement-id="pe-6_stmt" uuid="284421df-1c15-46cc-9e03-8069af1af063">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-6.1">
+    <implemented-requirement uuid="5e72c4c0-b074-48c7-aade-d9e0b483dab4" control-id="pe-6.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-6.1_stmt">
+      <statement statement-id="pe-6.1_stmt" uuid="7095b5cc-d088-48b6-8d91-5a023ac10829">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-8">
+    <implemented-requirement uuid="5ff1ef65-5a65-4a5e-bf4b-f9b86612d906" control-id="pe-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-8_stmt">
+      <statement statement-id="pe-8_stmt" uuid="b3479232-1695-4f58-8617-798490a95412">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-9">
+    <implemented-requirement uuid="99bc5062-9dfd-49e1-a8e8-51fa1cf6a47b" control-id="pe-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-9_stmt">
+      <statement statement-id="pe-9_stmt" uuid="249d1da5-4487-4bce-9720-d34808be5e85">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-10">
+    <implemented-requirement uuid="eb508c8c-7c31-407f-b92c-c2b41b2aa43e" control-id="pe-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-10_stmt">
+      <statement statement-id="pe-10_stmt" uuid="468d4489-4df8-4d3c-bdcd-148775b4a0c4">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-11">
+    <implemented-requirement uuid="1ee847b1-6962-4bfc-a1b3-7ad5c4559e9a" control-id="pe-11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-11_stmt">
+      <statement statement-id="pe-11_stmt" uuid="ab38d884-88f8-44e8-a8ef-93d9160923c2">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-12">
+    <implemented-requirement uuid="c9d16665-cec1-4f79-b5c6-4b60a6298535" control-id="pe-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-12_stmt">
+      <statement statement-id="pe-12_stmt" uuid="23088821-81db-44d3-89ba-bcc0a6645e54">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-13">
+    <implemented-requirement uuid="30a6cadc-d1a9-4918-b988-7deb12295a53" control-id="pe-13">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-13_stmt">
+      <statement statement-id="pe-13_stmt" uuid="0f64bab5-0b9f-4e66-82d8-731f58d60475">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-13.2">
+    <implemented-requirement uuid="94da8b22-b4a9-409c-96b5-2fdc054cb28c" control-id="pe-13.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-13.2_stmt">
+      <statement statement-id="pe-13.2_stmt" uuid="4ed1c6b7-6119-48c1-b0eb-2fbd66872fc1">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-13.3">
+    <implemented-requirement uuid="41ff637a-a7e4-49b3-a3ec-27aff03f625f" control-id="pe-13.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-13.3_stmt">
+      <statement statement-id="pe-13.3_stmt" uuid="78562ced-6884-4f20-8d2f-7bca71d93af6">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-14">
+    <implemented-requirement uuid="1b9032fd-8cce-45bf-ab39-b32c9e680b4b" control-id="pe-14">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-14_stmt">
+      <statement statement-id="pe-14_stmt" uuid="8fd958bd-0427-412d-8fc2-d20e13d9d360">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-14.2">
+    <implemented-requirement uuid="3d86147c-d8b3-42c9-bb4c-c62149e00262" control-id="pe-14.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-14.2_stmt">
+      <statement statement-id="pe-14.2_stmt" uuid="a8df9333-c6c1-45c8-8cc0-8d5daf7e4e52">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-15">
+    <implemented-requirement uuid="3f7766af-b035-4025-8108-71c2607a8dd7" control-id="pe-15">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-15_stmt">
+      <statement statement-id="pe-15_stmt" uuid="9915dc42-c49c-4b8f-903a-8c182a323630">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-16">
+    <implemented-requirement uuid="47022ff1-222d-4ff0-a979-f59954078e91" control-id="pe-16">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-16_stmt">
+      <statement statement-id="pe-16_stmt" uuid="688f1e60-6712-4705-b37b-ebbf6558acdf">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-17">
+    <implemented-requirement uuid="941f2bc4-68de-41f2-9d55-0ec6fe1099e2" control-id="pe-17">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-17_stmt">
+      <statement statement-id="pe-17_stmt" uuid="a603c4f8-a375-4e72-a9f2-39bb1c90c0d8">
         <description><p>This control is outside the scope of Ansible Tower configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-1">
+    <implemented-requirement uuid="836ee869-1b7c-43c2-8afb-9eb6c2bd19dd" control-id="pl-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-1_stmt">
+      <statement statement-id="pl-1_stmt" uuid="10fdb3a9-189e-41bf-bba8-8b9ebcdf6c4a">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-2">
+    <implemented-requirement uuid="dbd45224-6b37-4aeb-a327-01440aca4b60" control-id="pl-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-2_stmt">
+      <statement statement-id="pl-2_stmt" uuid="e0228bfd-5ac6-4f9d-a018-849a130d8f67">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-2.3">
+    <implemented-requirement uuid="32be42e0-e2d0-4eb8-8afe-b1d8137de221" control-id="pl-2.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-2.3_stmt">
+      <statement statement-id="pl-2.3_stmt" uuid="d3adc595-121b-4dd2-8f36-f556213c5b4c">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-4">
+    <implemented-requirement uuid="3d6fc8d8-3906-412c-b659-92326363be92" control-id="pl-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-4_stmt">
+      <statement statement-id="pl-4_stmt" uuid="cd206d6e-8248-467b-8b0a-1ef4d4ca1b1a">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-4.1">
+    <implemented-requirement uuid="42efca52-08c4-46a9-a7c3-2656f3fa9727" control-id="pl-4.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-4.1_stmt">
+      <statement statement-id="pl-4.1_stmt" uuid="b572f38f-fb63-4685-802c-15bb406ca0f3">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-8">
+    <implemented-requirement uuid="9f54210d-6a60-4379-accc-8d16526558bb" control-id="pl-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-8_stmt">
+      <statement statement-id="pl-8_stmt" uuid="0fbbe412-f8f6-41c8-acbd-4ad9e1476e8e">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-1">
+    <implemented-requirement uuid="8d86c098-70da-4dda-b0de-d8daa34597cb" control-id="ps-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-1_stmt">
+      <statement statement-id="ps-1_stmt" uuid="a42326e5-8d72-4f7b-a32a-7c830b9fecee">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-2">
+    <implemented-requirement uuid="c1eb532d-403f-45e0-8466-d46db5e05b74" control-id="ps-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-2_stmt">
+      <statement statement-id="ps-2_stmt" uuid="c2eeed88-69af-4239-a57c-911c42634671">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-3">
+    <implemented-requirement uuid="f74d27be-759e-437d-a3fa-0a3383401771" control-id="ps-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-3_stmt">
+      <statement statement-id="ps-3_stmt" uuid="1fb150a1-a9a2-4996-885a-cbb199d03691">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-4">
+    <implemented-requirement uuid="6cb5168b-18fc-4ac2-b81a-661631c2b71e" control-id="ps-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-4_stmt">
+      <statement statement-id="ps-4_stmt" uuid="6cbeb310-1470-4d0c-b145-fc0abeb629d4">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-5">
+    <implemented-requirement uuid="faf9c475-83f9-416d-a514-ad0ededa3d20" control-id="ps-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-5_stmt">
+      <statement statement-id="ps-5_stmt" uuid="f2f38d8a-0f1a-452b-adab-0ae2d7055e5b">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-6">
+    <implemented-requirement uuid="e9369780-91c1-44f7-864e-93b632825c67" control-id="ps-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-6_stmt">
+      <statement statement-id="ps-6_stmt" uuid="d3651606-4869-4b04-a643-f14a87aa0d72">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-7">
+    <implemented-requirement uuid="a4f4df17-1583-4736-867d-9a273564f840" control-id="ps-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-7_stmt">
+      <statement statement-id="ps-7_stmt" uuid="609dd1ed-a54a-4e9b-bd8d-57fff5adf8cb">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-8">
+    <implemented-requirement uuid="e764ad5c-f345-4cc7-907f-c1d9d8e39560" control-id="ps-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-8_stmt">
+      <statement statement-id="ps-8_stmt" uuid="899231df-8731-4170-9ffc-b3a49a3f702b">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-1">
+    <implemented-requirement uuid="83c1f20a-e337-4a37-afe7-22d629d56e6e" control-id="ra-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-1_stmt">
+      <statement statement-id="ra-1_stmt" uuid="43f8ca9e-88c2-4538-853b-d44d1c6f5f9b">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-2">
+    <implemented-requirement uuid="3c2f3b1a-66dc-46c8-a2d1-35dffec7cef9" control-id="ra-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-2_stmt">
+      <statement statement-id="ra-2_stmt" uuid="94f1685b-b2c7-4376-b02c-1a597e4d18f4">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-3">
+    <implemented-requirement uuid="944646e2-5806-4f91-b260-eaaa54cbd2cc" control-id="ra-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-3_stmt">
+      <statement statement-id="ra-3_stmt" uuid="b7cbf8b0-84fa-498a-8765-d852a73a0ff0">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-5">
+    <implemented-requirement uuid="22f03348-8763-46c4-8113-555d42b73558" control-id="ra-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-5_stmt">
+      <statement statement-id="ra-5_stmt" uuid="66cc3f9b-c068-4f0b-8d4e-6e18397a334f">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-1">
+    <implemented-requirement uuid="a47215ce-3f3b-457f-a8d3-39532401a875" control-id="sa-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-1_stmt">
+      <statement statement-id="sa-1_stmt" uuid="7437c090-3957-47ba-8c2a-c9868a3ea4c7">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-2">
+    <implemented-requirement uuid="9b262ec6-8da4-489e-8985-d64f460a0128" control-id="sa-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-2_stmt">
+      <statement statement-id="sa-2_stmt" uuid="0ffe5861-7cc6-4aab-806f-cbabd5391552">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-3">
+    <implemented-requirement uuid="9df236aa-7485-4e60-8bbc-a26772e0f507" control-id="sa-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-3_stmt">
+      <statement statement-id="sa-3_stmt" uuid="6134de6a-2a39-4835-b73d-c1dd598fccd2">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-4">
+    <implemented-requirement uuid="6e424a60-4d05-4880-9cb6-18e80efac04c" control-id="sa-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-4_stmt">
+      <statement statement-id="sa-4_stmt" uuid="19ab50a7-0331-4c8b-8742-fb94e65bd349">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-4.1">
+    <implemented-requirement uuid="1403fe8c-b374-4cd6-bc2d-210799dc7f8c" control-id="sa-4.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sa-4.1_stmt">
+      <statement statement-id="sa-4.1_stmt" uuid="c36bf5fb-d2e4-423a-85a6-61173164b93f">
         <description><p>'A control response to SA-4 (1) is planned.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-4.2">
+    <implemented-requirement uuid="2c0454c2-3ab3-42d0-8f6c-f13b167f2fa7" control-id="sa-4.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sa-4.2_stmt">
+      <statement statement-id="sa-4.2_stmt" uuid="f51c5af0-abe7-4953-abd7-7b6b3c8b4e53">
         <description><p>'A control response to SA-4 (2) is planned.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-4.8">
+    <implemented-requirement uuid="181c1d9b-f3e3-4fc3-a9e7-a0d94c6d46cb" control-id="sa-4.8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sa-4.8_stmt">
+      <statement statement-id="sa-4.8_stmt" uuid="95e413bd-d5bb-4d3b-9eaa-14cde0429d74">
         <description><p>'A control response to SA-4 (8) is planned.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-4.9">
+    <implemented-requirement uuid="33f3cb74-fc64-448c-a477-a381fe69ceb8" control-id="sa-4.9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sa-4.9_stmt">
+      <statement statement-id="sa-4.9_stmt" uuid="a57082e5-61ec-4b49-bfed-6c98c9257b57">
         <description><p>'A control response to SA-4 (9) is planned.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-4.10">
+    <implemented-requirement uuid="f55291f0-913c-463c-bc28-bc12977b0985" control-id="sa-4.10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-4.10_stmt">
+      <statement statement-id="sa-4.10_stmt" uuid="23d825a4-e016-42e5-a911-98c24ad10aba">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-5">
+    <implemented-requirement uuid="9c8cf55d-8c49-4576-9497-acb68f1c03ae" control-id="sa-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-5_stmt">
+      <statement statement-id="sa-5_stmt" uuid="00735e47-24b7-44cd-a411-dcfa841ad582">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-8">
+    <implemented-requirement uuid="87e74fb1-2b49-4d1e-99b7-4f8b77248a0b" control-id="sa-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-8_stmt">
+      <statement statement-id="sa-8_stmt" uuid="b7d9cda3-df3e-4afe-95c6-105faa34b177">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-9">
+    <implemented-requirement uuid="70f6b1b5-a4e2-403a-9b35-bbcce70ae923" control-id="sa-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-9_stmt">
+      <statement statement-id="sa-9_stmt" uuid="ad08fa60-0cdd-4bc5-a812-14ee07774147">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-9.1">
+    <implemented-requirement uuid="16e4d97a-67e9-42ae-b861-23c0db7c4906" control-id="sa-9.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-9.1_stmt">
+      <statement statement-id="sa-9.1_stmt" uuid="9a2b0644-1a53-402f-89db-05d20d640b32">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-9.2">
+    <implemented-requirement uuid="c0432953-558f-477d-923b-1a3709d6b383" control-id="sa-9.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-9.2_stmt">
+      <statement statement-id="sa-9.2_stmt" uuid="f71df5af-8aa6-438e-8fa2-1de25bd1426d">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-9.4">
+    <implemented-requirement uuid="f63abdc0-eefb-4747-bbec-71fb0449ec66" control-id="sa-9.4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-9.4_stmt">
+      <statement statement-id="sa-9.4_stmt" uuid="c79cb702-3229-4ddf-96c9-1455110b2c5f">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-9.5">
+    <implemented-requirement uuid="c22a10c1-070e-4143-a60b-b67a0c8eedfd" control-id="sa-9.5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-9.5_stmt">
+      <statement statement-id="sa-9.5_stmt" uuid="f222508a-b850-4efc-b039-2d1938897f49">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-10">
+    <implemented-requirement uuid="b90d8354-02f9-4449-8107-01796c82da23" control-id="sa-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sa-10_stmt.a">
+      <statement statement-id="sa-10_stmt.a" uuid="33c99cac-f64b-46bc-82a3-77c85603c30f">
         <description><p>'A control response to SA-10 (a) is planned.'
 </p></description>
       </statement>
-      <statement statement-id="sa-10_stmt.b">
+      <statement statement-id="sa-10_stmt.b" uuid="43ae9239-8d76-4b63-a126-69b18f1c0813">
         <description><p>'A control response to SA-10 (b) is planned.'
 </p></description>
       </statement>
-      <statement statement-id="sa-10_stmt.c">
+      <statement statement-id="sa-10_stmt.c" uuid="b8820b94-fb17-49d5-8df7-0dba4981de36">
         <description><p>'A control response to SA-10 (c) is planned.'
 </p></description>
       </statement>
-      <statement statement-id="sa-10_stmt.d">
+      <statement statement-id="sa-10_stmt.d" uuid="095b2d8f-d980-4cbb-9cfd-aecaf8af8060">
         <description><p>'A control response to SA-10 (d) is planned.'
 </p></description>
       </statement>
-      <statement statement-id="sa-10_stmt.e">
+      <statement statement-id="sa-10_stmt.e" uuid="4fa66f58-cc6d-4cb9-8e67-cc92e8ecf529">
         <description><p>'A control response to SA-10 (e) is planned.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-10.1">
+    <implemented-requirement uuid="d8b7a3f7-1c60-485b-abd9-a7c1ec842d7c" control-id="sa-10.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sa-10.1_stmt">
+      <statement statement-id="sa-10.1_stmt" uuid="f2355624-f3c5-4df2-8729-ad21e22047f0">
         <description><p>'A control response to SA-10 (1) is planned.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-1">
+    <implemented-requirement uuid="5147f54b-6218-45e3-866f-7e147547bc4e" control-id="sc-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-1_stmt">
+      <statement statement-id="sc-1_stmt" uuid="3e1121a5-b386-4a78-bcec-a1064ebc2a28">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-5">
+    <implemented-requirement uuid="de1ebf17-1acd-496f-94f6-b1a60dece9e5" control-id="sc-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-5_stmt">
+      <statement statement-id="sc-5_stmt" uuid="d643e01e-e0ce-457d-8f8c-4374fc387646">
         <description><p>'Documentation of anti-dential of service capabilities is being
 tracked on GitHub:
 
@@ -2303,15 +2308,15 @@ https://github.com/ComplianceAsCode/redhat/issues/333'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-7">
+    <implemented-requirement uuid="2bef3b77-844b-4bcc-8f18-02eaacac556e" control-id="sc-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-7_stmt">
+      <statement statement-id="sc-7_stmt" uuid="0ada55ec-4c09-4d9f-a5d7-ae9a18107911">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-12">
+    <implemented-requirement uuid="3f901bc5-e8fa-49ed-a49a-eea887dd61ed" control-id="sc-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-12_stmt">
+      <statement statement-id="sc-12_stmt" uuid="b10baf88-bc8d-44bf-bf5e-6f9b2c5698e6">
         <description><p>'Documentation regarding how Ansible Tower generates,
 distributes, stores,
 accesses, and desctructs, cryptographic keys is forthcoming. This
@@ -2321,9 +2326,9 @@ https://github.com/ComplianceAsCode/redhat/issues/334'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-13">
+    <implemented-requirement uuid="d6d82f17-a90d-4a9c-857b-5750ae24dc9b" control-id="sc-13">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-13_stmt">
+      <statement statement-id="sc-13_stmt" uuid="61bfdc58-0605-46cf-aedd-7d423cc55d7e">
         <description><p>'Documentation regarding Ansible Tower's usage of
 cryptography and applicability to Federal laws is forthcoming. This
 activity is being tracked in GitHub:
@@ -2332,37 +2337,37 @@ https://github.com/ComplianceAsCode/redhat/issues/335'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-15">
+    <implemented-requirement uuid="b914702f-4d87-4d12-b23b-fb9c641687fd" control-id="sc-15">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-15_stmt">
+      <statement statement-id="sc-15_stmt" uuid="f2f1db6f-510c-4f70-b106-eecdb7a6d2bc">
         <description><p>''
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-20">
+    <implemented-requirement uuid="2b914f42-6b84-46ee-a1d2-3c386c9ee621" control-id="sc-20">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-20_stmt">
+      <statement statement-id="sc-20_stmt" uuid="491fd967-0709-48cd-a448-1a50f64eb2fc">
         <description><p>''
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-21">
+    <implemented-requirement uuid="8a700370-b2a9-4def-b906-a26157fb4d12" control-id="sc-21">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-21_stmt">
+      <statement statement-id="sc-21_stmt" uuid="b5a81616-bddf-4d3b-8912-fea1e9291ce9">
         <description><p>''
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-22">
+    <implemented-requirement uuid="c0b89dcf-eb42-43d0-a250-884e1452d362" control-id="sc-22">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-22_stmt">
+      <statement statement-id="sc-22_stmt" uuid="339a92b0-91f0-4e8d-8a33-4efc20d2363c">
         <description><p>''
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-39">
+    <implemented-requirement uuid="89ebdc14-13a8-464a-a776-95267c08ca77" control-id="sc-39">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-39_stmt">
+      <statement statement-id="sc-39_stmt" uuid="77606262-ac66-4ac8-ba63-940136af2110">
         <description><p>'Documentation on ensuring this functionality is
 configured is forthcoming.
 This activity is being tracked in GitHub:
@@ -2371,39 +2376,39 @@ https://github.com/ComplianceAsCode/redhat/issues/336'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-1">
+    <implemented-requirement uuid="4eeb3f88-db0b-4c1e-8f72-b0dd96ac2eb1" control-id="si-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-1_stmt">
+      <statement statement-id="si-1_stmt" uuid="ed09a5c5-3411-46ef-acb2-549d1db2b17b">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-2">
+    <implemented-requirement uuid="287f35fb-46e0-4fe4-95b7-f2f4bb7e2685" control-id="si-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-2_stmt">
+      <statement statement-id="si-2_stmt" uuid="48367978-edab-499d-9ac8-a1bdd4eeb4f8">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-3">
+    <implemented-requirement uuid="7694c0db-7718-4059-b3e5-60663a510c0f" control-id="si-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-3_stmt">
+      <statement statement-id="si-3_stmt" uuid="7eaeb743-7b25-4992-8924-b1890896d6be">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-4">
+    <implemented-requirement uuid="35e5fee5-ad71-45e8-8061-d7f90587ee6a" control-id="si-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-4_stmt">
+      <statement statement-id="si-4_stmt" uuid="3bf66534-9f3a-4ecf-8fed-52186c2aa119">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-5">
+    <implemented-requirement uuid="c401ac6d-16ea-42d1-abe6-2901319df6a9" control-id="si-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-5_stmt">
+      <statement statement-id="si-5_stmt" uuid="929806f5-f028-4e49-a198-22f1030fe083">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-12">
+    <implemented-requirement uuid="b0e93fb6-c6a0-4a1c-915d-5322d696b63e" control-id="si-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="si-12_stmt">
+      <statement statement-id="si-12_stmt" uuid="ebaf3734-1b08-4a33-9077-a60a5280ba81">
         <description><p>'The customer will be responsible for handling and retaining
 information within, or hosted by, Ansible Tower in
 accordance with applicable federal laws, Executive Orders,
@@ -2422,9 +2427,9 @@ https://github.com/ComplianceAsCode/redhat/issues/337'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-16">
+    <implemented-requirement uuid="6789b47f-18c8-478d-b50e-ce6bdd7d15d9" control-id="si-16">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-16_stmt">
+      <statement statement-id="si-16_stmt" uuid="4a4b3519-5c76-4c1a-b8df-a421871b656a">
         <description><p></p></description>
       </statement>
     </implemented-requirement>

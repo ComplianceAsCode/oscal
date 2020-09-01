@@ -1,7 +1,7 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" id="TODO">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="8cc2b159-7b84-400a-8fad-d9a9fc13965d">
   <metadata>
     <title>FedRAMP System Security Plan (SSP)</title>
-    <last-modified>2020-02-12T11:53:40.13+01:00</last-modified>
+    <last-modified>2020-09-01T00:26:08.90+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone2</oscal-version>
   </metadata>
@@ -37,23 +37,28 @@
       <description><p>A holistic, top-level explanation of the FedRAMP authorization boundary.</p></description>
     </authorization-boundary>
   </system-characteristics>
+  <system-implementation>
+    <user uuid="9e708208-7f1a-4af1-b7db-b60de083279d">
+      <role-id>generator</role-id>
+    </user>
+  </system-implementation>
   <control-implementation>
     <description><p>FedRAMP SSP Template Section 13</p></description>
-    <implemented-requirement control-id="ac-1">
+    <implemented-requirement uuid="af74137e-cc9f-4eed-8a4b-6d1595ac6ab8" control-id="ac-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-1_stmt">
+      <statement statement-id="ac-1_stmt" uuid="4131776e-622b-4416-98af-7eae9f12c01b">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-2">
+    <implemented-requirement uuid="318abf63-56a9-4d19-ac84-5d2714e73a02" control-id="ac-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-2_stmt">
+      <statement statement-id="ac-2_stmt" uuid="3f208d68-ec94-4ce7-9e6e-770f9a1dd534">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-3">
+    <implemented-requirement uuid="7ec52fed-e078-46b9-834f-62fd7a250a36" control-id="ac-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-3_stmt">
+      <statement statement-id="ac-3_stmt" uuid="17246531-1354-4e40-a155-6b5b987e3a66">
         <description><p>'Documentation/guidance for satisfying this control is being
 tracked on GitHub:
 
@@ -61,16 +66,16 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/2'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-7">
+    <implemented-requirement uuid="b7ce4234-f2c8-4dbe-a389-8d8a79fa1bcf" control-id="ac-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-7_stmt.a">
+      <statement statement-id="ac-7_stmt.a" uuid="59f9418c-6c1d-439e-a308-79df63308f48">
         <description><p>'Documentation/guidance on satisfying this control is being
 tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/3'
 </p></description>
       </statement>
-      <statement statement-id="ac-7_stmt.b">
+      <statement statement-id="ac-7_stmt.b" uuid="82c743e4-f533-4177-8d10-4e396bdf55d6">
         <description><p>'Documentation/guiodance for this control is being
 tracked on GitHub:
 
@@ -78,22 +83,22 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/4'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-8">
+    <implemented-requirement uuid="1c7ac931-e6a9-4d12-97de-9a8e16b7cf75" control-id="ac-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-8_stmt.a">
+      <statement statement-id="ac-8_stmt.a" uuid="40dcab2c-f6f2-4ad3-b1e7-8cc79fc9c8d6">
         <description><p>'Documentation/guidance for this control is being tracked on
 GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/5'
 </p></description>
       </statement>
-      <statement statement-id="ac-8_stmt.b">
+      <statement statement-id="ac-8_stmt.b" uuid="d5535ee2-ca64-4624-8972-b6b7dd6b14e9">
         <description><p>'Documentation/guidance for this control is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/6'
 </p></description>
       </statement>
-      <statement statement-id="ac-8_stmt.c">
+      <statement statement-id="ac-8_stmt.c" uuid="07632982-6a30-49fe-a213-802b7db912a0">
         <description><p>'The banner text, as identified in AC-8(a), and banner acknowledgement,
 as defined in AC-8(b), will be the same regardless of what network(s)
 the Red Hat Identity Management console is accessed from. This control
@@ -101,9 +106,9 @@ is not applicable.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-14">
+    <implemented-requirement uuid="d734b4fd-dd89-4ead-a48a-82148921aca2" control-id="ac-14">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-14_stmt">
+      <statement statement-id="ac-14_stmt" uuid="f1ca1945-a687-4b7d-af80-cfebb615db0e">
         <description><p>'Regardless of access mechanism, such as the Red Hat Identity Management
 console, unauthenticated users will only be shown the
 system use notifications (as defined in AC-8) and login prompt. This is
@@ -114,127 +119,127 @@ prior to granting resource access.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-17">
+    <implemented-requirement uuid="76bf57a9-6e20-4807-abd0-d48cb2d964a5" control-id="ac-17">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-17_stmt">
+      <statement statement-id="ac-17_stmt" uuid="3ead23ff-bfa4-43d4-bf09-d750e6b4aef4">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-18">
+    <implemented-requirement uuid="dcaf2536-c091-444e-b0a7-74b0e860728a" control-id="ac-18">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-18_stmt">
+      <statement statement-id="ac-18_stmt" uuid="796edadf-ac76-4c07-85d4-6b9a0eb350ac">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-19">
+    <implemented-requirement uuid="e56e9099-8540-4a12-9cff-0dcde8fe2786" control-id="ac-19">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-19_stmt">
+      <statement statement-id="ac-19_stmt" uuid="31d640b6-1956-48e9-8e6d-4585dff2242e">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-20">
+    <implemented-requirement uuid="31250fea-cd62-46e6-bfe7-9b02a88333b2" control-id="ac-20">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-20_stmt">
+      <statement statement-id="ac-20_stmt" uuid="c62657e4-cbf7-4768-95de-103dd94738d6">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ac-22">
+    <implemented-requirement uuid="996d4b92-2140-4b16-ae5d-46dafc12901e" control-id="ac-22">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-22_stmt">
+      <statement statement-id="ac-22_stmt" uuid="2c8b8bc2-940c-47f8-a83f-c7b180f31b0a">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-1">
+    <implemented-requirement uuid="deeed58b-67ba-41b8-ab77-6478bcf15015" control-id="at-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-1_stmt.a">
+      <statement statement-id="at-1_stmt.a" uuid="d108d5e3-a16e-42f5-887e-2ccd4e310037">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-1_stmt.b">
+      <statement statement-id="at-1_stmt.b" uuid="53e1a8ba-15e9-47bf-9970-e820349b4d41">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-2">
+    <implemented-requirement uuid="d202a694-d4c5-48f1-b578-da1ac1298ce2" control-id="at-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-2_stmt.a">
+      <statement statement-id="at-2_stmt.a" uuid="58a6ecf6-8688-4119-a53d-eb15d2d6ac32">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-2_stmt.b">
+      <statement statement-id="at-2_stmt.b" uuid="566e8631-0276-4f37-b5cc-2d108a6d6464">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-2_stmt.c">
+      <statement statement-id="at-2_stmt.c" uuid="6d822685-dcce-4cc7-a479-7ee9dbce6937">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-3">
+    <implemented-requirement uuid="5183bd91-682e-4473-ba44-f5874fbfce78" control-id="at-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-3_stmt.a">
+      <statement statement-id="at-3_stmt.a" uuid="9e2fe4f2-5493-48f5-8da3-29aa22deff7e">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-3_stmt.b">
+      <statement statement-id="at-3_stmt.b" uuid="7781fb4c-2aee-4b38-ac86-37a08e0549e5">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-3_stmt.c">
+      <statement statement-id="at-3_stmt.c" uuid="5af8d185-14e3-4d8e-9621-421e9f635f83">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="at-4">
+    <implemented-requirement uuid="86b936f9-175d-42cb-aeaf-8b49de1a1d6d" control-id="at-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="at-4_stmt.a">
+      <statement statement-id="at-4_stmt.a" uuid="7b11b0fb-cdf1-4df8-9119-4340f207f150">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
-      <statement statement-id="at-4_stmt.b">
+      <statement statement-id="at-4_stmt.b" uuid="72957dbd-f54a-46bb-95db-3f0e18acce1b">
         <description><p>This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-1">
+    <implemented-requirement uuid="0981b061-325b-4909-a060-b0af9a334354" control-id="au-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-1_stmt">
+      <statement statement-id="au-1_stmt" uuid="e20bff3a-19d5-4c03-b495-70e156e3bd8f">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-2">
+    <implemented-requirement uuid="394a3457-12fd-4eb9-ae4a-c5894186a456" control-id="au-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-2_stmt">
+      <statement statement-id="au-2_stmt" uuid="7bed0adb-eea6-47cb-a004-cce1431f65ef">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-3">
+    <implemented-requirement uuid="ee035e1e-2090-4612-9aaa-7936b35b10e2" control-id="au-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="au-3_stmt">
+      <statement statement-id="au-3_stmt" uuid="24ea8875-5570-43d4-a6ff-62086aaf01c9">
         <description><p>'Red Hat Identity Management audit records contain this information
 by default. No additional configuration is required.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-4">
+    <implemented-requirement uuid="20e68afa-471b-4530-8f18-3736d352ee12" control-id="au-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-4_stmt">
+      <statement statement-id="au-4_stmt" uuid="eaa1c927-c115-4371-b54c-fd435cd9bc05">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-5">
+    <implemented-requirement uuid="8d00a51c-63a6-48de-8802-16dd519bda36" control-id="au-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-5_stmt.a">
+      <statement statement-id="au-5_stmt.a" uuid="28bac164-c3c4-4fc8-8834-ef7ac51b1544">
         <description><p>'Red Hat Identity Management Administrators  are responsible for
 alerting personnel or roles in the event of an audit processing
 failure. A successful
@@ -247,7 +252,7 @@ on GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/19'
 </p></description>
       </statement>
-      <statement statement-id="au-5_stmt.b">
+      <statement statement-id="au-5_stmt.b" uuid="5d93da3b-beab-4bbc-8091-018562df0ec8">
         <description><p>'In the event of an audit processing failure, Red Hat Identity
 Management Administrators
 are responsible for: overwriting the oldest audit records for low
@@ -262,21 +267,21 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/20'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-6">
+    <implemented-requirement uuid="be997f30-4b50-4899-b038-9863bc7823e8" control-id="au-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="au-6_stmt">
+      <statement statement-id="au-6_stmt" uuid="c2f647ca-d8ad-4bc5-8d2c-d223d482d8ae">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-8">
+    <implemented-requirement uuid="818eab2c-1e88-4b29-abcb-7f3aa50c76c8" control-id="au-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="au-8_stmt.a">
+      <statement statement-id="au-8_stmt.a" uuid="559c533b-bebd-4eff-ae35-20471bf40aae">
         <description><p>'Red Hat Identity Management time keeping relies on the time services
 provided by the underlying operating system. This control is not
 applicable to the configuration of Red Hat Identity Management.'
 </p></description>
       </statement>
-      <statement statement-id="au-8_stmt.b">
+      <statement statement-id="au-8_stmt.b" uuid="5e520655-de40-4988-bac5-5db86c225034">
         <description><p>'Red Hat Identity Management time keeping relies on the time
 services provided by the
 underlying operating system. This control is not applicable to the
@@ -284,9 +289,9 @@ configuration of Red Hat Identity Management.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-9">
+    <implemented-requirement uuid="894f4a17-fe5d-4028-b9ee-1482f5aeb962" control-id="au-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-9_stmt">
+      <statement statement-id="au-9_stmt" uuid="d325b781-17b9-4aef-9c04-952096b1015d">
         <description><p>'Customers are required to protect the audit information and audit
 tools from unauthorized access, modification, and deletion. A successful
 control response will discuss the way that audit information and tools
@@ -301,9 +306,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/21'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-11">
+    <implemented-requirement uuid="bb52bb93-dc88-496d-9af1-db13feef775c" control-id="au-11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-11_stmt">
+      <statement statement-id="au-11_stmt" uuid="082dc40e-c19b-481a-ba04-772af5e38813">
         <description><p>'Documentation/instructions on audit retention is being tracked
 in GitHub:
 
@@ -311,9 +316,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/22'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="au-12">
+    <implemented-requirement uuid="e909b158-4756-45d4-80f4-f0fb61eedec2" control-id="au-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-12_stmt.a">
+      <statement statement-id="au-12_stmt.a" uuid="4eb158ed-2ef0-4b5c-a478-9f2fe1a26f79">
         <description><p>'Customers are required to provide record generation capability for the
 events defined in AU-2a at all information system components where audit
 capability is available. A successful control response will discuss the
@@ -326,7 +331,7 @@ tracked on GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/23'
 </p></description>
       </statement>
-      <statement statement-id="au-12_stmt.b">
+      <statement statement-id="au-12_stmt.b" uuid="491e47bd-0fc7-43d1-bbe5-badf47e1c995">
         <description><p>'//*
 Customers are required to allow defined personnel or roles to select
 which auditable events are to be audited by specific components of the
@@ -341,7 +346,7 @@ tracked on GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/24'
 </p></description>
       </statement>
-      <statement statement-id="au-12_stmt.c">
+      <statement statement-id="au-12_stmt.c" uuid="d12eae9e-bdcf-4c1f-9ed9-44e51f4abc6d">
         <description><p>'Customers are required to generate audit records for the events
 defined in AU-2d with the content defined in AU-3. A successful control
 response will discuss how audit records are generated, and how they meet
@@ -354,82 +359,82 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/25'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-1">
+    <implemented-requirement uuid="6a0194d3-c4c8-47e8-bdf9-cbd610381096" control-id="ca-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-1_stmt">
+      <statement statement-id="ca-1_stmt" uuid="58755a80-adcf-43c9-ac23-75d616471a8a">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-2">
+    <implemented-requirement uuid="5f5d9759-4d74-4a7f-a8df-ab1d73026e46" control-id="ca-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-2_stmt">
+      <statement statement-id="ca-2_stmt" uuid="c9604c47-d793-4d7c-a52c-e998d3b1630e">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-2.1">
+    <implemented-requirement uuid="5be0b04a-1edc-4d17-8c39-9a5edc66038f" control-id="ca-2.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-2.1_stmt">
+      <statement statement-id="ca-2.1_stmt" uuid="6a194d2d-122c-4e44-9676-7d5e4dd052c1">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-3">
+    <implemented-requirement uuid="4542289d-4d83-4bb7-96ba-f7d07c5b4b49" control-id="ca-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-3_stmt">
+      <statement statement-id="ca-3_stmt" uuid="1ed7ad3b-6e82-4a83-952b-a0bc57afa55a">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-5">
+    <implemented-requirement uuid="cc16d913-9242-4782-8865-6f774b9bf324" control-id="ca-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-5_stmt">
+      <statement statement-id="ca-5_stmt" uuid="5f63e23a-7d0f-480a-9117-b480da6ff135">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-6">
+    <implemented-requirement uuid="0099d797-d1c5-41f7-bbba-7253e0a5676f" control-id="ca-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-6_stmt">
+      <statement statement-id="ca-6_stmt" uuid="fe5fb767-194c-4601-8797-483ea1f11b46">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-7">
+    <implemented-requirement uuid="03461b4b-2958-49d9-88f2-48188cf03d85" control-id="ca-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-7_stmt">
+      <statement statement-id="ca-7_stmt" uuid="736cbddd-e089-484e-a0e2-7c7329585463">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ca-9">
+    <implemented-requirement uuid="ccf82670-41ca-4ad3-a2ab-3785045a4a3c" control-id="ca-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ca-9_stmt">
+      <statement statement-id="ca-9_stmt" uuid="1c7b6576-db5c-45f5-8607-51f3a668d6cb">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-1">
+    <implemented-requirement uuid="106308db-e733-44d7-bc66-4382f58f2bff" control-id="cm-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-1_stmt">
+      <statement statement-id="cm-1_stmt" uuid="1077ba1b-6293-48e9-903a-a5e0a4c86714">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-2">
+    <implemented-requirement uuid="3ddc4aeb-b53b-4ce0-a5f5-2259803b0771" control-id="cm-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-2_stmt">
+      <statement statement-id="cm-2_stmt" uuid="d1d65484-6269-4202-a5e7-3b767fd52f5f">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-4">
+    <implemented-requirement uuid="e66d4dbd-cc67-430e-b410-fce2c3d207e4" control-id="cm-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-4_stmt">
+      <statement statement-id="cm-4_stmt" uuid="83a3e324-b34d-4246-8ed6-ddea62fbbcb0">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-6">
+    <implemented-requirement uuid="85e1efa3-77cf-4213-8ed4-0b9c9fc711a6" control-id="cm-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-6_stmt.a">
+      <statement statement-id="cm-6_stmt.a" uuid="2af25fa2-5f23-466c-8f32-6009777b8b49">
         <description><p>'This is an organizational control outside the scope of configuring
 Red Hat Identity Management. Use of the NIST National Checklist
 for Red Hat Identity Management is suggested as a supported,
 US Government recognized, vendor supported, baseline.'
 </p></description>
       </statement>
-      <statement statement-id="cm-6_stmt.b">
+      <statement statement-id="cm-6_stmt.b" uuid="a42473a7-6e07-4399-873d-7bd324fc19c9">
         <description><p>'The customer will be responsible for implementing configuration
 settings as defined in CM-6(a). A successful control response will
 describe how mandatory configuration settings are implemented. This can
@@ -441,12 +446,12 @@ is being tracked on GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/40'
 </p></description>
       </statement>
-      <statement statement-id="cm-6_stmt.c">
+      <statement statement-id="cm-6_stmt.c" uuid="e5f3d5fa-a6e5-4440-b284-1763f96ab14f">
         <description><p>'This is an organizational control outside the scope of configuring
 Red Hat Identity Management.'
 </p></description>
       </statement>
-      <statement statement-id="cm-6_stmt.d">
+      <statement statement-id="cm-6_stmt.d" uuid="1b692891-8940-4560-aafb-282102da5d0e">
         <description><p>'The customer will be responsible for monitoring and controlling
 changes to the configuration settings in accordance with organization
 policies and procedures. A successful control response will describe
@@ -456,9 +461,9 @@ track and approve changes.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-7">
+    <implemented-requirement uuid="f590daeb-ef00-4cda-ad76-84dfafdbbf25" control-id="cm-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-7_stmt">
+      <statement statement-id="cm-7_stmt" uuid="cf4e9ba1-f036-4697-bf66-74fe3a8e57ed">
         <description><p>'Red Hat Identity Management provides many capabilities, including
 user authentication, DNS integration, and several APIs. A successful
 control response will outline which services are enabled
@@ -466,51 +471,51 @@ and their mission purpose.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-8">
+    <implemented-requirement uuid="660ac7c1-8320-47b5-aab5-59a718880457" control-id="cm-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-8_stmt">
+      <statement statement-id="cm-8_stmt" uuid="ed456a06-2710-4214-8791-262ee00ebc0a">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-10">
+    <implemented-requirement uuid="43baddaf-0f79-4ff1-a6a9-2902def60601" control-id="cm-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-10_stmt">
+      <statement statement-id="cm-10_stmt" uuid="85af0980-bbba-4bc1-9d52-42db62030c35">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cm-11">
+    <implemented-requirement uuid="55150c0e-25e1-40a9-918f-7cb86fce5cfe" control-id="cm-11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cm-11_stmt">
+      <statement statement-id="cm-11_stmt" uuid="0ca7e26f-9f05-49dc-83b4-bea8488f86b7">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-1">
+    <implemented-requirement uuid="fc499411-6d69-4f06-9404-47a9197b5d11" control-id="cp-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-1_stmt">
+      <statement statement-id="cp-1_stmt" uuid="644ff238-ea59-4efe-a565-2d34c7f13017">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-2">
+    <implemented-requirement uuid="32751ec0-83f8-4e49-8ca4-dcdbdc325d85" control-id="cp-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-2_stmt">
+      <statement statement-id="cp-2_stmt" uuid="5c78f8b3-2c4b-47be-9976-5fc4562cfd2a">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-3">
+    <implemented-requirement uuid="a5c17c5e-9aae-4677-b649-ceb1bff445e1" control-id="cp-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-3_stmt">
+      <statement statement-id="cp-3_stmt" uuid="581adacc-08e8-49ef-952a-3ce4af368962">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-4">
+    <implemented-requirement uuid="402d505d-4ef3-4221-b097-517546a9e520" control-id="cp-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="cp-4_stmt">
+      <statement statement-id="cp-4_stmt" uuid="5c873506-e092-4143-ae15-36715709cac7">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-9">
+    <implemented-requirement uuid="535669ee-e131-471f-920d-c09adbfdd071" control-id="cp-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cp-9_stmt.a">
+      <statement statement-id="cp-9_stmt.a" uuid="2209d98f-a3dd-422b-8cb5-5616706cdf04">
         <description><p>'The customer will be responsible for conducting daily incremental and
 weekly full backups of user-level information contained in the
 information system. Additional FedRAMP requirements and guidance include
@@ -525,7 +530,7 @@ Guidance on establishing such backups is being tracked in GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/51'
 </p></description>
       </statement>
-      <statement statement-id="cp-9_stmt.b">
+      <statement statement-id="cp-9_stmt.b" uuid="8efd1ab2-17c4-43e9-9980-89d058439ae3">
         <description><p>'The customer will be responsible for conducting daily incremental and
 weekly full backups of system-level information contained in the
 information system. Additional FedRAMP requirements and guidance include
@@ -540,7 +545,7 @@ Guidance on establishing such backups is being tracked in GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/52'
 </p></description>
       </statement>
-      <statement statement-id="cp-9_stmt.c">
+      <statement statement-id="cp-9_stmt.c" uuid="5b6c083d-c7fd-4027-b9b1-b30eeb19e9d1">
         <description><p>'The customer will be responsible for conducting daily incremental and
 weekly full backups of information system documentation including
 security-related documentation. Additional FedRAMP requirements and
@@ -554,7 +559,7 @@ Guidance on establishing such backups is being tracked in GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/53'
 </p></description>
       </statement>
-      <statement statement-id="cp-9_stmt.d">
+      <statement statement-id="cp-9_stmt.d" uuid="3d18e097-9f68-49b9-b97e-50361f5f64c5">
         <description><p>'The customer will be responsible for protecting the confidentiality,
 integrity, and available of backup information at storage locations.
 Additional FedRAMP requirements and guidance include determining
@@ -568,9 +573,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/54'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="cp-10">
+    <implemented-requirement uuid="1ab54d59-fac5-492c-850b-98d6c8d0212d" control-id="cp-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cp-10_stmt">
+      <statement statement-id="cp-10_stmt" uuid="f772a139-8e57-46e0-b799-5bc29ef5dd2c">
         <description><p>'The customer will be responsible for documenting how to reconstitute
 their Red Hat Identity Management environment. A successful control
 response will detail
@@ -579,15 +584,15 @@ Management environment.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-1">
+    <implemented-requirement uuid="b26f6b88-7f88-4f3a-9841-6ac607bb5509" control-id="ia-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-1_stmt">
+      <statement statement-id="ia-1_stmt" uuid="b4e12049-5238-489b-936f-591420dcadd1">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-2">
+    <implemented-requirement uuid="f7a7c61c-0f98-4432-b4c8-a96e3b2dee9e" control-id="ia-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-2_stmt">
+      <statement statement-id="ia-2_stmt" uuid="618bb6c3-41f3-4940-a9af-f0522a13823c">
         <description><p>'Documentation/guidance on configuring Red Hat
 Identity Management against
 this requirement is being tracked on GitHub:
@@ -596,9 +601,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/61'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-2.1">
+    <implemented-requirement uuid="767d6bd0-cc23-4fe3-911e-b47625f00945" control-id="ia-2.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-2.1_stmt">
+      <statement statement-id="ia-2.1_stmt" uuid="f8371570-6a05-4f77-a3a0-bbcf16d54603">
         <description><p>'The customer will be responsible for implementing multifactor
 authentication for network access to privileged accounts.
 
@@ -619,9 +624,9 @@ Red Hat Identity Management.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-2.12">
+    <implemented-requirement uuid="a283ddb1-ace8-47e8-9495-dc82c42c90fc" control-id="ia-2.12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-2.12_stmt">
+      <statement statement-id="ia-2.12_stmt" uuid="f58e9252-12a8-4c97-b670-090cc696429e">
         <description><p>'Personal Identity Verification (PIV) credentials are those credentials
 issued by federal agencies that conform to FIPS Publication 201 and
 supporting guidance documents. Customers will not be expected to perform
@@ -636,31 +641,31 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/63'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-4">
+    <implemented-requirement uuid="97c8051e-bb43-4614-aa85-2d4b901b19dd" control-id="ia-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-4_stmt.a">
+      <statement statement-id="ia-4_stmt.a" uuid="1493c77d-397f-470b-99b6-c49d9549cd3d">
         <description><p>'This is an organizational control outside the scope of configuring
 Red Hat Identity Management.'
 </p></description>
       </statement>
-      <statement statement-id="ia-4_stmt.b">
+      <statement statement-id="ia-4_stmt.b" uuid="0453f4bb-5dd9-458b-b37e-2c399caf377f">
         <description><p>'This is an organizational control outside the scope of configuring
 Red Hat Identity Management.'
 </p></description>
       </statement>
-      <statement statement-id="ia-4_stmt.c">
+      <statement statement-id="ia-4_stmt.c" uuid="1da5effd-b8fd-43cf-926a-5975213b4053">
         <description><p>'This is an organizational control outside the scope of configuring
 Red Hat Identity Management.'
 </p></description>
       </statement>
-      <statement statement-id="ia-4_stmt.d">
+      <statement statement-id="ia-4_stmt.d" uuid="f1a76cfe-5668-4684-84e9-1f5cebcb8e6b">
         <description><p>'Documentation/guidance on preventing the reuse of identifiers is
 being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/64'
 </p></description>
       </statement>
-      <statement statement-id="ia-4_stmt.e">
+      <statement statement-id="ia-4_stmt.e" uuid="3370e5f7-9409-42c7-b882-7bdc3aed83b9">
         <description><p>'Documentation/guidance on disabling idle accounts is being tracked
 on GitHub:
 
@@ -668,40 +673,40 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/65'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-5">
+    <implemented-requirement uuid="07bff9be-9b16-4c08-83d8-d1eb5e6bfd9f" control-id="ia-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-5_stmt.a">
+      <statement statement-id="ia-5_stmt.a" uuid="57b41fa1-b60a-45a0-92f3-421645a7db51">
         <description><p>'This is an organizational control outside the scope of configuring
 Red Hat Identity Management.'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.b">
+      <statement statement-id="ia-5_stmt.b" uuid="f981ae57-b434-4d54-81d1-41e951bc380b">
         <description><p>'Documentation/guidance on how to configure initial authenticator
 metadata is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/66'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.c">
+      <statement statement-id="ia-5_stmt.c" uuid="e252c155-1921-4e48-a32c-82014cfc5b8c">
         <description><p>'Documentation/guidance on ensuring authenticators have sufficient
 strenth of mechanism for their purpose is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/67'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.d">
+      <statement statement-id="ia-5_stmt.d" uuid="a28a10d0-7dac-47b3-b719-2d74c2c319b2">
         <description><p>'Documentation/guidance for this control is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/68'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.e">
+      <statement statement-id="ia-5_stmt.e" uuid="7bd8ab65-f968-40e8-bc1f-5a521396b9c5">
         <description><p>'Documentation/guidance for this control is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/69'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.f">
+      <statement statement-id="ia-5_stmt.f" uuid="f1e597a5-6d85-4e6d-8c08-93538a4314c1">
         <description><p>'Guidance/documentation for establishing minimum/maximum lifetime
 restrictions and reuse conditions for authenticators is being
 tracked on GitHub:
@@ -709,71 +714,71 @@ tracked on GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/70'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.g">
+      <statement statement-id="ia-5_stmt.g" uuid="02cf6842-c68c-4cf7-91ca-4204177f02b7">
         <description><p>'Guidance on changing/refreshing authenticators after an
 organizationally-defined time period is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/71'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.h">
+      <statement statement-id="ia-5_stmt.h" uuid="eaeb552f-b96f-4d12-9b24-014d8698a9f2">
         <description><p>'Documentation/guidance for this control is being tracked on
 GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/72'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.i">
+      <statement statement-id="ia-5_stmt.i" uuid="9192690a-c3c7-4aaf-a4fa-4767340b8fec">
         <description><p>'Documentation/guidance for this control is being tracked on
 GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/73'
 </p></description>
       </statement>
-      <statement statement-id="ia-5_stmt.j">
+      <statement statement-id="ia-5_stmt.j" uuid="e146b68c-5f68-4174-8a30-16f52061575d">
         <description><p>'This is an organizational control outside the scope of configuring
 Red Hat Identity Management.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-5.1">
+    <implemented-requirement uuid="8bcde006-8d19-4c9c-8ff5-0975e5634c40" control-id="ia-5.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-5.1_stmt.a">
+      <statement statement-id="ia-5.1_stmt.a" uuid="a2a1d9a1-a38d-405b-957c-66df7500dd93">
         <description><p>'Documentation/guidance on implementing password complexity
 is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/74'
 </p></description>
       </statement>
-      <statement statement-id="ia-5.1_stmt.b">
+      <statement statement-id="ia-5.1_stmt.b" uuid="6095290b-8fb8-4b5a-bef2-34966b725705">
         <description><p>'Documentation/guidance on implementing changed characters during
 password creation is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/75'
 </p></description>
       </statement>
-      <statement statement-id="ia-5.1_stmt.c">
+      <statement statement-id="ia-5.1_stmt.c" uuid="ceb9d365-6eb1-44fc-a671-8d2e09f32243">
         <description><p>'Documentation/guidance on storing and transmitting only
 cryptographically-protected passwords is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/76'
 </p></description>
       </statement>
-      <statement statement-id="ia-5.1_stmt.d">
+      <statement statement-id="ia-5.1_stmt.d" uuid="e943e42a-e5ad-4942-b910-c1b01c82423c">
         <description><p>'Documentation/guidance on enforcing password minimum and maximum
 lifetime restrictions is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/77'
 </p></description>
       </statement>
-      <statement statement-id="ia-5.1_stmt.e">
+      <statement statement-id="ia-5.1_stmt.e" uuid="869cef09-19f7-40a7-a7ea-c49ee1a4366c">
         <description><p>'Documentation/guidance on enforcing password minimum and maximum
 lifetime restrictions is being tracked on GitHub:
 
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/78'
 </p></description>
       </statement>
-      <statement statement-id="ia-5.1_stmt.f">
+      <statement statement-id="ia-5.1_stmt.f" uuid="65c3a29d-a064-46ad-8353-64674a7c0f1b">
         <description><p>'Documentation/guidance on enforcing an immediate change to temporary
 passwords is being tracked on GitHub:
 
@@ -781,24 +786,24 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/79'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-5.11">
+    <implemented-requirement uuid="08d64789-107b-4667-a844-fd6f97da0051" control-id="ia-5.11">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ia-5.11_stmt">
+      <statement statement-id="ia-5.11_stmt" uuid="a3144402-8db0-497d-8de6-0c4dfca2d96b">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-6">
+    <implemented-requirement uuid="0ba325b8-5d17-4804-aa26-49791efd054a" control-id="ia-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ia-6_stmt">
+      <statement statement-id="ia-6_stmt" uuid="527c0961-1add-4899-8ec9-0e14cdbe2030">
         <description><p>'Red Hat Identity Management natively obscures such information.
 Red Hat Identity Management cannot be
 configured to be out of compliance with this requirement.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-7">
+    <implemented-requirement uuid="5a2ca085-c5e6-4029-93f9-75e224541258" control-id="ia-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-7_stmt">
+      <statement statement-id="ia-7_stmt" uuid="423b9b7f-dbc3-423d-874a-9cd3f45d7548">
         <description><p>'The customer will be responsible for configuring Red Hat Identity
 Management to use
 appropriate cryptographic modules. A successful control response will
@@ -811,9 +816,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/81'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8">
+    <implemented-requirement uuid="4ec2ec87-0f8e-4168-8b56-bb3845020546" control-id="ia-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8_stmt">
+      <statement statement-id="ia-8_stmt" uuid="5edf4098-8294-45b6-879a-2883adfd2e4e">
         <description><p>'The customer will be responsible for identifying and authenticating
 non-organizational users accessing the customer application. A
 successful control response will need to address how non-organizational
@@ -828,9 +833,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/82'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.1">
+    <implemented-requirement uuid="0ed5fcc6-b6f9-4d73-996d-be086b276c80" control-id="ia-8.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8.1_stmt">
+      <statement statement-id="ia-8.1_stmt" uuid="152870be-26c4-404a-be67-abdc89aa1378">
         <description><p>'Personal Identity Verificiation (PIV) credentials are those
 credentials issued by federal agencies that conform to FIPS Publication
 201 and supporting guidance documents. Customers will not be expected
@@ -846,9 +851,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/82'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.2">
+    <implemented-requirement uuid="4f3caef3-add0-4936-b959-c7e38e534842" control-id="ia-8.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8.2_stmt">
+      <statement statement-id="ia-8.2_stmt" uuid="fa0e4771-3554-474e-876f-6233af063c35">
         <description><p>'FICAM approved credentials are those credentials issued by nonfederal
 government entities approved by the Federal Identity, Credential, and
 Access Management (FICAM) Trust Framework Solutions Initiative.
@@ -865,9 +870,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/84'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.3">
+    <implemented-requirement uuid="c155f369-3321-4480-9fd6-7bc7c87410b2" control-id="ia-8.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8.3_stmt">
+      <statement statement-id="ia-8.3_stmt" uuid="df39d360-1784-4637-a7ad-03c057e412dc">
         <description><p>'FICAM approved credentials are those credentials issued by nonfederal
 government entities approved by the Federal Identity, Credential, and
 Access Management (FICAM) Trust Framework Solutions Initiative.
@@ -884,9 +889,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/85'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ia-8.4">
+    <implemented-requirement uuid="67f0ce79-0ec3-4458-bc67-75d4cf08c12c" control-id="ia-8.4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-8.4_stmt">
+      <statement statement-id="ia-8.4_stmt" uuid="dd5f0b9a-6aec-417b-9d2f-a9e534bc3f51">
         <description><p>'FICAM approved credentials are those credentials issued by nonfederal
 government entities approved by the Federal Identity, Credential, and
 Access Management (FICAM) Trust Framework Solutions Initiative.
@@ -903,329 +908,329 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/86'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-1">
+    <implemented-requirement uuid="68b6a303-fbf2-412b-b366-8eb742d437db" control-id="ir-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-1_stmt">
+      <statement statement-id="ir-1_stmt" uuid="d6379389-e8e9-41d7-b0e3-00f314bed039">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-2">
+    <implemented-requirement uuid="b70aeb6a-9d15-4053-840d-d209ac69ee0e" control-id="ir-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-2_stmt">
+      <statement statement-id="ir-2_stmt" uuid="ebe349b6-aba3-4e14-81c9-f770b2705059">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-4">
+    <implemented-requirement uuid="977652c0-e8d6-4b92-8358-74bb32e477bf" control-id="ir-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-4_stmt">
+      <statement statement-id="ir-4_stmt" uuid="d00f6265-2bf0-45d2-b53c-a113d1ed9935">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-5">
+    <implemented-requirement uuid="f41d05a2-d498-4a25-ac26-2c3d87f32f2b" control-id="ir-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-5_stmt">
+      <statement statement-id="ir-5_stmt" uuid="b14b2adf-b221-4077-ae54-b2bd6fb80c51">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-6">
+    <implemented-requirement uuid="1187bd0b-2ec6-4209-8079-ae4067d0d0a3" control-id="ir-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-6_stmt">
+      <statement statement-id="ir-6_stmt" uuid="17e574cd-fc9c-4408-95c9-c4276bfad5e1">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-7">
+    <implemented-requirement uuid="0b11751c-7f04-4a79-854f-c4c01e4f1b90" control-id="ir-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-7_stmt">
+      <statement statement-id="ir-7_stmt" uuid="e78a243a-098e-44f8-a069-677200c31d7a">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ir-8">
+    <implemented-requirement uuid="a5373673-1b73-4331-ad42-860af314bf10" control-id="ir-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ir-8_stmt">
+      <statement statement-id="ir-8_stmt" uuid="fe5c08ba-c12a-451f-8f59-be69c5b2e469">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-1">
+    <implemented-requirement uuid="1709d4a8-7839-4fdd-8218-c926074cdaf1" control-id="ma-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-1_stmt">
+      <statement statement-id="ma-1_stmt" uuid="ee86fc15-ac38-4f45-92fd-85d2d836b543">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-2">
+    <implemented-requirement uuid="6be98568-3528-4215-b7ba-4c48411b8d63" control-id="ma-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-2_stmt">
+      <statement statement-id="ma-2_stmt" uuid="7f92233c-6bb7-4a5a-99ba-202e0f642842">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-4">
+    <implemented-requirement uuid="12ed2259-edc1-4d1b-90ba-cd4d048d05e1" control-id="ma-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-4_stmt">
+      <statement statement-id="ma-4_stmt" uuid="42a2b54b-fce1-430e-8aad-e0a0eeb94ca2">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ma-5">
+    <implemented-requirement uuid="9d8963da-6d9e-4156-bb5e-8ba42cdc233b" control-id="ma-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ma-5_stmt">
+      <statement statement-id="ma-5_stmt" uuid="e990d170-b488-4a6e-aa79-0d4480781876">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-1">
+    <implemented-requirement uuid="f1445636-10ca-4311-9a7d-67c53d62257a" control-id="mp-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-1_stmt">
+      <statement statement-id="mp-1_stmt" uuid="e2e75103-13c6-4bd1-80e0-3416efcf4a5b">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-2">
+    <implemented-requirement uuid="f360991c-21a8-44c0-b586-cba27c2e9c16" control-id="mp-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-2_stmt">
+      <statement statement-id="mp-2_stmt" uuid="a7d0a416-415e-41f3-8551-3d0766ad36ab">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-6">
+    <implemented-requirement uuid="4df2bacd-5a99-4e7c-9d98-02f7c58233fc" control-id="mp-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-6_stmt">
+      <statement statement-id="mp-6_stmt" uuid="b4c8ad05-027e-46e1-b156-f7face576ad2">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="mp-7">
+    <implemented-requirement uuid="d18c87fb-96a4-4ed4-91c6-5e83abf45211" control-id="mp-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="mp-7_stmt">
+      <statement statement-id="mp-7_stmt" uuid="ea4013f6-0e69-4184-bce1-186f60def9cf">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-1">
+    <implemented-requirement uuid="f2eadd82-d256-48f9-9d7d-bc8b617a2e02" control-id="pe-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-1_stmt">
+      <statement statement-id="pe-1_stmt" uuid="2c044d3e-0e66-4f72-9392-e95c3f1469a8">
         <description><p>This control is outside the scope of Red Hat IdM configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-2">
+    <implemented-requirement uuid="14f35e80-3326-4f74-9797-9e8d65d608e3" control-id="pe-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-2_stmt">
+      <statement statement-id="pe-2_stmt" uuid="a8509b65-769c-4efe-9e32-7af9958b9d7a">
         <description><p>This control is outside the scope of Red Hat IdM configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-3">
+    <implemented-requirement uuid="1a43d2df-ac7d-4400-8353-053bcfbe6bbc" control-id="pe-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-3_stmt">
+      <statement statement-id="pe-3_stmt" uuid="407c1397-3965-47b1-836a-897f44a50247">
         <description><p>This control is outside the scope of Red Hat IdM configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-6">
+    <implemented-requirement uuid="77bc6e04-44db-495b-a69b-d0285c8f4787" control-id="pe-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-6_stmt">
+      <statement statement-id="pe-6_stmt" uuid="abd9711f-8d31-4871-8456-0f04a3a66417">
         <description><p>This control is outside the scope of Red Hat IdM configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-8">
+    <implemented-requirement uuid="6271fb6d-ff4e-43ae-ba41-5caf782284a7" control-id="pe-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-8_stmt">
+      <statement statement-id="pe-8_stmt" uuid="037c8156-9928-4c9d-b34f-967849e4fabc">
         <description><p>This control is outside the scope of Red Hat IdM configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-12">
+    <implemented-requirement uuid="d07b15ca-1e74-4d62-a1d2-c41e25b6bc2c" control-id="pe-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-12_stmt">
+      <statement statement-id="pe-12_stmt" uuid="278ede39-9ee9-4dee-8fc5-b54232ed79f7">
         <description><p>This control is outside the scope of Red Hat IdM configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-13">
+    <implemented-requirement uuid="66b87a51-15b1-45a9-9d1b-d1af179f024c" control-id="pe-13">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-13_stmt">
+      <statement statement-id="pe-13_stmt" uuid="52ec7d45-2f01-45e1-b8c2-5ca2057f2e83">
         <description><p>This control is outside the scope of Red Hat IdM configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-14">
+    <implemented-requirement uuid="4a84934f-f95f-4c3c-8bf4-e1144a6307ad" control-id="pe-14">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-14_stmt">
+      <statement statement-id="pe-14_stmt" uuid="f3ddeb4d-a229-4c4d-924e-c0a35d965b44">
         <description><p>This control is outside the scope of Red Hat IdM configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-15">
+    <implemented-requirement uuid="f3c498e6-fab4-4efb-916d-365ef5987dc6" control-id="pe-15">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-15_stmt">
+      <statement statement-id="pe-15_stmt" uuid="e37a4a5e-683c-4d09-abea-77daaff9d5c3">
         <description><p>This control is outside the scope of Red Hat IdM configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pe-16">
+    <implemented-requirement uuid="1ab0133c-1c60-454c-a8fd-c582e2ca2bbd" control-id="pe-16">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pe-16_stmt">
+      <statement statement-id="pe-16_stmt" uuid="feb2b83f-7a50-4f55-ab53-56eb25f68fac">
         <description><p>This control is outside the scope of Red Hat IdM configuration.</p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-1">
+    <implemented-requirement uuid="376d463e-eee1-42c4-9e7b-a1584010da22" control-id="pl-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-1_stmt">
+      <statement statement-id="pl-1_stmt" uuid="da5ab1c5-803d-4318-a1a4-8bc236d1a1f1">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-2">
+    <implemented-requirement uuid="c915d003-0ebe-4b9c-a1f3-535d97fb462e" control-id="pl-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-2_stmt">
+      <statement statement-id="pl-2_stmt" uuid="c908137a-eb15-485a-908b-499c8111945d">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="pl-4">
+    <implemented-requirement uuid="6a4edd92-464e-4134-b96b-9f2c45910b0c" control-id="pl-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="pl-4_stmt">
+      <statement statement-id="pl-4_stmt" uuid="fc747a33-66ef-43e6-a934-c5eb597c1ff0">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-1">
+    <implemented-requirement uuid="bc0ed535-ecc7-4eca-b040-a477f48aac2a" control-id="ps-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-1_stmt">
+      <statement statement-id="ps-1_stmt" uuid="eed57cb9-a116-49b6-8bc0-b1ba88b9f8c2">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-2">
+    <implemented-requirement uuid="d24ae2cf-80c6-47f1-939c-5f23c7de7f6b" control-id="ps-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-2_stmt">
+      <statement statement-id="ps-2_stmt" uuid="455b8cca-b366-4501-b070-c38d61912e5c">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-3">
+    <implemented-requirement uuid="739a699d-bf8b-4f05-9b68-81650593bfd4" control-id="ps-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-3_stmt">
+      <statement statement-id="ps-3_stmt" uuid="68a13310-5f0d-4c18-9042-ab43fcdf365f">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-4">
+    <implemented-requirement uuid="b813a0ed-b760-4ba2-89bd-5620f6f160ad" control-id="ps-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-4_stmt">
+      <statement statement-id="ps-4_stmt" uuid="ff57f240-4a3a-4131-ab94-8ce192934f99">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-5">
+    <implemented-requirement uuid="307239a9-e7cf-4b36-8327-977ba715c7e1" control-id="ps-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-5_stmt">
+      <statement statement-id="ps-5_stmt" uuid="387a40ac-24a0-49e6-882e-87ef0ee965d8">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-6">
+    <implemented-requirement uuid="4ff8de8f-3876-4599-be64-8adef519d0a7" control-id="ps-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-6_stmt">
+      <statement statement-id="ps-6_stmt" uuid="fc56a0ae-4622-47f0-b6c1-16c9e78cdfbe">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-7">
+    <implemented-requirement uuid="27d0523b-3f8e-4c7f-ba72-511c934f2151" control-id="ps-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-7_stmt">
+      <statement statement-id="ps-7_stmt" uuid="6b444215-8838-4f84-8433-1d7dc101db7f">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ps-8">
+    <implemented-requirement uuid="7019371d-be87-42ed-b79c-729e7e9c2f92" control-id="ps-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ps-8_stmt">
+      <statement statement-id="ps-8_stmt" uuid="e504213b-2d33-4af8-a1cd-b56d1f03068c">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-1">
+    <implemented-requirement uuid="355f9147-6356-48c1-a5e9-8d87a8e04d84" control-id="ra-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-1_stmt">
+      <statement statement-id="ra-1_stmt" uuid="40a3b653-4c77-493a-b616-0d267868eaf8">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-2">
+    <implemented-requirement uuid="115d1880-1db7-4caf-a9a7-98086d8195ef" control-id="ra-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-2_stmt">
+      <statement statement-id="ra-2_stmt" uuid="c920e011-f483-4a70-a2c7-44432f28b805">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-3">
+    <implemented-requirement uuid="9912ec35-b060-4a26-a52a-9218a07c2726" control-id="ra-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-3_stmt">
+      <statement statement-id="ra-3_stmt" uuid="02b7890f-e4bf-445a-a710-f115f502fc7c">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="ra-5">
+    <implemented-requirement uuid="6dbbdc81-aff5-4671-a906-82ab22fd791a" control-id="ra-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ra-5_stmt">
+      <statement statement-id="ra-5_stmt" uuid="d11c0366-92a8-473b-a6a5-6a003bc7cfaa">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-1">
+    <implemented-requirement uuid="ef451fac-533c-46e9-ab0b-d2f87721ca75" control-id="sa-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-1_stmt">
+      <statement statement-id="sa-1_stmt" uuid="b0891948-4e72-4736-882d-b35c6a44ecbd">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-2">
+    <implemented-requirement uuid="a2f182cf-d9d7-413e-b449-d3c3e92f47f9" control-id="sa-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-2_stmt">
+      <statement statement-id="sa-2_stmt" uuid="2497f574-0041-4387-a362-afc9bdc7dc70">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-3">
+    <implemented-requirement uuid="acbff28a-59bb-4628-88e7-211f4afbf37f" control-id="sa-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-3_stmt">
+      <statement statement-id="sa-3_stmt" uuid="939dd4c2-b4b9-4282-b63a-3375080bb58b">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-4">
+    <implemented-requirement uuid="664a6a4d-14f9-45e0-a1c3-a2bc44beaa1d" control-id="sa-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-4_stmt">
+      <statement statement-id="sa-4_stmt" uuid="8389d3f2-5ea0-4e02-82b1-0ebae2a59e4a">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-5">
+    <implemented-requirement uuid="d2ef9a9b-3c59-47b8-9ea3-e69c7744aaaf" control-id="sa-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-5_stmt">
+      <statement statement-id="sa-5_stmt" uuid="6a1db15c-5bea-4a45-a152-b59d7fc1f637">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sa-9">
+    <implemented-requirement uuid="e4f42128-afe0-4c49-b1ec-34aea9ff75cd" control-id="sa-9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sa-9_stmt">
+      <statement statement-id="sa-9_stmt" uuid="b034c6c9-723b-4386-824d-ce2d2d7d2dfd">
         <description><p>'This control reflects organizational procedure/policy and is not
 applicable to component-level configuration.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-1">
+    <implemented-requirement uuid="e7652075-7e71-4e3a-87f7-dbabb5c9b1be" control-id="sc-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-1_stmt">
+      <statement statement-id="sc-1_stmt" uuid="a8148cf9-9e5c-4241-a6cd-90a56e76cf2e">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-5">
+    <implemented-requirement uuid="5f5aced9-6a68-4175-9136-3046fbf84f0d" control-id="sc-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-5_stmt">
+      <statement statement-id="sc-5_stmt" uuid="8083ff85-c227-4a3a-81f4-cac0a9104797">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-7">
+    <implemented-requirement uuid="d351e8df-c955-4c66-90fd-726eb94d8069" control-id="sc-7">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-7_stmt.a">
+      <statement statement-id="sc-7_stmt.a" uuid="ee2c3c93-bf23-49c4-a80c-362e63b0eb3d">
         <description><p>'Documentation on how communications at key internal boundaries of
 Red Hat Identity Management can be monitored is forthcoming.
 This activity is being tracked in GitHub:
@@ -1233,7 +1238,7 @@ This activity is being tracked in GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/142'
 </p></description>
       </statement>
-      <statement statement-id="sc-7_stmt.b">
+      <statement statement-id="sc-7_stmt.b" uuid="9070f2ce-b2db-43b0-8631-4b53840d3473">
         <description><p>'Documentation regarding how Red Hat Identity Management can
 implement subnetworks
 for publicly accessible system components is forthcoming. This
@@ -1242,7 +1247,7 @@ activity is being tracked in GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/143'
 </p></description>
       </statement>
-      <statement statement-id="sc-7_stmt.c">
+      <statement statement-id="sc-7_stmt.c" uuid="1e711891-91ab-4db5-85c9-d5285d29f06c">
         <description><p>'Documentation regarding how Red Hat Identity Management can route
 connections to external
 systems through a managed interface is forthcoming. This
@@ -1252,9 +1257,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/144'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-12">
+    <implemented-requirement uuid="64938a26-bace-496d-a6d9-6c4f33b00a11" control-id="sc-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-12_stmt">
+      <statement statement-id="sc-12_stmt" uuid="3b09481a-f362-4775-9058-19309f404953">
         <description><p>'Documentation regarding how Red Hat Identity Management generates,
 distributes, stores,
 accesses, and desctructs, cryptographic keys is forthcoming. This
@@ -1264,9 +1269,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/145'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-13">
+    <implemented-requirement uuid="8b28c69e-90d5-40b8-8202-b14e7b922ba2" control-id="sc-13">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-13_stmt">
+      <statement statement-id="sc-13_stmt" uuid="3f250654-bb51-4600-95ec-d58d30e4cfc3">
         <description><p>'Documentation regarding Red Hat Identity Management's usage of
 cryptography and applicability to Federal laws is forthcoming. This
 activity is being tracked in GitHub:
@@ -1275,15 +1280,15 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/146'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-15">
+    <implemented-requirement uuid="f5e7f638-3a34-43ed-a3a0-45c2d161bf88" control-id="sc-15">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="sc-15_stmt">
+      <statement statement-id="sc-15_stmt" uuid="202e6364-7918-4334-90fb-027c4d0765ef">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-20">
+    <implemented-requirement uuid="298dc027-dbaa-4508-bf40-f2a9516dc191" control-id="sc-20">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-20_stmt.a">
+      <statement statement-id="sc-20_stmt.a" uuid="f0cbc871-fb0b-4653-afda-4a92b3fe6762">
         <description><p>'Documentation on how to configure Red Hat Identity Management DNS services to provide
 data origin authentication and integrity verification is forthcoming.
 That activity is being tracked GitHub:
@@ -1291,7 +1296,7 @@ That activity is being tracked GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/147'
 </p></description>
       </statement>
-      <statement statement-id="sc-20_stmt.b">
+      <statement statement-id="sc-20_stmt.b" uuid="4b0599e6-c42e-4479-a1cc-a176cec246fb">
         <description><p>'Documentation on how to configure this functionality within
 Red Hat Identity Management is forthcoming. This activity is being tracked in
 GitHub:
@@ -1300,9 +1305,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/148'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-21">
+    <implemented-requirement uuid="aab045ea-905f-4168-a014-6375d4fb4075" control-id="sc-21">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-21_stmt">
+      <statement statement-id="sc-21_stmt" uuid="369d8a97-389a-42e1-83ae-f485dee2c298">
         <description><p>'Documentation on enabling DNSSEC within Red Hat Identity Management is forthcoming. This
 activity is being tracked in GitHub:
 
@@ -1310,9 +1315,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/149'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-22">
+    <implemented-requirement uuid="91505c45-9e95-457c-8ab8-537a91d92e97" control-id="sc-22">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-22_stmt">
+      <statement statement-id="sc-22_stmt" uuid="44f55b2e-6200-47f2-aa06-14f41c4a4945">
         <description><p>'Documentation on creating fault-tolerant DNS configurations within
 Red Hat Identity Management is forthcoming. This activity is being
 tracked in GitHub:
@@ -1321,9 +1326,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/150'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="sc-39">
+    <implemented-requirement uuid="d0e17609-f297-41e4-9e31-d0d5b86fa2e7" control-id="sc-39">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-39_stmt">
+      <statement statement-id="sc-39_stmt" uuid="7ae931ae-4430-4a0b-a45d-9d048be4f023">
         <description><p>'When Red Hat Identity Management runs on Red Hat Enterprise Linux,
 Red Hat Identity Management maintains separate execution domains for
 each executing process by
@@ -1336,17 +1341,17 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/151'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-1">
+    <implemented-requirement uuid="708aef26-84bb-46e3-8c6f-d19f90bf28d1" control-id="si-1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-1_stmt">
+      <statement statement-id="si-1_stmt" uuid="08c29fd0-7478-441b-99fe-358f8febee0a">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat Identity Management.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-2">
+    <implemented-requirement uuid="194b0d87-720f-4a86-a270-2b0ac9e414ed" control-id="si-2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="si-2_stmt.a">
+      <statement statement-id="si-2_stmt.a" uuid="a6bf9091-7424-452f-9ab6-c568f52091df">
         <description><p>'The customer will be responsible for analyzing their
 Red Hat Identity Management deployment for
 flaws, reporting on those flaws, and correcting them. A successful
@@ -1360,7 +1365,7 @@ patching is forthcoming. This work is being tracked in GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/155'
 </p></description>
       </statement>
-      <statement statement-id="si-2_stmt.b">
+      <statement statement-id="si-2_stmt.b" uuid="85b82bec-e14d-4676-9723-27c12d94eac0">
         <description><p>'The customer will be responsible for testing
 Red Hat Identity Management updates
 related to flaw remediation prior to installation. A successful
@@ -1374,20 +1379,20 @@ This work is being tracked in GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/156'
 </p></description>
       </statement>
-      <statement statement-id="si-2_stmt.c">
+      <statement statement-id="si-2_stmt.c" uuid="3c2cc7d4-acd7-440c-a8a8-db08cec77912">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat Identity Management.'
 </p></description>
       </statement>
-      <statement statement-id="si-2_stmt.d">
+      <statement statement-id="si-2_stmt.d" uuid="f7d95d79-394e-4dab-aa5b-dda8735648ac">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat Identity Management.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-3">
+    <implemented-requirement uuid="dfe9915f-2013-4b7f-ac74-82c8299c138f" control-id="si-3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="si-3_stmt.a">
+      <statement statement-id="si-3_stmt.a" uuid="cd3af3dc-f998-42bf-a4d0-b9f4aea3d12e">
         <description><p>'The customer is responsible for ensuring that they employ malicious
 code protection at information system entry, and exit points to detect
 and eradicate malicious code. A successful control response will need
@@ -1403,37 +1408,37 @@ This work is being tracked in GitHub:
 https://github.com/ComplianceAsCode/redhat-identity-management/issues/158'
 </p></description>
       </statement>
-      <statement statement-id="si-3_stmt.b">
+      <statement statement-id="si-3_stmt.b" uuid="7fdd6ace-9377-4183-836b-ea574a3c1133">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat Identity Management.'
 </p></description>
       </statement>
-      <statement statement-id="si-3_stmt.c">
+      <statement statement-id="si-3_stmt.c" uuid="d1803825-06a4-4b4b-9c2a-8fd7f81c4b6f">
         <description><p>'In the scope of Red Hat Identity Management, this control is
 duplicative of SI-3(a).'
 </p></description>
       </statement>
-      <statement statement-id="si-3_stmt.d">
+      <statement statement-id="si-3_stmt.d" uuid="d4f8ecd8-39a1-417e-a939-8a3189c89ac5">
         <description><p>'This control reflects organizational procedures/policies, and is not
 applicable to the configuration of Red Hat Identity Management.'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-4">
+    <implemented-requirement uuid="405c8bcd-c86e-4e3d-950a-21bfa2917a72" control-id="si-4">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-4_stmt">
+      <statement statement-id="si-4_stmt" uuid="87e7302c-4856-4b83-add1-4882c9e4a5cf">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-5">
+    <implemented-requirement uuid="b4a49d43-0ec1-4ae9-9a87-59e2f71f4237" control-id="si-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-5_stmt">
+      <statement statement-id="si-5_stmt" uuid="c6c28295-6520-4898-9906-0e9f29447f5b">
         <description><p></p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-12">
+    <implemented-requirement uuid="d5e8a6f6-0ef5-45a1-bf2f-d3a24b0430dd" control-id="si-12">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="si-12_stmt">
+      <statement statement-id="si-12_stmt" uuid="4f298b05-ef83-401c-96fb-c4b4c3818c3b">
         <description><p>'The customer will be responsible for handling and retaining
 information within, or hosted by, Red Hat Identity Management in
 accordance with applicable federal laws, Executive Orders,
@@ -1452,9 +1457,9 @@ https://github.com/ComplianceAsCode/redhat-identity-management/issues/159'
 </p></description>
       </statement>
     </implemented-requirement>
-    <implemented-requirement control-id="si-16">
+    <implemented-requirement uuid="d4247bd9-21e6-418f-be2f-f656612286bb" control-id="si-16">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="si-16_stmt">
+      <statement statement-id="si-16_stmt" uuid="44e36304-2426-4c90-9e17-5f0d888ca405">
         <description><p>'Red Hat Red Hat Identity Management Container Platform
 inherits memory protections
 provided by the underlying operating system. This control is not
