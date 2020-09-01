@@ -7,13 +7,12 @@ This repository is on periodical refresh. ![Build](https://github.com/Compliance
 
 ### Developer information.
 
-`fedramp` tool was used to generate files available here.
+[gocomply_fedramp](https://github.com/gocomply/fedramp) tool was used to generate files available here.
 
 Commands to install `fedramp` tool:
 
-    $ git clone https://github.com/GoComply/fedramp
-    $ pushd fedramp ; make build  ; popd
+    $ get -u -v github.com/gocomply/fedramp/cli/gocomply_fedramp
 
 Command to re-generate OSCAL files:
 
-    $ fedramp opencontrol https://github.com/ComplianceAsCode/redhat xml/
+    $ gocomply_fedramp opencontrol https://github.com/ComplianceAsCode/redhat xml/
