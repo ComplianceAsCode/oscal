@@ -16,3 +16,9 @@ Commands to install `gocomply_fedramp` tool:
 Command to re-generate OSCAL files:
 
     $ gocomply_fedramp opencontrol https://github.com/ComplianceAsCode/redhat xml/
+
+### How to use these files?
+
+It is possible to generate latest FedRAMP SSP document in `.docx` form using `gocomply_fedramp` tool.
+
+    $ gocomply_fedramp convert ./xml/coreos-4-fedramp-Low.xml  FedRAMP-Low-openshift.docx
