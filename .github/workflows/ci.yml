@@ -21,7 +21,7 @@ jobs:
       - name: Convert opencontrol
         run: |
           export PATH="$HOME/go/bin:$PATH"
-          gocomply_fedramp opencontrol https://github.com/ComplianceAsCode/redhat xml/
+          make oscal
       - name: Disregard timestamp-only changes
         run: |
           .github/disregard-timestamp-changes.sh
