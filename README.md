@@ -22,3 +22,7 @@ Command to re-generate OSCAL files:
 It is possible to generate latest FedRAMP SSP document in `.docx` form using `gocomply_fedramp` tool.
 
     $ gocomply_fedramp convert ./xml/coreos-4-fedramp-Low.xml  FedRAMP-Low-openshift.docx
+
+To generate all FedRAMP docx guides, one for each oscal file available run:
+
+    $ make docx
