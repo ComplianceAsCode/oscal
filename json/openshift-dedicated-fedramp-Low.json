@@ -1,0 +1,4858 @@
+{
+  "system-security-plan": {
+    "uuid": "f805a7cf-c61c-4aa2-936a-d3a23b689caa",
+    "metadata": {
+      "title": "FedRAMP System Security Plan (SSP)",
+      "published": "2020-07-01T00:00:00.00-04:00",
+      "last-modified": "2020-11-30T13:14:23.18+00:00",
+      "version": "0.0.1",
+      "oscal-version": "1.0.0-milestone3",
+      "revision-history": [
+        {
+          "published": "2019-06-01T00:00:00.00-04:00",
+          "version": "1.0",
+          "oscal-version": "1.0-Milestone3",
+          "properties": [
+            {
+              "name": "party-uuid",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+            }
+          ],
+          "remarks": "\n               \tInitial publication.\n            "
+        },
+        {
+          "published": "2020-06-01T00:00:00.00-04:00",
+          "version": "2.0",
+          "oscal-version": "1.0-Milestone3",
+          "properties": [
+            {
+              "name": "party-id",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "csp"
+            }
+          ],
+          "remarks": "\n               \tUpdated for annual assessment.\n            "
+        }
+      ],
+      "properties": [
+        {
+          "name": "marking",
+          "value": "Controlled Unclassified Information"
+        }
+      ],
+      "roles": [
+        {
+          "id": "prepared-by",
+          "title": "Prepared By",
+          "desc": "The organization that prepared this SSP. If developed in-house, this is the CSP itself."
+        },
+        {
+          "id": "prepared-for",
+          "title": "Prepared For",
+          "desc": "The organization for which this SSP was prepared. Typically the CSP."
+        },
+        {
+          "id": "content-approver",
+          "title": "System Security Plan Approval",
+          "desc": "The individual or individuals accountable for the accuracy of this SSP."
+        },
+        {
+          "id": "cloud-service-provider",
+          "title": "Cloud Service Provider",
+          "short-name": "CSP"
+        },
+        {
+          "id": "system-owner",
+          "title": "Information System Owner",
+          "desc": "The individual within the CSP who is ultimately accountable for everything related to this system."
+        },
+        {
+          "id": "authorizing-official",
+          "title": "Authorizing Official",
+          "desc": "The individual or individuals who must grant this system an authorization to operate."
+        },
+        {
+          "id": "authorizing-official-poc",
+          "title": "Authorizing Official's Point of Contact",
+          "desc": "The individual representing the authorizing official."
+        },
+        {
+          "id": "system-poc-management",
+          "title": "Information System Management Point of Contact (POC)",
+          "desc": "The highest level manager who responsible for system operation on behalf of the System Owner."
+        },
+        {
+          "id": "system-poc-technical",
+          "title": "Information System Technical Point of Contact",
+          "desc": "The individual or individuals leading the technical operation of the system."
+        },
+        {
+          "id": "system-poc-other",
+          "title": "General Point of Contact (POC)",
+          "desc": "A general point of contact for the system, designated by the system owner."
+        },
+        {
+          "id": "information-system-security-officer",
+          "title": "System Information System Security Officer (or Equivalent)",
+          "desc": "The individual accountable for the security posture of the system on behalf of the system owner."
+        },
+        {
+          "id": "privacy-poc",
+          "title": "Privacy Official's Point of Contact",
+          "desc": "The individual responsible for the privacy threshold analysis and if necessary the privacy impact assessment."
+        },
+        {
+          "id": "asset-owner",
+          "title": "Owner of an inventory item within the system."
+        },
+        {
+          "id": "asset-administrator",
+          "title": "Administrative responsibility an inventory item within the system."
+        },
+        {
+          "id": "isa-poc-local",
+          "title": "ICA POC (Local)",
+          "desc": "The point of contact for an interconnection on behalf of this system.",
+          "remarks": "\n            \tRemove this role if there are no ICAs.\n         "
+        },
+        {
+          "id": "isa-poc-remote",
+          "title": "ICA POC (Remote)",
+          "desc": "The point of contact for an interconnection on behalf of this external system to which this system connects.",
+          "remarks": "\n            \tRemove this role if there are no ICAs.\n         "
+        },
+        {
+          "id": "isa-authorizing-official-local",
+          "title": "ICA Signatory (Local)",
+          "desc": "Responsible for signing an interconnection security agreement on behalf of this system.",
+          "remarks": "\n            \tRemove this role if there are no ICAs.\n         "
+        },
+        {
+          "id": "isa-authorizing-official-remote",
+          "title": "ICA Signatory (Remote)",
+          "desc": "Responsible for signing an interconnection security agreement on behalf of the external system to which this system connects.",
+          "remarks": "\n            \tRemove this role if there are no ICAs.\n         "
+        },
+        {
+          "id": "consultant",
+          "title": "Consultant",
+          "desc": "Any consultants involved with developing or maintaining this content."
+        },
+        {
+          "id": "admin-unix",
+          "title": "[SAMPLE]Unix Administrator",
+          "desc": "This is a sample role."
+        },
+        {
+          "id": "admin-client",
+          "title": "[SAMPLE]Client Administrator",
+          "desc": "This is a sample role."
+        },
+        {
+          "id": "program-director",
+          "title": "[SAMPLE]Program Director",
+          "desc": "This is a sample role."
+        },
+        {
+          "id": "fedramp-pmo",
+          "title": "Federal Risk and Authorization Management Program (FedRAMP) Program Management Office (PMO)",
+          "short-name": "FedRAMP PMO"
+        },
+        {
+          "id": "fedramp-jab",
+          "title": "Federal Risk and Authorization Management Program (FedRAMP) Joint Authorization Board (JAB)",
+          "short-name": "FedRAMP JAB"
+        }
+      ],
+      "locations": [
+        {
+          "uuid": "27b78960-59ef-4619-82b0-ae20b9c709ac",
+          "title": "CSP HQ",
+          "address": {
+            "type": "work",
+            "postal-address": [
+              "Suite 0000",
+              "1234 Some Street"
+            ],
+            "city": "Haven",
+            "state": "ME",
+            "postal-code": "00000"
+          },
+          "remarks": "\n            \tThere must be one location identifying the CSP's primary business address, such as the CSP's HQ, or the address of the system owner's primary business location.\n         "
+        },
+        {
+          "uuid": "16adcc8d-65d8-4583-80d3-9cf007744fec",
+          "title": "Primary Data Center",
+          "address": {
+            "postal-address": [
+              "2222 Main Street"
+            ],
+            "city": "Anywhere",
+            "state": "--",
+            "postal-code": "00000-0000"
+          },
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "data-center"
+            },
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "primary-data-center"
+            }
+          ],
+          "remarks": "\n            \tThere must be one location for each data center.\n            \tThere must be at least two data centers.\n            \tFor a data center, briefly summarize the components at this location.\n            \tAll data centers must have a conformity tag of \"data-center\".\n            \tA primary data center must also have a conformity tag of \"primary-data-center\".\n         "
+        },
+        {
+          "uuid": "ad321514-7b9f-4374-8409-efb18eea6e5d",
+          "title": "Secondary Data Center",
+          "address": {
+            "postal-address": [
+              "3333 Small Road"
+            ],
+            "city": "Anywhere",
+            "state": "--",
+            "postal-code": "00000-0000"
+          },
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "data-center"
+            },
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "alternate-data-center"
+            }
+          ],
+          "remarks": "\n            \tThere must be one location for each data center.\n            \tThere must be at least two data centers.\n            \tFor a data center, briefly summarize the components at this location.\n            \tAll data centers must have a conformity tag of \"data-center\"\n            \tAn alternate or backup data center must also have a conformity tag of \"alternate-data-center\".\n         "
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb",
+          "type": "organization",
+          "party-name": "Cloud Service Provider (CSP) Name",
+          "short-name": "CSP Acronym/Short Name",
+          "location-uuids": [
+            "27b78960-59ef-4619-82b0-ae20b9c709ac"
+          ],
+          "remarks": "\n            \tReplace sample CSP information.\n         "
+        },
+        {
+          "uuid": "77e0e2c8-2560-4fe9-ac78-c3ff4ffc9f6d",
+          "type": "organization",
+          "party-name": "Federal Risk and Authorization Management Program: Program Management Office",
+          "short-name": "FedRAMP PMO",
+          "links": [
+            {
+              "href": "https://fedramp.gov",
+              "text": ""
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "1800 F St. NW",
+                ""
+              ],
+              "city": "Washington",
+              "state": "DC",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "info@fedramp.gov"
+          ],
+          "remarks": "\n            \tThis party entry must be present in a FedRAMP SSP.\n            \tThe uuid may be different; however, the uuid must be associated with the \"fedramp-pmo\" role in the responsible-party assemblies.\n         "
+        },
+        {
+          "uuid": "49017ec3-9f51-4dbd-9253-858c2b1295fd",
+          "type": "organization",
+          "party-name": "Federal Risk and Authorization Management Program: Joint Authorization Board",
+          "short-name": "FedRAMP JAB",
+          "remarks": "\n            \tThis party entry must be present in a FedRAMP SSP.\n            \tThe uuid may be different; however, the uuid must be associated with the \"fedramp-jab\" role in the responsible-party assemblies.\n         "
+        },
+        {
+          "uuid": "78992555-4a99-4eaa-868c-f2c249679dd3",
+          "type": "organization",
+          "party-name": "External Organization",
+          "short-name": "External",
+          "remarks": "\n            \tGeneric placeholder for any external organization.\n         "
+        },
+        {
+          "uuid": "f595397b-cbe4-4a87-8c86-9bff91c4e7fd",
+          "type": "organization",
+          "party-name": "Agency Name",
+          "short-name": "A.N.",
+          "remarks": "\n            \tGeneric placeholder for an authorizing agency.\n         "
+        },
+        {
+          "uuid": "8e3d39da-4851-4d2a-adb5-4b5585ded952",
+          "type": "organization",
+          "party-name": "Name of Consulting Org",
+          "short-name": "NOCO",
+          "links": [
+            {
+              "href": "https://consulting.sample",
+              "text": ""
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "3333 Corporate Way"
+              ],
+              "city": "Washington",
+              "state": "DC",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "poc@consulting.sample"
+          ]
+        },
+        {
+          "uuid": "80361ec4-bfce-4b5c-85c8-313d6ebd220b",
+          "type": "organization",
+          "party-name": "[SAMPLE]Remote System Org Name"
+        },
+        {
+          "uuid": "09ad840f-aa79-43aa-9f22-25182c2ab11b",
+          "type": "person",
+          "party-name": "[SAMPLE]ICA POC's Name",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "email-addresses": [
+            "person@ica.org.example"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-555-1212"
+            }
+          ],
+          "member-of-organizations": [
+            "80361ec4-bfce-4b5c-85c8-313d6ebd220b"
+          ]
+        },
+        {
+          "uuid": "f0bc13a4-3303-47dd-80d3-380e159c8362",
+          "type": "organization",
+          "party-name": "[SAMPLE]Example IaaS Provider",
+          "short-name": "E.I.P.",
+          "remarks": "\n            \tUnderlying service provider. Leveraged Authorization.\n         "
+        },
+        {
+          "uuid": "3360e343-9860-4bda-9dfc-ff427c3dfab6",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 1",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "postal-address": [
+                "Mailstop A-1"
+              ]
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0001"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ],
+          "location-uuids": [
+            "27b78960-59ef-4619-82b0-ae20b9c709ac"
+          ]
+        },
+        {
+          "uuid": "36b8d6c0-3b25-42cc-b529-cf4066145cdd",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 2",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0002"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "0cec09d9-20c6-470b-9ffc-85763375880b",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 3",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0003"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "f75e21f6-43d8-46ab-890d-7f2eebc5a830",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 4",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0004"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "132953a9-640c-46f7-9de9-3fa15ec99361",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 5",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0005"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "4fded5fd-7a65-47ea-bd76-df57c46e27d1",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 6",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0006"
+            }
+          ],
+          "member-of-organizations": [
+            "78992555-4a99-4eaa-868c-f2c249679dd3"
+          ]
+        },
+        {
+          "uuid": "db234cb7-1776-425c-9ac4-b067c1723011",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 7",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0007"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "b306f5af-b93a-4a7f-a2b2-37a44fc92a79",
+          "type": "organization",
+          "party-name": "[SAMPLE] IT Department"
+        },
+        {
+          "uuid": "59cdc953-5902-4fa4-a878-f3163854624c",
+          "type": "organization",
+          "party-name": "[SAMPLE]Security Team"
+        }
+      ],
+      "responsible-parties": {
+        "cloud-service-provider": {
+          "party-uuids": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "prepared-by": {
+          "party-uuids": [
+            "3360e343-9860-4bda-9dfc-ff427c3dfab6"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "prepared-for": {
+          "party-uuids": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        "content-approver": {
+          "party-uuids": [
+            "3360e343-9860-4bda-9dfc-ff427c3dfab6",
+            "36b8d6c0-3b25-42cc-b529-cf4066145cdd"
+          ],
+          "remarks": "\n            \tOne or more\n         "
+        },
+        "system-owner": {
+          "party-uuids": [
+            "3360e343-9860-4bda-9dfc-ff427c3dfab6"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "authorizing-official": {
+          "party-uuids": [
+            "49017ec3-9f51-4dbd-9253-858c2b1295fd",
+            "4fded5fd-7a65-47ea-bd76-df57c46e27d1"
+          ],
+          "remarks": "\n            \tOne or more\n         "
+        },
+        "system-poc-management": {
+          "party-uuids": [
+            "0cec09d9-20c6-470b-9ffc-85763375880b"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "system-poc-technical": {
+          "party-uuids": [
+            "f75e21f6-43d8-46ab-890d-7f2eebc5a830"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "information-system-security-officer": {
+          "party-uuids": [
+            "132953a9-640c-46f7-9de9-3fa15ec99361"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "authorizing-official-poc": {
+          "party-uuids": [
+            "4fded5fd-7a65-47ea-bd76-df57c46e27d1"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "privacy-poc": {
+          "party-uuids": [
+            "db234cb7-1776-425c-9ac4-b067c1723011"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "fedramp-pmo": {
+          "party-uuids": [
+            "77e0e2c8-2560-4fe9-ac78-c3ff4ffc9f6d"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "fedramp-jab": {
+          "party-uuids": [
+            "49017ec3-9f51-4dbd-9253-858c2b1295fd"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        }
+      },
+      "remarks": "\n         \tThis OSCAL-based FedRAMP SSP Template can be used for the FedRAMP Low, Moderate, and\n            High baselines.\n         \tGuidance for OSCAL-based FedRAMP Tailored content has not yet been developed.\n      "
+    },
+    "import-profile": {
+      "href": "https://raw.githubusercontent.com/usnistgov/OSCAL/master/content/fedramp.gov/xml/FedRAMP_LOW-baseline_profile.xml"
+    },
+    "system-characteristics": {
+      "system-ids": [
+        {
+          "identifier-type": "https://fedramp.gov",
+          "id": "F00000000"
+        }
+      ],
+      "system-name": "Red Hat OpenShift Dedicated",
+      "system-name-short": "openshift-dedicated",
+      "description": "\tAutomatically generated OSCAL SSP from OpenControl guidance for Red Hat OpenShift Dedicated",
+      "security-sensitivity-level": "low",
+      "system-information": {
+        "information-types": [
+          {
+            "title": "Information Type Name",
+            "description": "\tThis item is useless nevertheless required.",
+            "confidentiality-impact": {
+              "base": "fips-199-moderate"
+            },
+            "integrity-impact": {
+              "base": "fips-199-moderate"
+            },
+            "availability-impact": {
+              "base": "fips-199-moderate"
+            }
+          }
+        ]
+      },
+      "security-impact-level": {
+        "security-objective-confidentiality": "fips-199-moderate",
+        "security-objective-integrity": "fips-199-moderate",
+        "security-objective-availability": "fips-199-moderate"
+      },
+      "status": {
+        "state": "operational"
+      },
+      "authorization-boundary": {
+        "description": "\tA holistic, top-level explanation of the FedRAMP authorization boundary."
+      }
+    },
+    "system-implementation": {
+      "users": {
+        "ebddf85a-2c8b-493f-89af-2e03c5ede486": {
+          "role-ids": [
+            "generator"
+          ]
+        }
+      },
+      "components": {
+        "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+          "component-type": "system",
+          "title": "This system",
+          "description": "\tThe entire system as depicted in the system authorization boundary",
+          "status": {
+            "state": "under-development"
+          }
+        }
+      }
+    },
+    "control-implementation": {
+      "description": "\tFedRAMP SSP Template Section 13",
+      "implemented-requirements": [
+        {
+          "uuid": "39a1b693-1d3d-42df-a7d4-f62ed63b754c",
+          "control-id": "ac-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ac-1_stmt.a": {
+              "uuid": "324dcda4-4f96-4ff5-8427-f924b21a8d8f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "b5309070-b957-4a26-8a72-9142200914d3",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-1(a) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-1_stmt.b": {
+              "uuid": "887641c8-6db9-493c-8ead-40bc3f2279d9",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "da0449ac-a99c-4e11-a5d3-aefae5063f81",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-1(b) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "308f2ab9-f2fb-4ebd-bd22-6f26a99c54a3",
+          "control-id": "ac-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ac-2_stmt.a": {
+              "uuid": "18e57d62-e667-46fe-858e-91af9c9f0477",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ead5e410-8afd-480c-bade-088a12eef60f",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(a) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-2_stmt.b": {
+              "uuid": "b7e2816e-2be0-4f16-95a4-394a2fd00758",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "048adc9f-d720-4d87-bfcb-643ff1c62695",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(b) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-2_stmt.c": {
+              "uuid": "b4009d35-0f2c-4fa2-ac5b-348f424d348f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "18af0d86-53be-49b8-a66e-a54267998f90",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(c) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-2_stmt.d": {
+              "uuid": "0c23a834-cae8-4a5b-9db7-00b2ddc807b8",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "22a7c136-117c-448b-a504-ac996979de3c",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(d) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-2_stmt.e": {
+              "uuid": "58c0cb86-c145-435f-a0d8-757dc7ac9fff",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "e9eeeb20-47db-4e6d-9154-fc86fc11fe10",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(e) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-2_stmt.f": {
+              "uuid": "1a1d724e-24dc-46d7-8c21-2f08da427696",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "6f5fbaa5-af8c-4109-a130-4d5c42713c9b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(f) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-2_stmt.g": {
+              "uuid": "461e9ffa-c9ff-4936-ba8b-71d1ad995fb6",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "94bc620f-e15d-4880-a056-abb577b18005",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(g) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-2_stmt.h": {
+              "uuid": "63220789-6f43-4e94-b50b-33138a10b46a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "7a3f1c4f-8287-401a-a2d5-d383ecbf12a7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(h) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-2_stmt.i": {
+              "uuid": "43b7976d-f5d1-4355-b32e-6bde93f63664",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "1155986e-c445-4ba6-9173-ec12fb48c8d2",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(i) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-2_stmt.j": {
+              "uuid": "e637623e-534f-46c5-a039-1f0931b14fa6",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff4fa720-c1b9-4840-8240-99543669ed40",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(j) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            },
+            "ac-2_stmt.k": {
+              "uuid": "f26cf7a0-d40b-4cad-8582-76bdfa8ca372",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "23d24c07-dfad-4e80-8794-c11b3b1b2707",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t'AC-2(k) is an organizational control outside the scope of component-level configuration.'\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "e69b7912-dc17-439c-9d84-b50501ec5536",
+          "control-id": "ac-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ac-3_stmt": {
+              "uuid": "7bb7f069-70e1-426a-82ce-a6e8d2dd3fe3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "34c744db-4973-418c-94fe-d132d3582c89",
+          "control-id": "ac-7",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ac-7_stmt.a": {
+              "uuid": "0ce553e4-fe3a-4e37-9835-fef4fa7649d5",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ac-7_stmt.b": {
+              "uuid": "4fa082e8-6eb4-4e3a-b627-5f0658b016ec",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "acbcd64b-c787-4c14-bd1e-3adf9ad25d14",
+          "control-id": "ac-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ac-8_stmt.a": {
+              "uuid": "f891ef64-ff0d-46d4-b5e8-27410f1b96d7",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ac-8_stmt.b": {
+              "uuid": "f2446ca4-cf6f-4158-b73a-dcbd92583a5f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ac-8_stmt.c": {
+              "uuid": "8537cf10-713a-4183-8ff8-6ae3ea21364c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "2f0f0ead-5fa5-4682-a174-7800552dedce",
+          "control-id": "ac-14",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ac-14_stmt": {
+              "uuid": "17e1ab2a-d00e-469e-8692-6b38e0f65a14",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "320c1d9b-b2b2-48bb-9c34-17fae95a4dcc",
+          "control-id": "ac-17",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ac-17_stmt": {
+              "uuid": "5d90a3e4-7361-4273-a8bc-db4c696d838a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "cf4f32c5-c564-4155-bb9c-f9503665fcba",
+          "control-id": "ac-18",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ac-18_stmt": {
+              "uuid": "679a2eca-7bdc-4f86-9fbe-308e6f9cf989",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "1f782fa7-e28e-47fb-ab66-2a3924b4e768",
+          "control-id": "ac-19",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ac-19_stmt": {
+              "uuid": "eda79b65-5b50-4781-a955-9e11b3cd8d97",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "c3be2813-ce58-4647-8d38-acd11c0b09fa",
+          "control-id": "ac-20",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ac-20_stmt": {
+              "uuid": "88248406-b936-4edd-8091-a2f86e3ba4b5",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "9e74d09e-7b3f-4fa2-ba78-c9bcadb577a6",
+          "control-id": "ac-22",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ac-22_stmt": {
+              "uuid": "73127c56-bd15-4e9f-bf78-77d76f7f9929",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "7f5357fb-e9ff-4372-8dfe-30971d1d15a4",
+          "control-id": "at-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "at-1_stmt": {
+              "uuid": "25f73115-0474-4dd4-9bdd-401954c96b87",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "9165e48c-47b2-45c6-9ef9-1be15d4bee34",
+          "control-id": "at-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "at-2_stmt": {
+              "uuid": "777b75c3-3c9e-4be7-ae9b-83d323694887",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "70995a7e-a4d6-4c67-bdd1-ca7e9e0213d5",
+          "control-id": "at-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "at-3_stmt": {
+              "uuid": "21d83bc7-fb3b-4876-a7d0-683325d30d77",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "9f744156-db76-4f8c-a95b-c73ad5c5a9e1",
+          "control-id": "at-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "at-4_stmt": {
+              "uuid": "2d36c3d1-c630-494b-ad2b-3dc40d0b15bf",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "76d29dbb-fc35-4487-a578-42658a664580",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''##\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "1e2c00bb-257e-4c9a-8976-4ce731867b45",
+          "control-id": "au-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "au-1_stmt": {
+              "uuid": "48b0f4ff-0104-4ba3-95b2-b32c29d9d4d9",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "4c08c196-0de3-477f-9170-57f638549f6a",
+          "control-id": "au-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "au-2_stmt": {
+              "uuid": "6efe2f9c-19dd-421a-9707-3c71129487c5",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "af56a0ad-445f-4a57-97a1-6f48aff745d3",
+          "control-id": "au-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "au-3_stmt": {
+              "uuid": "20ff5cbc-f1db-45fc-ae63-36db96309b77",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "0ea0d8e8-ffa5-4ecf-979f-c63a5f0da105",
+          "control-id": "au-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "au-4_stmt": {
+              "uuid": "2226f5be-fa26-43c2-ade6-dfd11dfb4951",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "5a3691b1-30a2-427a-abc5-fe83986ca715",
+          "control-id": "au-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "au-5_stmt.a": {
+              "uuid": "7889bdac-bfb0-4861-aac0-cc136c1c2b4a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "au-5_stmt.b": {
+              "uuid": "252cd8e0-2732-497e-bbb6-7b5062eca13e",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "1f6efc7f-06cf-40b6-a0a9-650c53e0f178",
+          "control-id": "au-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "au-6_stmt": {
+              "uuid": "c4fb2454-d02e-4154-b5f1-f1821fd421c4",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "86503bc5-38e0-4f6d-bf8d-331ea3d1a2b8",
+          "control-id": "au-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "au-8_stmt.a": {
+              "uuid": "51d7e171-b44e-4ba9-bf07-0dae8326dac8",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "au-8_stmt.b": {
+              "uuid": "3ddb5ae8-d5ea-4655-87d3-058e32962850",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "9e7467a4-dad1-4276-bf08-d8d34380831e",
+          "control-id": "au-9",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "au-9_stmt": {
+              "uuid": "399a2a67-60c7-4f14-8a6a-b073089ead3c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "325e4141-ff18-4912-8ca2-fac8295c5172",
+          "control-id": "au-11",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "au-11_stmt": {
+              "uuid": "ae2204bf-c4d7-49c8-859a-829d982f7803",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "17a6e0b9-18e4-44c4-b7a8-a80b7c808622",
+          "control-id": "au-12",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "au-12_stmt.a": {
+              "uuid": "6db41abc-586c-4d6d-b231-639e07256b3d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "au-12_stmt.b": {
+              "uuid": "e53a6c7a-39a7-4a40-af2e-f7898cf0fbc8",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "au-12_stmt.c": {
+              "uuid": "3baa0952-d9bf-4d8b-be5a-72ee07bf17e5",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "76d29dbb-fc35-4487-a578-42658a664580",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''##\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "971e9508-426c-4403-a87f-f0ffbb29a222",
+          "control-id": "ca-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ca-1_stmt": {
+              "uuid": "46b8a74a-9f80-4ba6-8138-ceb05880ef58",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "5261b627-d858-4901-934a-e370806710e6",
+          "control-id": "ca-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ca-2_stmt": {
+              "uuid": "a6b03178-7b7f-4c3e-8fb8-17aa47256d8f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "feb6cf0d-d8ae-4f12-8a00-eb9cd47740b8",
+          "control-id": "ca-2.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ca-2.1_stmt": {
+              "uuid": "9509e517-0390-4c95-b918-3e221cd113b8",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "af5a6093-d245-4da5-ad1f-d99f2d2df6ef",
+          "control-id": "ca-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ca-3_stmt": {
+              "uuid": "6d35641b-efbd-4d18-a403-37baf1180bb9",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "1b914e6e-95e4-467f-aded-d23dd5e9d7bf",
+          "control-id": "ca-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ca-5_stmt": {
+              "uuid": "9edeef89-9962-4daa-842b-cbc201b87e1b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "bb0b9ff7-b5d0-448b-9dd0-4dcd974b1738",
+          "control-id": "ca-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ca-6_stmt": {
+              "uuid": "867ae207-54b9-4e90-8ac3-f1fd300e72ca",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "567d50d9-72bb-4086-8068-58e1b8e9c1d5",
+          "control-id": "ca-7",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ca-7_stmt": {
+              "uuid": "7a8a866e-b7a1-4d18-9493-01a1a6acfa64",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "64db1d9d-4002-4019-bc0e-7d5edd01ea32",
+          "control-id": "ca-9",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ca-9_stmt": {
+              "uuid": "affdd47a-c192-4094-8874-d3f6b3b88f20",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "380e7a14-e061-4121-a8bf-79d0005964ac",
+          "control-id": "cm-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cm-1_stmt": {
+              "uuid": "51f63c2e-b95d-4f67-91f2-9c0d7d81e733",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "722eab9b-ec8c-4e05-b741-b75eb4b0784f",
+          "control-id": "cm-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cm-2_stmt": {
+              "uuid": "6041d2ce-ce86-4ae5-b4ec-32db39eb19cb",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "f9d4934e-52e6-471a-9b01-b234b2bfe396",
+          "control-id": "cm-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cm-4_stmt": {
+              "uuid": "6dc0ba14-3590-498b-b656-23c90f02b6f8",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "d52b144a-784f-45bb-902c-8c75d7c29f61",
+          "control-id": "cm-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cm-6_stmt.a": {
+              "uuid": "df3d7a5e-5965-40bb-9507-2c7d8e25635a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "cm-6_stmt.b": {
+              "uuid": "50e28883-5f66-44ad-a4d0-58f966e9fcb6",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "cm-6_stmt.c": {
+              "uuid": "4967c4ad-f6bd-46e8-8be3-a82ffb6df199",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "cm-6_stmt.d": {
+              "uuid": "8bac2c7a-dc9c-4a45-b5f0-6b01f311534a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "eeb4a8f0-0297-4da6-b654-c419632fef88",
+          "control-id": "cm-7",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cm-7_stmt": {
+              "uuid": "3dce3505-f872-402c-9895-140c2bf099b8",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "16693daa-98d2-43b7-baff-aa83a4ad25db",
+          "control-id": "cm-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cm-8_stmt": {
+              "uuid": "655b46ac-0faf-4e0e-816f-638e3b03ca9f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "f19518a1-afae-4380-bcd9-24be30a53938",
+          "control-id": "cm-10",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cm-10_stmt": {
+              "uuid": "9d174f2c-091a-46e9-a0ff-71fef70b108c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "a65ca1a5-22db-4288-8611-563896620700",
+          "control-id": "cm-11",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cm-11_stmt": {
+              "uuid": "5c1bb060-3965-423a-a1c2-448f24514220",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ea6dee5d-c9c3-4065-b507-1c156b3a9faa",
+          "control-id": "cp-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cp-1_stmt": {
+              "uuid": "16ba263b-5cab-4d3f-a54d-0519747f22b5",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "723a02e4-1c79-4718-bc38-ee38752343b1",
+          "control-id": "cp-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cp-2_stmt": {
+              "uuid": "7d5a1fc2-4c1f-4feb-8373-f483d661a581",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "8d4ca3f2-090a-4ba7-b7c7-7ebcf314ed38",
+          "control-id": "cp-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cp-3_stmt": {
+              "uuid": "e11b1f35-dc2a-4b14-8479-05601c3def0d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "fb214c5b-30b7-4b32-bb7e-06cff0651262",
+          "control-id": "cp-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cp-4_stmt": {
+              "uuid": "ce9be4ad-3a63-4f99-bcfe-b6ffa581e414",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "fefe0445-0e64-41c9-b480-338a4c5bd9ba",
+          "control-id": "cp-9",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cp-9_stmt.a": {
+              "uuid": "57ff7385-77cc-4cfc-a336-272d1beb7567",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "cp-9_stmt.b": {
+              "uuid": "60b825b4-2b2a-4a27-b9bc-e4bd83daa5ee",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "cp-9_stmt.c": {
+              "uuid": "69f94737-48c2-4b8d-9802-0e9e5e8aa97e",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "cp-9_stmt.d": {
+              "uuid": "69738b01-a603-4de2-a97f-b09db026e408",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "492337f8-10a6-4327-a66a-ea1bdd457586",
+          "control-id": "cp-10",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "cp-10_stmt": {
+              "uuid": "d1cdfa3b-767b-42ea-9551-29a60119e39d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "3d758108-acb6-4eac-9b0d-915d022c8d76",
+          "control-id": "ia-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-1_stmt": {
+              "uuid": "b217d162-433e-40a5-92e1-af29d849fa80",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "82903ec3-33bb-4857-8cb5-f56d44ec0560",
+          "control-id": "ia-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-2_stmt": {
+              "uuid": "188213c0-2886-4654-94a7-d3d29f60238f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "4541b2e4-a651-4dae-bc37-0c55789025e5",
+          "control-id": "ia-2.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-2.1_stmt": {
+              "uuid": "0ce9f0a7-76db-445c-9400-e6ff2b4fc7f8",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "17ceb079-816b-4d76-b5d7-e9ff38e520be",
+          "control-id": "ia-2.12",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-2.12_stmt": {
+              "uuid": "42bb9f64-b1eb-4b59-ae75-8bce8d6cea87",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "c4ce1586-af7c-4486-99a4-a2135d320661",
+          "control-id": "ia-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-4_stmt.a": {
+              "uuid": "cfaa44d0-6476-4a3f-b1aa-bb081ff43f7f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-4_stmt.b": {
+              "uuid": "758139f6-3cd5-40b9-91c4-38775ebc6fdf",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-4_stmt.c": {
+              "uuid": "79b1819c-ff07-4803-b426-7994dfd3734e",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-4_stmt.d": {
+              "uuid": "b3a202e3-f292-4ba2-b5d8-bae09f051787",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-4_stmt.e": {
+              "uuid": "5a3ed097-5611-49d3-a1ea-5f3ed83758d3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "3fb902e3-a4df-40ad-8c86-9e5b88d9e17b",
+          "control-id": "ia-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-5_stmt.a": {
+              "uuid": "e45f25ba-f806-4e4c-a2df-f23d1aa3f319",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5_stmt.b": {
+              "uuid": "42462fae-3f29-46c9-a22c-8c9f2a276623",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5_stmt.c": {
+              "uuid": "34bee8e8-b77b-483f-8c75-546a85ee209f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5_stmt.d": {
+              "uuid": "d63b5685-fcd0-4f75-a3b3-1ad69b91d414",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5_stmt.e": {
+              "uuid": "e45c697b-8dfd-472d-9f9c-ecacbfda96f2",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5_stmt.f": {
+              "uuid": "77011543-3370-4773-90e9-b1b265ce0d76",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5_stmt.g": {
+              "uuid": "acf4cd95-c065-40d7-8fc5-baeee3682049",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5_stmt.h": {
+              "uuid": "c2a4d63d-209d-4a49-92f8-b5d10f50dc4d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5_stmt.i": {
+              "uuid": "de33cfef-2076-4db2-92af-a4ea950a13f9",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5_stmt.j": {
+              "uuid": "ed0b7320-a255-426e-ba0f-1b271d718687",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "aacd4c81-3fbe-41ef-a1ae-375c10e04ddd",
+          "control-id": "ia-5.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-5.1_stmt.a": {
+              "uuid": "ba6d6897-8997-4bb4-9530-1b5b548dddb4",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5.1_stmt.b": {
+              "uuid": "5dcfe43e-28ac-4e71-9b64-c0c94455dd73",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5.1_stmt.c": {
+              "uuid": "1b44b970-a455-4465-a491-9a439d16a0f3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5.1_stmt.d": {
+              "uuid": "fd847861-5041-443e-b446-9a29dc75fe26",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5.1_stmt.e": {
+              "uuid": "a8d49da3-e616-4399-854d-5976bf4642e7",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            },
+            "ia-5.1_stmt.f": {
+              "uuid": "86e222e6-8aee-4d6a-87fe-50a30a57e002",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "2eb13d36-5514-496b-b454-31c775a1fc70",
+          "control-id": "ia-5.11",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-5.11_stmt": {
+              "uuid": "13326533-06ef-43eb-920c-87b9a8f47737",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "c6b95d74-8648-4b21-9c78-39550972de14",
+          "control-id": "ia-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-6_stmt": {
+              "uuid": "ffd86149-b84a-40f5-9fcf-adde40f974d7",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "cd0b8d25-c145-4d15-be94-07bacf532824",
+          "control-id": "ia-7",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-7_stmt": {
+              "uuid": "5354e6b0-a65e-4aca-8e86-a9a289c7f61b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "2888bfcc-e194-422a-8825-4f53bdb20d89",
+          "control-id": "ia-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-8_stmt": {
+              "uuid": "3cb73140-4585-4e6e-8417-c1ec9ff7b55b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "66f0b14b-5d6f-4ae9-b8bd-a9c2164a8aa2",
+          "control-id": "ia-8.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-8.1_stmt": {
+              "uuid": "06757d86-2146-46c7-bdce-dad895acad87",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "316b86bf-44d2-4fa6-a4f5-7833eb8452c2",
+          "control-id": "ia-8.2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-8.2_stmt": {
+              "uuid": "4b9c3d26-d95c-4161-b3de-5b333fbdf6c3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "66acb44b-508c-4e55-88c6-6db3bbc366f3",
+          "control-id": "ia-8.3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-8.3_stmt": {
+              "uuid": "593b1940-e12f-4507-9d3d-acb1bc340259",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "8eec4d41-4452-4ec2-8a6c-540cbf19cd0e",
+          "control-id": "ia-8.4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ia-8.4_stmt": {
+              "uuid": "992d4863-d8ca-4ed9-a82b-59fdccc1b1eb",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "28ff4a5c-d327-40e3-99aa-bedf8fb5203c",
+          "control-id": "ir-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ir-1_stmt": {
+              "uuid": "07381d25-127d-465e-9c8c-b64f43fd04f0",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "3d26ebe3-7f91-44d0-a3e4-f44192791ec8",
+          "control-id": "ir-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ir-2_stmt": {
+              "uuid": "34942c74-95ac-4599-b551-7397d0d08f99",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "632ff990-7955-40a0-83e6-81ba280c93a4",
+          "control-id": "ir-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ir-4_stmt": {
+              "uuid": "4eedad3d-d67c-408e-b55b-44b72a18ea2a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "4780a3da-36e9-45ac-9448-246d9de52d4d",
+          "control-id": "ir-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ir-5_stmt": {
+              "uuid": "934c7912-3aa8-4b48-ae97-b62c5a5dfda1",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "90dbe198-eaa1-424d-bbbc-aa898e2f8910",
+          "control-id": "ir-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ir-6_stmt": {
+              "uuid": "63df69cd-4851-45f6-81eb-006fbd9b0ddd",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "65889916-6ebc-478a-9e11-9eac2f138f8b",
+          "control-id": "ir-7",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ir-7_stmt": {
+              "uuid": "8fd6efff-d8f2-4c7b-9fc9-2593323d8bae",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "81dc3c73-edd1-4c6d-bb2e-95e9ddecdad2",
+          "control-id": "ir-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ir-8_stmt": {
+              "uuid": "ad980c89-acc1-468b-b401-1263a56b1090",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "624adb57-c624-407f-8775-cdcc75abe075",
+          "control-id": "ma-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ma-1_stmt": {
+              "uuid": "10102b0e-c4a9-456c-b5ec-06acfe0dac75",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ddcb61f4-5048-4ab9-973b-490a5db3c808",
+          "control-id": "ma-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ma-2_stmt": {
+              "uuid": "077d4499-e419-410b-aa07-2ec6aec2a54b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "59b21f81-8979-4404-a720-f32cf697b4c1",
+          "control-id": "ma-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ma-4_stmt": {
+              "uuid": "caf41cab-c02d-4d3f-b898-b3ea874cd3c0",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "46e83d36-ea11-439b-bd56-a355174a7d12",
+          "control-id": "ma-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ma-5_stmt": {
+              "uuid": "3672de4d-6646-4a8f-b442-add1db7eaf72",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "cce0658a-b46e-425e-a359-ccbbdadad9e4",
+          "control-id": "mp-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "mp-1_stmt": {
+              "uuid": "c28b2e96-7d13-4320-b93c-31d1ba35dcb3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "f9b2e3ea-90a8-4e2f-9dd2-c8bfd1883265",
+          "control-id": "mp-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "mp-2_stmt": {
+              "uuid": "5d1bd24a-257a-46ae-82d2-54e634995271",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "c4c70fa8-e2de-418c-af96-5aa873793015",
+          "control-id": "mp-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "mp-6_stmt": {
+              "uuid": "8efd2033-dd8d-40c2-abfa-ccd253e17f8a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "e85261f5-5f7a-4602-bfcc-c91fc07fad67",
+          "control-id": "mp-7",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "mp-7_stmt": {
+              "uuid": "3c0ff776-5261-4f11-b7f8-3720d55f6758",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "a936699e-188b-4365-b8c8-ac27c7c551ef",
+          "control-id": "pe-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "planned"
+            }
+          ],
+          "statements": {
+            "pe-1_stmt": {
+              "uuid": "9eeaf67c-b116-4010-bf82-2cedced92bff",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "635e39b2-31b8-4559-8baf-bbac88e50381",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tA control response is planned. Progress can be tracked\nvia:\n\n[https://github.com/ComplianceAsCode/redhat/issues/762](https://github.com/ComplianceAsCode/redhat/issues/762)\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "357f50ff-894c-415a-8eeb-f49f3d068779",
+          "control-id": "pe-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-2_stmt.a": {
+              "uuid": "b57fbab6-6e7c-4331-88d8-b80a3510b436",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-2_stmt.b": {
+              "uuid": "aef52af3-fe2b-4d6c-8571-7f9fbc647e97",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "e8e71ab2-3ab0-45ee-834b-9b9fb2b38177",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access\nto the facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-2_stmt.c": {
+              "uuid": "ef527317-5209-4c89-926c-78c14b1fa41a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "e8e71ab2-3ab0-45ee-834b-9b9fb2b38177",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access\nto the facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-2_stmt.d": {
+              "uuid": "10afcd59-4906-427b-9948-baabd570648a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "e8e71ab2-3ab0-45ee-834b-9b9fb2b38177",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access\nto the facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "8c21f041-ad73-49a3-9294-c789ab513d8f",
+          "control-id": "pe-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-3_stmt.a": {
+              "uuid": "666d7036-90a5-40a9-854a-0a1ee6a21363",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-3_stmt.b": {
+              "uuid": "fd166ad5-7fca-497e-8e51-4c8a4cdc28d3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-3_stmt.c": {
+              "uuid": "25ed7e5f-2cdc-45f6-af02-9a0c77db04e1",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-3_stmt.d": {
+              "uuid": "9960adac-3249-426c-9d36-6586f4ceadf1",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-3_stmt.e": {
+              "uuid": "58a40390-8a4e-459f-9e58-368a83aebeab",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-3_stmt.f": {
+              "uuid": "cd0ce203-100c-4430-87d4-3b5c3387f9df",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-3_stmt.g": {
+              "uuid": "07f74625-38ac-4ca8-bc8f-4434d856d129",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ea3b1ae8-ca6f-4178-a120-def72eb0edb4",
+          "control-id": "pe-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-6_stmt.a": {
+              "uuid": "adc055a6-c4df-48b1-8df5-e825566ed731",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-6_stmt.b": {
+              "uuid": "7bdf5f6f-2836-4984-b5db-b5ffd79be70f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            },
+            "pe-6_stmt.c": {
+              "uuid": "61e0973f-7994-43ba-9bb8-62a5fa0f0b8b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "c866bacc-21ad-4981-95fa-df3525a603d7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOpenShift Dedicated staff do not have physical access to\nthe facility where the information system resides.\n\nThis control is inherited from Amazon Web Services.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "e4f2790e-8cdf-402e-b3b6-7805c45878ef",
+          "control-id": "pe-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-8_stmt.a": {
+              "uuid": "e3512a72-92e7-4983-8945-ee9a467eabc0",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff31200e-51e7-4541-a244-748f0f9d4d0b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is inherited from Amazon Web Services, who own\nand operate the facility where the information system\nresides.\n"
+                }
+              }
+            },
+            "pe-8_stmt.b": {
+              "uuid": "dc35409c-4dcd-43a3-9bd3-53ec208e4f55",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff31200e-51e7-4541-a244-748f0f9d4d0b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is inherited from Amazon Web Services, who own\nand operate the facility where the information system\nresides.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "3156bcaf-1fdb-4e58-9c33-41b74c964038",
+          "control-id": "pe-12",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-12_stmt": {
+              "uuid": "162e05ce-172b-4055-9a53-5a5a466e62e3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff31200e-51e7-4541-a244-748f0f9d4d0b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is inherited from Amazon Web Services, who own\nand operate the facility where the information system\nresides.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "2b8e5e39-05a4-42d3-879b-6c2d85fb6698",
+          "control-id": "pe-13",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-13_stmt": {
+              "uuid": "e539b4af-1f30-4b7e-b7c0-a5a2e754eaa3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff31200e-51e7-4541-a244-748f0f9d4d0b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is inherited from Amazon Web Services, who own\nand operate the facility where the information system\nresides.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "95ec2fce-564f-4fd8-b858-b89af62566d3",
+          "control-id": "pe-14",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-14_stmt.a": {
+              "uuid": "63ad4abf-3740-4e72-94f7-393c8625edd4",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff31200e-51e7-4541-a244-748f0f9d4d0b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is inherited from Amazon Web Services, who own\nand operate the facility where the information system\nresides.\n"
+                }
+              }
+            },
+            "pe-14_stmt.b": {
+              "uuid": "bec858c3-3512-418c-9c3d-902ceec3def3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff31200e-51e7-4541-a244-748f0f9d4d0b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is inherited from Amazon Web Services, who own\nand operate the facility where the information system\nresides.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "b8c2ad37-9714-411a-ad3c-ea5800b64aa1",
+          "control-id": "pe-15",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-15_stmt": {
+              "uuid": "2d10e6f1-78e0-424d-a58b-4a2e01a3fb43",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff31200e-51e7-4541-a244-748f0f9d4d0b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is inherited from Amazon Web Services, who own\nand operate the facility where the information system\nresides.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "62b24ebb-350f-463b-b9dd-d0a9f76644a9",
+          "control-id": "pe-16",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-16_stmt": {
+              "uuid": "b71c7cb8-6d89-48bb-b6bb-5957ab08ce34",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff31200e-51e7-4541-a244-748f0f9d4d0b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is inherited from Amazon Web Services, who own\nand operate the facility where the information system\nresides.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "1a5e4178-9df9-45e0-b04e-c88228dc5fd3",
+          "control-id": "pl-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "pl-1_stmt": {
+              "uuid": "4f330b5a-3729-4854-bb38-91c48434723c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "0ba70246-52c9-4cd4-902a-b406fd162505",
+          "control-id": "pl-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "pl-2_stmt": {
+              "uuid": "09a9c7b1-dfc1-4884-8a4e-f76340d26b5b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "7a0f5f95-640e-4569-ab2a-41be6b94bb58",
+          "control-id": "pl-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "pl-4_stmt": {
+              "uuid": "12d94f45-18cd-4a10-b195-11cc6f6de5a6",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "eb3dd41a-bbab-4d9b-ae5d-4b219bef17c1",
+          "control-id": "ps-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ps-1_stmt": {
+              "uuid": "d801ba76-cb38-48aa-a78e-a48d3fcf57a5",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "daa68232-f074-4b9f-a109-865771304d0e",
+          "control-id": "ps-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ps-2_stmt": {
+              "uuid": "c497b71b-2ea0-4163-be92-978db18b837d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "49180b21-da3a-4e0f-9a97-011c62ae8e06",
+          "control-id": "ps-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ps-3_stmt": {
+              "uuid": "edeca7d9-cefd-4692-a1e0-9c873371f24b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "e2c40744-e377-439f-ac7b-2278f730964b",
+          "control-id": "ps-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ps-4_stmt": {
+              "uuid": "a9b66737-1c42-416b-906a-b91dcfad8c61",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "7909e627-5796-4305-89ba-5f66c9918ce7",
+          "control-id": "ps-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ps-5_stmt": {
+              "uuid": "a82c2d3f-223f-4197-81f8-5137d548c165",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ac05a0ba-c487-4d5c-a072-9e746a101b00",
+          "control-id": "ps-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ps-6_stmt": {
+              "uuid": "a4163a29-637c-4323-864a-182f50a43a4b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "d0f887d5-2b2e-4de8-aa3f-c5490c35bab7",
+          "control-id": "ps-7",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ps-7_stmt": {
+              "uuid": "69322f64-642f-4a53-93e4-509bb25bc954",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "6da54514-da22-41d5-9c37-ed629645a10b",
+          "control-id": "ps-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ps-8_stmt": {
+              "uuid": "96587a7a-8d35-4131-b1d6-ebe60b30eb9e",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ff695294-861f-41d7-b470-178d71912b8f",
+          "control-id": "ra-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ra-1_stmt": {
+              "uuid": "7b9b9499-4ab4-4779-aade-339ac837c535",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "136a72f7-d72d-4a7d-9dc0-499becbc392a",
+          "control-id": "ra-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ra-2_stmt": {
+              "uuid": "5931e57b-c4b6-431a-8234-1cab5c8f7610",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "7dbe0353-27aa-47ed-afa2-2a6823696698",
+          "control-id": "ra-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ra-3_stmt": {
+              "uuid": "470d9f68-7c8c-420a-9d01-cc03a101210e",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "9dfd0d25-bc22-41b9-b13e-08a0ed87cb85",
+          "control-id": "ra-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "ra-5_stmt": {
+              "uuid": "9322da0a-5fc8-4850-bab1-c53964899e39",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ff7060c8-f745-4b2b-a479-c1a57eeae347",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "cb54c9b7-9d11-4572-80c3-784ec67da4f3",
+          "control-id": "sa-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sa-1_stmt": {
+              "uuid": "b7625cb2-66d5-4892-bbb0-a9d7d5faf003",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "c575a17c-62a9-4567-aa0f-9f26b4745496",
+          "control-id": "sa-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sa-2_stmt": {
+              "uuid": "bdc6558d-3570-4907-b9e0-64ef3e1e00f7",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "740568db-cbb0-4ca6-a4ab-3f606104c86c",
+          "control-id": "sa-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sa-3_stmt": {
+              "uuid": "8c037ef8-ea13-4df1-8f57-0d8131701f7f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "fba35c40-c7d7-4c2b-9b9d-8f38770f4343",
+          "control-id": "sa-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sa-4_stmt": {
+              "uuid": "cc86ae33-c11a-47f1-b346-5fcc89190585",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "26cae64d-898f-4832-b702-1b228d6a7ce0",
+          "control-id": "sa-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sa-5_stmt": {
+              "uuid": "6304df28-0587-4607-991c-972dade816e2",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "3dba2dd7-5806-463f-a2a5-f927c9f17197",
+          "control-id": "sa-9",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sa-9_stmt": {
+              "uuid": "5ce7182c-ceca-4e58-b733-ece84ff92504",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "b885d23c-98bc-4694-b3df-ad5e2d79b193",
+          "control-id": "sc-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sc-1_stmt": {
+              "uuid": "31a28689-d22a-4281-9396-3e39aaf00400",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "36d6ee6d-75a4-479a-99b4-18617dcb82b5",
+          "control-id": "sc-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sc-5_stmt": {
+              "uuid": "04f915f3-359b-4ed2-867c-c0d4ded64687",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "c79f28d7-1ee0-4de9-ac9f-b038234e264d",
+          "control-id": "sc-7",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sc-7_stmt": {
+              "uuid": "7bd816be-8571-4716-90fb-770dff3d90bf",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "fd9ed307-9307-48a0-b4df-23137355735d",
+          "control-id": "sc-12",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sc-12_stmt": {
+              "uuid": "1265e32b-2e01-4b72-9fd3-82ce6a990176",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "375718e1-a987-475b-b769-b532677acbc6",
+          "control-id": "sc-13",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sc-13_stmt": {
+              "uuid": "5ca69218-91fb-48ca-ba66-733c6b941a33",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "9f623733-ea80-4bb0-aae3-e74004c03fdc",
+          "control-id": "sc-15",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sc-15_stmt": {
+              "uuid": "65341d7a-5048-4aeb-9868-4aed33d3e642",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "8c87c369-bc5e-4588-97ae-ab413040e28e",
+          "control-id": "sc-20",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sc-20_stmt": {
+              "uuid": "e6d43ee2-e134-4615-a6a5-96abffdf0d8f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "8aa2a844-5c53-4ad0-96de-8b84998ddb1d",
+          "control-id": "sc-21",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sc-21_stmt": {
+              "uuid": "94068221-ee66-41e6-ae49-c1347298014b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "6aa8d7c2-44cf-4e9e-a7d4-2993d6428e16",
+          "control-id": "sc-22",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sc-22_stmt": {
+              "uuid": "2d9e7064-f178-40b2-92d9-28a08ec6de4c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "758e3f6c-4438-46ea-994f-e3b47147705e",
+          "control-id": "sc-39",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "sc-39_stmt": {
+              "uuid": "925ad4ee-2f66-4648-9a31-11916aaa7e33",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "76d29dbb-fc35-4487-a578-42658a664580",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''##\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "fad37c51-3b6c-49ff-a563-6dd95baaadbf",
+          "control-id": "si-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "si-1_stmt": {
+              "uuid": "378180e0-e560-4d05-b874-93c566727297",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "d145ad6a-a7ee-4fef-b361-19e0901849ed",
+          "control-id": "si-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "si-2_stmt": {
+              "uuid": "fbd48d0e-3698-476b-b60b-cfd9e17d053f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "12a9295d-25c1-4afe-bbb2-bc3176a0e6b8",
+          "control-id": "si-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "si-3_stmt": {
+              "uuid": "4206e8f0-b3a8-4c9d-b5c6-3d40e0ae6634",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "f808f76a-7dd5-40bd-b73a-0eacadd447a0",
+          "control-id": "si-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "si-4_stmt": {
+              "uuid": "901968f4-a0f8-416c-8212-dbeead97b485",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "d246d1db-451c-42db-8834-5b50d8a831d0",
+          "control-id": "si-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "si-5_stmt": {
+              "uuid": "dc50f1f5-8925-4856-999c-7bc1960b9580",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "d8df9871-e1d2-4feb-a760-893e044d0552",
+          "control-id": "si-12",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "si-12_stmt": {
+              "uuid": "71503f08-ca5f-4e1b-9cd6-3dbdb0f72c6d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0822dfcd-65eb-4ffa-8380-45fedf445030",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "b82a5b17-3cd2-4fd3-b74c-aa929adfe913",
+          "control-id": "si-16",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "unknown"
+            }
+          ],
+          "statements": {
+            "si-16_stmt": {
+              "uuid": "2695eee3-10b5-42be-b8f8-ca027016329b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "3d9d2d85-73e6-4152-82d5-cdfcee4ba9ac",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\t''"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "3a5ca2de-0f66-47e6-844d-6ccdf214b767",
+          "title": "FedRAMP Applicable Laws and Regulations",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "fedramp-citations"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://www.fedramp.gov/assets/resources/templates/SSP-A12-FedRAMP-Laws-and-Regulations-Template.xlsx"
+            }
+          ]
+        },
+        {
+          "uuid": "12da89ef-51dd-4404-948d-e9f0e25b961e",
+          "title": "FedRAMP Master Acronym and Glossary",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "fedramp-acronyms"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://www.fedramp.gov/assets/resources/documents/FedRAMP_Master_Acronym_and_Glossary.pdf"
+            }
+          ]
+        },
+        {
+          "uuid": "d45612a9-cf25-4ef6-b2dd-69e38ba2967a",
+          "title": "[SAMPLE]Name or Title of Document",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "law"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Publication Date"
+            }
+          ],
+          "document-ids": [
+            {
+              "type": "doi",
+              "identifier": "Identification Number"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://domain.example/path/to/document.pdf"
+            }
+          ]
+        },
+        {
+          "uuid": "a8a0cc81-800f-479f-93d3-8b8743d9b98d",
+          "title": "[SAMPLE]Privacy-Related Law Citation",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "law"
+            },
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "pii"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Publication Date"
+            }
+          ],
+          "document-ids": [
+            {
+              "type": "doi",
+              "identifier": "Identification Number"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://domain.example/path/to/document.pdf"
+            }
+          ]
+        },
+        {
+          "uuid": "545e75c3-537f-48fe-9630-95337916d982",
+          "title": "[SAMPLE]Regulation Citation",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "regulation"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Publication Date"
+            }
+          ],
+          "document-ids": [
+            {
+              "type": "doi",
+              "identifier": "Identification Number"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://domain.example/path/to/document.pdf"
+            }
+          ]
+        },
+        {
+          "uuid": "9d6cf2b4-8e88-4040-a33c-7bc206553a1a",
+          "title": "[SAMPLE]Interconnection Security Agreement Title",
+          "properties": [
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ]
+        },
+        {
+          "uuid": "31a46c4f-2959-4287-bc1c-67297d7da60b",
+          "desc": "CSP Logo",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "prepared-for-logo"
+            },
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "csp-logo"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./logo.png",
+              "media-type": "image/png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ]
+        },
+        {
+          "uuid": "c5866ad8-8ed7-49b4-844a-0276fa9f8f51",
+          "desc": "Preparer Logo",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "prepared-by-logo"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./party-1-logo.png",
+              "media-type": "image/png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ]
+        },
+        {
+          "uuid": "0846b6ef-cfa4-4bb3-8280-717f7e7b04d4",
+          "desc": "FedRAMP Logo",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "fedramp-logo"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://github.com/GSA/fedramp-automation/raw/master/assets/FedRAMP_LOGO.png"
+            }
+          ]
+        },
+        {
+          "uuid": "2c1747d6-874a-49a2-8488-2fd9735416bf",
+          "desc": "3PAO Logo",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "3pao-logo"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./logo.png",
+              "media-type": "image/png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ]
+        },
+        {
+          "uuid": "d2eb3c18-6754-4e3a-a933-03d289e3fad5",
+          "desc": "The primary authorization boundary diagram.",
+          "rlinks": [
+            {
+              "href": "./diagrams/boundary.png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tSection 9.2, Figure 9-1 Authorization Boundary Diagram (graphic)\n            \tThis should be referenced in the\n               system-characteristics/authorization-boundary/diagram/link/@href flag using a value\n               of \"#d2eb3c18-6754-4e3a-a933-03d289e3fad5\"\n         "
+        },
+        {
+          "uuid": "61081e81-850b-43c1-bf43-1ecbddcb9e7f",
+          "desc": "The primary network diagram.",
+          "rlinks": [
+            {
+              "href": "./diagrams/network.png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tSection 9.4, Figure 9-2 Network Diagram (graphic)\n            \tThis should be referenced in the\n               system-characteristics/network-architecture/diagram/link/@href flag using a value\n               of \"#61081e81-850b-43c1-bf43-1ecbddcb9e7f\"\n         "
+        },
+        {
+          "uuid": "ac5d7535-f3b8-45d3-bf3b-735c82c64547",
+          "desc": "The primary data flow diagram.",
+          "rlinks": [
+            {
+              "href": "./diagrams/dataflow.png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tSection 10, Figure 10-1 Data Flow Diagram (graphic)\n            \tThis should be referenced in the\n               system-characteristics/data-flow/diagram/link/@href flag using a value\n               of \"#ac5d7535-f3b8-45d3-bf3b-735c82c64547\"\n         "
+        },
+        {
+          "uuid": "090ab379-2089-4830-b9fd-26d0729e22e9",
+          "title": "Policy Title",
+          "desc": "Policy document",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "policy"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./sample_policy.pdf"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Policy Attachment\n         "
+        },
+        {
+          "uuid": "ab300133-d749-4abb-b858-1cd6ffd8af9e",
+          "title": "Policy Title",
+          "desc": "Policy document",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "policy"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./sample_policy.pdf"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Policy Attachment\n         "
+        },
+        {
+          "uuid": "1002a58e-9e11-4aa6-9ab4-2bde52995952",
+          "title": "Procedure Title",
+          "desc": "Procedure document",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "procedure"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./sample_procedure.pdf"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Procedure Attachment\n         "
+        },
+        {
+          "uuid": "4bb1e2e5-261c-4b5c-b22c-e1627c2e8be6",
+          "title": "Procedure Title",
+          "desc": "Procedure document",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "procedure"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./sample_procedure.pdf"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Procedure Attachment\n         "
+        },
+        {
+          "uuid": "90a128ac-c850-48f6-8fff-a55692f80b41",
+          "title": "User's Guide",
+          "desc": "User's Guide",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "user-guide"
+            },
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "guide"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./sample_guide.pdf"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: User's Guide Attachment\n         "
+        },
+        {
+          "uuid": "fab59751-b855-40cb-93c1-492562e20e18",
+          "title": "Privacy Impact Assessment",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "privacy-impact-assessment"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./pia.docx"
+            }
+          ],
+          "attachments": [
+            {
+              "filename": "pia.docx",
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Privacy Impact Assessment\n         "
+        },
+        {
+          "uuid": "489112e1-57f2-4c29-8dd0-95b1442fbf3b",
+          "title": "Document Title",
+          "desc": "Rules of Behavior",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "rules-of-behavior"
+            },
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "rob"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://sample"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Rules of Behavior (ROB)\n         "
+        },
+        {
+          "uuid": "c7860916-f2f4-43aa-b578-d48cf8e6d381",
+          "title": "Document Title",
+          "desc": "Contingency Plan (CP)",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "plan"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://sample"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Contingency Plan (CP) Attachment\n         "
+        },
+        {
+          "uuid": "ab56cf27-0dae-40d6-89b7-d750137309af",
+          "title": "Document Title",
+          "desc": "Configuration Management (CM) Plan",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "plan"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://sample"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Configuration Management (CM) Plan Attachment\n         "
+        },
+        {
+          "uuid": "3f771ab5-8016-4571-98d1-f0fb962e15e2",
+          "title": "Document Title",
+          "desc": "Incident Response (IR) Plan",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "plan"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://sample"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Incident Response (IR) Plan Attachment\n         "
+        },
+        {
+          "uuid": "49fb4631-1da2-41ca-b0b3-e1b1006d4025",
+          "title": "Separation of Duties Matrix",
+          "desc": "Separation of Duties Matrix",
+          "properties": [
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://sample"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Separation of Duties Matrix Attachment\n         "
+        },
+        {
+          "uuid": "9f1aae37-7359-411f-86c1-768aaab85e63",
+          "title": "FedRAMP High Baseline",
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.0-milestone3/content/fedramp.gov/xml/FedRAMP_HIGH-baseline_profile.xml",
+              "media-type": "application/xml"
+            }
+          ],
+          "remarks": "\n            \tPointer to High baseline content in OSCAL.\n         "
+        },
+        {
+          "uuid": "890170c3-d4fa-4d25-ab96-8e4bf7cc237c",
+          "title": "FedRAMP Moderate Baseline",
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.0-milestone3/content/fedramp.gov/xml/FedRAMP_MODERATE-baseline_profile.xml",
+              "media-type": "application/xml"
+            }
+          ],
+          "remarks": "\n            \tPointer to Moderate baseline content in OSCAL.\n         "
+        },
+        {
+          "uuid": "2acaf846-5496-4d36-8565-9a15b48aef2c",
+          "title": "FedRAMP Low Baseline",
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.0-milestone3/content/fedramp.gov/xml/FedRAMP_LOW-baseline_profile.xml",
+              "media-type": "application/xml"
+            }
+          ],
+          "remarks": "\n            \tPointer to Low baseline content in OSCAL.\n         "
+        }
+      ]
+    }
+  },
+  "Component": null
+}

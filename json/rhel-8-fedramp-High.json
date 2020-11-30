@@ -1,0 +1,4071 @@
+{
+  "system-security-plan": {
+    "uuid": "cd51cafc-2568-4a8d-97ce-bf4b7354536a",
+    "metadata": {
+      "title": "FedRAMP System Security Plan (SSP)",
+      "published": "2020-07-01T00:00:00.00-04:00",
+      "last-modified": "2020-11-30T13:14:24.34+00:00",
+      "version": "0.0.1",
+      "oscal-version": "1.0.0-milestone3",
+      "revision-history": [
+        {
+          "published": "2019-06-01T00:00:00.00-04:00",
+          "version": "1.0",
+          "oscal-version": "1.0-Milestone3",
+          "properties": [
+            {
+              "name": "party-uuid",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+            }
+          ],
+          "remarks": "\n               \tInitial publication.\n            "
+        },
+        {
+          "published": "2020-06-01T00:00:00.00-04:00",
+          "version": "2.0",
+          "oscal-version": "1.0-Milestone3",
+          "properties": [
+            {
+              "name": "party-id",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "csp"
+            }
+          ],
+          "remarks": "\n               \tUpdated for annual assessment.\n            "
+        }
+      ],
+      "properties": [
+        {
+          "name": "marking",
+          "value": "Controlled Unclassified Information"
+        }
+      ],
+      "roles": [
+        {
+          "id": "prepared-by",
+          "title": "Prepared By",
+          "desc": "The organization that prepared this SSP. If developed in-house, this is the CSP itself."
+        },
+        {
+          "id": "prepared-for",
+          "title": "Prepared For",
+          "desc": "The organization for which this SSP was prepared. Typically the CSP."
+        },
+        {
+          "id": "content-approver",
+          "title": "System Security Plan Approval",
+          "desc": "The individual or individuals accountable for the accuracy of this SSP."
+        },
+        {
+          "id": "cloud-service-provider",
+          "title": "Cloud Service Provider",
+          "short-name": "CSP"
+        },
+        {
+          "id": "system-owner",
+          "title": "Information System Owner",
+          "desc": "The individual within the CSP who is ultimately accountable for everything related to this system."
+        },
+        {
+          "id": "authorizing-official",
+          "title": "Authorizing Official",
+          "desc": "The individual or individuals who must grant this system an authorization to operate."
+        },
+        {
+          "id": "authorizing-official-poc",
+          "title": "Authorizing Official's Point of Contact",
+          "desc": "The individual representing the authorizing official."
+        },
+        {
+          "id": "system-poc-management",
+          "title": "Information System Management Point of Contact (POC)",
+          "desc": "The highest level manager who responsible for system operation on behalf of the System Owner."
+        },
+        {
+          "id": "system-poc-technical",
+          "title": "Information System Technical Point of Contact",
+          "desc": "The individual or individuals leading the technical operation of the system."
+        },
+        {
+          "id": "system-poc-other",
+          "title": "General Point of Contact (POC)",
+          "desc": "A general point of contact for the system, designated by the system owner."
+        },
+        {
+          "id": "information-system-security-officer",
+          "title": "System Information System Security Officer (or Equivalent)",
+          "desc": "The individual accountable for the security posture of the system on behalf of the system owner."
+        },
+        {
+          "id": "privacy-poc",
+          "title": "Privacy Official's Point of Contact",
+          "desc": "The individual responsible for the privacy threshold analysis and if necessary the privacy impact assessment."
+        },
+        {
+          "id": "asset-owner",
+          "title": "Owner of an inventory item within the system."
+        },
+        {
+          "id": "asset-administrator",
+          "title": "Administrative responsibility an inventory item within the system."
+        },
+        {
+          "id": "isa-poc-local",
+          "title": "ICA POC (Local)",
+          "desc": "The point of contact for an interconnection on behalf of this system.",
+          "remarks": "\n            \tRemove this role if there are no ICAs.\n         "
+        },
+        {
+          "id": "isa-poc-remote",
+          "title": "ICA POC (Remote)",
+          "desc": "The point of contact for an interconnection on behalf of this external system to which this system connects.",
+          "remarks": "\n            \tRemove this role if there are no ICAs.\n         "
+        },
+        {
+          "id": "isa-authorizing-official-local",
+          "title": "ICA Signatory (Local)",
+          "desc": "Responsible for signing an interconnection security agreement on behalf of this system.",
+          "remarks": "\n            \tRemove this role if there are no ICAs.\n         "
+        },
+        {
+          "id": "isa-authorizing-official-remote",
+          "title": "ICA Signatory (Remote)",
+          "desc": "Responsible for signing an interconnection security agreement on behalf of the external system to which this system connects.",
+          "remarks": "\n            \tRemove this role if there are no ICAs.\n         "
+        },
+        {
+          "id": "consultant",
+          "title": "Consultant",
+          "desc": "Any consultants involved with developing or maintaining this content."
+        },
+        {
+          "id": "admin-unix",
+          "title": "[SAMPLE]Unix Administrator",
+          "desc": "This is a sample role."
+        },
+        {
+          "id": "admin-client",
+          "title": "[SAMPLE]Client Administrator",
+          "desc": "This is a sample role."
+        },
+        {
+          "id": "program-director",
+          "title": "[SAMPLE]Program Director",
+          "desc": "This is a sample role."
+        },
+        {
+          "id": "fedramp-pmo",
+          "title": "Federal Risk and Authorization Management Program (FedRAMP) Program Management Office (PMO)",
+          "short-name": "FedRAMP PMO"
+        },
+        {
+          "id": "fedramp-jab",
+          "title": "Federal Risk and Authorization Management Program (FedRAMP) Joint Authorization Board (JAB)",
+          "short-name": "FedRAMP JAB"
+        }
+      ],
+      "locations": [
+        {
+          "uuid": "27b78960-59ef-4619-82b0-ae20b9c709ac",
+          "title": "CSP HQ",
+          "address": {
+            "type": "work",
+            "postal-address": [
+              "Suite 0000",
+              "1234 Some Street"
+            ],
+            "city": "Haven",
+            "state": "ME",
+            "postal-code": "00000"
+          },
+          "remarks": "\n            \tThere must be one location identifying the CSP's primary business address, such as the CSP's HQ, or the address of the system owner's primary business location.\n         "
+        },
+        {
+          "uuid": "16adcc8d-65d8-4583-80d3-9cf007744fec",
+          "title": "Primary Data Center",
+          "address": {
+            "postal-address": [
+              "2222 Main Street"
+            ],
+            "city": "Anywhere",
+            "state": "--",
+            "postal-code": "00000-0000"
+          },
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "data-center"
+            },
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "primary-data-center"
+            }
+          ],
+          "remarks": "\n            \tThere must be one location for each data center.\n            \tThere must be at least two data centers.\n            \tFor a data center, briefly summarize the components at this location.\n            \tAll data centers must have a conformity tag of \"data-center\".\n            \tA primary data center must also have a conformity tag of \"primary-data-center\".\n         "
+        },
+        {
+          "uuid": "ad321514-7b9f-4374-8409-efb18eea6e5d",
+          "title": "Secondary Data Center",
+          "address": {
+            "postal-address": [
+              "3333 Small Road"
+            ],
+            "city": "Anywhere",
+            "state": "--",
+            "postal-code": "00000-0000"
+          },
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "data-center"
+            },
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "alternate-data-center"
+            }
+          ],
+          "remarks": "\n            \tThere must be one location for each data center.\n            \tThere must be at least two data centers.\n            \tFor a data center, briefly summarize the components at this location.\n            \tAll data centers must have a conformity tag of \"data-center\"\n            \tAn alternate or backup data center must also have a conformity tag of \"alternate-data-center\".\n         "
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb",
+          "type": "organization",
+          "party-name": "Cloud Service Provider (CSP) Name",
+          "short-name": "CSP Acronym/Short Name",
+          "location-uuids": [
+            "27b78960-59ef-4619-82b0-ae20b9c709ac"
+          ],
+          "remarks": "\n            \tReplace sample CSP information.\n         "
+        },
+        {
+          "uuid": "77e0e2c8-2560-4fe9-ac78-c3ff4ffc9f6d",
+          "type": "organization",
+          "party-name": "Federal Risk and Authorization Management Program: Program Management Office",
+          "short-name": "FedRAMP PMO",
+          "links": [
+            {
+              "href": "https://fedramp.gov",
+              "text": ""
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "1800 F St. NW",
+                ""
+              ],
+              "city": "Washington",
+              "state": "DC",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "info@fedramp.gov"
+          ],
+          "remarks": "\n            \tThis party entry must be present in a FedRAMP SSP.\n            \tThe uuid may be different; however, the uuid must be associated with the \"fedramp-pmo\" role in the responsible-party assemblies.\n         "
+        },
+        {
+          "uuid": "49017ec3-9f51-4dbd-9253-858c2b1295fd",
+          "type": "organization",
+          "party-name": "Federal Risk and Authorization Management Program: Joint Authorization Board",
+          "short-name": "FedRAMP JAB",
+          "remarks": "\n            \tThis party entry must be present in a FedRAMP SSP.\n            \tThe uuid may be different; however, the uuid must be associated with the \"fedramp-jab\" role in the responsible-party assemblies.\n         "
+        },
+        {
+          "uuid": "78992555-4a99-4eaa-868c-f2c249679dd3",
+          "type": "organization",
+          "party-name": "External Organization",
+          "short-name": "External",
+          "remarks": "\n            \tGeneric placeholder for any external organization.\n         "
+        },
+        {
+          "uuid": "f595397b-cbe4-4a87-8c86-9bff91c4e7fd",
+          "type": "organization",
+          "party-name": "Agency Name",
+          "short-name": "A.N.",
+          "remarks": "\n            \tGeneric placeholder for an authorizing agency.\n         "
+        },
+        {
+          "uuid": "8e3d39da-4851-4d2a-adb5-4b5585ded952",
+          "type": "organization",
+          "party-name": "Name of Consulting Org",
+          "short-name": "NOCO",
+          "links": [
+            {
+              "href": "https://consulting.sample",
+              "text": ""
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "3333 Corporate Way"
+              ],
+              "city": "Washington",
+              "state": "DC",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "poc@consulting.sample"
+          ]
+        },
+        {
+          "uuid": "80361ec4-bfce-4b5c-85c8-313d6ebd220b",
+          "type": "organization",
+          "party-name": "[SAMPLE]Remote System Org Name"
+        },
+        {
+          "uuid": "09ad840f-aa79-43aa-9f22-25182c2ab11b",
+          "type": "person",
+          "party-name": "[SAMPLE]ICA POC's Name",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "email-addresses": [
+            "person@ica.org.example"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-555-1212"
+            }
+          ],
+          "member-of-organizations": [
+            "80361ec4-bfce-4b5c-85c8-313d6ebd220b"
+          ]
+        },
+        {
+          "uuid": "f0bc13a4-3303-47dd-80d3-380e159c8362",
+          "type": "organization",
+          "party-name": "[SAMPLE]Example IaaS Provider",
+          "short-name": "E.I.P.",
+          "remarks": "\n            \tUnderlying service provider. Leveraged Authorization.\n         "
+        },
+        {
+          "uuid": "3360e343-9860-4bda-9dfc-ff427c3dfab6",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 1",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "postal-address": [
+                "Mailstop A-1"
+              ]
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0001"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ],
+          "location-uuids": [
+            "27b78960-59ef-4619-82b0-ae20b9c709ac"
+          ]
+        },
+        {
+          "uuid": "36b8d6c0-3b25-42cc-b529-cf4066145cdd",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 2",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0002"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "0cec09d9-20c6-470b-9ffc-85763375880b",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 3",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0003"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "f75e21f6-43d8-46ab-890d-7f2eebc5a830",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 4",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0004"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "132953a9-640c-46f7-9de9-3fa15ec99361",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 5",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0005"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "4fded5fd-7a65-47ea-bd76-df57c46e27d1",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 6",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0006"
+            }
+          ],
+          "member-of-organizations": [
+            "78992555-4a99-4eaa-868c-f2c249679dd3"
+          ]
+        },
+        {
+          "uuid": "db234cb7-1776-425c-9ac4-b067c1723011",
+          "type": "person",
+          "party-name": "[SAMPLE]Person Name 7",
+          "properties": [
+            {
+              "name": "title",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Individual's Title"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "postal-address": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "email-addresses": [
+            "name@org.domain"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "202-000-0007"
+            }
+          ],
+          "member-of-organizations": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        {
+          "uuid": "b306f5af-b93a-4a7f-a2b2-37a44fc92a79",
+          "type": "organization",
+          "party-name": "[SAMPLE] IT Department"
+        },
+        {
+          "uuid": "59cdc953-5902-4fa4-a878-f3163854624c",
+          "type": "organization",
+          "party-name": "[SAMPLE]Security Team"
+        }
+      ],
+      "responsible-parties": {
+        "cloud-service-provider": {
+          "party-uuids": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "prepared-by": {
+          "party-uuids": [
+            "3360e343-9860-4bda-9dfc-ff427c3dfab6"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "prepared-for": {
+          "party-uuids": [
+            "6b286b5d-8f07-4fa7-8847-1dd0d88f73fb"
+          ]
+        },
+        "content-approver": {
+          "party-uuids": [
+            "3360e343-9860-4bda-9dfc-ff427c3dfab6",
+            "36b8d6c0-3b25-42cc-b529-cf4066145cdd"
+          ],
+          "remarks": "\n            \tOne or more\n         "
+        },
+        "system-owner": {
+          "party-uuids": [
+            "3360e343-9860-4bda-9dfc-ff427c3dfab6"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "authorizing-official": {
+          "party-uuids": [
+            "49017ec3-9f51-4dbd-9253-858c2b1295fd",
+            "4fded5fd-7a65-47ea-bd76-df57c46e27d1"
+          ],
+          "remarks": "\n            \tOne or more\n         "
+        },
+        "system-poc-management": {
+          "party-uuids": [
+            "0cec09d9-20c6-470b-9ffc-85763375880b"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "system-poc-technical": {
+          "party-uuids": [
+            "f75e21f6-43d8-46ab-890d-7f2eebc5a830"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "information-system-security-officer": {
+          "party-uuids": [
+            "132953a9-640c-46f7-9de9-3fa15ec99361"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "authorizing-official-poc": {
+          "party-uuids": [
+            "4fded5fd-7a65-47ea-bd76-df57c46e27d1"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "privacy-poc": {
+          "party-uuids": [
+            "db234cb7-1776-425c-9ac4-b067c1723011"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "fedramp-pmo": {
+          "party-uuids": [
+            "77e0e2c8-2560-4fe9-ac78-c3ff4ffc9f6d"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        },
+        "fedramp-jab": {
+          "party-uuids": [
+            "49017ec3-9f51-4dbd-9253-858c2b1295fd"
+          ],
+          "remarks": "\n            \tExactly one\n         "
+        }
+      },
+      "remarks": "\n         \tThis OSCAL-based FedRAMP SSP Template can be used for the FedRAMP Low, Moderate, and\n            High baselines.\n         \tGuidance for OSCAL-based FedRAMP Tailored content has not yet been developed.\n      "
+    },
+    "import-profile": {
+      "href": "https://raw.githubusercontent.com/usnistgov/OSCAL/master/content/fedramp.gov/xml/FedRAMP_HIGH-baseline_profile.xml"
+    },
+    "system-characteristics": {
+      "system-ids": [
+        {
+          "identifier-type": "https://fedramp.gov",
+          "id": "F00000000"
+        }
+      ],
+      "system-name": "Red Hat Enterprise Linux 8.x",
+      "system-name-short": "rhel-8",
+      "description": "\tAutomatically generated OSCAL SSP from OpenControl guidance for Red Hat Enterprise Linux 8.x",
+      "security-sensitivity-level": "low",
+      "system-information": {
+        "information-types": [
+          {
+            "title": "Information Type Name",
+            "description": "\tThis item is useless nevertheless required.",
+            "confidentiality-impact": {
+              "base": "fips-199-moderate"
+            },
+            "integrity-impact": {
+              "base": "fips-199-moderate"
+            },
+            "availability-impact": {
+              "base": "fips-199-moderate"
+            }
+          }
+        ]
+      },
+      "security-impact-level": {
+        "security-objective-confidentiality": "fips-199-moderate",
+        "security-objective-integrity": "fips-199-moderate",
+        "security-objective-availability": "fips-199-moderate"
+      },
+      "status": {
+        "state": "operational"
+      },
+      "authorization-boundary": {
+        "description": "\tA holistic, top-level explanation of the FedRAMP authorization boundary."
+      }
+    },
+    "system-implementation": {
+      "users": {
+        "ebddf85a-2c8b-493f-89af-2e03c5ede486": {
+          "role-ids": [
+            "generator"
+          ]
+        }
+      },
+      "components": {
+        "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+          "component-type": "system",
+          "title": "This system",
+          "description": "\tThe entire system as depicted in the system authorization boundary",
+          "status": {
+            "state": "under-development"
+          }
+        }
+      }
+    },
+    "control-implementation": {
+      "description": "\tFedRAMP SSP Template Section 13",
+      "implemented-requirements": [
+        {
+          "uuid": "a5f7c261-b143-4932-bafe-56a203d2974f",
+          "control-id": "at-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "at-1_stmt.a": {
+              "uuid": "4fb55f92-8f7a-4b68-9edf-48625ce3a62a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            },
+            "at-1_stmt.b": {
+              "uuid": "faf43c77-46a3-41ed-8d55-a238c5c3c300",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "187bbf86-112c-43bb-a6b1-0370ac67b459",
+          "control-id": "at-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "at-2_stmt.a": {
+              "uuid": "11e87d5e-a558-4352-8418-864f48a3fa5a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            },
+            "at-2_stmt.b": {
+              "uuid": "6b809c4b-ae3b-448a-b599-1cc724f41ce5",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            },
+            "at-2_stmt.c": {
+              "uuid": "326f3d80-8c5a-4a2a-ab26-8a3a290f2d01",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "85423d56-ffaa-47b7-91de-4b3716fdc1e9",
+          "control-id": "at-2.2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "at-2.2_stmt": {
+              "uuid": "df48593e-8383-492b-bf47-79f3bf4bc514",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "6b128074-d806-4839-b3ec-d1afd70507f0",
+          "control-id": "at-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "at-3_stmt.a": {
+              "uuid": "9fd8bcd9-0953-4643-8659-30a875b9bf4e",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            },
+            "at-3_stmt.b": {
+              "uuid": "c069e62b-112d-4576-aa88-f8728db3cd66",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            },
+            "at-3_stmt.c": {
+              "uuid": "e21d0bf9-7aac-4595-be92-736aeec4ec3e",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "60a1baef-90a2-4386-95d1-67bc0cac3143",
+          "control-id": "at-3.3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "at-3.3_stmt": {
+              "uuid": "0615dde9-2371-44b0-99f9-314729a2ac31",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "4e1b516b-90f5-4543-8add-c1421d1690c9",
+          "control-id": "at-3.4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "at-3.4_stmt": {
+              "uuid": "ed3cb1b5-cde2-4534-a9e0-5bb306499e60",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "2ff212e3-ac02-4eba-8546-8fa25721828c",
+          "control-id": "at-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "at-4_stmt.a": {
+              "uuid": "07d09c72-058c-4b7e-be8b-044b9a8f8236",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            },
+            "at-4_stmt.b": {
+              "uuid": "2ffa39fb-db05-43b4-83ff-65762cef8c30",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "fec21d0a-8f0b-4ec3-935b-62a5310fc014",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "b2074ca2-3314-40e0-a322-f76401c98bfa",
+          "control-id": "ir-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-1_stmt.a": {
+              "uuid": "ed383cd8-fcef-44ad-940f-ea4fc52b0aa2",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-1_stmt.a.1": {
+              "uuid": "a3341e3c-19c6-4b0b-b637-9735c61cc5f6",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-1_stmt.a.2": {
+              "uuid": "e91da04a-dbf5-4de9-b6e9-746ea1986315",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-1_stmt.b": {
+              "uuid": "f045f5f3-7433-450a-8514-a5d958b6f756",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-1_stmt.b.1": {
+              "uuid": "2cee221e-32d8-4226-a9f9-301ed97dd459",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-1_stmt.b.2": {
+              "uuid": "fa61c208-6617-4235-b59c-eca7c1a95820",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "0a75b64e-e699-48d4-8f39-5739080a53eb",
+          "control-id": "ir-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-2_stmt.a": {
+              "uuid": "fb410b5c-35f6-43a9-bc42-1eb15f6561a9",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-2_stmt.b": {
+              "uuid": "7503c5a4-5d5e-4dc7-8423-09cfaaed0c90",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-2_stmt.c": {
+              "uuid": "eae5a6d6-5743-4c18-a1ff-417213648ba8",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "b8a42e25-33ea-48f7-8636-c4dc638c8dd5",
+          "control-id": "ir-2.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-2.1_stmt": {
+              "uuid": "70b8f46d-e881-4a8b-8e60-5307a87a785a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "37391bc4-53e0-4236-8e44-0e0d825177a3",
+          "control-id": "ir-2.2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-2.2_stmt": {
+              "uuid": "a85b68a6-8ae0-41e1-9b14-875498165386",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "534c3783-f194-4e6d-bce8-f673cd7876a9",
+          "control-id": "ir-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-3_stmt": {
+              "uuid": "b08ef514-12d3-49de-9430-8bd0081b6d34",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "cd2b8dea-d475-4536-810f-4cb8840225a1",
+          "control-id": "ir-3.2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-3.2_stmt": {
+              "uuid": "228b2851-d621-491a-99b4-011447d2e390",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "d5f43da4-0738-4742-b982-9078b37c5e7a",
+          "control-id": "ir-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-4_stmt.a": {
+              "uuid": "df767cc6-026f-47e6-b828-78dde7ffea92",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-4_stmt.b": {
+              "uuid": "a776cf6b-5456-46a0-8971-aea647e59336",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-4_stmt.c": {
+              "uuid": "f50b8c8c-add4-42c9-8c3b-c2a614a4652b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "51142785-d1e4-4886-b642-592d35b71e70",
+          "control-id": "ir-4.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-4.1_stmt": {
+              "uuid": "12a7343e-93c9-41a0-922b-eac846bcb671",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "8ee0c424-a9d0-46a8-b5d5-7a47e1ed622a",
+          "control-id": "ir-4.2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-4.2_stmt": {
+              "uuid": "cb1a61a3-9d00-4e80-9a56-ddf8135425af",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "bb7b4e46-e393-4a60-9b1e-55a08e8639d8",
+          "control-id": "ir-4.3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-4.3_stmt": {
+              "uuid": "7c9a0d7a-bd4b-4613-92ea-1916c2285841",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "49785cc2-49b5-473f-9d73-7cda245d08ad",
+          "control-id": "ir-4.4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-4.4_stmt": {
+              "uuid": "e8f86a45-aba2-4d10-b48b-ce60ebbc0bff",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ccbe2177-2354-43c4-96ff-825626571315",
+          "control-id": "ir-4.6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-4.6_stmt": {
+              "uuid": "34db7a41-1695-4729-ac23-f7336e158a1f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ec5e92ad-bd5f-4af5-90ce-e08156a52be0",
+          "control-id": "ir-4.8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-4.8_stmt": {
+              "uuid": "921039ab-2d45-4951-9be6-0106bcfce3ec",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "fb3375f1-e4be-45d8-98a3-89897298fca4",
+          "control-id": "ir-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-5_stmt": {
+              "uuid": "5e6ba516-299c-4800-a996-f5a5d9edbb09",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "f064814e-36c6-448e-8f0d-4eca9db77025",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "6e53c00b-4ce3-4992-a0fc-4cba0a780287",
+          "control-id": "ir-5.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-5.1_stmt": {
+              "uuid": "d661f626-6658-407e-845c-1334ce9e6f31",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "655e23ea-73f9-42c9-b7d4-3a94e7a2ad57",
+          "control-id": "ir-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-6_stmt.a": {
+              "uuid": "40d636d6-6964-4610-aa7c-d86737531f1a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-6_stmt.b": {
+              "uuid": "9a1f52a2-b2a3-42dd-9f4e-07b0a9e5562a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "abbf5ca4-c37f-4e55-be38-e0fb78d98b6d",
+          "control-id": "ir-6.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-6.1_stmt": {
+              "uuid": "bff866ee-07a1-48e0-bff5-677bbab030e1",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "3e04a01d-4a41-444a-bdc8-bb8ddeb427e9",
+          "control-id": "ir-7",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-7_stmt": {
+              "uuid": "1defce0f-835b-45b2-a8b4-0bbf79eb06a7",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "1e7dfee4-59e7-4258-a21b-252a865c51a8",
+          "control-id": "ir-7.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-7.1_stmt": {
+              "uuid": "6aea26c2-e075-4c68-8b42-d974cef94703",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "b0e1ca1a-d05a-4e97-891c-242848ed917e",
+          "control-id": "ir-7.2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-7.2_stmt.a": {
+              "uuid": "0205e4dc-efcc-405b-b919-c8d96b200b01",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-7.2_stmt.b": {
+              "uuid": "71973ea4-e082-42b8-b2c1-59894f32f069",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "98e7a79d-ec6b-4253-a247-3dfa3a97f274",
+          "control-id": "ir-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-8_stmt.a": {
+              "uuid": "f226ef5d-c4e5-453e-8f06-806363fc976a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.a.1": {
+              "uuid": "a45f4789-b326-476a-873c-2c0f287832d3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.a.2": {
+              "uuid": "813f981f-6923-4235-a648-7b076ee3eea6",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.a.3": {
+              "uuid": "30328a20-0b4a-46b8-8f1a-7ba21adae16c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.a.4": {
+              "uuid": "df0171a6-7b99-4a7d-94b4-05f839870539",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.a.5": {
+              "uuid": "0f112da4-8f39-4059-9b59-5e79408d6400",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.a.6": {
+              "uuid": "c5f5033e-b926-4c39-8ed6-ce6973cf1003",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.a.7": {
+              "uuid": "7165cc37-0212-473c-b692-b82782d977cd",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.a.8": {
+              "uuid": "d9359977-60b1-407b-b570-0a5f1196cc94",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.b": {
+              "uuid": "0a5d4e19-2307-43f4-bc0b-8e40d51b1709",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.c": {
+              "uuid": "410ad22d-49e8-4aa4-89cf-ba7d90b82231",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.d": {
+              "uuid": "b8b6ffaa-f874-46b5-a0e8-919d4d22db03",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.e": {
+              "uuid": "987ad1c7-67d9-44bb-9bdf-070d5bef811c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-8_stmt.f": {
+              "uuid": "78a2096f-5c01-4a63-a51b-4652d85f1821",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "bcf3f3da-6836-477e-a2f9-7d4c2782c738",
+          "control-id": "ir-9",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-9_stmt.a": {
+              "uuid": "02df5246-c9a1-48c3-b3da-7603a39cdb7b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-9_stmt.b": {
+              "uuid": "7661656b-02d7-4f24-8543-2ab420fd420b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-9_stmt.c": {
+              "uuid": "163ad426-d038-4abf-a55a-cb9f0b6a5721",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-9_stmt.d": {
+              "uuid": "8808f90b-b6a0-46a6-8342-0a3dbda1d754",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-9_stmt.e": {
+              "uuid": "3085e8b1-08c5-4b1a-997d-a0d3f7ef4a5d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "ir-9_stmt.f": {
+              "uuid": "13ae73bc-6bed-4a1c-96a2-401a1538d7ce",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "d32202a4-71c3-4e5b-86bb-b799a06c6389",
+          "control-id": "ir-9.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-9.1_stmt": {
+              "uuid": "e360dc90-aa12-4097-b259-8b605b99154a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "562b61fc-ccbb-408a-9c03-08aef03f0615",
+          "control-id": "ir-9.2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-9.2_stmt": {
+              "uuid": "4aeeb1f5-3b39-4d64-a261-220ab7f8a37b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "8677d99b-d58e-462b-83b5-5d7283825a99",
+          "control-id": "ir-9.3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-9.3_stmt": {
+              "uuid": "e527df40-341b-4109-8975-29f039c56cd7",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "38421d01-5e3e-4eab-8293-0686e2181441",
+          "control-id": "ir-9.4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ir-9.4_stmt": {
+              "uuid": "38221d3e-2bfe-450f-9a8f-0c88f2860012",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20e12e08-e93e-4178-bab1-0649101f2a59",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "42a8e6e7-ba47-4673-aa26-921fc065444d",
+          "control-id": "pe-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-1_stmt.a": {
+              "uuid": "c83f6fe7-f379-4d26-b467-b6d8eee9b69d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "b9ec3101-88dd-4b31-8554-cb58a661cf37",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tDevelopment, documentation, and dissemination of a physical\nand environmental protection policy reflects organizational\nprocedure/policy and is not applicable to component-level\nconfiguration.\n"
+                }
+              }
+            },
+            "pe-1_stmt.b": {
+              "uuid": "da7d9481-1921-47cd-a889-16afb00309d7",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "e2f86c0a-2a8a-4fb1-bba7-bcb67201d575",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational review and updates to the physical and\nenvironmental protection policy reflects organizational\nprocedure/policy and is not applicable to component-level\nconfiguration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "7ec32282-917b-4e33-9f1b-1cc83c5f2126",
+          "control-id": "pe-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-2_stmt.a": {
+              "uuid": "b5066467-2113-4017-8031-35011f19a450",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "038e04b3-3dbe-4b39-92c2-c785877f4bcd",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tDevelopment, approval, and maintenance of a list\nof individuals with authorized access to the facility\nwhere the information system resides reflects organizational\nprocedure/policy and is not applicable to component-level\nconfiguration.\n"
+                }
+              }
+            },
+            "pe-2_stmt.b": {
+              "uuid": "392ae166-9512-48e9-aa07-42183889708c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "669f2834-4e92-4717-871b-ae33fdaeaaa1",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tIssuing authorization credentials for facility access\nreflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            },
+            "pe-2_stmt.c": {
+              "uuid": "d5469cdc-724a-4322-9129-d5934c105c10",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "bfb7d2d8-d63a-49c4-b3fb-7ca6924e9d98",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tReviewing the access list detailing authorized facility\naccess by individuals at an organization-defined frequency\nreflects organizational procedure/policy and is not\napplicable to component-level configuration.\n"
+                }
+              }
+            },
+            "pe-2_stmt.d": {
+              "uuid": "a967db64-9e28-4b4e-b8c7-3f44a166c394",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "859bce49-462e-42c3-a22c-f485a8e44724",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tRemoval of individuals from the facility access list when access\nis no longer required reflects organizational procedure/policy\nand is not applicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "042703fc-da12-4f5b-9c7a-6d0137e53335",
+          "control-id": "pe-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-3_stmt.a": {
+              "uuid": "5441c93a-ece5-4408-89a4-3016425351ad",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "d32678f5-5c72-4ec3-81f0-9d87d5406f5a",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tEnforcing physical access authorizations at organization-defined\nentry/exit points to the facility where the information system resides\nreflects organizational procedure/policy and is not applicable to\ncomponent-level configuration.\n"
+                }
+              }
+            },
+            "pe-3_stmt.b": {
+              "uuid": "ff052ff3-128f-4899-bd0b-2ab818502631",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "6fa063ec-7fbd-43c2-b09c-7d1a0f27e663",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tMaintaining physical access audit logs for organization-defined\nentry/exit points reflects organizational procedure/policy and\nis not applicable to component-level configuration.\n"
+                }
+              }
+            },
+            "pe-3_stmt.c": {
+              "uuid": "6d431649-93fd-40ed-82a5-a10123b36d13",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ab51d315-44ab-420d-a34a-fe28a1bb5d8d",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tProviding organization-defined security safeguards to control access\nto areas within the facility officially designated as publicly\naccessible reflects organizational procedure/policy and\nis not applicable to component-level configuration.\n"
+                }
+              }
+            },
+            "pe-3_stmt.d": {
+              "uuid": "73ada1b1-2cb7-4e33-92b5-d49db0460f18",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "89f5db7a-50c1-41a4-bd2f-b0515b74cd9d",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tEscorting visitors and monitoring visitor activity during\norganization-defined circumstances requiring visitor escorts\nand monitoring reflects organizational procedure/policy and\nis not applicable to component-level configuration.\n"
+                }
+              }
+            },
+            "pe-3_stmt.e": {
+              "uuid": "cf7ec606-b6be-4f32-87a2-b69aacb9c9b8",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "49afbd68-3163-4721-b4a1-6da04653789f",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tSecuring keys, combinations, and other physical access devices\nreflects organizational procedure/policy and\nis not applicable to component-level configuration.\n"
+                }
+              }
+            },
+            "pe-3_stmt.f": {
+              "uuid": "ac8fc9a1-95dd-4d7c-b1c2-7e8aba4d5be6",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0938121d-1df5-4128-b99d-0c772958da88",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tInventory of organization-defined physical access devices\nat an organization-defined frequency reflects organizational\nprocedure/policy and is not applicable to component-level\nconfiguration.\n"
+                }
+              }
+            },
+            "pe-3_stmt.g": {
+              "uuid": "38201073-f9fa-470b-be12-c08647c86ac2",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "12ae89c8-84dd-48ee-a198-3e89b569638f",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tChanging combinations and keys at an organization-defined frequency\nand/or when keys are lost, combinations are compromised, or individuals\nare transferred or terminated, reflects organizational procedure/policy\nand is not applicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "e5c68a92-d4ce-41fa-8e1b-1063b64c6dad",
+          "control-id": "pe-3.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-3.1_stmt": {
+              "uuid": "06fd9321-0bf0-42e0-846d-db2e491efd5d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "6692dd72-82e2-4904-b978-57ab4fe9921b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tEnforcing physical access authorizations to the information system\nin addition to the physical access controls for the facility at\norganization-defined physical spaces containing one or more components\nof the information system reflects organizational procedure/policy\nand is not applicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "46abf4f3-4472-4c77-bbd9-74c3eae01ff9",
+          "control-id": "pe-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-4_stmt": {
+              "uuid": "3f1d80f0-7748-44bb-b239-72401a8a3c9a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "20a97f0a-87de-472b-9dab-1f3e696ffd79",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tControlling physical access to organization-defined information\nsystem distribution and transmission lines within organizational\nfacilities using organizaiton-defined security safeguards reflects\norganizational procedure/policy and is not applicable to\ncomponent-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "3cf500e1-b3c3-403e-bbf2-3379450bbcd6",
+          "control-id": "pe-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-5_stmt": {
+              "uuid": "095a9727-ee06-43af-bffc-967482a0e923",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "9939d4ca-f972-4a8d-b331-68d3d9967242",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tControlling physical access to information system output devices to\nprevent unauthorized individuals from obtaining the output reflects\norganizational policy/procedures and is not applicable to\ncomponent-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "dc8a7092-0aab-4dd5-a47a-e857656e5f0b",
+          "control-id": "pe-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-6_stmt.a": {
+              "uuid": "33cd6b74-63d4-460b-823f-b5f28b85efcd",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "d819c998-1e4d-48ac-b59d-ad2866825484",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tMonitoring physical access to the facility where the information\nsystem resides to detect and respond to physical security incidents\nreflects organizational procedure/policy and is outside the scope\nof component-level configuration.\n"
+                }
+              }
+            },
+            "pe-6_stmt.b": {
+              "uuid": "f3362c58-4214-4a7c-80a0-b105d2e1c71b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "ce190ad7-f714-44fa-bfc0-8945d32c13e1",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tReviewing physical access logs at an organization-defined\nfrequency and upon occurence of organization-defined events\nor potential indications of events, reflects organizational\nprocedure/policy and is not applicable to component-level\nconfiguration.\n"
+                }
+              }
+            },
+            "pe-6_stmt.c": {
+              "uuid": "b92908ce-4745-4711-bcb3-6a5960563a2d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "84fe10a0-60dc-47d9-90ba-d0f6f61bca15",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tCoordinating results of reviews and investigations with\nthe organizational incident response capability reflects\norganizational procedure/policy and is not applicable to\ncomponent-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "9eb8c9df-6a43-4ca1-be5e-af5b64bc1e07",
+          "control-id": "pe-6.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-6.1_stmt": {
+              "uuid": "a52a9d06-93d7-4a3c-87f0-fcedc317b627",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8bef794c-7b7e-4074-8e91-b173fa4abe84",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tMonitoring physical intrusion alarms and surveillance\nequipment reflects organizational procedure/policy and is\nnot applicable to component-level configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "6039d4cd-6f4f-4ab3-9ab4-8fe4db6cfa1a",
+          "control-id": "pe-6.4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-6.4_stmt": {
+              "uuid": "92f4bec1-a907-445b-a447-5a23b28698c1",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "e4329b69-a2bc-496f-aef9-60af3f2ba616",
+          "control-id": "pe-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-8_stmt.a": {
+              "uuid": "91b8d93b-c8fa-417c-ae8c-4951597fe883",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "pe-8_stmt.b": {
+              "uuid": "02093793-e0dd-4d1a-949f-013f040ae8a0",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "89185b64-4241-4cc1-b99e-0fd4611379c9",
+          "control-id": "pe-8.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-8.1_stmt": {
+              "uuid": "7e29b876-5b35-4b33-b2c7-2599c8dccf92",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "d09ba053-a392-4fce-9d48-2650bbe51d68",
+          "control-id": "pe-9",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-9_stmt": {
+              "uuid": "af932a4a-e681-44b8-b559-7f4bae228387",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "a00714fb-0cff-453b-a86c-7123f5a5af8f",
+          "control-id": "pe-10",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-10_stmt.a": {
+              "uuid": "f82a835d-0e45-447e-8cf6-e6a35c1e3060",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "pe-10_stmt.b": {
+              "uuid": "b84f3c3e-161c-4083-9cf6-9bfdb8187570",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "pe-10_stmt.c": {
+              "uuid": "8c8049ef-779b-42d9-ba34-d24838950330",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "667ed986-a1ea-4a5b-a836-1ef848a2d405",
+          "control-id": "pe-11",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-11_stmt": {
+              "uuid": "1bc8ee94-7662-43a7-8b6b-53bb4f6e9fa9",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "2ac139bd-067d-49a3-8cc1-e6c0ee845310",
+          "control-id": "pe-11.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-11.1_stmt": {
+              "uuid": "8bcd7752-2be0-432a-a939-ef6cc5ef4da7",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "11b8b7ee-c378-4425-b296-6f56eb703c76",
+          "control-id": "pe-12",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-12_stmt": {
+              "uuid": "4845a568-565f-40f8-976c-5c1d1f1eb9ef",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "6657211f-e3b9-43c5-9477-02767cef12b4",
+          "control-id": "pe-13",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-13_stmt": {
+              "uuid": "4c7ac6a7-5677-47f5-ad33-e8a4d982c01d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "c0a49647-2ecf-426d-8a0d-cc03b586ee60",
+          "control-id": "pe-13.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-13.1_stmt": {
+              "uuid": "63dc1e82-21c0-46cb-81c5-a1380d588d97",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "e61b56eb-502e-48d0-8dea-dd329df1444f",
+          "control-id": "pe-13.2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-13.2_stmt": {
+              "uuid": "d20d68b1-605b-4789-a71d-0302341a68e5",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ed45689d-2e14-4612-a688-ed8bacf22fd6",
+          "control-id": "pe-13.3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-13.3_stmt": {
+              "uuid": "99caa78c-7757-4d63-a13d-cb0e57aff9ae",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "4bf3d533-2f44-44d2-9003-a104380b30e9",
+          "control-id": "pe-14",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-14_stmt.a": {
+              "uuid": "e2719a38-2d72-4d39-9c9f-344e9d3342b6",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "pe-14_stmt.b": {
+              "uuid": "6b2d96a7-6a9d-4448-99d5-89a5443be73b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "c4d47a12-0052-49da-a5a8-b3852d8e8c00",
+          "control-id": "pe-14.2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-14.2_stmt": {
+              "uuid": "b1069fc2-cf93-4ebc-951c-c7b8e46001cc",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "07a3be45-5937-4bfd-98b8-b8f9ea1b21a2",
+          "control-id": "pe-15",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-15_stmt": {
+              "uuid": "a6f71100-a32c-4b0b-bd03-ef3d792de1ad",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "02bd1e2e-c144-4c61-a041-9577c29aa0b8",
+          "control-id": "pe-15.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-15.1_stmt": {
+              "uuid": "b219e010-a9cd-4505-a8c6-ceff54b9fd2c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "e9fecabe-ac5c-4e3c-9e8b-dcd8923787f8",
+          "control-id": "pe-16",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-16_stmt": {
+              "uuid": "29136d47-d918-4593-8b2b-6516d3c01915",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "4d8e695f-6725-4dfc-a388-a629ab9aa7eb",
+          "control-id": "pe-17",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-17_stmt.a": {
+              "uuid": "e750901a-4d28-4c37-bed5-3563e37933e1",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "pe-17_stmt.b": {
+              "uuid": "a9dd49bb-c3da-4d5e-858b-3c0f480131f4",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "pe-17_stmt.c": {
+              "uuid": "e012ea43-db85-46c0-8920-fa79191734d1",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "ef8324ba-51bd-46ca-8dcc-4f8ff4335588",
+          "control-id": "pe-18",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pe-18_stmt": {
+              "uuid": "2b1af852-47b4-4a7e-b90f-ac74f16d0812",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "90eeb4a5-5f8d-4bee-9f00-0e22c33d8db6",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "5a6a70cd-e241-4b52-bf70-dbb9f62a0c75",
+          "control-id": "pl-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pl-1_stmt.a": {
+              "uuid": "094d50b5-ebc2-442d-9031-7bc8a1196c57",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "pl-1_stmt.b": {
+              "uuid": "8a288e6e-1641-49e0-acf5-684f40de5b21",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "567a49c4-0184-47f0-854f-4ef1fb836ae8",
+          "control-id": "pl-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pl-2_stmt.a": {
+              "uuid": "b0c294fd-f8da-43a1-91a5-5a8f1ce16aa8",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "pl-2_stmt.b": {
+              "uuid": "0ae636b7-3308-4de6-985d-bee23fd586cc",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "pl-2_stmt.c": {
+              "uuid": "d878723c-436f-4131-bcf9-a63cff332b30",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "pl-2_stmt.d": {
+              "uuid": "b4235c44-8baf-4bda-8d26-1e2fd25a910d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "pl-2_stmt.e": {
+              "uuid": "0336a419-949e-41a7-9586-7844675ee2a5",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "9d5246a3-4521-4c59-8205-516f2577541d",
+          "control-id": "pl-2.3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pl-2.3_stmt": {
+              "uuid": "d6f42931-4074-4ff2-b339-9a5fcf43a1da",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "17ac9647-3ab7-479b-8945-90c0e73b1faa",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "aa60b190-b436-428f-82d3-5e609134ce39",
+          "control-id": "pl-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pl-4_stmt.a": {
+              "uuid": "42ef50ea-2c10-46a2-9bdc-76d8adf7560c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "pl-4_stmt.b": {
+              "uuid": "c46e6105-5a63-49db-bf1f-73b389843af6",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "pl-4_stmt.c": {
+              "uuid": "2f333acf-78a0-4ff4-b462-cff0758b291b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "pl-4_stmt.d": {
+              "uuid": "4f93d123-f0b7-41ec-8ad8-3b8862704db2",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "befdd6de-025b-45b9-bb1d-1904009c1805",
+          "control-id": "pl-4.1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pl-4.1_stmt": {
+              "uuid": "2b440776-5d21-4e64-8135-54ff7feffdd0",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "17ac9647-3ab7-479b-8945-90c0e73b1faa",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedure/policy and is not\napplicable to Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "d36b86a7-bf0a-4413-bb8b-b9fc088f748f",
+          "control-id": "pl-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "pl-8_stmt.a": {
+              "uuid": "28433225-ecd9-4fbb-ad7b-f3440807c5cc",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "pl-8_stmt.b": {
+              "uuid": "79100567-b6d1-4a03-870a-6dcdfd334078",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            },
+            "pl-8_stmt.c": {
+              "uuid": "28d8ca15-8a90-4601-99a2-be94f976857e",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8a38c107-7dd3-417b-bd56-95c3002123b8",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tThis control reflects organizational procedures/policies, and is not\napplicable to the configuration of Red Hat Enterprise Linux.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "c988b60d-465a-4ff5-b48a-725e3a78d86a",
+          "control-id": "ps-1",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ps-1_stmt.a": {
+              "uuid": "0d51f17d-3553-4efc-8ffd-225ef6ca9909",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "f35720a2-4c26-47e0-b150-10fbdef09485",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational development, documentation, and dissemination of\na personnel security policy to organization-defined personnel\nis outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-1_stmt.a.1": {
+              "uuid": "0aa5b922-5a46-4e23-a13b-3c3dc4d2394e",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "f35720a2-4c26-47e0-b150-10fbdef09485",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational development, documentation, and dissemination of\na personnel security policy to organization-defined personnel\nis outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-1_stmt.a.2": {
+              "uuid": "c46c9f16-3014-47ad-bcf4-7fe5b7f7eef3",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "f35720a2-4c26-47e0-b150-10fbdef09485",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational development, documentation, and dissemination of\na personnel security policy to organization-defined personnel\nis outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-1_stmt.b": {
+              "uuid": "3b162d5f-320a-4980-96a4-827861f26603",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "8e1a01d7-b935-4923-a72b-5fdab355ca76",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational reviews and updates to the personnel security policy\nand personnel security procedures at an organization-defined frequency\nis outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-1_stmt.b.1": {
+              "uuid": "40256f60-3c90-424b-8d79-8a8be97a6d02",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "f35720a2-4c26-47e0-b150-10fbdef09485",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational development, documentation, and dissemination of\na personnel security policy to organization-defined personnel\nis outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-1_stmt.b.2": {
+              "uuid": "390198da-0711-49ba-ba04-7e623e2f872f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "f35720a2-4c26-47e0-b150-10fbdef09485",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational development, documentation, and dissemination of\na personnel security policy to organization-defined personnel\nis outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "4013a119-4669-4462-b32c-a13a61913347",
+          "control-id": "ps-2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ps-2_stmt.a": {
+              "uuid": "1388f2d8-ae86-4819-97e2-5768ca9dc4b7",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "a1f82811-f626-4ecb-9987-0e5c056a792f",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational assignment of a risk designation to all organizational\npositions is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-2_stmt.b": {
+              "uuid": "277a1997-199e-4df9-9aff-3a28c98b2569",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "76dc6db9-0389-4e6b-b889-0cfc81206704",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational establishment of screening criteria for individuals\nfilling those positions is outside the scope of Red Hat Enterprise Linux\nconfiguration.\n"
+                }
+              }
+            },
+            "ps-2_stmt.c": {
+              "uuid": "421af13e-3066-4d91-89e9-3327af5f2d90",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "2e37e2c3-8e83-48a9-a8f0-3e10cbda33b0",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational review and updating of position risk\ndesignations at an organization-defined frequency is outside the scope\nof Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "f7be1dbd-86aa-41f8-b1d0-67ff78c56022",
+          "control-id": "ps-3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ps-3_stmt.a": {
+              "uuid": "4b0f8c16-3670-44f5-9304-3dfbb1e47801",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "f5ce677b-00ef-4acd-a893-6a1108779fe0",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational screening of individuals prior to authorizing access\nto the information system is outside the scope of Red Hat Enterprise Linux\nconfiguration.\n"
+                }
+              }
+            },
+            "ps-3_stmt.b": {
+              "uuid": "94fdd023-e571-45e2-96ea-e752c9f6f201",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "e4e0488e-a97a-4a7d-b05d-a628a196dcf4",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes to rescreen individuals according to\norganization-defined conditions requiring rescreening and,\nwhere rescreening is so indicated, the frequency of such\nrescreening, is outside the scope of Red Hat Enterprise Linux\nconfiguration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "3959ccbc-54ed-4af9-9c1b-d819ab34008c",
+          "control-id": "ps-3.3",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ps-3.3_stmt.a": {
+              "uuid": "2cc3204c-5d15-4f86-bc80-67ef31dfdd43",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "4149b12e-25db-459f-920b-dd7c6cc1d6fa",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes ensuring that individuals accessing an\ninformation system processing, storing, or transmitting information\nrequiring special protection have valid access authorizations that are\ndemonstrated by assigned official government dutues, are outside the\nscope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-3.3_stmt.b": {
+              "uuid": "4993cea3-da26-44a3-aa3b-d596533cc62d",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "a7e0d2c3-63eb-4bad-85b8-e6e8a1437fc1",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes ensuring that individuals accessing an\ninformation system processing, storing, or transmitting information\nrequiring special protection satisgy organization-defined additional\npersonnel screening criteria, are outside the scope of Red Hat Enterprise Linux\nconfiguration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "b4b68dad-4698-4307-b5d5-368927e4ca81",
+          "control-id": "ps-4",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ps-4_stmt.a": {
+              "uuid": "e713072c-cd4d-4957-8a6a-89312c814a72",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "4131e0d9-2ae1-439c-9390-594d5fe724b4",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes ensuring that, upon termination of individual\nemployment, information system access is disabled within an\norganization-defined time period, are outside the scope of\nRed Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-4_stmt.b": {
+              "uuid": "82bbc369-291d-41ad-8142-adf503f51a3b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "855c02d1-a80b-4fe4-9e88-b9f1541c7966",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes ensuring that, upon termination of individual\nemployment, any authenticators/credentials associated with the individual\nare terminated/revoked, are outside the scope of\nRed Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-4_stmt.c": {
+              "uuid": "89d535f9-c9da-406c-89e0-4a5fdf524ef0",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "6fe3d101-0b7e-4306-8a60-a83386d2902b",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes ensuring that, upon termination of individual\nemployment, exit interviews are conducted that include a discussion of\norganization-defined information security topics, are outside the scope\nof Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-4_stmt.d": {
+              "uuid": "e84edbfc-357a-4010-a60d-3d3a9101fb6a",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "e2fcf347-7359-4cb0-9b78-4495cb51f9fe",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes ensuring that, upon termination of individual\nemployment, all security-related organizational information\nsystem-related property is retrieved, are outside the scope\nof Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-4_stmt.e": {
+              "uuid": "3e3d11bc-4f79-45e6-a8c8-5027ae4fa3cf",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "09c8db57-2a8e-432e-bfcf-7751092dc5cf",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes ensuring that, upon termination of individual\nemployment, the organization retains access to organizational\ninformation systems formerly controlled by the terminated individual,\nare outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-4_stmt.f": {
+              "uuid": "1dced8bb-23f9-4853-9127-e579658554b6",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "a0416027-169d-43e4-816d-a7d11f28ab5c",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes ensuring that, upon termination of individual\nemployment, the organization notifies organization-defined personnel\nor roles within an organization-defined time period, are outside\nthe scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "f2c61442-1b14-4a10-96c3-d0ba8c4659ec",
+          "control-id": "ps-4.2",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ps-4.2_stmt": {
+              "uuid": "eb569d00-deee-46c3-9cac-a0880b547c74",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "7158c5f2-fe50-427b-ae5d-93b17fd0666a",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational employment of automated mechanisms to notify\norganization-defined personnel or roles upon termination of\nan individual, is outside the scope of\nRed Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "c13693a6-8717-4c41-b9a5-4f30ce6f8101",
+          "control-id": "ps-5",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ps-5_stmt.a": {
+              "uuid": "e1489dc0-a117-42be-b778-82b7750998cd",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "479491e8-8dea-4f0e-b7d3-ffd22903d2b4",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes to review and confirm ongoing operational\nneed for current logical and physical access authorizations to\ninformation systems/facilities when individuals are reassigned or\ntransferred to other positions within the organization are\noutside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-5_stmt.b": {
+              "uuid": "4a9feaa8-de4f-4163-ade4-79cc444243ab",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "4f79abd4-01cc-4a13-9688-27c5d024bfcb",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes to initiate organization-defined transfer\nor reassignment actions within organization-defined time period\nfollowing the formal transfer action are outside the scope of\nRed Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-5_stmt.c": {
+              "uuid": "dc70a4f1-e6f7-413e-b681-a8c1bc3c046e",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "0e9e3993-12c2-4701-b54f-a4840a0c6bd7",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes to modify access authorizations as needed to\ncorrespond with any changes in oeprational need due to reassignment\nor transfer are outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-5_stmt.d": {
+              "uuid": "1db9f2d5-379b-4c98-a6e4-00940b0e110f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "5065e649-c75c-4114-b472-32d24cbfad15",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational notifications of organization-defined personnel\nor roles within an organization-defined time period are outside\nthe scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "170cfb24-bb93-4702-90d1-8d17b5c354fd",
+          "control-id": "ps-6",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ps-6_stmt.a": {
+              "uuid": "2d92b85d-052e-41e8-a286-e555d06de10f",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "21e5d497-9123-4f23-8057-62ef9c31ccbd",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational process to develop and document access agreements for\norganizational information systems are outside the scope of\nRed Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-6_stmt.b": {
+              "uuid": "4f3ef13a-e090-4d16-8b0c-9e889bae67db",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "adb9b134-e07a-4289-b7d5-9b540c238761",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational reviews and updates to the access agreements at an\norganization-defined frequency are outside the scope of\nRed Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-6_stmt.c": {
+              "uuid": "32edf3e6-203c-4450-83ff-cf925412a8ac",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "b16478ac-2be8-4826-a331-d89f1f9c817e",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes that ensure individuals requiring access to\norganizational information and information systems sign and re-sign\naccess agreements are outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-6_stmt.c.1": {
+              "uuid": "0ec17fd5-01a5-418d-88b7-f844e61ca31b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "b16478ac-2be8-4826-a331-d89f1f9c817e",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes that ensure individuals requiring access to\norganizational information and information systems sign and re-sign\naccess agreements are outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-6_stmt.c.2": {
+              "uuid": "085ff1ac-a28c-4d4d-ac7c-a9458cceb105",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "b16478ac-2be8-4826-a331-d89f1f9c817e",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes that ensure individuals requiring access to\norganizational information and information systems sign and re-sign\naccess agreements are outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "71d0c115-792b-462a-a349-f36740aa5544",
+          "control-id": "ps-7",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ps-7_stmt.a": {
+              "uuid": "0adf029f-4aec-4849-a44d-24e76dd274e1",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "5a6b68a7-216e-4f2d-a7d6-017baa605b65",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes to establish security requirements including\nsecurity roles and responsibilities for third-party providers are\noutside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-7_stmt.b": {
+              "uuid": "d7de56d7-ee30-475c-99c9-c76655387b24",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "72edc7fa-1400-43a6-a419-b63392aa46b5",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes requiring third-party providers to comply\nwith personnel security polocies and procedures established by\nthe organization are outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-7_stmt.c": {
+              "uuid": "c93764f1-b0bd-4889-bd27-cb577fb9109c",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "71831662-dfd7-442f-8e95-0142f1d3c5c4",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes to document presonnel security requirements\nare outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-7_stmt.d": {
+              "uuid": "c6d320d9-3ce8-46fd-a00c-8963e666aee0",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "7757d8f6-0ae6-42b5-ae0f-9e3059c7efe9",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational processes to require third-party providers to notify\norganization-defined personnel or roles of any personnel transfers or\nterminations of third-party personnel who possess organizational\ncredentials and/or badges, or who have information system privileges\nwithin an organization-defined time period, are outside the\nscope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-7_stmt.e": {
+              "uuid": "85911840-5a9f-4809-8966-3b61e611f684",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "9c5a474a-0081-488e-8770-80e2de25b009",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational monitoring of provider compliance is outside\nthe scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            }
+          }
+        },
+        {
+          "uuid": "7a65e74d-e2e7-493a-a7ba-b05985a49cb2",
+          "control-id": "ps-8",
+          "annotations": [
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "not-applicable"
+            }
+          ],
+          "statements": {
+            "ps-8_stmt.a": {
+              "uuid": "53be986d-9088-4b95-a7f2-9920267fa519",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "660bfa1c-231a-4b9c-9f2a-dbc99d75ef46",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational employment of a formal sanctions process for individuals\nfailing to comply with established information security policies\nand procedures is outside the scope of Red Hat Enterprise Linux configuration.\n"
+                }
+              }
+            },
+            "ps-8_stmt.b": {
+              "uuid": "65d1d313-0f08-45cb-a619-0c2f61acfa0b",
+              "by-components": {
+                "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
+                  "uuid": "4a62645f-0cd3-49e8-9156-210ee0518aac",
+                  "description": "\tDescribe how is the software component satisfying the control.",
+                  "remarks": "\tOrganizational notification of organization-defined personnel\nor roles within an organization-defined time period when a formal\nemployee santions process is initiated, identifying the individual\nsanctioned and the reason for the sanction.\n"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "3a5ca2de-0f66-47e6-844d-6ccdf214b767",
+          "title": "FedRAMP Applicable Laws and Regulations",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "fedramp-citations"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://www.fedramp.gov/assets/resources/templates/SSP-A12-FedRAMP-Laws-and-Regulations-Template.xlsx"
+            }
+          ]
+        },
+        {
+          "uuid": "12da89ef-51dd-4404-948d-e9f0e25b961e",
+          "title": "FedRAMP Master Acronym and Glossary",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "fedramp-acronyms"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://www.fedramp.gov/assets/resources/documents/FedRAMP_Master_Acronym_and_Glossary.pdf"
+            }
+          ]
+        },
+        {
+          "uuid": "d45612a9-cf25-4ef6-b2dd-69e38ba2967a",
+          "title": "[SAMPLE]Name or Title of Document",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "law"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Publication Date"
+            }
+          ],
+          "document-ids": [
+            {
+              "type": "doi",
+              "identifier": "Identification Number"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://domain.example/path/to/document.pdf"
+            }
+          ]
+        },
+        {
+          "uuid": "a8a0cc81-800f-479f-93d3-8b8743d9b98d",
+          "title": "[SAMPLE]Privacy-Related Law Citation",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "law"
+            },
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "pii"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Publication Date"
+            }
+          ],
+          "document-ids": [
+            {
+              "type": "doi",
+              "identifier": "Identification Number"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://domain.example/path/to/document.pdf"
+            }
+          ]
+        },
+        {
+          "uuid": "545e75c3-537f-48fe-9630-95337916d982",
+          "title": "[SAMPLE]Regulation Citation",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "regulation"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Publication Date"
+            }
+          ],
+          "document-ids": [
+            {
+              "type": "doi",
+              "identifier": "Identification Number"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://domain.example/path/to/document.pdf"
+            }
+          ]
+        },
+        {
+          "uuid": "9d6cf2b4-8e88-4040-a33c-7bc206553a1a",
+          "title": "[SAMPLE]Interconnection Security Agreement Title",
+          "properties": [
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ]
+        },
+        {
+          "uuid": "31a46c4f-2959-4287-bc1c-67297d7da60b",
+          "desc": "CSP Logo",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "prepared-for-logo"
+            },
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "csp-logo"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./logo.png",
+              "media-type": "image/png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ]
+        },
+        {
+          "uuid": "c5866ad8-8ed7-49b4-844a-0276fa9f8f51",
+          "desc": "Preparer Logo",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "prepared-by-logo"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./party-1-logo.png",
+              "media-type": "image/png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ]
+        },
+        {
+          "uuid": "0846b6ef-cfa4-4bb3-8280-717f7e7b04d4",
+          "desc": "FedRAMP Logo",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "fedramp-logo"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://github.com/GSA/fedramp-automation/raw/master/assets/FedRAMP_LOGO.png"
+            }
+          ]
+        },
+        {
+          "uuid": "2c1747d6-874a-49a2-8488-2fd9735416bf",
+          "desc": "3PAO Logo",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "3pao-logo"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./logo.png",
+              "media-type": "image/png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ]
+        },
+        {
+          "uuid": "d2eb3c18-6754-4e3a-a933-03d289e3fad5",
+          "desc": "The primary authorization boundary diagram.",
+          "rlinks": [
+            {
+              "href": "./diagrams/boundary.png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tSection 9.2, Figure 9-1 Authorization Boundary Diagram (graphic)\n            \tThis should be referenced in the\n               system-characteristics/authorization-boundary/diagram/link/@href flag using a value\n               of \"#d2eb3c18-6754-4e3a-a933-03d289e3fad5\"\n         "
+        },
+        {
+          "uuid": "61081e81-850b-43c1-bf43-1ecbddcb9e7f",
+          "desc": "The primary network diagram.",
+          "rlinks": [
+            {
+              "href": "./diagrams/network.png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tSection 9.4, Figure 9-2 Network Diagram (graphic)\n            \tThis should be referenced in the\n               system-characteristics/network-architecture/diagram/link/@href flag using a value\n               of \"#61081e81-850b-43c1-bf43-1ecbddcb9e7f\"\n         "
+        },
+        {
+          "uuid": "ac5d7535-f3b8-45d3-bf3b-735c82c64547",
+          "desc": "The primary data flow diagram.",
+          "rlinks": [
+            {
+              "href": "./diagrams/dataflow.png"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tSection 10, Figure 10-1 Data Flow Diagram (graphic)\n            \tThis should be referenced in the\n               system-characteristics/data-flow/diagram/link/@href flag using a value\n               of \"#ac5d7535-f3b8-45d3-bf3b-735c82c64547\"\n         "
+        },
+        {
+          "uuid": "090ab379-2089-4830-b9fd-26d0729e22e9",
+          "title": "Policy Title",
+          "desc": "Policy document",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "policy"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./sample_policy.pdf"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Policy Attachment\n         "
+        },
+        {
+          "uuid": "ab300133-d749-4abb-b858-1cd6ffd8af9e",
+          "title": "Policy Title",
+          "desc": "Policy document",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "policy"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./sample_policy.pdf"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Policy Attachment\n         "
+        },
+        {
+          "uuid": "1002a58e-9e11-4aa6-9ab4-2bde52995952",
+          "title": "Procedure Title",
+          "desc": "Procedure document",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "procedure"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./sample_procedure.pdf"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Procedure Attachment\n         "
+        },
+        {
+          "uuid": "4bb1e2e5-261c-4b5c-b22c-e1627c2e8be6",
+          "title": "Procedure Title",
+          "desc": "Procedure document",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "procedure"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./sample_procedure.pdf"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Procedure Attachment\n         "
+        },
+        {
+          "uuid": "90a128ac-c850-48f6-8fff-a55692f80b41",
+          "title": "User's Guide",
+          "desc": "User's Guide",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "user-guide"
+            },
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "guide"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./sample_guide.pdf"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: User's Guide Attachment\n         "
+        },
+        {
+          "uuid": "fab59751-b855-40cb-93c1-492562e20e18",
+          "title": "Privacy Impact Assessment",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "privacy-impact-assessment"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "./pia.docx"
+            }
+          ],
+          "attachments": [
+            {
+              "filename": "pia.docx",
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Privacy Impact Assessment\n         "
+        },
+        {
+          "uuid": "489112e1-57f2-4c29-8dd0-95b1442fbf3b",
+          "title": "Document Title",
+          "desc": "Rules of Behavior",
+          "properties": [
+            {
+              "name": "conformity",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "rules-of-behavior"
+            },
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "rob"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://sample"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Rules of Behavior (ROB)\n         "
+        },
+        {
+          "uuid": "c7860916-f2f4-43aa-b578-d48cf8e6d381",
+          "title": "Document Title",
+          "desc": "Contingency Plan (CP)",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "plan"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://sample"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Contingency Plan (CP) Attachment\n         "
+        },
+        {
+          "uuid": "ab56cf27-0dae-40d6-89b7-d750137309af",
+          "title": "Document Title",
+          "desc": "Configuration Management (CM) Plan",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "plan"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://sample"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Configuration Management (CM) Plan Attachment\n         "
+        },
+        {
+          "uuid": "3f771ab5-8016-4571-98d1-f0fb962e15e2",
+          "title": "Document Title",
+          "desc": "Incident Response (IR) Plan",
+          "properties": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "plan"
+            },
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://sample"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Incident Response (IR) Plan Attachment\n         "
+        },
+        {
+          "uuid": "49fb4631-1da2-41ca-b0b3-e1b1006d4025",
+          "title": "Separation of Duties Matrix",
+          "desc": "Separation of Duties Matrix",
+          "properties": [
+            {
+              "name": "publication",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Date"
+            },
+            {
+              "name": "version",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Document Version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://sample"
+            }
+          ],
+          "attachments": [
+            {
+              "value": "00000000"
+            }
+          ],
+          "remarks": "\n            \tTable 15-1 Attachments: Separation of Duties Matrix Attachment\n         "
+        },
+        {
+          "uuid": "9f1aae37-7359-411f-86c1-768aaab85e63",
+          "title": "FedRAMP High Baseline",
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.0-milestone3/content/fedramp.gov/xml/FedRAMP_HIGH-baseline_profile.xml",
+              "media-type": "application/xml"
+            }
+          ],
+          "remarks": "\n            \tPointer to High baseline content in OSCAL.\n         "
+        },
+        {
+          "uuid": "890170c3-d4fa-4d25-ab96-8e4bf7cc237c",
+          "title": "FedRAMP Moderate Baseline",
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.0-milestone3/content/fedramp.gov/xml/FedRAMP_MODERATE-baseline_profile.xml",
+              "media-type": "application/xml"
+            }
+          ],
+          "remarks": "\n            \tPointer to Moderate baseline content in OSCAL.\n         "
+        },
+        {
+          "uuid": "2acaf846-5496-4d36-8565-9a15b48aef2c",
+          "title": "FedRAMP Low Baseline",
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.0-milestone3/content/fedramp.gov/xml/FedRAMP_LOW-baseline_profile.xml",
+              "media-type": "application/xml"
+            }
+          ],
+          "remarks": "\n            \tPointer to Low baseline content in OSCAL.\n         "
+        }
+      ]
+    }
+  },
+  "Component": null
+}
