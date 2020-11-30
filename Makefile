@@ -3,7 +3,7 @@ all: oscal docx
 
 
 xml: gocomply_fedramp
-	gocomply_fedramp opencontrol https://github.com/ComplianceAsCode/redhat xml/
+	gocomply_fedramp --debug opencontrol https://github.com/ComplianceAsCode/redhat xml/
 
 docx: gocomply_fedramp $(shell ls -d xml/* | sed -e 's/xml/docx/g')
 
