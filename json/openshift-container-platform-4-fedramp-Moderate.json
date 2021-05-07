@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "82a7494e-28a6-4559-9186-ffe7f38c1b68",
+    "uuid": "48fb2df5-a3bf-4926-9149-96a62d4b5c6c",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-06T00:42:07.13+00:00",
+      "last-modified": "2021-05-07T00:43:48.19+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -8684,7 +8684,7 @@
           }
         },
         {
-          "uuid": "d4d65759-0b51-4008-b230-13f0cad39da3",
+          "uuid": "6b0c06fe-c123-491b-bf1f-ad42a542f9d2",
           "control-id": "ra-5",
           "annotations": [
             {
@@ -8705,12 +8705,12 @@
               }
             },
             "ra-5_stmt.b": {
-              "uuid": "32452604-d567-4f57-9297-989800a25777",
+              "uuid": "9e011137-9397-4173-ac6f-6f88b42aaac5",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "df419c09-815a-4da6-b94b-910a483031f0",
+                  "uuid": "0c464f70-c295-4971-b471-013e4b933d4b",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-352\n"
+                  "remarks": "\tThe Compliance Operator [1] scans the host and the platform (OCP)\nconfiguration for software flaws and improper configurations according\nto different compliance benchmarks. It uses OpenSCAP as a backend,\nwhich is a known and certified tool to do such scans.\n\nThe default results are presented by the operator in the form of\nComplianceCheckResults, which are Kubernetes objects. These objects\nare labeled with the appropriate severity of the finding.\n\nIt is also possible to download the raw results which contain\ninformation such as the risk score.\n\n[1] https://docs.openshift.com/container-platform/4.7/security/compliance_operator/compliance-operator-understanding.html#compliance-operator-understanding\n\nhttps://issues.redhat.com/browse/CMP-352\n"
                 }
               }
             },
@@ -8725,12 +8725,12 @@
               }
             },
             "ra-5_stmt.d": {
-              "uuid": "251084fa-f276-473f-814f-ab0b8af395ba",
+              "uuid": "94d2da03-ccca-4650-9e67-12a44abd6fef",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "df419c09-815a-4da6-b94b-910a483031f0",
+                  "uuid": "aabee3ea-5f53-472f-b9ac-5ba579a15aa3",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-352\n"
+                  "remarks": "\tThe Compliance Operator [1] scans the host and the platform (OCP)\nconfiguration for software flaws and improper configurations according\nto different compliance benchmarks. It uses OpenSCAP as a backend,\nwhich is a known and certified tool to do such scans.\n\nThe system presents remediations as ComplianceRemediation objects,\nwhich are Kubernetes objects stored in Etcd. These can be applied\nto remediate findings per organizational policy.\n\n[1] https://docs.openshift.com/container-platform/4.7/security/compliance_operator/compliance-operator-understanding.html#compliance-operator-understanding\n\nhttps://issues.redhat.com/browse/CMP-352\n"
                 }
               }
             },
@@ -9794,23 +9794,23 @@
           }
         },
         {
-          "uuid": "591ef3b8-6fee-4e3f-a241-82278e96a4e7",
+          "uuid": "c751fc0d-ffd4-4080-b216-120e491d4cac",
           "control-id": "sc-2",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "sc-2_stmt": {
-              "uuid": "143cf0ca-c117-4586-a1cd-91947e3f1a18",
+              "uuid": "60e89917-0f14-4362-95e3-35e5f831b47e",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "fa072737-5175-4d0d-a2ab-e535883b1181",
+                  "uuid": "13ffcc9c-8538-42e7-934a-0da2d2dc6f5b",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer is responsible for separating user functionality\nincluding user interface services) from information system management\nfunctionality. A successful control response will indicate how user\nand management functionality access is separated.\n\nA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-429\n"
+                  "remarks": "\tOpenShift uses the concept of namespaces or projects to ensure\nworkload isolation. The OpenShift platform comes with several\ndefault projects that start with the \"openshift-\" prefix. [1] Such\nprojects, host functionality that's critical for the cluster's\noperations. Only Cluser Administrators have access to these namespaces,\nwhich ensures that regular users don't hace access to cluster\nmanagement functionality.\n\nBesides the aforementioned project separation, user permissions are also\nmanaged via RBAC, which is enabled by default [2]. This prevents unprivileged\nusers from using privileged functionality.\n\n[1] https://docs.openshift.com/container-platform/4.7/applications/projects/working-with-projects.html\n[2] https://docs.openshift.com/container-platform/4.7/authentication/using-rbac.html\n"
                 }
               }
             }

@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="9a90618f-e421-4779-a4a8-597e957d5eea">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="362371f3-e53a-47ee-acee-260b49f4988e">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-05-06T00:42:00.21+00:00</last-modified>
+    <last-modified>2021-05-07T00:43:39.76+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -3631,7 +3631,7 @@ are outside the scope of OpenShift configuration.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="d4d65759-0b51-4008-b230-13f0cad39da3" control-id="ra-5">
+    <implemented-requirement uuid="6b0c06fe-c123-491b-bf1f-ad42a542f9d2" control-id="ra-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="ra-5_stmt.a" uuid="f17a8ec1-9d5d-4580-bbc2-b4353fee950c">
         <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="434e2e8f-99a5-403b-af5d-747b508b2d22">
@@ -3641,10 +3641,22 @@ applicable to the configuration of OpenShift.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ra-5_stmt.b" uuid="32452604-d567-4f57-9297-989800a25777">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="df419c09-815a-4da6-b94b-910a483031f0">
+      <statement statement-id="ra-5_stmt.b" uuid="9e011137-9397-4173-ac6f-6f88b42aaac5">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="0c464f70-c295-4971-b471-013e4b933d4b">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Progress can be tracked via:
+          <remarks><p>The Compliance Operator [1] scans the host and the platform (OCP)
+configuration for software flaws and improper configurations according
+to different compliance benchmarks. It uses OpenSCAP as a backend,
+which is a known and certified tool to do such scans.
+
+The default results are presented by the operator in the form of
+ComplianceCheckResults, which are Kubernetes objects. These objects
+are labeled with the appropriate severity of the finding.
+
+It is also possible to download the raw results which contain
+information such as the risk score.
+
+[1] https://docs.openshift.com/container-platform/4.7/security/compliance_operator/compliance-operator-understanding.html#compliance-operator-understanding
 
 https://issues.redhat.com/browse/CMP-352
 </p></remarks>
@@ -3658,10 +3670,19 @@ applicable to the configuration of OpenShift.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ra-5_stmt.d" uuid="251084fa-f276-473f-814f-ab0b8af395ba">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="df419c09-815a-4da6-b94b-910a483031f0">
+      <statement statement-id="ra-5_stmt.d" uuid="94d2da03-ccca-4650-9e67-12a44abd6fef">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="aabee3ea-5f53-472f-b9ac-5ba579a15aa3">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Progress can be tracked via:
+          <remarks><p>The Compliance Operator [1] scans the host and the platform (OCP)
+configuration for software flaws and improper configurations according
+to different compliance benchmarks. It uses OpenSCAP as a backend,
+which is a known and certified tool to do such scans.
+
+The system presents remediations as ComplianceRemediation objects,
+which are Kubernetes objects stored in Etcd. These can be applied
+to remediate findings per organizational policy.
+
+[1] https://docs.openshift.com/container-platform/4.7/security/compliance_operator/compliance-operator-understanding.html#compliance-operator-understanding
 
 https://issues.redhat.com/browse/CMP-352
 </p></remarks>

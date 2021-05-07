@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="85025fa6-5bc9-4c57-b914-96bc5c43d3a8">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="88204d9a-841b-475d-a445-70096c4927dd">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-05-06T00:42:00.30+00:00</last-modified>
+    <last-modified>2021-05-07T00:43:39.86+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -5981,7 +5981,7 @@ are outside the scope of OpenShift configuration.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="d4d65759-0b51-4008-b230-13f0cad39da3" control-id="ra-5">
+    <implemented-requirement uuid="6b0c06fe-c123-491b-bf1f-ad42a542f9d2" control-id="ra-5">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
       <statement statement-id="ra-5_stmt.a" uuid="f17a8ec1-9d5d-4580-bbc2-b4353fee950c">
         <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="434e2e8f-99a5-403b-af5d-747b508b2d22">
@@ -5991,10 +5991,22 @@ applicable to the configuration of OpenShift.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ra-5_stmt.b" uuid="32452604-d567-4f57-9297-989800a25777">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="df419c09-815a-4da6-b94b-910a483031f0">
+      <statement statement-id="ra-5_stmt.b" uuid="9e011137-9397-4173-ac6f-6f88b42aaac5">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="0c464f70-c295-4971-b471-013e4b933d4b">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Progress can be tracked via:
+          <remarks><p>The Compliance Operator [1] scans the host and the platform (OCP)
+configuration for software flaws and improper configurations according
+to different compliance benchmarks. It uses OpenSCAP as a backend,
+which is a known and certified tool to do such scans.
+
+The default results are presented by the operator in the form of
+ComplianceCheckResults, which are Kubernetes objects. These objects
+are labeled with the appropriate severity of the finding.
+
+It is also possible to download the raw results which contain
+information such as the risk score.
+
+[1] https://docs.openshift.com/container-platform/4.7/security/compliance_operator/compliance-operator-understanding.html#compliance-operator-understanding
 
 https://issues.redhat.com/browse/CMP-352
 </p></remarks>
@@ -6008,10 +6020,19 @@ applicable to the configuration of OpenShift.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ra-5_stmt.d" uuid="251084fa-f276-473f-814f-ab0b8af395ba">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="df419c09-815a-4da6-b94b-910a483031f0">
+      <statement statement-id="ra-5_stmt.d" uuid="94d2da03-ccca-4650-9e67-12a44abd6fef">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="aabee3ea-5f53-472f-b9ac-5ba579a15aa3">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Progress can be tracked via:
+          <remarks><p>The Compliance Operator [1] scans the host and the platform (OCP)
+configuration for software flaws and improper configurations according
+to different compliance benchmarks. It uses OpenSCAP as a backend,
+which is a known and certified tool to do such scans.
+
+The system presents remediations as ComplianceRemediation objects,
+which are Kubernetes objects stored in Etcd. These can be applied
+to remediate findings per organizational policy.
+
+[1] https://docs.openshift.com/container-platform/4.7/security/compliance_operator/compliance-operator-understanding.html#compliance-operator-understanding
 
 https://issues.redhat.com/browse/CMP-352
 </p></remarks>
@@ -6740,20 +6761,25 @@ applicable to the configuration of OpenShift.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="591ef3b8-6fee-4e3f-a241-82278e96a4e7" control-id="sc-2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-2_stmt" uuid="143cf0ca-c117-4586-a1cd-91947e3f1a18">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="fa072737-5175-4d0d-a2ab-e535883b1181">
+    <implemented-requirement uuid="c751fc0d-ffd4-4080-b216-120e491d4cac" control-id="sc-2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="sc-2_stmt" uuid="60e89917-0f14-4362-95e3-35e5f831b47e">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="13ffcc9c-8538-42e7-934a-0da2d2dc6f5b">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>The customer is responsible for separating user functionality
-including user interface services) from information system management
-functionality. A successful control response will indicate how user
-and management functionality access is separated.
+          <remarks><p>OpenShift uses the concept of namespaces or projects to ensure
+workload isolation. The OpenShift platform comes with several
+default projects that start with the "openshift-" prefix. [1] Such
+projects, host functionality that's critical for the cluster's
+operations. Only Cluser Administrators have access to these namespaces,
+which ensures that regular users don't hace access to cluster
+management functionality.
 
-A complete control response is planned. Engineering progress can be
-tracked via:
+Besides the aforementioned project separation, user permissions are also
+managed via RBAC, which is enabled by default [2]. This prevents unprivileged
+users from using privileged functionality.
 
-https://issues.redhat.com/browse/CMP-429
+[1] https://docs.openshift.com/container-platform/4.7/applications/projects/working-with-projects.html
+[2] https://docs.openshift.com/container-platform/4.7/authentication/using-rbac.html
 </p></remarks>
         </by-component>
       </statement>
