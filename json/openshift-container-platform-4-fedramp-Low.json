@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "27cf97c0-d8d8-49f5-b76e-a9fdfe7059f7",
+    "uuid": "d822c822-e37c-40a3-bf1c-0973d9f6ac23",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-07T00:43:48.06+00:00",
+      "last-modified": "2021-05-08T00:43:06.44+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -5523,23 +5523,23 @@
           }
         },
         {
-          "uuid": "7c68bba4-5d9c-44f2-aad2-9eb8cadced49",
+          "uuid": "10c7d043-df3b-4f14-b4b0-ea322123cb84",
           "control-id": "sc-5",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "sc-5_stmt": {
-              "uuid": "03ef8862-55de-4b8e-89ac-f0803b4547c7",
+              "uuid": "878a1cd5-c175-4303-9795-c83ed4fcbf57",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "d12aca87-769c-4968-9b71-135e5bb3a73e",
+                  "uuid": "8f39af36-e3b1-4ada-87d5-648baf89e409",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-427\n"
+                  "remarks": "\tDepending on the exposure of the workloads or the component that's\nintended to be protected, OpenShift offers several settings to enforce\nrate-limiting and protection against denial of service attacks.\n\nIt is recommended that all workloads in the system establish appropriate\nresource requests and limits to avoid resource starvation of critical\nworkloads. Appropriate configurations exist to manage resource\novercommitment [1]. Ensure that appropriate quotas are set in each\nrelevant project [2], or establish a cluster quota to limit the resources\nthat workloads can take [3].\n\nOpenShift also allows the configuration of egress and ingress traffic\nfor individual workloads [4]. This ensures that workloads don't get\noverwhelmed by incoming traffic, and that they don't act as Denial\nof Service agents.\n\nIf a workload is to be exposed externally, it is recommended that it's\nbehind an OpenShift Route. Routes allow for the configuration of several\nsecurity attributes, but most relevant to this control is the rate-limiting\nsettings that it allows to configure in the form of annotations. configuring\nrate-limiting settings for a workload exposed on a route not only protects\nthe workload itself, but also ensures that the target workload doesn't\ninterfere with other workloads placed on the same node or set of nodes.\n\nOn the other hand, OpenShift's API is configured with the Kubernetes API\nPriority \u0026amp; Fairness feature enabled by default. This feature allows for\nfine-grained configuration of the handling of incoming requests. [6]\nThis way it's possible to control how the cluster will react on an\noverload situation. By default, OpenShift has a catch-all configuration\nthat classifies every request.\n\nFinally, regardless of the environment that OpenShift is deployed in,\nit is assumed that there is a load balancer or load balancing service\nhandling requests for the OpenShift API. This provides redundancy and\nextra protection when dealing with Denial of Service attacks.\n\n[1] https://docs.openshift.com/container-platform/4.7/nodes/clusters/nodes-cluster-overcommit.html\n[2] https://docs.openshift.com/container-platform/4.7/applications/quotas/quotas-setting-per-project.html\n[3] https://docs.openshift.com/container-platform/4.7/applications/quotas/quotas-setting-across-multiple-projects.html\n[4] https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-configuring.html#nodes-pods-configuring-bandwidth_nodes-pods-configuring\n[5] https://docs.openshift.com/container-platform/4.7/networking/routes/route-configuration.html#nw-route-specific-annotations_route-configuration\n[6] https://kubernetes.io/docs/concepts/cluster-administration/flow-control/\n\nhttps://issues.redhat.com/browse/CMP-427\n"
                 }
               }
             }

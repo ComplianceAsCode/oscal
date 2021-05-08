@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="362371f3-e53a-47ee-acee-260b49f4988e">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="eeb6214f-7cde-4f65-8756-f8798d4c7e07">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-05-07T00:43:39.76+00:00</last-modified>
+    <last-modified>2021-05-08T00:43:00.53+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -4052,13 +4052,53 @@ applicable to the configuration of OpenShift.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="7c68bba4-5d9c-44f2-aad2-9eb8cadced49" control-id="sc-5">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-5_stmt" uuid="03ef8862-55de-4b8e-89ac-f0803b4547c7">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="d12aca87-769c-4968-9b71-135e5bb3a73e">
+    <implemented-requirement uuid="10c7d043-df3b-4f14-b4b0-ea322123cb84" control-id="sc-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="sc-5_stmt" uuid="878a1cd5-c175-4303-9795-c83ed4fcbf57">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="8f39af36-e3b1-4ada-87d5-648baf89e409">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>Depending on the exposure of the workloads or the component that's
+intended to be protected, OpenShift offers several settings to enforce
+rate-limiting and protection against denial of service attacks.
+
+It is recommended that all workloads in the system establish appropriate
+resource requests and limits to avoid resource starvation of critical
+workloads. Appropriate configurations exist to manage resource
+overcommitment [1]. Ensure that appropriate quotas are set in each
+relevant project [2], or establish a cluster quota to limit the resources
+that workloads can take [3].
+
+OpenShift also allows the configuration of egress and ingress traffic
+for individual workloads [4]. This ensures that workloads don't get
+overwhelmed by incoming traffic, and that they don't act as Denial
+of Service agents.
+
+If a workload is to be exposed externally, it is recommended that it's
+behind an OpenShift Route. Routes allow for the configuration of several
+security attributes, but most relevant to this control is the rate-limiting
+settings that it allows to configure in the form of annotations. configuring
+rate-limiting settings for a workload exposed on a route not only protects
+the workload itself, but also ensures that the target workload doesn't
+interfere with other workloads placed on the same node or set of nodes.
+
+On the other hand, OpenShift's API is configured with the Kubernetes API
+Priority &amp; Fairness feature enabled by default. This feature allows for
+fine-grained configuration of the handling of incoming requests. [6]
+This way it's possible to control how the cluster will react on an
+overload situation. By default, OpenShift has a catch-all configuration
+that classifies every request.
+
+Finally, regardless of the environment that OpenShift is deployed in,
+it is assumed that there is a load balancer or load balancing service
+handling requests for the OpenShift API. This provides redundancy and
+extra protection when dealing with Denial of Service attacks.
+
+[1] https://docs.openshift.com/container-platform/4.7/nodes/clusters/nodes-cluster-overcommit.html
+[2] https://docs.openshift.com/container-platform/4.7/applications/quotas/quotas-setting-per-project.html
+[3] https://docs.openshift.com/container-platform/4.7/applications/quotas/quotas-setting-across-multiple-projects.html
+[4] https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-configuring.html#nodes-pods-configuring-bandwidth_nodes-pods-configuring
+[5] https://docs.openshift.com/container-platform/4.7/networking/routes/route-configuration.html#nw-route-specific-annotations_route-configuration
+[6] https://kubernetes.io/docs/concepts/cluster-administration/flow-control/
 
 https://issues.redhat.com/browse/CMP-427
 </p></remarks>

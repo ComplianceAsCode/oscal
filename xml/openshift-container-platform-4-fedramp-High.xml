@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="51abf5bc-ec34-4739-9b2f-e220d7436941">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="b8da7337-f440-4471-ac67-801c6f71b965">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-05-07T00:43:40.03+00:00</last-modified>
+    <last-modified>2021-05-08T00:43:00.75+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -581,10 +581,10 @@
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="71608a8a-d089-4954-b51b-2221f505ec2c" control-id="ac-2.1">
+    <implemented-requirement uuid="ff722640-4563-4e3d-98ab-c5b1e459a5db" control-id="ac-2.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-2.1_stmt" uuid="d810afaf-6285-4d35-b93b-dfaaee5a334a">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c1564796-d940-43cf-a045-b462f51cee98">
+      <statement statement-id="ac-2.1_stmt" uuid="a6fb50ed-8e46-4953-a395-ba358424978e">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="62d80fe1-12ef-4940-a895-48a965dbaf02">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>OpenShift components of the system support automated
 management through monitoring of accounts and system
@@ -597,14 +597,18 @@ system events. This functionality would fall to third
 party software such as an Identity Provider (IdP),
 Active Directory (MSAD), LDAP, etc.
 
-To configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/identity_providers/configuring-ldap-identity-provider.html#configuring-ldap-identity-provider</p></remarks>
+To configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/understanding-identity-provider.html
+
+Note that the using the htpasswd IDP type cannot cover this
+control, therefore using httpasswd based IDPs should render
+the system non-compliant.</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="15663a5f-9548-43f5-90fa-9a9ee651356c" control-id="ac-2.2">
+    <implemented-requirement uuid="748c05dc-acc1-46f2-b948-feb301470e34" control-id="ac-2.2">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-2.2_stmt" uuid="eb582557-e0f9-48af-9d91-00a0842824b2">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="91d5bc1e-6bdc-4f6d-9322-c41a68573f5c">
+      <statement statement-id="ac-2.2_stmt" uuid="600cba59-d68a-4c3e-85cc-226eab9ad010">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="9aa5ba5f-6af2-4618-b46e-2c52abb205b8">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>OpenShift does not have the capability to create
 guest/anonymous accounts or temporary accounts. Any
@@ -612,14 +616,18 @@ external emergency or temporary accounts will be
 inherited from, and managed by, an external
 identity service (e.g. Active Directory, LDAP, etc.)
 
-To configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/identity_providers/configuring-ldap-identity-provider.html#configuring-ldap-identity-provider</p></remarks>
+To configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/understanding-identity-provider.html
+
+It is recommended to grant the cluster-admin clusterrole
+to a user or a group backed by an IDP and subsequently
+remove the kubeadmin user as described in https://docs.openshift.com/container-platform/latest/authentication/remove-kubeadmin.html</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="e20a5a38-dec4-4fec-b76f-cf4e06a8ba5f" control-id="ac-2.3">
+    <implemented-requirement uuid="8f1190bf-86ec-48b0-a26e-d39c8cf53d09" control-id="ac-2.3">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-2.3_stmt" uuid="721acfa4-a4e8-4359-8975-ef95f0549b8e">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="81b3fad1-f504-4d3a-9cf6-a871edafda17">
+      <statement statement-id="ac-2.3_stmt" uuid="085a3b99-f3dc-4d07-a30e-4a6c345006ba">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f7bcad17-7dbf-4f6b-9e52-67256cd8c439">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>OpenShift does not have the ability to automatically
 disable user accounts. Automatic disabling of these
@@ -627,14 +635,18 @@ accounts must happen at the centralized account
 management level; for example, within LDAP, Red Hat
 IdM, or Active Directory.
 
-To configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/identity_providers/configuring-ldap-identity-provider.html#configuring-ldap-identity-provider</p></remarks>
+To configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/understanding-identity-provider.html
+
+Note that the using the htpasswd IDP type cannot cover this
+control, therefore using httpasswd based IDPs should render
+the system non-compliant.</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="ab1bfdb4-b28e-473f-8f0e-7fca979a658e" control-id="ac-2.4">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-2.4_stmt" uuid="ff9934b1-570a-4ace-9514-3a96da164797">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="6937e246-fb33-4df9-9dc6-e93b469a1250">
+    <implemented-requirement uuid="3c897090-0745-43da-9145-84b0df56943f" control-id="ac-2.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-2.4_stmt" uuid="2c263185-8af7-4ef2-a254-a77ff39d0b3e">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="00f7561e-d613-48c5-a4eb-84b736a94866">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>To meet FISMA requirements, OpenShift must be configured
 to use centralized authentication (e.g. LDAP, Red Hat IdM,
@@ -643,24 +655,50 @@ modification, enabling, disabling, and removal actions is
 the responsibility of the centralized service. Additionally,
 notification of organization-defined personnel or roles is
 also the responsibility of the centralized authentication
-service.</p></remarks>
-        </by-component>
-      </statement>
-    </implemented-requirement>
-    <implemented-requirement uuid="2e0d4e7a-3946-4faf-bf32-e7b97b978e7b" control-id="ac-2.5">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-2.5_stmt" uuid="b0d83af7-15be-479a-bf3d-c1ad429b569c">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="6cd6beeb-9176-4ef1-9609-6a0442dc4046">
-          <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response for AC-2 (5) is planned. Engineering
-progress can be tracked via:
+service.
 
-https://issues.redhat.com/browse/CMP-82</p></remarks>
+OpenShift automatically audits creation of the Identity
+API objects which subsequently allow to match the creation
+of the OpenShift identity to the external IDP identity. See
+https://docs.openshift.com/container-platform/latest/security/audit-log-view.html
+for documentation on how to view the audit logs and
+https://docs.openshift.com/container-platform/latest/security/audit-log-policy-config.html
+for information on configuring the audit logging.
+
+Note that the using the htpasswd IDP type cannot cover this
+control, therefore using httpasswd based IDPs should render
+the system non-compliant.</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="215d4c67-0389-4250-8a9d-94e5768dc97c" control-id="ac-2.7">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+    <implemented-requirement uuid="a2574f80-c398-495c-abf9-89ddc8e1442a" control-id="ac-2.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-2.5_stmt" uuid="5ecb9421-d75c-4a84-81af-c7d2cd7dab93">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="8e19d992-756b-481b-af2c-16311dade8a3">
+          <description><p>Describe how is the software component satisfying the control.</p></description>
+          <remarks><p>To meet the requirements, OpenShift must be configured
+to use centralized authentication via an IDP. The account
+inactivity timeout can be either configured per OAuth client
+as described here:
+https://docs.openshift.com/container-platform/latest/authentication/configuring-oauth-clients.html#oauth-token-inactivity-timeout_configuring-oauth-clients
+
+Or globally (this example uses 600s timeout):
+$ oc patch oauth.config cluster -p '{"spec":{"tokenConfig":{"accessTokenInactivityTimeout": "600s"}}}' --type='merge'
+
+Note that the global configuration does not change the configuration
+of the oauthclient objects, so for proper compliance check, both must
+be audited.
+
+Also note that prior to OpenShift 4.8, changing the global oauth.config
+object triggers a rollout of the kube-apiserver which can take up
+to 15 minutes. You can watch the kube-apiserver rollout with
+"oc get co kube-apiserver". Once the rollout finishes, the "Progressing"
+column will say "False".</p></remarks>
+        </by-component>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement uuid="b1f63fed-9508-4d2d-8f77-2eb9ae53155a" control-id="ac-2.7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
       <statement statement-id="ac-2.7_stmt.a" uuid="cb087f11-2c7b-4215-9494-6f2d577fbafa">
         <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="21350fe2-0e01-4b99-894d-c42aa132f9d8">
           <description><p>Describe how is the software component satisfying the control.</p></description>
@@ -701,26 +739,37 @@ longer appropriate is an organizational control outside the scope of OpenShift.<
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="2a6b5a09-c3a0-4009-9f0f-edeca0282466" control-id="ac-2.9">
+    <implemented-requirement uuid="97784d80-a73e-4782-a3ef-9db10af5e218" control-id="ac-2.9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-2.9_stmt" uuid="088f54b2-99bc-4179-b6fb-62a409ca203e">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="1e243f06-367c-4ba3-8ef9-12959c75d0b3">
-          <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>This control is applicable to the identity service provider
-and outside the scope of OpenShift configuration.</p></remarks>
-        </by-component>
-      </statement>
-    </implemented-requirement>
-    <implemented-requirement uuid="75e3c63a-6cb3-440b-8d80-e09bf7200e6a" control-id="ac-2.10">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
-      <statement statement-id="ac-2.10_stmt" uuid="f39028f7-2123-499f-b93c-893d702db421">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="49fc7330-de6e-4102-9900-72f2af447fbd">
+      <statement statement-id="ac-2.9_stmt" uuid="0a344c50-0c93-4691-8e23-b757c9b17e2e">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="7940c646-b463-4606-a366-d2d8b1ee7b1f">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>OpenShift does not have the concept of group accounts.
 
 Should the organization allow shared credentials, the
 creation and management of such would fall under the scope
-of operating the shared identity service and not OpenShift.</p></remarks>
+of operating the shared identity service and not OpenShift.
+
+It is recommended to grant the cluster-admin clusterrole
+to a user or a group backed by an IDP and subsequently
+remove the kubeadmin user as described in https://docs.openshift.com/container-platform/latest/authentication/remove-kubeadmin.html</p></remarks>
+        </by-component>
+      </statement>
+    </implemented-requirement>
+    <implemented-requirement uuid="59072794-aaca-4c84-a8d4-fb6f96c5f0a9" control-id="ac-2.10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-2.10_stmt" uuid="6580a6a9-d644-416b-9c7c-15ad98e03b3c">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="7940c646-b463-4606-a366-d2d8b1ee7b1f">
+          <description><p>Describe how is the software component satisfying the control.</p></description>
+          <remarks><p>OpenShift does not have the concept of group accounts.
+
+Should the organization allow shared credentials, the
+creation and management of such would fall under the scope
+of operating the shared identity service and not OpenShift.
+
+It is recommended to grant the cluster-admin clusterrole
+to a user or a group backed by an IDP and subsequently
+remove the kubeadmin user as described in https://docs.openshift.com/container-platform/latest/authentication/remove-kubeadmin.html</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
@@ -740,36 +789,35 @@ https://docs.openshift.com/container-platform/latest/authentication/understandin
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="f87599d6-cdda-44c8-a492-0a03ce2512da" control-id="ac-2.12">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-2.12_stmt.a" uuid="3e81fc69-33f7-479e-bfd3-ea0347fe65ff">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="6081c351-b18f-4343-8345-f7972bf41f8d">
+    <implemented-requirement uuid="4178e1da-9fe9-4d72-ba9b-9bda8111257f" control-id="ac-2.12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-2.12_stmt.a" uuid="9a522119-ae40-4c88-9e80-37d434a5280c">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="641b6d53-f3e3-4346-be18-60a5d09e02aa">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response for AC-2(12)(a) is planned. Engineering
-progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-259</p></remarks>
+          <remarks><p>Monitoring of atypical use is outside of the scope of OpenShift configuration.
+However, setting up log forwarding can help analyze the data for suspicious
+activity. Please refer to
+https://docs.openshift.com/container-platform/latest/logging/cluster-logging-external.html
+to learn more about setting up secure log forwarding.</p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ac-2.12_stmt.b" uuid="bded1b14-61c2-475a-b9a5-925cfdb9c421">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="bc5978cb-1d46-4568-8533-5ad7f0b52d7e">
+      <statement statement-id="ac-2.12_stmt.b" uuid="6d674fd6-1bf3-43b3-affc-bccee1179fe6">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="641b6d53-f3e3-4346-be18-60a5d09e02aa">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response for AC-2(12)(b) is planned. Engineering
-progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-259</p></remarks>
+          <remarks><p>Monitoring of atypical use is outside of the scope of OpenShift configuration.
+However, setting up log forwarding can help analyze the data for suspicious
+activity. Please refer to
+https://docs.openshift.com/container-platform/latest/logging/cluster-logging-external.html
+to learn more about setting up secure log forwarding.</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="9acf0cc8-f955-4bdc-b6ba-168f06052b5e" control-id="ac-2.13">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-2.13_stmt" uuid="f102a128-ddfb-41e6-b2d0-93af2e08babd">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="74cf5a18-ead4-4dc2-a5ef-b0e174d6435f">
+    <implemented-requirement uuid="2640c42d-3341-493e-96ab-b872ec4e4961" control-id="ac-2.13">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-2.13_stmt" uuid="16b73d3f-8850-4224-a910-dfa99f5104a0">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="fd765f65-df8d-4b6d-bd6d-cf0d4e0afd70">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response for AC-2(13) is planned. Engineering
-progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-211</p></remarks>
+          <remarks><p>AC-2 (13) is an organizational control outside the scope of OpenShift configuration.</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
@@ -7918,68 +7966,120 @@ users from using privileged functionality.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="4585b1a9-f2b6-47c5-9ea1-fe85860e03b5" control-id="sc-3">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-3_stmt" uuid="47370f6d-b791-4508-9f02-15d432b516ca">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="49b6197f-11f4-40fb-b3fb-0086caf4bae7">
+    <implemented-requirement uuid="5db7d707-3d1c-4c58-9650-2e51f1c7394c" control-id="sc-3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="sc-3_stmt" uuid="b7fa02b2-1c35-42e2-b34a-05689fb28db3">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="67db1db2-4d8c-4973-98a4-08c20a6a5d0b">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>The customer is responsible for deployment utilizing namespaces,
-host roles and other features as well as policies and procedures
-to implement and ensure continued isolation of security functions
-from non-security functions.
+          <remarks><p>OpenShift uses the concept of namespaces or projects to ensure
+workload isolation. The OpenShift platform comes with several
+default projects that start with the "openshift-" prefix. [1] Such
+projects, host functionality that's critical for the cluster's
+operations. Only Cluser Administrators have access to these namespaces,
+which ensures that regular users don't hace access to cluster
+management functionality.
 
-A complete control response is planned. Engineering progress can be
-tracked via:
+The namespace/project functionality can't be turned off.
 
-https://issues.redhat.com/browse/CMP-467
+[1] https://docs.openshift.com/container-platform/4.7/applications/projects/working-with-projects.html
 </p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="96f7fae4-b1c4-4625-92ac-3353f07bb6ca" control-id="sc-4">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-4_stmt" uuid="deb25b8f-b7c0-4ffc-87c3-ddb3e0e9e98b">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="617b39ae-8abc-4fb0-9c00-c50746b0d781">
+    <implemented-requirement uuid="0ea7752b-16dc-44c5-b8a2-d8bc1323f5e8" control-id="sc-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="sc-4_stmt" uuid="75276e77-5796-4486-871b-a98b19fba24a">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="0c1c6a8a-8576-4c14-b662-9da7eeb2d05a">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>The customer is responsible for preventing unauthorized and
-unintended information transfer via shared system resources. A
-successful control response will discuss how this is prevented.
+          <remarks><p>OpenShift namespaces/projects are used to isolate resources
+in the cluster. If a Secret or a ConfigMap object exists
+in the cluster, it will only be accessible by other resources
+on that same namespace. Only users with explicit access to a
+namespace are able to access those objects.
 
-A complete control response is planned. Engineering progress can be
-tracked via:
+Accidental exposure of secrets is prevented by the Kubelet itself,
+since it's responsible of deleting the secret once no
+workload is using it [1]
 
-https://issues.redhat.com/browse/CMP-428
+[1] https://kubernetes.io/docs/concepts/configuration/secret/#protections
 </p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="7c68bba4-5d9c-44f2-aad2-9eb8cadced49" control-id="sc-5">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-5_stmt" uuid="03ef8862-55de-4b8e-89ac-f0803b4547c7">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="d12aca87-769c-4968-9b71-135e5bb3a73e">
+    <implemented-requirement uuid="10c7d043-df3b-4f14-b4b0-ea322123cb84" control-id="sc-5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="sc-5_stmt" uuid="878a1cd5-c175-4303-9795-c83ed4fcbf57">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="8f39af36-e3b1-4ada-87d5-648baf89e409">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>Depending on the exposure of the workloads or the component that's
+intended to be protected, OpenShift offers several settings to enforce
+rate-limiting and protection against denial of service attacks.
+
+It is recommended that all workloads in the system establish appropriate
+resource requests and limits to avoid resource starvation of critical
+workloads. Appropriate configurations exist to manage resource
+overcommitment [1]. Ensure that appropriate quotas are set in each
+relevant project [2], or establish a cluster quota to limit the resources
+that workloads can take [3].
+
+OpenShift also allows the configuration of egress and ingress traffic
+for individual workloads [4]. This ensures that workloads don't get
+overwhelmed by incoming traffic, and that they don't act as Denial
+of Service agents.
+
+If a workload is to be exposed externally, it is recommended that it's
+behind an OpenShift Route. Routes allow for the configuration of several
+security attributes, but most relevant to this control is the rate-limiting
+settings that it allows to configure in the form of annotations. configuring
+rate-limiting settings for a workload exposed on a route not only protects
+the workload itself, but also ensures that the target workload doesn't
+interfere with other workloads placed on the same node or set of nodes.
+
+On the other hand, OpenShift's API is configured with the Kubernetes API
+Priority &amp; Fairness feature enabled by default. This feature allows for
+fine-grained configuration of the handling of incoming requests. [6]
+This way it's possible to control how the cluster will react on an
+overload situation. By default, OpenShift has a catch-all configuration
+that classifies every request.
+
+Finally, regardless of the environment that OpenShift is deployed in,
+it is assumed that there is a load balancer or load balancing service
+handling requests for the OpenShift API. This provides redundancy and
+extra protection when dealing with Denial of Service attacks.
+
+[1] https://docs.openshift.com/container-platform/4.7/nodes/clusters/nodes-cluster-overcommit.html
+[2] https://docs.openshift.com/container-platform/4.7/applications/quotas/quotas-setting-per-project.html
+[3] https://docs.openshift.com/container-platform/4.7/applications/quotas/quotas-setting-across-multiple-projects.html
+[4] https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-configuring.html#nodes-pods-configuring-bandwidth_nodes-pods-configuring
+[5] https://docs.openshift.com/container-platform/4.7/networking/routes/route-configuration.html#nw-route-specific-annotations_route-configuration
+[6] https://kubernetes.io/docs/concepts/cluster-administration/flow-control/
 
 https://issues.redhat.com/browse/CMP-427
 </p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="2ecd1aa4-1ec5-424c-8299-2f1847c78d2d" control-id="sc-6">
+    <implemented-requirement uuid="a106e2d3-5473-42e0-902c-c454525d6306" control-id="sc-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sc-6_stmt" uuid="1c65ffd6-790a-45be-9f96-dae549f63731">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="cb086507-2e55-4213-b420-2f757534f30d">
+      <statement statement-id="sc-6_stmt" uuid="49deed49-0403-44f8-b8bd-6740e774d94d">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="b3fd59d9-c38b-4b4d-8c3c-429a315ed33b">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>The customer is responsible for the protection and availability of
 resources by allocating processor and memory resources by process
-priority and resource availability. A successful control response will
-discuss how resource availability is protected.
+priority and resource availability.
 
-A complete control response is planned. Engineering progress can be
-tracked via:
+It is recommended that all workloads in the system establish appropriate
+resource requests and limits to avoid resource starvation of critical
+workloads. Appropriate configurations exist to manage resource
+overcommitment [1]. Ensure that appropriate quotas are set in each
+relevant project [2], or establish a cluster quota to limit the resources
+that workloads can take [3]. The platform also allows for priorization
+of workloads using priority classes [4].
 
-https://issues.redhat.com/browse/CMP-476
+[1] https://docs.openshift.com/container-platform/4.7/nodes/clusters/nodes-cluster-overcommit.html
+[2] https://docs.openshift.com/container-platform/4.7/applications/quotas/quotas-setting-per-project.html
+[3] https://docs.openshift.com/container-platform/4.7/applications/quotas/quotas-setting-across-multiple-projects.html
+[4] https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-priority.html
 </p></remarks>
         </by-component>
       </statement>
