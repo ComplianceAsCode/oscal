@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "058eeab9-8705-496f-9878-569934f78f06",
+    "uuid": "af0018f9-25cc-4a94-a511-c8ec776e1cdc",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-10T00:45:15.34+00:00",
+      "last-modified": "2021-05-11T00:44:58.87+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -1195,7 +1195,7 @@
           }
         },
         {
-          "uuid": "8ed60360-91df-45c9-bae5-82a7bc31a7b3",
+          "uuid": "a67495ee-414c-4dfc-937f-96bddd920e8f",
           "control-id": "ac-3",
           "annotations": [
             {
@@ -1206,12 +1206,12 @@
           ],
           "statements": {
             "ac-3_stmt": {
-              "uuid": "f0bb86a5-90e9-402d-b977-53a357f35912",
+              "uuid": "990ba005-0c36-4eb5-826b-6ee3fd563e48",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "3144d8bb-1a8d-444d-809e-f38d4290dad3",
+                  "uuid": "52f803b1-4b36-47f3-8b95-e0d2180da0f4",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThis control is met through the use of Role-based Access Control\nfor an OpenShift user. Namespaces should also be configured to\nsandbox users and resources to only the required projects."
+                  "remarks": "\tThis control is inherently met through the use of Role-based Access Control\nfor an OpenShift user. Namespaces should also be configured to\nsandbox users and resources to only the required projects."
                 }
               }
             }
@@ -11778,7 +11778,7 @@
           }
         },
         {
-          "uuid": "c751fc0d-ffd4-4080-b216-120e491d4cac",
+          "uuid": "5139d972-ea86-44fe-88c5-fea6a00a647b",
           "control-id": "sc-2",
           "annotations": [
             {
@@ -11789,19 +11789,19 @@
           ],
           "statements": {
             "sc-2_stmt": {
-              "uuid": "60e89917-0f14-4362-95e3-35e5f831b47e",
+              "uuid": "e4ab636f-2f9c-416e-97e4-343f5cdd9b33",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "13ffcc9c-8538-42e7-934a-0da2d2dc6f5b",
+                  "uuid": "69537285-102a-4417-bc84-1a394d85249f",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tOpenShift uses the concept of namespaces or projects to ensure\nworkload isolation. The OpenShift platform comes with several\ndefault projects that start with the \"openshift-\" prefix. [1] Such\nprojects, host functionality that's critical for the cluster's\noperations. Only Cluser Administrators have access to these namespaces,\nwhich ensures that regular users don't hace access to cluster\nmanagement functionality.\n\nBesides the aforementioned project separation, user permissions are also\nmanaged via RBAC, which is enabled by default [2]. This prevents unprivileged\nusers from using privileged functionality.\n\n[1] https://docs.openshift.com/container-platform/4.7/applications/projects/working-with-projects.html\n[2] https://docs.openshift.com/container-platform/4.7/authentication/using-rbac.html\n"
+                  "remarks": "\tThis is inherently met by OpenShift since uses the concept of\nnamespaces or projects to ensure workload isolation. The\nOpenShift platform comes with several default projects that\nstart with the \"openshift-\" prefix. [1] Such projects, host\nfunctionality that's critical for the cluster's operations.\nOnly Cluser Administrators have access to these namespaces,\nwhich ensures that regular users don't hace access to cluster\nmanagement functionality.\n\nBesides the aforementioned project separation, user permissions are also\nmanaged via RBAC, which is enabled by default [2]. This prevents unprivileged\nusers from using privileged functionality.\n\n[1] https://docs.openshift.com/container-platform/4.7/applications/projects/working-with-projects.html\n[2] https://docs.openshift.com/container-platform/4.7/authentication/using-rbac.html\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "5db7d707-3d1c-4c58-9650-2e51f1c7394c",
+          "uuid": "2a095c7c-420b-4f41-87ec-d81fb8b13638",
           "control-id": "sc-3",
           "annotations": [
             {
@@ -11812,19 +11812,19 @@
           ],
           "statements": {
             "sc-3_stmt": {
-              "uuid": "b7fa02b2-1c35-42e2-b34a-05689fb28db3",
+              "uuid": "1f23e793-2b22-4b2c-acd8-c278dbf4a59c",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "67db1db2-4d8c-4973-98a4-08c20a6a5d0b",
+                  "uuid": "5af4e6ea-44fe-419f-b5ec-34f3648f681d",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tOpenShift uses the concept of namespaces or projects to ensure\nworkload isolation. The OpenShift platform comes with several\ndefault projects that start with the \"openshift-\" prefix. [1] Such\nprojects, host functionality that's critical for the cluster's\noperations. Only Cluser Administrators have access to these namespaces,\nwhich ensures that regular users don't hace access to cluster\nmanagement functionality.\n\nThe namespace/project functionality can't be turned off.\n\n[1] https://docs.openshift.com/container-platform/4.7/applications/projects/working-with-projects.html\n"
+                  "remarks": "\tThis is inherently met by OpenShift since uses the concept of\nnamespaces or projects to ensure workload isolation. The\nOpenShift platform comes with several default projects that\nstart with the \"openshift-\" prefix. [1] Such projects, host\nfunctionality that's critical for the cluster's operations.\nOnly Cluser Administrators have access to these namespaces,\nwhich ensures that regular users don't hace access to cluster\nmanagement functionality.\n\nThe namespace/project functionality can't be turned off.\n\n[1] https://docs.openshift.com/container-platform/4.7/applications/projects/working-with-projects.html\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "0ea7752b-16dc-44c5-b8a2-d8bc1323f5e8",
+          "uuid": "d82447dc-7b98-43eb-920a-a8def4c6492c",
           "control-id": "sc-4",
           "annotations": [
             {
@@ -11835,12 +11835,12 @@
           ],
           "statements": {
             "sc-4_stmt": {
-              "uuid": "75276e77-5796-4486-871b-a98b19fba24a",
+              "uuid": "86438916-94b5-4ebe-a679-df79d46b2015",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "0c1c6a8a-8576-4c14-b662-9da7eeb2d05a",
+                  "uuid": "ae6d5b54-5b10-4d7e-9307-f16c74e7d227",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tOpenShift namespaces/projects are used to isolate resources\nin the cluster. If a Secret or a ConfigMap object exists\nin the cluster, it will only be accessible by other resources\non that same namespace. Only users with explicit access to a\nnamespace are able to access those objects.\n\nAccidental exposure of secrets is prevented by the Kubelet itself,\nsince it's responsible of deleting the secret once no\nworkload is using it [1]\n\n[1] https://kubernetes.io/docs/concepts/configuration/secret/#protections\n"
+                  "remarks": "\tThis is inherently met by OpenShift due to its native constructs.\nOpenShift namespaces/projects are used to isolate resources\nin the cluster. If a Secret or a ConfigMap object exists\nin the cluster, it will only be accessible by other resources\non that same namespace. Only users with explicit access to a\nnamespace are able to access those objects.\n\nAccidental exposure of secrets is prevented by the Kubelet itself,\nsince it's responsible of deleting the secret once no\nworkload is using it [1]\n\n[1] https://kubernetes.io/docs/concepts/configuration/secret/#protections\n"
                 }
               }
             }
