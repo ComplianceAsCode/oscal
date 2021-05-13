@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "fe7d7893-a9be-4cb4-b07c-a6886d9c2f99",
+    "uuid": "ca91390a-0c09-4984-a220-b1cf2ab6daa6",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-12T00:46:13.24+00:00",
+      "last-modified": "2021-05-13T00:53:31.92+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -935,33 +935,33 @@
           }
         },
         {
-          "uuid": "cb84ea2a-aa7f-4ca1-a112-98adda4ef300",
+          "uuid": "ec570783-62b2-4722-9ca8-ac360aac9c88",
           "control-id": "ac-7",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "ac-7_stmt.a": {
-              "uuid": "c6f44433-35ce-4551-8e69-ccd1c6fefbfd",
+              "uuid": "aa7dc906-fb88-411e-9d51-f7db6d92426e",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "3d49b1fd-a0dd-4916-bd70-cd9f161a830e",
+                  "uuid": "f908c066-d3e2-478f-afb4-c044a9d2b4df",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for enforcing a limit on consecutive\nfailed login attempts.\n\nA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-124\n"
+                  "remarks": "\tTo meet the requirements, OpenShift must be configured\nto use centralized authentication via an IDP. The limit\non consecutive failed login attempts must then be set\non the IDP side.\n\nNote that the using the htpasswd IDP type cannot cover this\ncontrol, therefore using httpasswd based IDPs should render\nthe system non-compliant.\n\nTo configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/understanding-identity-provider.html\n"
                 }
               }
             },
             "ac-7_stmt.b": {
-              "uuid": "5b7d9846-3174-4dac-9b78-192e9dbb169c",
+              "uuid": "4978f477-b3f9-4fca-b894-3a718c14e9a5",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "83315ca3-684a-4b34-943a-05edbd9f2a26",
+                  "uuid": "3dfd2161-f702-4cc2-a269-4ca83490c7c5",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for taking required\nactions defined by the customer, upon account lockout.\n\nA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-124\n"
+                  "remarks": "\tTo meet the requirements, OpenShift must be configured\nto use centralized authentication via an IDP. The account\nlock or delay until next login prompt must then be set\non the IDP side.\n\nNote that the using the htpasswd IDP type cannot cover this\ncontrol, therefore using httpasswd based IDPs should render\nthe system non-compliant.\n\nTo configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/understanding-identity-provider.html\nThe customer will be responsible for taking required\nactions defined by the customer, upon account lockout.\n"
                 }
               }
             }
@@ -5612,23 +5612,23 @@
           }
         },
         {
-          "uuid": "03947a78-12ad-4fc8-a947-cd02e7de8fdc",
+          "uuid": "b2767dbc-e0ee-42be-aec5-2878b6f26276",
           "control-id": "sc-13",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "sc-13_stmt": {
-              "uuid": "abbbba59-7105-407d-8a2a-47371938c821",
+              "uuid": "2cc08b25-a2b0-4b7b-a5ff-0671b3811587",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "928ec4b6-10a7-478e-b5fb-95abffde0a9e",
+                  "uuid": "68cb8d9c-5a81-4610-831c-d1a834c8ef16",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-420\n"
+                  "remarks": "\tFIPS mode can be enabled in OpenShift through a flag that\ncan be set at installation time [1]. Follow the relevant\ndocumentation for the applicable cloud provider [2][3][4][5]\nfor more information. But, note that this is also applicable\nin on-prem deployments.\n\n[1] https://docs.openshift.com/container-platform/latest/installing/installing-fips.html\n[2] https://docs.openshift.com/container-platform/latest/installing/installing_aws/installing-aws-government-region.html#installation-configuration-parameters_installing-aws-government-region\n[3] https://docs.openshift.com/container-platform/4.7/installing/installing_azure/installing-azure-customizations.html\n[4] https://docs.openshift.com/container-platform/4.7/installing/installing_gcp/installing-gcp-customizations.html\n"
                 }
               }
             }
@@ -5668,33 +5668,33 @@
           }
         },
         {
-          "uuid": "e8aba7c2-acb4-4654-b1d5-e600a651d4c3",
+          "uuid": "98f91ebf-b7a9-4166-b3f0-9ec33f7e2fde",
           "control-id": "sc-20",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "not-applicable"
             }
           ],
           "statements": {
             "sc-20_stmt.a": {
-              "uuid": "a438c5ea-e94c-44e1-9c84-4d29a630732b",
+              "uuid": "14369734-12bc-43bf-88f4-924ebb5a6b21",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "8d60a17e-515b-4a94-821a-de75ff70ced1",
+                  "uuid": "1512d503-503d-42ac-97e0-5d5c09be74bf",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tOpenShift administrators are responsible for providing\norigin authentication and integrity verification artifacts along\nwith authoritative name resolution data returns in response. A\nsuccessful control response will discuss the technical means used to\naccomplish this.\n\nA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-417\n"
+                  "remarks": "\tOpenShift administrators are responsible for providing\norigin authentication and integrity verification artifacts along\nwith authoritative name resolution data returns in response.\n\nWhen installing the OpenShift Platform on any cloud, or even on\nbaremetal, it's assumed that there is an available DNS service\nthat will host relevant entries that OpenShift needs. [1]\n\nOpenShift administrators will need to configure DNSSEC for their\nservice and should consult their service provider for more details\non this.\n\n[1] https://docs.openshift.com/container-platform/4.6/installing/installing_platform_agnostic/installing-platform-agnostic.html#installation-dns-user-infra_installing-platform-agnostic\n"
                 }
               }
             },
             "sc-20_stmt.b": {
-              "uuid": "3b9bf6aa-8da0-4050-bb86-c3357e8d9f0d",
+              "uuid": "e5587017-52a9-48a1-a657-7cd3993948d2",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "76baf97e-0a1f-4b12-bb26-a59e03124332",
+                  "uuid": "b8378337-afa4-44a8-8344-1ac4f660c3ba",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tOpenShift administrators are responsible for\nproviding means to indicate the security status of child zones and\nenable verification of a chain of trust among parent and child domains.\nA successful control response will discuss the technical means used to\naccomplish this.\n\nA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-417\n"
+                  "remarks": "\tOpenShift administrators are responsible for\nproviding means to indicate the security status of child zones and\nenable verification of a chain of trust among parent and child domains.\n\nWhen installing the OpenShift Platform on any cloud, or even on\nbaremetal, it's assumed that there is an available DNS service\nthat will host relevant entries that OpenShift needs. [1]\n\nOpenShift administrators will need to configure DNSSEC for their\nservice and should consult their service provider for more details\non this.\n\n[1] https://docs.openshift.com/container-platform/4.6/installing/installing_platform_agnostic/installing-platform-agnostic.html#installation-dns-user-infra_installing-platform-agnostic\n"
                 }
               }
             }
@@ -5724,7 +5724,7 @@
           }
         },
         {
-          "uuid": "5fee0dd7-b1f6-4891-98bd-848c114c8822",
+          "uuid": "1a41c3cb-850f-42fc-a78d-c59293595765",
           "control-id": "sc-22",
           "annotations": [
             {
@@ -5735,19 +5735,19 @@
           ],
           "statements": {
             "sc-22_stmt": {
-              "uuid": "81094d0d-abb6-44fe-b96d-302346ffb9a8",
+              "uuid": "cd5e5cef-b674-4609-b9f7-81e1822203e0",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "ec8d8758-4010-4e53-bf8f-07d498fe1433",
+                  "uuid": "f60d3436-4fa4-4e94-8ffc-087582c91f38",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tOpenShift administrators are responsible for ensuring\nservices are fault-tolerant and implement internal/external role\nseparation.\n\nA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-409\n"
+                  "remarks": "\tOpenShift's internal DNS implementation inherently meets this\ncontrol as the CoreDNS instances deployed by the cluster-dns-operator\nare run as a DaemonSet, and hence, run on every node on the cluster. [1]\n\nThis implementation provides adequate fault tolerance since there\nare as many replicas as there are nodes in the cluster. Moreover,\nby default nodes in the cluster are deployed in different availability\nzones on the hosting cloud. This same pattern is recommended for\non-prem deployments.\n\n[1] https://docs.openshift.com/container-platform/latest/networking/dns-operator.html\n\nhttps://issues.redhat.com/browse/CMP-409\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "3acd7bd4-240b-494c-8272-e84c423da259",
+          "uuid": "b526e97a-3d8c-4cfd-b7f6-a051205b1234",
           "control-id": "sc-39",
           "annotations": [
             {
@@ -5758,12 +5758,12 @@
           ],
           "statements": {
             "sc-39_stmt": {
-              "uuid": "5172fcb7-d81e-45a4-83f6-e6231c3cc750",
+              "uuid": "c669865a-352d-47e9-a186-e0ba7972f981",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "5e973918-9963-4200-bcef-aaa99887d3a1",
+                  "uuid": "4023b98a-5b71-45e5-a672-5c275949897c",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe control is met when SELinux and namespaces are enabled and used.\n"
+                  "remarks": "\tOpenShift inherently meets this control since SELinux and namespaces\nare enabled and used.\n"
                 }
               }
             }

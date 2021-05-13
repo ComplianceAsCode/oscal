@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "731c189b-1c1e-4493-8970-19688f6823ee",
+    "uuid": "4a6d29f2-2967-4ad5-9e5a-0227801d2766",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-12T00:46:13.35+00:00",
+      "last-modified": "2021-05-13T00:53:32.04+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -1399,33 +1399,33 @@
           }
         },
         {
-          "uuid": "cb84ea2a-aa7f-4ca1-a112-98adda4ef300",
+          "uuid": "ec570783-62b2-4722-9ca8-ac360aac9c88",
           "control-id": "ac-7",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "ac-7_stmt.a": {
-              "uuid": "c6f44433-35ce-4551-8e69-ccd1c6fefbfd",
+              "uuid": "aa7dc906-fb88-411e-9d51-f7db6d92426e",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "3d49b1fd-a0dd-4916-bd70-cd9f161a830e",
+                  "uuid": "f908c066-d3e2-478f-afb4-c044a9d2b4df",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for enforcing a limit on consecutive\nfailed login attempts.\n\nA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-124\n"
+                  "remarks": "\tTo meet the requirements, OpenShift must be configured\nto use centralized authentication via an IDP. The limit\non consecutive failed login attempts must then be set\non the IDP side.\n\nNote that the using the htpasswd IDP type cannot cover this\ncontrol, therefore using httpasswd based IDPs should render\nthe system non-compliant.\n\nTo configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/understanding-identity-provider.html\n"
                 }
               }
             },
             "ac-7_stmt.b": {
-              "uuid": "5b7d9846-3174-4dac-9b78-192e9dbb169c",
+              "uuid": "4978f477-b3f9-4fca-b894-3a718c14e9a5",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "83315ca3-684a-4b34-943a-05edbd9f2a26",
+                  "uuid": "3dfd2161-f702-4cc2-a269-4ca83490c7c5",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for taking required\nactions defined by the customer, upon account lockout.\n\nA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-124\n"
+                  "remarks": "\tTo meet the requirements, OpenShift must be configured\nto use centralized authentication via an IDP. The account\nlock or delay until next login prompt must then be set\non the IDP side.\n\nNote that the using the htpasswd IDP type cannot cover this\ncontrol, therefore using httpasswd based IDPs should render\nthe system non-compliant.\n\nTo configure an IdP, see https://docs.openshift.com/container-platform/latest/authentication/understanding-identity-provider.html\nThe customer will be responsible for taking required\nactions defined by the customer, upon account lockout.\n"
                 }
               }
             }
@@ -3401,23 +3401,23 @@
           }
         },
         {
-          "uuid": "9811f427-cb9f-4959-839e-c1ad0e3b1f69",
+          "uuid": "97b5e901-55b1-4be7-adc2-18a1b6229afa",
           "control-id": "cm-2.2",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "cm-2.2_stmt": {
-              "uuid": "1a85e226-7846-458e-87aa-daabb3024acb",
+              "uuid": "780350f5-b081-44eb-96ad-e139a6a509a2",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "fbbf585d-7073-4272-9b00-0e9a10603a48",
+                  "uuid": "da9db211-e18b-4679-897a-ca845987ed47",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-262\n"
+                  "remarks": "\tAll of Red Hat OpenShift's control plane components are managed by operators.\nOperators themselves expose functionality and configuration through\ndeclarative objects that can be represented as YAML files, but ultimately\nget stored and persisted in etcd. Due to the declarative nature of\nhow operators work, Red Hat OpenShift inherently meets this requirement as it's\ntrivial and encouraged for administrators to store the YAML files that\nare used to configure the cluster in means that allow for further automation.\nThis goes from the high level control plane components, down to the Operating\nSystem configurations. It's all managed through Kubernetes Objects.\n\nThis allows for keeping the cluster's configuration in git and establishing\na GitOps sort of workflow for configuring the cluster and ensuring that\nconfiguration changes are tracked, audited, and stored securely.\n\nFurthermore, Red Hat Advanced Cluster Manager allows for managing\nmultiple clusters and their configurations centrally and securely [1].\n\nCustomers must then choose what path do they want to take to store their baseline\nconfigurations and enforce their usage.\n\n[1] https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.0/\n"
                 }
               }
             }
@@ -3480,73 +3480,73 @@
           }
         },
         {
-          "uuid": "d5803f5d-c744-42be-8dc1-112e58561dac",
+          "uuid": "93409d96-42be-434a-af3c-d206a8efe8d6",
           "control-id": "cm-3",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "partial"
+              "value": "not-applicable"
             }
           ],
           "statements": {
             "cm-3_stmt.a": {
-              "uuid": "cd86af9e-b2c4-42f9-bd08-622642ee246a",
+              "uuid": "7cac3f3c-e727-4844-b88c-e86511c28a31",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "d2eaeb47-e9d0-47c0-9a11-57510f38c504",
+                  "uuid": "9258c2bd-1531-4542-86e3-275636555c06",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-265\n"
+                  "remarks": "\tThe organization reviewing the types of changes that should be\nconfiguration controlled is out of scope from OpenShift.\n"
                 }
               }
             },
             "cm-3_stmt.b": {
-              "uuid": "55b2e92c-81f2-4fad-b3dd-456c93a1fbac",
+              "uuid": "53fbd110-a9ec-4fe6-a729-f94cdf68c7b6",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "d2eaeb47-e9d0-47c0-9a11-57510f38c504",
+                  "uuid": "b2ca1b4b-fd7c-47da-b4c8-8fed60f9381c",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-265\n"
+                  "remarks": "\tThe organization approving configuration controlled changes\nto the system is out of scope from OpenShift.\n"
                 }
               }
             },
             "cm-3_stmt.c": {
-              "uuid": "684a0521-4ea2-4b94-b6b7-7b7a50b3f2aa",
+              "uuid": "9bf55ad0-1dde-4386-b481-09f3b2c971ce",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "d2eaeb47-e9d0-47c0-9a11-57510f38c504",
+                  "uuid": "1ee8ec77-f297-4466-b56e-ccdfbbebd070",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-265\n"
+                  "remarks": "\tThe organization documented the decisions for configuration changes\nto the system is out of scope from OpenShift.\n"
                 }
               }
             },
             "cm-3_stmt.d": {
-              "uuid": "b1245fb4-2e87-497b-9ad1-8332e3854425",
+              "uuid": "710de0c3-4727-4242-831b-9af138bf9552",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "d2eaeb47-e9d0-47c0-9a11-57510f38c504",
+                  "uuid": "af032225-2510-46c9-ba2c-815a60755322",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-265\n"
+                  "remarks": "\tThe organization implementing approved configuration changes\nto the system is out of scope from OpenShift.\n"
                 }
               }
             },
             "cm-3_stmt.e": {
-              "uuid": "2a387d15-e1e8-4940-bce5-98bf905dd8d1",
+              "uuid": "7230f422-8afb-45d4-b25f-68df5825e2a3",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "d2eaeb47-e9d0-47c0-9a11-57510f38c504",
+                  "uuid": "2d77987d-8558-4f10-b3af-48422ead8c03",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-265\n"
+                  "remarks": "\tThe organization maintaining records of the configuration-controlled\nchanges to the system is out of scope from OpenShift. However,\nOpenShift allows for such capability since all configurations of\nOpenShift are done through operators, which are configured through\nKubernetes objects which can be stored and even version-controlled.\n\nAny change to the system will generate an audit log that allows for\ndetermining when a change is made. And having a GitOps approach to\nmanaging the system allows for tracking the change approvals.\n"
                 }
               }
             },
             "cm-3_stmt.f": {
-              "uuid": "dfaa0f29-9d3f-4979-97ec-a7128d6afa16",
+              "uuid": "3249b32d-2897-4e15-8af1-ff4774c54f11",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "d2eaeb47-e9d0-47c0-9a11-57510f38c504",
+                  "uuid": "cfb0f639-0069-46fc-81bb-1babb7c390fc",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-265\n"
+                  "remarks": "\tThe organization auditing activities related to configuration\nchanges to the system is out of scope from OpenShift. However,\nOpenShift allows for such capability since all configurations of\nOpenShift are done through operators, which are configured through\nKubernetes objects which can be stored and even version-controlled.\n\nAny change to the system will generate an audit log that allows for\ndetermining when a change is made. And having a GitOps approach to\nmanaging the system allows for tracking the change approvals.\n"
                 }
               }
             },
@@ -3609,7 +3609,7 @@
           }
         },
         {
-          "uuid": "6a0f4778-ac03-4417-bb0d-6454f165ebc5",
+          "uuid": "cfd9d7db-4dc4-44cf-ab00-097e6e424e3c",
           "control-id": "cm-5.1",
           "annotations": [
             {
@@ -3620,12 +3620,12 @@
           ],
           "statements": {
             "cm-5.1_stmt": {
-              "uuid": "8495d5df-5f1f-40d8-bb5e-57adf0bb341e",
+              "uuid": "0b6fea0d-6b5c-48cd-a65b-f4a6eaffc48d",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "28aea2d2-60b4-47de-8206-03d1cc256146",
+                  "uuid": "a2908ff3-42e3-4621-88de-4fe055d5cd2f",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Progress can be\ntracked via:\n\nhttps://github.com/ComplianceAsCode/redhat/issues/897\n"
+                  "remarks": "\tOpenShift enforces access restrictions through RBAC, which is\nenabled and enforcing by default [1]. Every action in the system\nis audited with relevant information about the time of the event,\nthe user involved, the source and destination of the action, the\nKubernetes object involved, and the enforcement (RBAC) decision taken\nfor that action.\n\n[1] https://docs.openshift.com/container-platform/latest/authentication/using-rbac.html\n[2] https://docs.openshift.com/container-platform/4.7/security/audit-log-view.html\n"
                 }
               }
             }
@@ -10199,23 +10199,23 @@
           }
         },
         {
-          "uuid": "df5e51eb-966c-402f-98c6-1bc7cb654de8",
+          "uuid": "47f4293b-7769-4407-b08c-59e8b7c2abd2",
           "control-id": "sc-10",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "sc-10_stmt": {
-              "uuid": "49fd79b3-99f8-474f-82f2-797e2fcb4835",
+              "uuid": "e1eb5c62-9ba0-4b03-8fce-5628d901a4c5",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "3fcef049-edaf-49f1-ae92-34545047b7a3",
+                  "uuid": "be209cf2-5f18-45a0-9867-7f662349e5c6",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for terminating network connections\nat the end of the session or after no longer than 30 minutes of\ninactivity. A successful control response will document the technical\nmeans on how this is established.\n\nA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-422\n"
+                  "remarks": "\tThe OpenShift Oauth Server has a setting that enables the termination\nof inactive sessions. The relevant setting is `accessTokenInactivityTimeout`\nand it's possible to configure it under the OAuth object. [1]\nA similar configuration exists in OAuthClient objects. This takes precedence\nover the global OAuth object configuration, so it needs to be verified as\nwell.\n\n[1] https://docs.openshift.com/container-platform/4.7/authentication/configuring-internal-oauth.html#oauth-token-inactivity-timeout_configuring-internal-oauth\n"
                 }
               }
             }
@@ -10291,23 +10291,23 @@
           }
         },
         {
-          "uuid": "03947a78-12ad-4fc8-a947-cd02e7de8fdc",
+          "uuid": "b2767dbc-e0ee-42be-aec5-2878b6f26276",
           "control-id": "sc-13",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "sc-13_stmt": {
-              "uuid": "abbbba59-7105-407d-8a2a-47371938c821",
+              "uuid": "2cc08b25-a2b0-4b7b-a5ff-0671b3811587",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "928ec4b6-10a7-478e-b5fb-95abffde0a9e",
+                  "uuid": "68cb8d9c-5a81-4610-831c-d1a834c8ef16",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-420\n"
+                  "remarks": "\tFIPS mode can be enabled in OpenShift through a flag that\ncan be set at installation time [1]. Follow the relevant\ndocumentation for the applicable cloud provider [2][3][4][5]\nfor more information. But, note that this is also applicable\nin on-prem deployments.\n\n[1] https://docs.openshift.com/container-platform/latest/installing/installing-fips.html\n[2] https://docs.openshift.com/container-platform/latest/installing/installing_aws/installing-aws-government-region.html#installation-configuration-parameters_installing-aws-government-region\n[3] https://docs.openshift.com/container-platform/4.7/installing/installing_azure/installing-azure-customizations.html\n[4] https://docs.openshift.com/container-platform/4.7/installing/installing_gcp/installing-gcp-customizations.html\n"
                 }
               }
             }
@@ -10347,23 +10347,23 @@
           }
         },
         {
-          "uuid": "9c076857-d661-4be2-95d3-920782a6606d",
+          "uuid": "cbcd6201-0ade-4349-bf31-aa71b5d2af6d",
           "control-id": "sc-17",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "sc-17_stmt": {
-              "uuid": "1287771e-ed58-4c87-87ba-d0cc3a5a201d",
+              "uuid": "1041680d-d6d1-4414-8373-526b0fda5f0b",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "f6c49247-3dbc-4eba-a1d7-c293a52eef9a",
+                  "uuid": "d5640ff9-9362-4c29-8a96-38c932ae0b74",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-419\n"
+                  "remarks": "\tWhile OpenShift auto-generates several PKIs to serve TLS on different\nendpoints of the system, it is possible and necessary to configure a\ncustom PKI which allows external clients trust the endpoints.\n\nThe Ingress Operator is the component responsible for enabling external\naccess to OpenShift Container Platform cluster services. The aforementioned\noperator creates an internal CA and issues a wildcard certificate that is\nvalid for applications under the .apps sub-domain. Both the web console\nand CLI use this certificate as well. The certificate and key would need\nto be replaced since a certificate coming from an approved provider is\nneeded. [1]\n\nWhile the API Server certificates can't be replaced, it's possible to\nadd extra certificates that it will serve in case there's the need\nfor clients to have explicit trust for them. [2]\n\n[1] https://docs.openshift.com/container-platform/latest/security/certificates/replacing-default-ingress-certificate.html\n[2] https://docs.openshift.com/container-platform/latest/security/certificates/api-server.html\n"
                 }
               }
             }
@@ -10413,13 +10413,13 @@
           }
         },
         {
-          "uuid": "bc408d6f-99ea-4a9f-b808-c973d7933495",
+          "uuid": "fe36115b-ecc7-4a6f-83f9-4286404c1f17",
           "control-id": "sc-19",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "not-applicable"
             }
           ],
           "statements": {
@@ -10434,45 +10434,45 @@
               }
             },
             "sc-19_stmt.b": {
-              "uuid": "992aef3c-4eb9-4a40-a0d6-5eba74b1990b",
+              "uuid": "65926b18-ebc2-4920-a8f4-e9e406fe5d51",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "9a61a484-9036-4b36-a33c-746889aac4f7",
+                  "uuid": "fde6f2cf-8906-4b73-8a41-3e1e4ef3d261",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for authorizing, monitoring, and\ncontrolling the use of VoIP within the system in accordance with\norganizational policies defined in SC-19(a).\n"
+                  "remarks": "\tThe customer will be responsible for authorizing, monitoring, and\ncontrolling the use of VoIP within the system in accordance with\norganizational policies defined in SC-19(a).\n\nThis needs to be done on the networking or OS layer and does not\ncorrespond to the platform implementation.\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "e8aba7c2-acb4-4654-b1d5-e600a651d4c3",
+          "uuid": "98f91ebf-b7a9-4166-b3f0-9ec33f7e2fde",
           "control-id": "sc-20",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "not-applicable"
             }
           ],
           "statements": {
             "sc-20_stmt.a": {
-              "uuid": "a438c5ea-e94c-44e1-9c84-4d29a630732b",
+              "uuid": "14369734-12bc-43bf-88f4-924ebb5a6b21",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "8d60a17e-515b-4a94-821a-de75ff70ced1",
+                  "uuid": "1512d503-503d-42ac-97e0-5d5c09be74bf",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tOpenShift administrators are responsible for providing\norigin authentication and integrity verification artifacts along\nwith authoritative name resolution data returns in response. A\nsuccessful control response will discuss the technical means used to\naccomplish this.\n\nA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-417\n"
+                  "remarks": "\tOpenShift administrators are responsible for providing\norigin authentication and integrity verification artifacts along\nwith authoritative name resolution data returns in response.\n\nWhen installing the OpenShift Platform on any cloud, or even on\nbaremetal, it's assumed that there is an available DNS service\nthat will host relevant entries that OpenShift needs. [1]\n\nOpenShift administrators will need to configure DNSSEC for their\nservice and should consult their service provider for more details\non this.\n\n[1] https://docs.openshift.com/container-platform/4.6/installing/installing_platform_agnostic/installing-platform-agnostic.html#installation-dns-user-infra_installing-platform-agnostic\n"
                 }
               }
             },
             "sc-20_stmt.b": {
-              "uuid": "3b9bf6aa-8da0-4050-bb86-c3357e8d9f0d",
+              "uuid": "e5587017-52a9-48a1-a657-7cd3993948d2",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "76baf97e-0a1f-4b12-bb26-a59e03124332",
+                  "uuid": "b8378337-afa4-44a8-8344-1ac4f660c3ba",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tOpenShift administrators are responsible for\nproviding means to indicate the security status of child zones and\nenable verification of a chain of trust among parent and child domains.\nA successful control response will discuss the technical means used to\naccomplish this.\n\nA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-417\n"
+                  "remarks": "\tOpenShift administrators are responsible for\nproviding means to indicate the security status of child zones and\nenable verification of a chain of trust among parent and child domains.\n\nWhen installing the OpenShift Platform on any cloud, or even on\nbaremetal, it's assumed that there is an available DNS service\nthat will host relevant entries that OpenShift needs. [1]\n\nOpenShift administrators will need to configure DNSSEC for their\nservice and should consult their service provider for more details\non this.\n\n[1] https://docs.openshift.com/container-platform/4.6/installing/installing_platform_agnostic/installing-platform-agnostic.html#installation-dns-user-infra_installing-platform-agnostic\n"
                 }
               }
             }
@@ -10502,7 +10502,7 @@
           }
         },
         {
-          "uuid": "5fee0dd7-b1f6-4891-98bd-848c114c8822",
+          "uuid": "1a41c3cb-850f-42fc-a78d-c59293595765",
           "control-id": "sc-22",
           "annotations": [
             {
@@ -10513,88 +10513,88 @@
           ],
           "statements": {
             "sc-22_stmt": {
-              "uuid": "81094d0d-abb6-44fe-b96d-302346ffb9a8",
+              "uuid": "cd5e5cef-b674-4609-b9f7-81e1822203e0",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "ec8d8758-4010-4e53-bf8f-07d498fe1433",
+                  "uuid": "f60d3436-4fa4-4e94-8ffc-087582c91f38",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tOpenShift administrators are responsible for ensuring\nservices are fault-tolerant and implement internal/external role\nseparation.\n\nA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-409\n"
+                  "remarks": "\tOpenShift's internal DNS implementation inherently meets this\ncontrol as the CoreDNS instances deployed by the cluster-dns-operator\nare run as a DaemonSet, and hence, run on every node on the cluster. [1]\n\nThis implementation provides adequate fault tolerance since there\nare as many replicas as there are nodes in the cluster. Moreover,\nby default nodes in the cluster are deployed in different availability\nzones on the hosting cloud. This same pattern is recommended for\non-prem deployments.\n\n[1] https://docs.openshift.com/container-platform/latest/networking/dns-operator.html\n\nhttps://issues.redhat.com/browse/CMP-409\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "55f35173-b26b-446c-84e9-4d9c3403963f",
+          "uuid": "c694ea7a-6cce-4cf8-883e-3a0360a91a99",
           "control-id": "sc-23",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "sc-23_stmt": {
-              "uuid": "c6fbdad1-b354-4172-bf6e-6d9004084a83",
+              "uuid": "046345cb-1aeb-48e7-99e5-0f40c92a2fdc",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "d91fa822-db8a-44f5-8ade-232b776bd79a",
+                  "uuid": "594e6046-175c-48ce-b697-98c083ffba35",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for guarding against, for\nexample, man in the middle or session hijacking attacks for\nconnections to the customer application, for example via the\nuse of TLS. A successful control response will address the\nvarious types of attacks against session authenticity and the\nmechanisms used to protect against those attacks.\n\nOpenShift uses various TLS algorithms and ciphers to protect\nthe authenticity of communications sessions.\n\nA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-408\n"
+                  "remarks": "\tThe customer will be responsible for guarding against, for\nexample, man in the middle or session hijacking attacks for\nconnections to the customer application, for example via the\nuse of TLS.\n\nOpenShift uses various TLS algorithms and ciphers to protect\nthe authenticity of communications sessions. By default,\nall of the control plane components in OpenShift use mutual-TLS\nto protect communications against the attacks mentioned by this\ncontrol. [1] Thus, OpenShift inherently meets this requirement.\n\nAny Route exposed by the deployment also use TLS and have a policy\nto redirect requests to use TLS, and thus are secure by default.\n\n[1] https://docs.openshift.com/container-platform/latest/security/certificate_types_descriptions/control-plane-certificates.html\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "2f992720-6db0-4356-8634-6339b0d6cda8",
+          "uuid": "9570bc4c-0f29-48df-8809-d7943deeb016",
           "control-id": "sc-28",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "sc-28_stmt": {
-              "uuid": "8ef6d238-c643-47a9-852d-368fa7d3e931",
+              "uuid": "5ae9e5a7-3b88-43df-9504-fa6f7cf67b43",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "32649326-f922-49d4-bd77-0b13901bf763",
+                  "uuid": "d1c97f21-2993-46bc-a652-01eae8d47601",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-407\n"
+                  "remarks": "\tInformation about the state of the system is stored in etcd.\nOpenShift has support for enabling etcd encryption [1], which\neffectively protects the confidentiality and integrity of\nthe cluster's runtime and workload-related information at rest.\n\n[1] https://docs.openshift.com/container-platform/latest/security/encrypting-etcd.html\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "2fdd7a56-3726-4eb1-bfcf-5e176b9a3034",
+          "uuid": "37a6661a-74b8-4712-8870-e0f389aeb843",
           "control-id": "sc-28.1",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "sc-28.1_stmt": {
-              "uuid": "71a057ff-989d-433f-9ba8-138a0d68cd4b",
+              "uuid": "ad89bd3c-62d7-45fb-bae6-9d51f85610e5",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "8e0ee74f-bb55-464d-aee1-4aac52eb7bb3",
+                  "uuid": "b6d26dd4-cc98-4f52-8dee-8e0ffe29cbe9",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer is responsible for implementing cryptographic\nmechanisms to prevent unauthorzed disclosure and modification of\ncustomer data. A successful control response will outline how\ncryptography is used to ensure integrity of data in rest and\ntransport.\n\nWhen running on Red Hat Enterprise Linux, full disk encryption\nis possible for data at rest on the OpenShift nodes. For data\nin transport, OpenShift uses cryptographic algorithms and ciphers to\nprotect confidentiality and integrity of data in transport.\n\nA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-509\n"
+                  "remarks": "\tThe customer is responsible for implementing cryptographic\nmechanisms to prevent unauthorzed disclosure and modification of\ncustomer data.\n\nWhen running on Red Hat Enterprise Linux, full disk encryption\nis possible for data at rest on the OpenShift nodes. For data\nin transport, OpenShift uses cryptographic algorithms and ciphers to\nprotect confidentiality and integrity of data in transport.\n\nInformation about the state of the system is stored in etcd.\nOpenShift has support for enabling etcd encryption [1], which\neffectively protects the confidentiality and integrity of\nthe cluster's runtime and workload-related information at rest.\n\n[1] https://docs.openshift.com/container-platform/latest/security/encrypting-etcd.html\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "3acd7bd4-240b-494c-8272-e84c423da259",
+          "uuid": "b526e97a-3d8c-4cfd-b7f6-a051205b1234",
           "control-id": "sc-39",
           "annotations": [
             {
@@ -10605,12 +10605,12 @@
           ],
           "statements": {
             "sc-39_stmt": {
-              "uuid": "5172fcb7-d81e-45a4-83f6-e6231c3cc750",
+              "uuid": "c669865a-352d-47e9-a186-e0ba7972f981",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "5e973918-9963-4200-bcef-aaa99887d3a1",
+                  "uuid": "4023b98a-5b71-45e5-a672-5c275949897c",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe control is met when SELinux and namespaces are enabled and used.\n"
+                  "remarks": "\tOpenShift inherently meets this control since SELinux and namespaces\nare enabled and used.\n"
                 }
               }
             }
@@ -10743,23 +10743,23 @@
           }
         },
         {
-          "uuid": "25e6bb3e-56cc-4987-892a-3e681e6f3441",
+          "uuid": "f2eb256e-9e19-43f4-8569-f607e896ae0f",
           "control-id": "si-2.2",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "si-2.2_stmt": {
-              "uuid": "166767a9-51b0-49a0-a1bf-86af3fa2e962",
+              "uuid": "39e45e6f-335d-4f88-b8a2-c336d772a903",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "775d5517-24f7-404a-ba5b-c641b36f0d73",
+                  "uuid": "f14dd30f-a14b-42ea-a6be-55bd7243bff7",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be required to employ automated mechanisms on a\nmonthly basis to determine the state of information system components\nwith regard to flaw remediation on their information systems as\nrequired by their organizations policy. A successful control response\nwill address the customers use of automated tools such as Nessus to\nperform periodic and on-demand scans through their system to determine\nthe state of system components with regard to flaw remediation.\n\nA control response for SI-2(2) is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-405\n"
+                  "remarks": "\tThis is inherently met by the platform as it comes with a\npre-configured, pre-installed, and self-updating monitoring stack\ninstalled by default [1]. This allows for specifying metrics and\nheuristics to immediately alert administrators if there's a flaw\nin the system so it can be remediated. This allows for the configuration\nof real-time alerts.\n\n[1] https://docs.openshift.com/container-platform/latest/monitoring/understanding-the-monitoring-stack.html\n"
                 }
               }
             }
@@ -11179,23 +11179,23 @@
           }
         },
         {
-          "uuid": "07d7972f-8d1d-4f42-ad1a-42cede0f3a4c",
+          "uuid": "feda7c17-ae0f-4b7c-95b2-bc50804840dc",
           "control-id": "si-4.16",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "si-4.16_stmt": {
-              "uuid": "816c1b9b-678c-4cd0-9101-99a2ad18fea9",
+              "uuid": "71abf0ca-3974-4a4d-81e4-693b44c738a1",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "a9202c5d-7097-4f4d-95f1-5de0b334241b",
+                  "uuid": "6b584751-ca97-4af0-8534-5ac641f4970b",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for aggregating and correlating\ninformation from monitoring tools, for multiple system components.\nThis is frequently accomplished with centralized audit reduction\ntools.\n\nA control response for SI-4(16) is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-536\n"
+                  "remarks": "\tThe customer will be responsible for aggregating and correlating\ninformation from monitoring tools, for multiple system components.\nThis is frequently accomplished with centralized audit reduction\ntools.\n\nOpenShift enables auditing by default for the API Servers, the OAuth\nserver and the Linux hosts themselves. Auditing cannot be turned off.\n\nThe Cluster Logging Operator is able to forward the aforementioned\naudit logs to a SIEM for further inspection and correlation of\ninformation. [1]\n\n[1] https://docs.openshift.com/container-platform/latest/logging/cluster-logging-external.html\n"
                 }
               }
             }
@@ -11331,7 +11331,7 @@
           }
         },
         {
-          "uuid": "75b37a46-3c5d-4af3-b138-3dd476964635",
+          "uuid": "6ac8ed6c-eaac-462f-8e73-5e2f10312590",
           "control-id": "si-7",
           "annotations": [
             {
@@ -11342,19 +11342,19 @@
           ],
           "statements": {
             "si-7_stmt": {
-              "uuid": "8f7edc4b-595d-481e-95ef-290b4ef632cc",
+              "uuid": "adf613da-5e6e-4240-bb55-bb2a13e762b2",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "51c1d92f-ecb2-4ea3-a509-a65151878115",
+                  "uuid": "37c5eb83-1b1e-4242-b93b-3fb8442112dc",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for employing integrity verification\ntools for customer-controlled operating systems and software. A\nsuccessful control response will need to discuss the tools in use and\nthe integrity-checking mechanisms these tools employ.\n\nA control response for SI-7 is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-394\n"
+                  "remarks": "\tThe OpenShift Platform provides the File Integrity Operator to do\nintegrity verification of files and information on the nodes. [1]\n\nIntegrity verification of Operating System's firmware and bootloader is\nplanned through Keylime which is in development.\n\n[1] https://docs.openshift.com/container-platform/latest/security/file_integrity_operator/file-integrity-operator-installation.html\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "ca455f35-8815-4603-b38f-dbd91fcb6a79",
+          "uuid": "5abba055-5dd1-45d6-862b-c20e51a71d14",
           "control-id": "si-7.1",
           "annotations": [
             {
@@ -11365,12 +11365,12 @@
           ],
           "statements": {
             "si-7.1_stmt": {
-              "uuid": "b9e27bf9-5e74-407b-bc19-f1ee19c96e3d",
+              "uuid": "cf0a36a1-80a4-45eb-8144-5b2550c5f1eb",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "1a3da903-2950-443c-ba74-bffeec06af44",
+                  "uuid": "9db5b633-897a-419c-89bc-f7c7a9ffbc13",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for performing integrity checks at\ncustomer-specific frequencies and under customer-specified\ncircumstances (including frequencies and circumstances specified by\nFedRAMP). A successful control response will need to identify the\ncriteria for performing integrity checking, as well as the rationale\nfor selecting those criteria.\n\nA control response for SI-7(1) is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-395\n"
+                  "remarks": "\tThe OpenShift Platform provides the File Integrity Operator to do\nintegrity verification of files and information on the nodes. [1]\n\nThe operator can be configured to perform integrity checks at user-defined\nintervals. [2]\n\nIntegrity verification of Operating System's firmware and bootloader is\nplanned through Keylime which is in development. This will allow to\ncover the system's startup integrity as specified by the control.\n\n[1] https://docs.openshift.com/container-platform/latest/security/file_integrity_operator/file-integrity-operator-installation.html\n[2] https://docs.openshift.com/container-platform/4.6/security/file_integrity_operator/file-integrity-operator-configuring.html\n"
                 }
               }
             }
@@ -11502,7 +11502,7 @@
           }
         },
         {
-          "uuid": "9d4f8c58-966a-48c6-ac16-f1be1ae2dd35",
+          "uuid": "044b7a0f-03d9-4c04-919c-5004f24bea99",
           "control-id": "si-11",
           "annotations": [
             {
@@ -11513,12 +11513,12 @@
           ],
           "statements": {
             "si-11_stmt.a": {
-              "uuid": "a55473ef-7114-43c7-98ad-4015560fa82c",
+              "uuid": "693ee616-6137-4c43-985d-3a891710154f",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "6f9fb551-baaa-44eb-94b9-d95e13448ee6",
+                  "uuid": "ec2a4582-1d77-4097-8f5d-4fbdf3340dbc",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tIn OpenShift, the logs depend greatly on the component. Some\ncomponents would just write messages to stdout that the cluster\nadministrator can retrieve logs through the use of the `oc` command.\nSome components emit events, and others emit a Prometheus metric which\nthe API server would write into their logs.\n\nFor the OCP components that run in a container (most operators),\nthe usual RBAC rules would prevent a non-admin user from reading\nthe container logs or events.\n\nOpenShift error message handling is designed to obscure or not log\nsensitive information such as passwords, credit card numbers, social\nsecurity information, account information, etc.\n"
+                  "remarks": "\tIn OpenShift, the logs depend greatly on the component. Some\ncomponents would just write messages to stdout that the cluster\nadministrator can retrieve logs through the use of the `oc` command.\nSome components emit events, and others emit a Prometheus metric which\nthe API server would write into their logs.\n\nFor the OCP components that run in a container (most operators),\nthe usual RBAC rules would prevent a non-admin user from reading\nthe container logs or events.\n\nOpenShift inherently meets this control as error message handling\nis designed to obscure or not log sensitive information such as\npasswords, credit card numbers, social security information,\naccount information, etc.\n"
                 }
               }
             },
