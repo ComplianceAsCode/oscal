@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "fc979a25-0835-4f99-bee0-9dede2e03241",
+    "uuid": "c41cda51-09ec-479d-a75a-c3b25c34f976",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-14T00:55:29.16+00:00",
+      "last-modified": "2021-05-15T00:52:57.64+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -6145,23 +6145,23 @@
           }
         },
         {
-          "uuid": "b1a1d601-8791-4d0c-8bbb-027ee58dcb42",
+          "uuid": "2537edff-3f93-49d8-ae19-8749b6dc8059",
           "control-id": "si-12",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "si-12_stmt": {
-              "uuid": "d5b07424-e2c1-4d00-9ec9-19ae396fdf63",
+              "uuid": "ee8be2e9-f3eb-46b4-9a8e-bc84fee67675",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "b53f03e2-1235-4a29-ba26-5b7ebc6674a1",
+                  "uuid": "b7656576-4ed0-4374-8b5c-825b31f72533",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for handling and retaining\ninformation within, or hosted by, OpenShift in\naccordance with applicable federal laws, Executive Orders,\ndirectives, policies, regulations, standards, and operational\nrequirements. A successful control response will need to outline\nthe specific requirements applicable to customer information\nhandling and retention, and the means by which those requirements\nare met.\n"
+                  "remarks": "\tThe customer will be responsible for handling and retaining\ninformation within, or hosted by, OpenShift in\naccordance with applicable federal laws, Executive Orders,\ndirectives, policies, regulations, standards, and operational\nrequirements.\n\nThis can be achieved with a combination of log forwarding [1]\nand backing up the etcd datastore [2]. The appropriate retention\nof the aforementioned data shall be ensured and determined by the customer.\n\n[1] https://docs.openshift.com/container-platform/latest/logging/cluster-logging-external.html\n[2] https://docs.openshift.com/container-platform/latest/backup_and_restore/backing-up-etcd.html\n"
                 }
               }
             }
