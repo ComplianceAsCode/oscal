@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "eb2a64b8-5cd9-479e-a863-f2a1870ea99b",
+    "uuid": "4b7f77f9-0226-4960-a221-50290c4fe373",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-17T00:53:19.88+00:00",
+      "last-modified": "2021-05-18T00:57:05.42+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -1330,69 +1330,69 @@
           }
         },
         {
-          "uuid": "88abbdda-8e98-4645-80b9-5595e5f7d2c3",
+          "uuid": "747625df-ad9f-4b20-aa0b-1f0e410fd389",
           "control-id": "ac-6",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "ac-6_stmt": {
-              "uuid": "2919dd72-8813-440e-95aa-eb4a48e9292a",
+              "uuid": "f4313b1c-bb0c-43cf-87b5-71830630136a",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "9f513ea4-777c-4021-88e1-d944a78e84d1",
+                  "uuid": "3ed47fee-a211-4701-855b-21fb0513b4ff",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-115\n"
+                  "remarks": "\tThis control is inherently met through the combination of Role-based\nAccess Control for both user and system accounts by dividing the\nroles and assigning them via RBAC to the appropriate accounts,\nplus defaulting to the restricted SCC.\n\nDocumentation on the OpenShift RBAC capabilities can be found at\nhttps://docs.openshift.com/container-platform/latest/authentication/using-rbac.html\nDocumentation on the OpenShift SCCs can be found at\nhttps://docs.openshift.com/container-platform/latest/authentication/managing-security-context-constraints.html\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "be17b2e2-832e-40b8-8b3f-ecfca434f4cb",
+          "uuid": "5462f43e-24f0-48f9-a58d-6e155bb3741c",
           "control-id": "ac-6.1",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "ac-6.1_stmt": {
-              "uuid": "3d1ce575-6e16-4e36-a4ba-c376990f21c1",
+              "uuid": "2e3ea180-d9dd-4f0e-bbfa-e1ac3058df5f",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "23d844c0-1c7c-4fb3-a161-cf80cdee6df3",
+                  "uuid": "df1748a6-43cf-487b-9655-724abe003f3c",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-219\n"
+                  "remarks": "\tThis control is inherently met because OpenShift requires the\nmembership in the cluster-admin role in order to change security\nfunctions or security relevant information by default. Other\nfiner-grained access control can be configured using RBAC:\nhttps://docs.openshift.com/container-platform/latest/authentication/using-rbac.html\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "2f88947c-672c-42df-9318-6837c2af234b",
+          "uuid": "43d302a8-0dee-444e-a3ad-412e52e4c3bc",
           "control-id": "ac-6.2",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "not-applicable"
             }
           ],
           "statements": {
             "ac-6.2_stmt": {
-              "uuid": "3c9f06ea-c341-4363-a3b9-10d98fb1db5e",
+              "uuid": "deb52bbb-a6e8-4da1-8ca7-e60716f94f8d",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "2aeeba05-5891-442d-8182-60a5a0389867",
+                  "uuid": "66b84ae6-c941-4115-b620-ec62f573229e",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThis is an organizational/procedural control outside the scope of\nOpenShift configuration.\n\nThe customer will be responsible for requiring users to use the\nlowest level of access required to perform any given function. In\nterms of OpenShift, this may require creation of multiple logon\naccounts per user. When users require access to privileged functions\nor capability, they will need to logout from the unprivileged account\nand login with an account that has received appropriate RBAC rights.\n\nNote: OpenShift does not have privilege escalation capabilities similar\nto sudo in Linux. Users will have to completely logout/login when\nrequiring privilege escalation between accounts.\n\nA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-220\n"
+                  "remarks": "\tThis is an organizational/procedural control outside the scope of\nOpenShift configuration.\n\nThe customer will be responsible for requiring users to use the\nlowest level of access required to perform any given function. In\nterms of OpenShift, this may require creation of multiple logon\naccounts per user. When users require access to privileged functions\nor capability, they will need to logout from the unprivileged account\nand login with an account that has received appropriate RBAC rights.\n\nNote: OpenShift does not have privilege escalation capabilities similar\nto sudo in Linux. Users will have to completely logout/login when\nrequiring privilege escalation between accounts.\n\nIt is recommended to grant the cluster-admin clusterrole\nto a user or a group backed by an IDP and subsequently\nremove the kubeadmin user as described in https://docs.openshift.com/container-platform/latest/authentication/remove-kubeadmin.html\n"
                 }
               }
             }
@@ -1422,23 +1422,23 @@
           }
         },
         {
-          "uuid": "e3e3efab-5461-4dd0-8720-65773f2e5379",
+          "uuid": "fac17fa1-c6dd-4292-9e80-fdd84f7f266f",
           "control-id": "ac-6.5",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "not-applicable"
             }
           ],
           "statements": {
             "ac-6.5_stmt": {
-              "uuid": "6582b7a1-0f0e-4d84-98f3-ebe259e0b29d",
+              "uuid": "33a554bd-bcd4-4ac6-be69-1e95648804a4",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "626ddc47-b7c5-417f-9610-19c21a97cfcc",
+                  "uuid": "1f255f3c-7220-4712-bf44-475ccd16eea8",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-118\n"
+                  "remarks": "\tRestricting privileged accounts to organization-defined personnel\nor roles is outside the scope of OpenShift configuration, therefore\nAC-6(5) is an organizational control.\n"
                 }
               }
             }
@@ -1501,46 +1501,46 @@
           }
         },
         {
-          "uuid": "a46cc993-69c0-40a9-b1c7-3b51a8170ecc",
+          "uuid": "603490c7-9d59-4df7-9eda-6382e0af7b6e",
           "control-id": "ac-6.9",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "ac-6.9_stmt": {
-              "uuid": "1b950782-4ef9-4f2f-aa12-d01c6885456e",
+              "uuid": "43d2c35c-ebb7-4fe9-8230-c6c7f5cdbc30",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "a7754724-50c8-4d11-b4a0-d4235cb8ef81",
+                  "uuid": "d22b6a0b-98af-48e4-ac04-27a49f54e100",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for auditing the execution of\nprivileged functions. A successful control response will need\nto relate this requirement to the general auditing requirements\nof the AU control family.\n\nA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-122\n"
+                  "remarks": "\tOpenShift performs audit logging by default, which makes this\ncontrol inherently met.\n\nWhat constitutes an action by an admin role must be synthetized in a\nSIEM, though. OCP audit logs do specify the RBAC rule that allowed the action\nand the identity that requested the action.\n\nSee https://docs.openshift.com/container-platform/latest/security/audit-log-view.html\nfor documentation on how to view the audit logs and\nhttps://docs.openshift.com/container-platform/latest/security/audit-log-policy-config.html\nfor information on configuring the audit logging.\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "3e6efe21-9357-46fb-9506-c930ed1c9bd1",
+          "uuid": "0be5b7b8-ea0d-4bfc-8d59-89cfb9aac522",
           "control-id": "ac-6.10",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "ac-6.10_stmt": {
-              "uuid": "fcec7506-27c3-45a4-abc8-25e198fd2ca7",
+              "uuid": "6c3a2a2b-f2c6-4aa9-a7e1-0275e86b1db0",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "0f817e29-325b-449e-9120-08bf8dc62dca",
+                  "uuid": "3597e8a2-776b-458b-9573-c5563a6111f0",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for ensuring that non-privileged\nusers cannot execute privileged functions. A successful control\nresponse will need to discuss the use of centralized authentication\nand authorization and any other means of enforcement of privilege\nlevels.\n\nA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-123\n"
+                  "remarks": "\tThis control is inherently met through the use of Role-based Access Control\nand SCCs.\n"
                 }
               }
             }
@@ -4438,23 +4438,23 @@
           }
         },
         {
-          "uuid": "49523066-b7d9-4d77-a2c7-59366937787a",
+          "uuid": "f595485e-8f58-458c-b3bf-82e7dbd0129c",
           "control-id": "cm-5.3",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "cm-5.3_stmt": {
-              "uuid": "84764f58-0c4a-4051-bc47-08d6a39f7317",
+              "uuid": "2ae684c7-9654-4f72-a81e-3c6e60565f1a",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "ca577a36-3847-4240-9bff-912466fccf24",
+                  "uuid": "5f554b7f-a3b4-4dfc-ac3a-fc4cde003d69",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-187\n"
+                  "remarks": "\tOpenShift allows for enforcing that only signed and verified\ncontainers run on the platform [1]. This is not enabled by default\nand needs to be configured per the customer's environment and\nrequirements.\n\n[1] https://docs.openshift.com/container-platform/4.7/security/container_security/security-deploy.html\n"
                 }
               }
             }
