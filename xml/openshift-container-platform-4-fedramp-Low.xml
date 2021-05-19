@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="1176f95b-6394-42c8-b7b3-c04aea11304b">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="17e3d1e9-0dbe-42a7-9d1c-cdb81abb909a">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-05-18T00:56:58.43+00:00</last-modified>
+    <last-modified>2021-05-19T00:52:35.40+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -629,42 +629,38 @@ actions defined by the customer, upon account lockout.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="1871ab2d-f550-4a44-abf0-755904c32987" control-id="ac-8">
+    <implemented-requirement uuid="5e5932cc-4291-400b-8d28-4c6002ff15da" control-id="ac-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-8_stmt.a" uuid="81fee283-7ebc-4201-8c6f-6c842d1258ad">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="dbaba125-1dff-4fe4-a089-3bbbfa1485ed">
+      <statement statement-id="ac-8_stmt.a" uuid="141f259d-393a-4e39-a443-85fd27e93c9d">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c882fe21-cdad-43ba-b3d9-3df78aaf263e">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>The customer will be responsible for displaying a system use
-notification banner to users. A successful control response will need
-to address the conditions under which the banner will be displayed
-(if a non-government user accesses the system, the system use
-notification banner may not be appropriate), as well as the contents
-of the notification message.
+          <remarks><p>To configure a login banner for console logins via "oc login",
+ensure a "motd" configMap in the openshift namespace exists.
+The login message is set in the "message" key of the configMap:
 
-In context of OpenShift, a banner must be displayed for all means
-of accessing OpenShift itself (e.g. service consoles, remote access
-through SSH, etc).
+$ oc create cm motd --from-literal=message="this is the display banner" -nopenshift
 
-A control response to AC-8 is planned. Progress can be tracked
-via:
-
-https://issues.redhat.com/browse/CMP-125
+To configure a login banner for the webUI logins, please follow:
+https://docs.openshift.com/container-platform/latest/web_console/customizing-the-web-console.html#customizing-the-login-page_customizing-web-console
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ac-8_stmt.b" uuid="196b39d7-5d87-483b-8ce5-32a33ca589a4">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="557a28c6-1c41-4bc4-90b6-53de6fe4fd8c">
+      <statement statement-id="ac-8_stmt.b" uuid="fbb92786-5288-4cd5-864a-9e6bd9bb40e0">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="e88fd0e5-1576-4170-8c6a-3c886b10e040">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>The customer will be responsible for displaying the use notification
-banner until the user acknowledges the usage condition and takes
-explicit actions to further access the system. A successful control
-response will need to address the means by which the user will indicate
-acknowledgement and move forward.
+          <remarks><p>To configure a login banner for console logins via "oc login",
+ensure a "motd" configMap in the openshift namespace exists.
+The login message is set in the "message" key of the configMap:
 
-A control response to AC-8 is planned. Progress can be tracked
-via:
+$ oc create cm motd --from-literal=message="this is the display banner" -nopenshift
 
-https://issues.redhat.com/browse/CMP-125
+To configure a login banner for the webUI logins, please follow:
+https://docs.openshift.com/container-platform/latest/web_console/customizing-the-web-console.html#customizing-the-login-page_customizing-web-console
+
+The login banner is displayed before the user logins in to the webUI,
+thus satisfying the control. For console logins, the login banner
+is displayed when the user acquires an OAuth token, but before they
+actually perform any action.
 </p></remarks>
         </by-component>
       </statement>
@@ -1489,45 +1485,52 @@ is outside the scope of OpenShift configuration.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="2f4b6122-9153-47ed-818f-839b33259939" control-id="cm-6">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
-      <statement statement-id="cm-6_stmt.a" uuid="bbd6ce3c-7ef2-45b4-8618-7d4168d9bd32">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f0557d99-daa7-4cd5-a5bb-79a2ef5df470">
+    <implemented-requirement uuid="423e047f-6289-4add-8fba-5f6a5c81fc3b" control-id="cm-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cm-6_stmt.a" uuid="9393dc96-836e-4b73-869b-f1134f2c3cc0">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="da94f3d2-b46f-49fe-8f5c-0523d3cdcf25">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>Customers should document the configuration settings applicable to their
+deployments and ensure that appropriate hardening settings are in place.
+Red Hat provides a hardening guide that's useful to help customers get
+a reasonable hardened configuration. [1]
 
-https://issues.redhat.com/browse/CMP-188
+[1] https://access.redhat.com/solutions/5870581
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-6_stmt.b" uuid="c26016e8-a231-4f68-b2a0-18de19f60eb9">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f0557d99-daa7-4cd5-a5bb-79a2ef5df470">
+      <statement statement-id="cm-6_stmt.b" uuid="233db8db-3436-4928-a16c-de9ba1e36122">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="ce4a1322-60e7-4042-b3a1-e7ced16a4b98">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>A hardened configuration can be implemented by the customer, however
+OpenShift's Compliance Operator [1] provides some automated remediations
+and checks to verify that the hardened configuration has been implemented
+correctly.
 
-https://issues.redhat.com/browse/CMP-188
+[1] https://docs.openshift.com/container-platform/4.7/security/compliance_operator/compliance-operator-understanding.html#compliance-operator-understanding
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-6_stmt.c" uuid="d34a9516-5f0b-4557-996b-2d5d71b12864">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f0557d99-daa7-4cd5-a5bb-79a2ef5df470">
+      <statement statement-id="cm-6_stmt.c" uuid="1110a7a1-5599-44da-8e96-24486fe2e502">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="a6a9ee9f-9171-48a9-bf98-62f9ec2c5c15">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>It is the customer's responsibility to document deviations from the
+recommended hardened settings. In case of using the Compliance Operator,
+this can be achieved by filling in appropriate details in the `rationale`
+sections in the TailoredProfile objects. [1]
 
-https://issues.redhat.com/browse/CMP-188
+[1] https://docs.openshift.com/container-platform/4.7/security/compliance_operator/compliance-operator-tailor.html
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-6_stmt.d" uuid="40dd9dc9-7354-4b8d-a07a-707c81fb4177">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f0557d99-daa7-4cd5-a5bb-79a2ef5df470">
+      <statement statement-id="cm-6_stmt.d" uuid="5a7c52ab-9c3a-43eb-9c73-2045ff83deda">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="d6391d54-386b-4d78-bdb3-6292ca2cc973">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
-
-https://issues.redhat.com/browse/CMP-188
+          <remarks><p>Monitoring and controlling changes to the configuration itself is out of
+OpenShift's scope. However, any changes to the system will be audited by the
+platform. Further change control and management can be achieved by following
+a GitOps workflow, which enables one to track who made and authorized
+changes to the system.
 </p></remarks>
         </by-component>
       </statement>

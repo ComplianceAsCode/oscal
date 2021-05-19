@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="a6be5709-f7e9-4373-aa22-f69542b826f2">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="e6c023a6-dc28-471a-89ea-e85b0c9cbcca">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-05-18T00:56:58.53+00:00</last-modified>
+    <last-modified>2021-05-19T00:52:35.51+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -1020,42 +1020,38 @@ actions defined by the customer, upon account lockout.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="1871ab2d-f550-4a44-abf0-755904c32987" control-id="ac-8">
+    <implemented-requirement uuid="5e5932cc-4291-400b-8d28-4c6002ff15da" control-id="ac-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-8_stmt.a" uuid="81fee283-7ebc-4201-8c6f-6c842d1258ad">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="dbaba125-1dff-4fe4-a089-3bbbfa1485ed">
+      <statement statement-id="ac-8_stmt.a" uuid="141f259d-393a-4e39-a443-85fd27e93c9d">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c882fe21-cdad-43ba-b3d9-3df78aaf263e">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>The customer will be responsible for displaying a system use
-notification banner to users. A successful control response will need
-to address the conditions under which the banner will be displayed
-(if a non-government user accesses the system, the system use
-notification banner may not be appropriate), as well as the contents
-of the notification message.
+          <remarks><p>To configure a login banner for console logins via "oc login",
+ensure a "motd" configMap in the openshift namespace exists.
+The login message is set in the "message" key of the configMap:
 
-In context of OpenShift, a banner must be displayed for all means
-of accessing OpenShift itself (e.g. service consoles, remote access
-through SSH, etc).
+$ oc create cm motd --from-literal=message="this is the display banner" -nopenshift
 
-A control response to AC-8 is planned. Progress can be tracked
-via:
-
-https://issues.redhat.com/browse/CMP-125
+To configure a login banner for the webUI logins, please follow:
+https://docs.openshift.com/container-platform/latest/web_console/customizing-the-web-console.html#customizing-the-login-page_customizing-web-console
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ac-8_stmt.b" uuid="196b39d7-5d87-483b-8ce5-32a33ca589a4">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="557a28c6-1c41-4bc4-90b6-53de6fe4fd8c">
+      <statement statement-id="ac-8_stmt.b" uuid="fbb92786-5288-4cd5-864a-9e6bd9bb40e0">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="e88fd0e5-1576-4170-8c6a-3c886b10e040">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>The customer will be responsible for displaying the use notification
-banner until the user acknowledges the usage condition and takes
-explicit actions to further access the system. A successful control
-response will need to address the means by which the user will indicate
-acknowledgement and move forward.
+          <remarks><p>To configure a login banner for console logins via "oc login",
+ensure a "motd" configMap in the openshift namespace exists.
+The login message is set in the "message" key of the configMap:
 
-A control response to AC-8 is planned. Progress can be tracked
-via:
+$ oc create cm motd --from-literal=message="this is the display banner" -nopenshift
 
-https://issues.redhat.com/browse/CMP-125
+To configure a login banner for the webUI logins, please follow:
+https://docs.openshift.com/container-platform/latest/web_console/customizing-the-web-console.html#customizing-the-login-page_customizing-web-console
+
+The login banner is displayed before the user logins in to the webUI,
+thus satisfying the control. For console logins, the login banner
+is displayed when the user acquires an OAuth token, but before they
+actually perform any action.
 </p></remarks>
         </by-component>
       </statement>
@@ -1141,35 +1137,38 @@ https://issues.redhat.com/browse/CMP-131
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="e915b154-d306-4240-b477-551192bcedc5" control-id="ac-11">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-11_stmt.a" uuid="ddde43f0-56b3-481b-96dc-95b0befdff3c">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="cc13d468-eafb-4e76-a258-4653088b4c5a">
+    <implemented-requirement uuid="847211d7-e3e3-4fd3-ba48-54fa240a8e51" control-id="ac-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-11_stmt.a" uuid="f7575fa4-ec81-45c3-84cc-29d1972545f6">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="1aaf9fd4-29cf-4022-a235-9029116bbbd1">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Progress can be tracked via:
+          <remarks><p>A session lock must be configured with the device that is used
+to access Red Hat OpenShift.
 
-https://issues.redhat.com/browse/CMP-222
+See also AC-2(5) for information on configuring inactivity timeout.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ac-11_stmt.b" uuid="9cfa0153-ccc7-4fad-baac-e5e5beee1046">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="cc13d468-eafb-4e76-a258-4653088b4c5a">
+      <statement statement-id="ac-11_stmt.b" uuid="9dcc5bb7-07c2-455f-b471-377c4d24168e">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="1aaf9fd4-29cf-4022-a235-9029116bbbd1">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Progress can be tracked via:
+          <remarks><p>A session lock must be configured with the device that is used
+to access Red Hat OpenShift.
 
-https://issues.redhat.com/browse/CMP-222
+See also AC-2(5) for information on configuring inactivity timeout.
 </p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="ab6903c4-8a5b-4507-ad07-184780da55aa" control-id="ac-11.1">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-11.1_stmt" uuid="e16650c5-8d95-4e15-bc8e-5d3e7457ba56">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="09896195-8492-4293-a137-628ef9ab4ea0">
+    <implemented-requirement uuid="f560fa43-b965-4b05-b3b3-3cc9475fcc5c" control-id="ac-11.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="ac-11.1_stmt" uuid="820eb874-d665-4487-83d0-eaea029f01a3">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="1aaf9fd4-29cf-4022-a235-9029116bbbd1">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Progress can be tracked via:
+          <remarks><p>A session lock must be configured with the device that is used
+to access Red Hat OpenShift.
 
-https://issues.redhat.com/browse/CMP-221
+See also AC-2(5) for information on configuring inactivity timeout.
 </p></remarks>
         </by-component>
       </statement>
@@ -1234,37 +1233,16 @@ applicable to the configuration of OpenShift.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="88b90b9a-fb15-4e92-9fc6-1fa52e43892c" control-id="ac-17.2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-17.2_stmt" uuid="f3d9d92e-2e38-4824-be78-32ed9cf94460">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="36668d5a-b24d-47f1-9ae3-69c368fbb2c8">
+    <implemented-requirement uuid="b6c6b8f9-8887-42f6-be7a-3d803a18583f" control-id="ac-17.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-17.2_stmt" uuid="5b0d8a2d-5318-44c4-8e2f-197f7799de95">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="3fd01482-f2d1-4762-b529-371247c3bc25">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>Beginning with OpenShift 4.3, when OpenShift is deployed on Red Hat Enterprise
 Linux, and FIPS is enabled as a kernel setting, OpenShift will use OpenSSL
 libraries instead of the native Golang crypto. The system operator will need to
 verify that OpenShift is being deployed on a version of Red Hat Enterprise Linux
 that has been FIPS validated.
-
-Prior to OpenShift 4.3, remote sessions were encrypted using Golang-provided
-cryptography. While not FIPS validated, this included the following
-cryptographic algorithms and ciphers to protect the confidentiality
-and integrity of remote access sessions:
-        - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
-        - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-        - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
-        - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-        - TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
-        - TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
-        - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-        - TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-        - TLS_RSA_WITH_AES_128_CBC_SHA
-        - TLS_RSA_WITH_AES_256_CBC_SHA
-        - TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA
-        - TLS_RSA_WITH_3DES_EDE_CBC_SHA
-
-A better control response is planned. Progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-144
 </p></remarks>
         </by-component>
       </statement>
@@ -1321,24 +1299,29 @@ configuration.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="6d39d74d-7cc9-4300-95e0-18776a3bb79a" control-id="ac-17.9">
+    <implemented-requirement uuid="53d51c69-ccdd-4e01-9505-8017f0c3c91f" control-id="ac-17.9">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ac-17.9_stmt" uuid="0f860f1f-ebb3-4506-af67-3a93ecc11ef4">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="a7de19c9-673d-4a6d-8e4d-796b592c1787">
+      <statement statement-id="ac-17.9_stmt" uuid="b32948f4-03f7-4c78-afc0-abbeee9a36b5">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="16b33abc-7cd0-40d1-9e30-428301c805fc">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>OpenShift utilizes the firewall technology embedded into Red Hat
-Enterprise Linux. This technology, named firewalld, allows a system
-administrator to configure host-based rules which take effect
-immediately. This gives an OpenShift operator the ability to immediately
-drop all remote connections.
+          <remarks><p>This control is inherently met by Red Hat OpenShift.
 
-Additionally, OpenShift nodes may be placed into Maintenance Mode. This
+OpenShift nodes may be placed into Maintenance Mode. This
 designation will migrate applications from a given cluster node to
 another, disconnecting any active sessions to a given cluster node.
 
 If immediate disconnect of all hosted applications are desired,
 individual containers may be halted. This will disconnect user sessions
 for tenant applications immediately.
+
+In order to disconnect all users, delete all OAuth tokens:
+$ oc delete oauthaccesstoken --all
+
+Since neither Kubernetes nor Red Hat OpenShift support CRLs or
+OSCP, the advice is not to use x509 certificates. If certificates
+must absolutely be used, use very short-lived certificates and
+as a last resort, instead of preventing authentication, remove all
+RBAC rules associated with accounts that possess x509 certificates.
 </p></remarks>
         </by-component>
       </statement>
@@ -2668,15 +2651,20 @@ requirements.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="10d3143c-c783-4b4b-b538-995e6714f707" control-id="cm-5.5">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
-      <statement statement-id="cm-5.5_stmt.a" uuid="3dae2524-5241-4fdd-978d-beb381490964">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="d823359b-250c-49fe-954d-f6be6ba9d33a">
+    <implemented-requirement uuid="807895b7-e793-43e7-bbaa-a69f017e0b4f" control-id="cm-5.5">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cm-5.5_stmt.a" uuid="f0774482-b621-48e6-9a6b-25d573a134da">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="aeefb9ec-e1cf-4fca-a7b1-df9a3d1187f0">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Progress can be
-tracked via:
+          <remarks><p>OpenShift inherently meets this requirement as adding additional Operators
+requires admin RBAC permissions. Regular users are not able to install
+extra operators in the system.
 
-https://github.com/ComplianceAsCode/redhat/issues/901
+On the other hand, deploying additional workloads requires that users have
+access to the target namespace. Which is also protected by RBAC. Users need
+to have explicit permission in order to add or remove components from namespaces. [1]
+
+[1] https://docs.openshift.com/container-platform/4.7/authentication/using-rbac.html
 </p></remarks>
         </by-component>
       </statement>
@@ -2689,45 +2677,52 @@ of OpenShift configuration guidance.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="2f4b6122-9153-47ed-818f-839b33259939" control-id="cm-6">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
-      <statement statement-id="cm-6_stmt.a" uuid="bbd6ce3c-7ef2-45b4-8618-7d4168d9bd32">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f0557d99-daa7-4cd5-a5bb-79a2ef5df470">
+    <implemented-requirement uuid="423e047f-6289-4add-8fba-5f6a5c81fc3b" control-id="cm-6">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cm-6_stmt.a" uuid="9393dc96-836e-4b73-869b-f1134f2c3cc0">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="da94f3d2-b46f-49fe-8f5c-0523d3cdcf25">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>Customers should document the configuration settings applicable to their
+deployments and ensure that appropriate hardening settings are in place.
+Red Hat provides a hardening guide that's useful to help customers get
+a reasonable hardened configuration. [1]
 
-https://issues.redhat.com/browse/CMP-188
+[1] https://access.redhat.com/solutions/5870581
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-6_stmt.b" uuid="c26016e8-a231-4f68-b2a0-18de19f60eb9">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f0557d99-daa7-4cd5-a5bb-79a2ef5df470">
+      <statement statement-id="cm-6_stmt.b" uuid="233db8db-3436-4928-a16c-de9ba1e36122">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="ce4a1322-60e7-4042-b3a1-e7ced16a4b98">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>A hardened configuration can be implemented by the customer, however
+OpenShift's Compliance Operator [1] provides some automated remediations
+and checks to verify that the hardened configuration has been implemented
+correctly.
 
-https://issues.redhat.com/browse/CMP-188
+[1] https://docs.openshift.com/container-platform/4.7/security/compliance_operator/compliance-operator-understanding.html#compliance-operator-understanding
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-6_stmt.c" uuid="d34a9516-5f0b-4557-996b-2d5d71b12864">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f0557d99-daa7-4cd5-a5bb-79a2ef5df470">
+      <statement statement-id="cm-6_stmt.c" uuid="1110a7a1-5599-44da-8e96-24486fe2e502">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="a6a9ee9f-9171-48a9-bf98-62f9ec2c5c15">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>It is the customer's responsibility to document deviations from the
+recommended hardened settings. In case of using the Compliance Operator,
+this can be achieved by filling in appropriate details in the `rationale`
+sections in the TailoredProfile objects. [1]
 
-https://issues.redhat.com/browse/CMP-188
+[1] https://docs.openshift.com/container-platform/4.7/security/compliance_operator/compliance-operator-tailor.html
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-6_stmt.d" uuid="40dd9dc9-7354-4b8d-a07a-707c81fb4177">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f0557d99-daa7-4cd5-a5bb-79a2ef5df470">
+      <statement statement-id="cm-6_stmt.d" uuid="5a7c52ab-9c3a-43eb-9c73-2045ff83deda">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="d6391d54-386b-4d78-bdb3-6292ca2cc973">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
-
-https://issues.redhat.com/browse/CMP-188
+          <remarks><p>Monitoring and controlling changes to the configuration itself is out of
+OpenShift's scope. However, any changes to the system will be audited by the
+platform. Further change control and management can be achieved by following
+a GitOps workflow, which enables one to track who made and authorized
+changes to the system.
 </p></remarks>
         </by-component>
       </statement>
