@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "6477985a-ff91-4199-8e22-6191c9265b8e",
+    "uuid": "55e18151-64fc-4ef2-aef2-9acba0def1f1",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-19T00:52:43.24+00:00",
+      "last-modified": "2021-05-20T00:49:53.29+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -1584,23 +1584,23 @@
           }
         },
         {
-          "uuid": "80d9fe3f-ec91-44e1-8c30-69b9aaf4e472",
+          "uuid": "e0d25a00-09e8-4fd3-b8f0-6ed6f235cc6d",
           "control-id": "ac-12",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "ac-12_stmt": {
-              "uuid": "fc0fc943-da69-4c4e-946a-4d377389240b",
+              "uuid": "00197163-e822-417a-a79f-ff9ac87c4c31",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "292db0d7-a6a2-4127-a9b1-4efb2359e579",
+                  "uuid": "3436c083-6ec9-4006-b238-7a07e88fa75d",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tThe customer will be responsible for defining events or conditions\nrequiring disconnection (for example, user requesting logout), and for\nterminating the session when those events or conditions arise. A\nsuccessful control response will need to outline the qualifying events\nor conditions.\n\nA control response is planned. Progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-132\n"
+                  "remarks": "\tThe customer will be responsible for defining events or conditions\nrequiring disconnection (for example, user requesting logout),\nand for terminating the session when those events or conditions\narise. Because a very common condition is to disconnect a user\nafter a certain period of time, this control response describes\nhow to configure the internal OAuth server’s token duration.\n\nTo meet the requirements, OpenShift must be configured\nto use centralized authentication via an IDP. The token\nduration can be then be configured globally:\nhttps://docs.openshift.com/container-platform/latest/authentication/configuring-internal-oauth.html#oauth-configuring-internal-oauth_configuring-internal-oauth\n\nOr per client:\nhttps://docs.openshift.com/container-platform/4.7/rest_api/oauth_apis/oauthclient-oauth-openshift-io-v1.html#oauthclient-oauth-openshift-io-v1\n\nNote that the global configuration does not change the configuration\nof the oauthclient objects, so for proper compliance check, both must\nbe audited.\n\nAlso note that prior to OpenShift 4.8, changing the global oauth.config\nobject triggers a rollout of the kube-apiserver which can take up\nto 15 minutes. You can watch the kube-apiserver rollout with\n\"oc get co kube-apiserver\". Once the rollout finishes, the \"Progressing\"\ncolumn will say \"False\".\n"
                 }
               }
             }

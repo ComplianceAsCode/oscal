@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="e6c023a6-dc28-471a-89ea-e85b0c9cbcca">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="af8b726a-9f22-4b52-89e4-7c08ceb702a6">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-05-19T00:52:35.51+00:00</last-modified>
+    <last-modified>2021-05-20T00:49:44.09+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -1173,20 +1173,35 @@ See also AC-2(5) for information on configuring inactivity timeout.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="80d9fe3f-ec91-44e1-8c30-69b9aaf4e472" control-id="ac-12">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-12_stmt" uuid="fc0fc943-da69-4c4e-946a-4d377389240b">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="292db0d7-a6a2-4127-a9b1-4efb2359e579">
+    <implemented-requirement uuid="e0d25a00-09e8-4fd3-b8f0-6ed6f235cc6d" control-id="ac-12">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ac-12_stmt" uuid="00197163-e822-417a-a79f-ff9ac87c4c31">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="3436c083-6ec9-4006-b238-7a07e88fa75d">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>The customer will be responsible for defining events or conditions
-requiring disconnection (for example, user requesting logout), and for
-terminating the session when those events or conditions arise. A
-successful control response will need to outline the qualifying events
-or conditions.
+requiring disconnection (for example, user requesting logout),
+and for terminating the session when those events or conditions
+arise. Because a very common condition is to disconnect a user
+after a certain period of time, this control response describes
+how to configure the internal OAuth server’s token duration.
 
-A control response is planned. Progress can be tracked via:
+To meet the requirements, OpenShift must be configured
+to use centralized authentication via an IDP. The token
+duration can be then be configured globally:
+https://docs.openshift.com/container-platform/latest/authentication/configuring-internal-oauth.html#oauth-configuring-internal-oauth_configuring-internal-oauth
 
-https://issues.redhat.com/browse/CMP-132
+Or per client:
+https://docs.openshift.com/container-platform/4.7/rest_api/oauth_apis/oauthclient-oauth-openshift-io-v1.html#oauthclient-oauth-openshift-io-v1
+
+Note that the global configuration does not change the configuration
+of the oauthclient objects, so for proper compliance check, both must
+be audited.
+
+Also note that prior to OpenShift 4.8, changing the global oauth.config
+object triggers a rollout of the kube-apiserver which can take up
+to 15 minutes. You can watch the kube-apiserver rollout with
+"oc get co kube-apiserver". Once the rollout finishes, the "Progressing"
+column will say "False".
 </p></remarks>
         </by-component>
       </statement>
