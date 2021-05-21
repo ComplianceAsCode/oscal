@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "f69652cf-2aa4-4b11-b7e7-e173b0e6a3f6",
+    "uuid": "197c9fe2-8fef-48f6-97c4-f459ef54236e",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-20T00:49:53.19+00:00",
+      "last-modified": "2021-05-21T00:53:54.18+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -1510,23 +1510,23 @@
           }
         },
         {
-          "uuid": "29b45c5c-75d3-46af-be25-434858dee17e",
+          "uuid": "92672ad8-90f6-4f1c-85d5-9551114ad243",
           "control-id": "au-4",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "partial"
+              "value": "complete"
             }
           ],
           "statements": {
             "au-4_stmt": {
-              "uuid": "18d3e825-6592-4360-aac3-79664eca082d",
+              "uuid": "0b7cd6f8-82ed-4db7-a260-1792f38c046f",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "efa9da94-2510-4f80-b6c9-1acdb42d0e4f",
+                  "uuid": "db8326c0-8a77-4b89-bcb8-ca229f3bfef1",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Engineering progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-159\n"
+                  "remarks": "\tRed Hat OpenShift audit logs are stored under the /var/log directory\non the master nodes, in particular /var/log/kube-apiserver,\n/var/log/openshift-apiserver and /var/log/oauth-apiserver. To make\nsure there is enough space for these logs, ensure that each of\nthe above directories resides on a separate partition.\n\nThe following document describes creating additional partitions:\nhttps://docs.openshift.com/container-platform/4.7/installing/installing_platform_agnostic/installing-platform-agnostic.html#installation-user-infra-machines-advanced_disk_installing-platform-agnostic\n"
                 }
               }
             }
@@ -1599,7 +1599,7 @@
           }
         },
         {
-          "uuid": "9c2388b8-6ef5-45cf-93d2-cd87d4f39794",
+          "uuid": "12f4deb5-9abb-4ee7-9688-3dac00bf8ac6",
           "control-id": "au-8",
           "annotations": [
             {
@@ -1610,68 +1610,68 @@
           ],
           "statements": {
             "au-8_stmt.a": {
-              "uuid": "7edb6f5a-e08e-4faf-a375-bad11b80aa7c",
+              "uuid": "879ad6f7-dd58-4d65-ad73-a71bb7164447",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "a3e4e1da-469f-42f2-a0e1-2c8ffaeae1ba",
+                  "uuid": "c39c3d0b-89ee-4013-817a-ab78cf76644e",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tBy default, the OpenShift API uses the internal system clocks to generate\ntime stamps for audit records. At the code level, the OpenShift API\nstores audit events in a struct called MicroTime:\n\n// MicroTime is version of Time with microsecond level precision.\n//\n// +protobuf.options.marshal=false\n// +protobuf.as=Timestamp\n// +protobuf.options.(gogoproto.goproto_stringer)=false\ntype MicroTime struct\n{ time.Time `protobuf:\"-\"` }\n\nwhich really is a time.Time value which comes from the standard golang library:\n\nhttps://golang.org/pkg/time/"
+                  "remarks": "\tBy default, the OpenShift API uses the internal system clocks to generate\ntime stamps for audit records. At the code level, the OpenShift API\nstores audit events in a struct called MicroTime:\n\n// MicroTime is version of Time with microsecond level precision.\n//\n// +protobuf.options.marshal=false\n// +protobuf.as=Timestamp\n// +protobuf.options.(gogoproto.goproto_stringer)=false\ntype MicroTime struct\n{ time.Time `protobuf:\"-\"` }\n\nwhich really is a time.Time value which comes from the standard golang library:\n\nhttps://golang.org/pkg/time/\n\nTherefore this control is inherently met."
                 }
               }
             },
             "au-8_stmt.b": {
-              "uuid": "8199e4bb-c82f-4ace-9317-6db96229ad0a",
+              "uuid": "f48722ba-a14b-4352-9514-ec19837f1dc7",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "ca64871d-2677-4674-8c06-a118a56ef997",
+                  "uuid": "597caf6c-34d7-42d2-bb8e-884f83550be2",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tBy default, the OpenShift API records time stamps for audit records\nthat can be mapped to Coordinated Universal Time (UTC). For example\nin the following node audit record:\n\n{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"ad209ce1-fec7-4130-8192-c4cc63f1d8cd\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/openshift-kube-controller-manager/configmaps/cert-recovery-controller-lock?timeout=35s\",\"verb\":\"update\",\"user\":{\"username\":\"system:serviceaccount:openshift-kube-controller-manager:localhost-recovery-client\",\"uid\":\"dd4997e3-d565-4e37-80f8-7fc122ccd785\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:openshift-kube-controller-manager\",\"system:authenticated\"]},\"sourceIPs\":[\"::1\"],\"userAgent\":\"cluster-kube-controller-manager-operator/v0.0.0 (linux/amd64) kubernetes/$Format\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"openshift-kube-controller-manager\",\"name\":\"cert-recovery-controller-lock\",\"uid\":\"5c57190b-6993-425d-8101-8337e48c7548\",\"apiVersion\":\"v1\",\"resourceVersion\":\"574307\"},\"responseStatus\":{\"metadata\":{},\"code\":200},\"requestReceivedTimestamp\":\"2020-04-02T08:27:20.200962Z\",\"stageTimestamp\":\"2020-04-02T08:27:20.206710Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:openshift:operator:kube-controller-manager-recovery\\\" of ClusterRole \\\"cluster-admin\\\" to ServiceAccount \\\"localhost-recovery-client/openshift-kube-controller-manager\\\"\"}}\n\ntimestamps such as requestReceivedTimestamp and stageTimestamp are\nin UTC format e.g. 2020-04-02T08:27:20.200962Z\n\nSee https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-audit-log.html\nfor more example of audit records."
+                  "remarks": "\tBy default, the OpenShift API records time stamps for audit records\nthat can be mapped to Coordinated Universal Time (UTC). For example\nin the following node audit record:\n\n{\"kind\":\"Event\",\"apiVersion\":\"audit.k8s.io/v1\",\"level\":\"Metadata\",\"auditID\":\"ad209ce1-fec7-4130-8192-c4cc63f1d8cd\",\"stage\":\"ResponseComplete\",\"requestURI\":\"/api/v1/namespaces/openshift-kube-controller-manager/configmaps/cert-recovery-controller-lock?timeout=35s\",\"verb\":\"update\",\"user\":{\"username\":\"system:serviceaccount:openshift-kube-controller-manager:localhost-recovery-client\",\"uid\":\"dd4997e3-d565-4e37-80f8-7fc122ccd785\",\"groups\":[\"system:serviceaccounts\",\"system:serviceaccounts:openshift-kube-controller-manager\",\"system:authenticated\"]},\"sourceIPs\":[\"::1\"],\"userAgent\":\"cluster-kube-controller-manager-operator/v0.0.0 (linux/amd64) kubernetes/$Format\",\"objectRef\":{\"resource\":\"configmaps\",\"namespace\":\"openshift-kube-controller-manager\",\"name\":\"cert-recovery-controller-lock\",\"uid\":\"5c57190b-6993-425d-8101-8337e48c7548\",\"apiVersion\":\"v1\",\"resourceVersion\":\"574307\"},\"responseStatus\":{\"metadata\":{},\"code\":200},\"requestReceivedTimestamp\":\"2020-04-02T08:27:20.200962Z\",\"stageTimestamp\":\"2020-04-02T08:27:20.206710Z\",\"annotations\":{\"authorization.k8s.io/decision\":\"allow\",\"authorization.k8s.io/reason\":\"RBAC: allowed by ClusterRoleBinding \\\"system:openshift:operator:kube-controller-manager-recovery\\\" of ClusterRole \\\"cluster-admin\\\" to ServiceAccount \\\"localhost-recovery-client/openshift-kube-controller-manager\\\"\"}}\n\ntimestamps such as requestReceivedTimestamp and stageTimestamp are\nin UTC format e.g. 2020-04-02T08:27:20.200962Z\n\nTherefore this control is inherently met.\n\nSee https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-audit-log.html\nfor more example of audit records."
                 }
               }
             }
           }
         },
         {
-          "uuid": "55434d4e-d726-4f87-80da-a735bf9ddb65",
+          "uuid": "764febad-5659-4d07-815e-e9a31d366200",
           "control-id": "au-9",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "au-9_stmt": {
-              "uuid": "98139dd1-5cd9-4c5c-9450-60a7461da54a",
+              "uuid": "df580731-5467-43c8-ab7a-2f4701e645cd",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "7970ec74-624d-4dce-a658-d8c036036d1a",
+                  "uuid": "328f774c-9b06-4c0a-ac2f-6d62365c1898",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Engineering progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-232\n"
+                  "remarks": "\tAccess to and integrity of the audit records on the master nodes\nis protected by the usual operating system permissions.\n\nThis control is met when /var/log/kube-apiserver,\n/var/log/openshift-apiserver and /var/log/oauth-apiserver have\nthe permissions 0700 and the files under them 0600 and are\nowned by root.root.\n\nIn addition, if audit logs are being offloaded from the cluster\nusing Cluster Logging Operator, care must be taken to only\nuse TLS in transit - all ClusterLogForwarder outputs must use\neither https:// or tls:// as protocol. For more information, see\nhttps://docs.openshift.com/container-platform/4.6/logging/cluster-logging-external.html\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "026a03b5-1bd0-4e63-93ef-7c513080917e",
+          "uuid": "e56ac826-051d-46bf-a315-86c091c66954",
           "control-id": "au-11",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "au-11_stmt": {
-              "uuid": "0a9fbed7-ddad-41fb-b5c1-5966fd294dce",
+              "uuid": "2aac2a40-1882-4c26-a067-833f5c351005",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "2e8093cd-410f-44fe-8d14-44321f8fade4",
+                  "uuid": "dacb8a3e-5b1c-4341-ba45-269aaa276df7",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Engineering progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-243\n"
+                  "remarks": "\tThe Red Hat OpenShift audit logs are emited by the API servers\nand stored on the master nodes.\nThe API servers do not support retaining audit logs for at least a\ndefined number of days, therefore the logs must be offloaded from\nthe cluster.\n\nThe Cluster Logging Operator is able to forward the Red Hat OpenShift\naudit logs so that they can be stored per organizational policy.\n\nhttps://docs.openshift.com/container-platform/latest/logging/cluster-logging-external.html\n"
                 }
               }
             }
@@ -2197,66 +2197,66 @@
           }
         },
         {
-          "uuid": "4e820a8c-dcd9-489c-902b-a072fa5c0b70",
+          "uuid": "7aad1d1f-2f24-426e-b02c-bfe45704e7a9",
           "control-id": "cm-7",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "cm-7_stmt.a": {
-              "uuid": "b5871b01-e9c9-4485-a45f-3bdccb1c0a89",
+              "uuid": "262ae188-4528-448c-9fd3-767d0f81f9e9",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "c615bddb-a883-4ae1-a0ef-3f53a9833d5e",
+                  "uuid": "00030a4b-873b-476d-a08c-154921aba404",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-273\n"
+                  "remarks": "\tRed Hat OpenShift is targeted at running containers, and thus it\ncontains the minimal components to provide a secure, reliable\nand operable container platform. It also runs over Red Hat CoreOS, [1]\nwhich only contains a subset of packages that RHEL would usually have.\nThis subset is the minimum required to run OpenShift.\n\n[1] https://docs.openshift.com/container-platform/4.7/architecture/architecture-rhcos.html\n"
                 }
               }
             },
             "cm-7_stmt.b": {
-              "uuid": "a6b5f2d2-287e-406f-acdd-57fb518663a8",
+              "uuid": "5cd22880-5c15-4ade-a3f4-e21635249c87",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "c615bddb-a883-4ae1-a0ef-3f53a9833d5e",
+                  "uuid": "8b8ac795-a63f-43a3-ac7a-66724379910a",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-273\n"
+                  "remarks": "\tWithin OpenShift, as in Kubernetes, restrictions on network communications (open\nports and protocols) can be done by using NetworkPolicies [1]. This allows\nadministrators to restrict the traffic to and within a namespace.\n\nFurther restrictions should be done from the cloud that's running OpenShift,\nor the infrastructure that the platform is running on.\n\n[1] https://docs.openshift.com/container-platform/4.7/networking/network_policy/about-network-policy.html\n"
                 }
               }
             }
           }
         },
         {
-          "uuid": "6ab840ef-1732-44c3-a612-787e7e545ccd",
+          "uuid": "e5b9961f-7ee1-46a4-b72e-5aa0b9a4e8c1",
           "control-id": "cm-8",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "not-applicable"
             }
           ],
           "statements": {
             "cm-8_stmt.a": {
-              "uuid": "8981d481-fa58-4a47-863f-735659a75a57",
+              "uuid": "c550408c-4e53-42e5-8259-a4e0fe24ea7c",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "c7eceb86-8630-47f8-be2b-a463c84ef6a0",
+                  "uuid": "aac03b7b-e3aa-4bca-8c06-795a9a53119f",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-277\n"
+                  "remarks": "\tIt is up to the customer to review and implement an appropriate\nsystem component inventory. However, Red Hat provides tools that can\naid customers in generating such inventories and keeping them up-to-date.\n\nA summary of the cluster's specification is available through the\nClusterVersion object [1]. This will provide information both on the version\nand the specific container hash used. A list of the control plane operators\nused for managing Red Hat OpenShift is available through the ClusterOperator\nobject [2].\n\nKnowing this information, it's possible to get the list of packages for the\nunderlying hosts, as well as their versions. This can be done by\ninspecting OpenShift's payload [3].\n\nInstalled operators with their respective versions can be listed through the\nClusterServiceVersion [4] object. Note that this is a namespaced resource, so\nall namespaces need to be inspected.\n\nFinally, Red Hat also provides the Skopeo [5] and Podman [6] to further inspect\nany container images used in the deployment. These tools can help fill out extra\ndetails about the contents of the containers used in the system.\n\n[1] https://docs.openshift.com/container-platform/4.7/support/summarizing-cluster-specifications.html\n[2] https://docs.openshift.com/container-platform/4.7/installing/validating-an-installation.html#getting-cluster-version-and-update-details_validating-an-installation\n[3] https://access.redhat.com/solutions/5787001\n[4] https://docs.openshift.com/container-platform/4.7/operators/understanding/olm/olm-understanding-olm.html#olm-csv_olm-understanding-olm\n[5] https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#skopeo\n[6] https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#podman\n"
                 }
               }
             },
             "cm-8_stmt.b": {
-              "uuid": "1831a671-8eb9-4dfb-84aa-c3ec5f2f24fb",
+              "uuid": "6158134e-620a-439b-903d-a21637cb24fc",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "c7eceb86-8630-47f8-be2b-a463c84ef6a0",
+                  "uuid": "95a09560-4c4a-4642-b005-7f7751b0952a",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Engineering progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-277\n"
+                  "remarks": "\tIt is up to the customer to ensure that the system component\ninventory is kept up-to-date.\n"
                 }
               }
             }

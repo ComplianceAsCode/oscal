@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="ca483885-8d39-4336-b504-2747133b14cd">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="66bd491a-110b-4483-a85e-45ff7225481d">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-05-20T00:49:44.22+00:00</last-modified>
+    <last-modified>2021-05-21T00:53:47.22+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -1898,14 +1898,19 @@ https://issues.redhat.com/browse/CMP-158
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="29b45c5c-75d3-46af-be25-434858dee17e" control-id="au-4">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
-      <statement statement-id="au-4_stmt" uuid="18d3e825-6592-4360-aac3-79664eca082d">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="efa9da94-2510-4f80-b6c9-1acdb42d0e4f">
+    <implemented-requirement uuid="92672ad8-90f6-4f1c-85d5-9551114ad243" control-id="au-4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-4_stmt" uuid="0b7cd6f8-82ed-4db7-a260-1792f38c046f">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="db8326c0-8a77-4b89-bcb8-ca229f3bfef1">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Engineering progress can be tracked via:
+          <remarks><p>Red Hat OpenShift audit logs are stored under the /var/log directory
+on the master nodes, in particular /var/log/kube-apiserver,
+/var/log/openshift-apiserver and /var/log/oauth-apiserver. To make
+sure there is enough space for these logs, ensure that each of
+the above directories resides on a separate partition.
 
-https://issues.redhat.com/browse/CMP-159
+The following document describes creating additional partitions:
+https://docs.openshift.com/container-platform/4.7/installing/installing_platform_agnostic/installing-platform-agnostic.html#installation-user-infra-machines-advanced_disk_installing-platform-agnostic
 </p></remarks>
         </by-component>
       </statement>
@@ -2163,10 +2168,10 @@ https://docs.openshift.com/container-platform/latest/logging/cluster-logging-dep
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="9c2388b8-6ef5-45cf-93d2-cd87d4f39794" control-id="au-8">
+    <implemented-requirement uuid="12f4deb5-9abb-4ee7-9688-3dac00bf8ac6" control-id="au-8">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="au-8_stmt.a" uuid="7edb6f5a-e08e-4faf-a375-bad11b80aa7c">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="a3e4e1da-469f-42f2-a0e1-2c8ffaeae1ba">
+      <statement statement-id="au-8_stmt.a" uuid="879ad6f7-dd58-4d65-ad73-a71bb7164447">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c39c3d0b-89ee-4013-817a-ab78cf76644e">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>By default, the OpenShift API uses the internal system clocks to generate
 time stamps for audit records. At the code level, the OpenShift API
@@ -2182,11 +2187,13 @@ type MicroTime struct
 
 which really is a time.Time value which comes from the standard golang library:
 
-https://golang.org/pkg/time/</p></remarks>
+https://golang.org/pkg/time/
+
+Therefore this control is inherently met.</p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="au-8_stmt.b" uuid="8199e4bb-c82f-4ace-9317-6db96229ad0a">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="ca64871d-2677-4674-8c06-a118a56ef997">
+      <statement statement-id="au-8_stmt.b" uuid="f48722ba-a14b-4352-9514-ec19837f1dc7">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="597caf6c-34d7-42d2-bb8e-884f83550be2">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>By default, the OpenShift API records time stamps for audit records
 that can be mapped to Coordinated Universal Time (UTC). For example
@@ -2196,6 +2203,8 @@ in the following node audit record:
 
 timestamps such as requestReceivedTimestamp and stageTimestamp are
 in UTC format e.g. 2020-04-02T08:27:20.200962Z
+
+Therefore this control is inherently met.
 
 See https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-audit-log.html
 for more example of audit records.</p></remarks>
@@ -2221,14 +2230,24 @@ operating system. This control is not applicable to OpenShift.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="55434d4e-d726-4f87-80da-a735bf9ddb65" control-id="au-9">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-9_stmt" uuid="98139dd1-5cd9-4c5c-9450-60a7461da54a">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="7970ec74-624d-4dce-a658-d8c036036d1a">
+    <implemented-requirement uuid="764febad-5659-4d07-815e-e9a31d366200" control-id="au-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-9_stmt" uuid="df580731-5467-43c8-ab7a-2f4701e645cd">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="328f774c-9b06-4c0a-ac2f-6d62365c1898">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Engineering progress can be tracked via:
+          <remarks><p>Access to and integrity of the audit records on the master nodes
+is protected by the usual operating system permissions.
 
-https://issues.redhat.com/browse/CMP-232
+This control is met when /var/log/kube-apiserver,
+/var/log/openshift-apiserver and /var/log/oauth-apiserver have
+the permissions 0700 and the files under them 0600 and are
+owned by root.root.
+
+In addition, if audit logs are being offloaded from the cluster
+using Cluster Logging Operator, care must be taken to only
+use TLS in transit - all ClusterLogForwarder outputs must use
+either https:// or tls:// as protocol. For more information, see
+https://docs.openshift.com/container-platform/4.6/logging/cluster-logging-external.html
 </p></remarks>
         </by-component>
       </statement>
@@ -2259,15 +2278,14 @@ https://issues.redhat.com/browse/CMP-236
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="2e936dfa-c426-4c14-b9bf-b4a2585f877c" control-id="au-9.4">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="au-9.4_stmt" uuid="67384918-d292-4ecf-907c-a9a006bd813e">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c316f2ae-f82d-4182-a625-9ce6bf288afb">
+    <implemented-requirement uuid="fcf3dc98-6557-458d-8c67-33295db6d0a0" control-id="au-9.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="au-9.4_stmt" uuid="5a230462-b0b9-4e7a-b42d-0c0e45a23ac3">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="44d3a9f5-e0e2-4919-91a2-7c4c1d1becb8">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Progress can be tracked
-via:
-
-https://github.com/ComplianceAsCode/redhat/issues/863
+          <remarks><p>Authorizing access to management of audit functionality to only
+organizationally defined subset of users is outside the scope
+of OpenShift configuration.
 </p></remarks>
         </by-component>
       </statement>
@@ -2284,14 +2302,21 @@ https://issues.redhat.com/browse/CMP-232
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="026a03b5-1bd0-4e63-93ef-7c513080917e" control-id="au-11">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-11_stmt" uuid="0a9fbed7-ddad-41fb-b5c1-5966fd294dce">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="2e8093cd-410f-44fe-8d14-44321f8fade4">
+    <implemented-requirement uuid="e56ac826-051d-46bf-a315-86c091c66954" control-id="au-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="au-11_stmt" uuid="2aac2a40-1882-4c26-a067-833f5c351005">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="dacb8a3e-5b1c-4341-ba45-269aaa276df7">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Engineering progress can be tracked via:
+          <remarks><p>The Red Hat OpenShift audit logs are emited by the API servers
+and stored on the master nodes.
+The API servers do not support retaining audit logs for at least a
+defined number of days, therefore the logs must be offloaded from
+the cluster.
 
-https://issues.redhat.com/browse/CMP-243
+The Cluster Logging Operator is able to forward the Red Hat OpenShift
+audit logs so that they can be stored per organizational policy.
+
+https://docs.openshift.com/container-platform/latest/logging/cluster-logging-external.html
 </p></remarks>
         </by-component>
       </statement>
@@ -3242,48 +3267,62 @@ of OpenShift configuration guidance.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="4e820a8c-dcd9-489c-902b-a072fa5c0b70" control-id="cm-7">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-7_stmt.a" uuid="b5871b01-e9c9-4485-a45f-3bdccb1c0a89">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c615bddb-a883-4ae1-a0ef-3f53a9833d5e">
+    <implemented-requirement uuid="7aad1d1f-2f24-426e-b02c-bfe45704e7a9" control-id="cm-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cm-7_stmt.a" uuid="262ae188-4528-448c-9fd3-767d0f81f9e9">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="00030a4b-873b-476d-a08c-154921aba404">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>Red Hat OpenShift is targeted at running containers, and thus it
+contains the minimal components to provide a secure, reliable
+and operable container platform. It also runs over Red Hat CoreOS, [1]
+which only contains a subset of packages that RHEL would usually have.
+This subset is the minimum required to run OpenShift.
 
-https://issues.redhat.com/browse/CMP-273
+[1] https://docs.openshift.com/container-platform/4.7/architecture/architecture-rhcos.html
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-7_stmt.b" uuid="a6b5f2d2-287e-406f-acdd-57fb518663a8">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c615bddb-a883-4ae1-a0ef-3f53a9833d5e">
+      <statement statement-id="cm-7_stmt.b" uuid="5cd22880-5c15-4ade-a3f4-e21635249c87">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="8b8ac795-a63f-43a3-ac7a-66724379910a">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>Within OpenShift, as in Kubernetes, restrictions on network communications (open
+ports and protocols) can be done by using NetworkPolicies [1]. This allows
+administrators to restrict the traffic to and within a namespace.
 
-https://issues.redhat.com/browse/CMP-273
+Further restrictions should be done from the cloud that's running OpenShift,
+or the infrastructure that the platform is running on.
+
+[1] https://docs.openshift.com/container-platform/4.7/networking/network_policy/about-network-policy.html
 </p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="681bbf04-881f-448a-b207-3183b7066a64" control-id="cm-7.1">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-7.1_stmt.a" uuid="712afed5-3de9-4f0b-a3cd-93267d37b136">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="4fbaf0fe-904f-4f7b-b606-46d13f3a0500">
+    <implemented-requirement uuid="0e297dc6-d675-4665-9f4c-3795263921f1" control-id="cm-7.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cm-7.1_stmt.a" uuid="b9deedd6-e9fe-4243-886c-281aa1e6ea01">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="5176a1d6-a61e-47eb-8d4b-6c5233150771">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>It is up to the customer to review the deployment to identify the minimal
+needed services, network protocols and ports that need to be enabled in
+the system.
 
-https://issues.redhat.com/browse/CMP-274
+For OpenShift, there is a comprehensive list in the documentation [1]
+
+[1] https://docs.openshift.com/container-platform/4.7/installing/install_config/configuring-firewall.html
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-7.1_stmt.b" uuid="ec980658-104c-4e52-8631-2d923aff4c85">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="4fbaf0fe-904f-4f7b-b606-46d13f3a0500">
+      <statement statement-id="cm-7.1_stmt.b" uuid="a571ead7-0837-47c4-b1ac-3183cabc7400">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="8b8ac795-a63f-43a3-ac7a-66724379910a">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>Within OpenShift, as in Kubernetes, restrictions on network communications (open
+ports and protocols) can be done by using NetworkPolicies [1]. This allows
+administrators to restrict the traffic to and within a namespace.
 
-https://issues.redhat.com/browse/CMP-274
+Further restrictions should be done from the cloud that's running OpenShift,
+or the infrastructure that the platform is running on.
+
+[1] https://docs.openshift.com/container-platform/4.7/networking/network_policy/about-network-policy.html
 </p></remarks>
         </by-component>
       </statement>
@@ -3334,25 +3373,47 @@ https://issues.redhat.com/browse/CMP-205
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="6ab840ef-1732-44c3-a612-787e7e545ccd" control-id="cm-8">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-8_stmt.a" uuid="8981d481-fa58-4a47-863f-735659a75a57">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c7eceb86-8630-47f8-be2b-a463c84ef6a0">
+    <implemented-requirement uuid="e5b9961f-7ee1-46a4-b72e-5aa0b9a4e8c1" control-id="cm-8">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
+      <statement statement-id="cm-8_stmt.a" uuid="c550408c-4e53-42e5-8259-a4e0fe24ea7c">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="aac03b7b-e3aa-4bca-8c06-795a9a53119f">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
+          <remarks><p>It is up to the customer to review and implement an appropriate
+system component inventory. However, Red Hat provides tools that can
+aid customers in generating such inventories and keeping them up-to-date.
 
-https://issues.redhat.com/browse/CMP-277
+A summary of the cluster's specification is available through the
+ClusterVersion object [1]. This will provide information both on the version
+and the specific container hash used. A list of the control plane operators
+used for managing Red Hat OpenShift is available through the ClusterOperator
+object [2].
+
+Knowing this information, it's possible to get the list of packages for the
+underlying hosts, as well as their versions. This can be done by
+inspecting OpenShift's payload [3].
+
+Installed operators with their respective versions can be listed through the
+ClusterServiceVersion [4] object. Note that this is a namespaced resource, so
+all namespaces need to be inspected.
+
+Finally, Red Hat also provides the Skopeo [5] and Podman [6] to further inspect
+any container images used in the deployment. These tools can help fill out extra
+details about the contents of the containers used in the system.
+
+[1] https://docs.openshift.com/container-platform/4.7/support/summarizing-cluster-specifications.html
+[2] https://docs.openshift.com/container-platform/4.7/installing/validating-an-installation.html#getting-cluster-version-and-update-details_validating-an-installation
+[3] https://access.redhat.com/solutions/5787001
+[4] https://docs.openshift.com/container-platform/4.7/operators/understanding/olm/olm-understanding-olm.html#olm-csv_olm-understanding-olm
+[5] https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#skopeo
+[6] https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#podman
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-8_stmt.b" uuid="1831a671-8eb9-4dfb-84aa-c3ec5f2f24fb">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c7eceb86-8630-47f8-be2b-a463c84ef6a0">
+      <statement statement-id="cm-8_stmt.b" uuid="6158134e-620a-439b-903d-a21637cb24fc">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="95a09560-4c4a-4642-b005-7f7751b0952a">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Engineering progress can be
-tracked via:
-
-https://issues.redhat.com/browse/CMP-277
+          <remarks><p>It is up to the customer to ensure that the system component
+inventory is kept up-to-date.
 </p></remarks>
         </by-component>
       </statement>
