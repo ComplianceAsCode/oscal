@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "67a8c92a-a998-4ca7-b4d4-3b23b1be7671",
+    "uuid": "7cc9ac19-da24-4dde-9035-c124a0866eda",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-22T00:53:08.07+00:00",
+      "last-modified": "2021-05-23T00:59:24.01+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -5119,7 +5119,7 @@
           }
         },
         {
-          "uuid": "affb7bbc-ba2d-4d82-81ee-3b12c82a0240",
+          "uuid": "6681a0ac-18a0-4006-90cb-bc170c6e44e3",
           "control-id": "ia-3",
           "annotations": [
             {
@@ -5130,12 +5130,12 @@
           ],
           "statements": {
             "ia-3_stmt": {
-              "uuid": "b0106689-c877-4dd2-b7fb-48be934113bd",
+              "uuid": "c71b0f38-5ad3-47e3-b88a-ec1dc30dc527",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "4094f41b-39e5-4be9-a5c0-2b03948cd290",
+                  "uuid": "c160e098-4bbf-4c68-96b0-dc8e92bb4062",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response for IA-3 is planned."
+                  "remarks": "\tDuring cluster operation, all components are using mutual-TLS\nto authenticate each other's identities:\nhttps://docs.openshift.com/container-platform/4.6/security/certificate_types_descriptions/node-certificates.html\n\nmTLS is also used during the initial bootstrap of the cluster:\nhttps://docs.openshift.com/container-platform/4.3/authentication/certificate-types-descriptions.html#bootstrap-certificates_ocp-certificates\nhttps://docs.openshift.com/container-platform/4.6/security/certificate_types_descriptions/bootstrap-certificates.html\n\nTherefore, this control is inherently met.\n\nAuthenticating devices outside the cluster is the customer's\nreponsibility."
                 }
               }
             }
