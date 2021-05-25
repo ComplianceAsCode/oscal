@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="359f0039-f078-49ca-9e0b-bc1c76cbcabc">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="3a0a57df-4be1-48a8-aca3-d3c0f2697800">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-05-24T00:56:33.98+00:00</last-modified>
+    <last-modified>2021-05-25T00:55:43.68+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -1276,8 +1276,8 @@ that has been FIPS validated.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="39d48f16-1d4f-47cd-a477-ddb3574cdf02" control-id="ac-17.3">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+    <implemented-requirement uuid="a4ba92c5-c388-4d73-a7f0-84abd5663e04" control-id="ac-17.3">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="not-applicable"></annotation>
       <statement statement-id="ac-17.3_stmt" uuid="7967ae9c-1cd4-42ae-bdcf-f84c036ae938">
         <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="09af0121-32d6-4b5b-8587-b4c4adeea806">
           <description><p>Describe how is the software component satisfying the control.</p></description>
@@ -4169,38 +4169,61 @@ https://docs.openshift.com/container-platform/latest/authentication/understandin
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="3d445664-31ad-44c3-9a73-e966b555a4e1" control-id="ia-5.2">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-5.2_stmt.a" uuid="a2b1037b-32b1-48d7-b633-f389aba90736">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="541735ef-84f2-42fc-a606-f0ebd03a99e2">
+    <implemented-requirement uuid="e4117f5f-1c3c-4777-ae87-11d4abdf403e" control-id="ia-5.2">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ia-5.2_stmt.a" uuid="1510fdeb-5c48-4c78-afdb-31b3bf41b4cc">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="666bf435-3c16-4ebf-a23a-bb34324ad6e0">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Engineering progress can be tracked via:
+          <remarks><p>The certificates used for in-cluster mTLS authentication
+are issued by an internal CA. It is not possible
+to set a different CA:
+https://docs.openshift.com/container-platform/4.6/security/certificate_types_descriptions/control-plane-certificates.html
 
-https://issues.redhat.com/browse/CMP-327</p></remarks>
+The API server's certificates can be swapped for user-provided
+ones:
+https://docs.openshift.com/container-platform/4.6/security/certificate_types_descriptions/user-provided-certificates-for-api-server.html
+
+It is also possible to set a custom CA for the Proxy objects:
+https://docs.openshift.com/container-platform/4.6/security/certificate_types_descriptions/proxy-certificates.html
+services:
+https://docs.openshift.com/container-platform/4.6/security/certificate_types_descriptions/service-ca-certificates.html
+
+When setting up IDPs, all compliant IDP allow the CA that signed
+the IDP certificate to be set:
+https://docs.openshift.com/container-platform/4.7/rest_api/config_apis/oauth-config-openshift-io-v1.html</p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ia-5.2_stmt.b" uuid="e0bce06b-3ca7-4c6b-b737-8f7b277f03ce">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="541735ef-84f2-42fc-a606-f0ebd03a99e2">
+      <statement statement-id="ia-5.2_stmt.b" uuid="9dc4191b-1b86-4c4f-b60d-3e2b54698ad7">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="26acce1d-cd1b-4393-9f48-d55583691cc4">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Engineering progress can be tracked via:
+          <remarks><p>Most of the private keys are stored in Kubernetes secrets
+which are inherently protected by the combination of RBAC
+and namespaces.
 
-https://issues.redhat.com/browse/CMP-327</p></remarks>
+In addition, OpenShift makes use of a number of key files as part
+of the operation of its components. This includes keys for control
+place components like kube-apiserver, kube-controller-manager,
+kube-scheduler and etcd. These key files are protected using
+traditional UNIX permissions as well as SELinux labels. Private
+keys on the filesystem are checked using CaC rules that will be
+imported from the CIS profile. It is possible to check their
+permissions and SELinux labels by running:
+$ find /etc/kubernetes/static-pod-resources/ -name \*.key -exec ls -lZ {} \;</p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ia-5.2_stmt.c" uuid="0bc48b29-44a3-402f-8bf4-891ed7bfaaeb">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="541735ef-84f2-42fc-a606-f0ebd03a99e2">
+      <statement statement-id="ia-5.2_stmt.c" uuid="2aaa505e-b4e1-4b28-8fc9-fc724877b437">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="e120b3d8-976f-49ae-b269-947782c7ef06">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Engineering progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-327</p></remarks>
+          <remarks><p>The customer is responsible for checking that no wildcard
+certificates are being used.</p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ia-5.2_stmt.d" uuid="e6f5339f-55ea-49b8-8b36-6ca9d24cbd37">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="541735ef-84f2-42fc-a606-f0ebd03a99e2">
+      <statement statement-id="ia-5.2_stmt.d" uuid="98d950fc-c073-4fe0-95a3-814fab5467c7">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="e9afe21d-dbb9-4cad-85ea-5592e400d72f">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Engineering progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-327</p></remarks>
+          <remarks><p>There seems to be a gap where the certificates for IDPs are
+not checked using OCSP or CRLS:
+https://issues.redhat.com/browse/CMP-977</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
@@ -4259,13 +4282,14 @@ OpenShift configuration.</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="278f0c10-7e86-45aa-82ce-665eaea8a519" control-id="ia-6">
+    <implemented-requirement uuid="b1b81ba1-66df-4af5-841c-2a07fe1a4c4e" control-id="ia-6">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
-      <statement statement-id="ia-6_stmt" uuid="df3f707c-10a3-4a47-b6bf-dd6577ba8230">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="9f69b9bf-bcc7-445b-b5c4-b713fe85b0c5">
+      <statement statement-id="ia-6_stmt" uuid="2348136e-b41a-4e9d-b491-d4585108d6df">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="51e1ac9f-20a2-40f9-9274-5a2c7892d4c2">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>Red Hat OpenShift inherently meets this as the session key and account login
 passwords are obscured by not being displayed on output or by asterisks.
+This control is inherently met.
 
 This is applicable to both the `oc` CLI and OpenShift's UI console.</p></remarks>
         </by-component>

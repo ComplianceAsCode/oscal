@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "c5ea0496-69e6-4126-adb7-7e7bcfc88564",
+    "uuid": "5da85be2-9011-4abf-a418-a5fc57f2c652",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-05-24T00:56:41.39+00:00",
+      "last-modified": "2021-05-25T00:55:50.19+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -1709,13 +1709,13 @@
           }
         },
         {
-          "uuid": "39d48f16-1d4f-47cd-a477-ddb3574cdf02",
+          "uuid": "a4ba92c5-c388-4d73-a7f0-84abd5663e04",
           "control-id": "ac-17.3",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "complete"
+              "value": "not-applicable"
             }
           ],
           "statements": {
@@ -5414,53 +5414,53 @@
           }
         },
         {
-          "uuid": "3d445664-31ad-44c3-9a73-e966b555a4e1",
+          "uuid": "e4117f5f-1c3c-4777-ae87-11d4abdf403e",
           "control-id": "ia-5.2",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "ia-5.2_stmt.a": {
-              "uuid": "a2b1037b-32b1-48d7-b633-f389aba90736",
+              "uuid": "1510fdeb-5c48-4c78-afdb-31b3bf41b4cc",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "541735ef-84f2-42fc-a606-f0ebd03a99e2",
+                  "uuid": "666bf435-3c16-4ebf-a23a-bb34324ad6e0",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Engineering progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-327"
+                  "remarks": "\tThe certificates used for in-cluster mTLS authentication\nare issued by an internal CA. It is not possible\nto set a different CA:\nhttps://docs.openshift.com/container-platform/4.6/security/certificate_types_descriptions/control-plane-certificates.html\n\nThe API server's certificates can be swapped for user-provided\nones:\nhttps://docs.openshift.com/container-platform/4.6/security/certificate_types_descriptions/user-provided-certificates-for-api-server.html\n\nIt is also possible to set a custom CA for the Proxy objects:\nhttps://docs.openshift.com/container-platform/4.6/security/certificate_types_descriptions/proxy-certificates.html\nservices:\nhttps://docs.openshift.com/container-platform/4.6/security/certificate_types_descriptions/service-ca-certificates.html\n\nWhen setting up IDPs, all compliant IDP allow the CA that signed\nthe IDP certificate to be set:\nhttps://docs.openshift.com/container-platform/4.7/rest_api/config_apis/oauth-config-openshift-io-v1.html"
                 }
               }
             },
             "ia-5.2_stmt.b": {
-              "uuid": "e0bce06b-3ca7-4c6b-b737-8f7b277f03ce",
+              "uuid": "9dc4191b-1b86-4c4f-b60d-3e2b54698ad7",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "541735ef-84f2-42fc-a606-f0ebd03a99e2",
+                  "uuid": "26acce1d-cd1b-4393-9f48-d55583691cc4",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Engineering progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-327"
+                  "remarks": "\tMost of the private keys are stored in Kubernetes secrets\nwhich are inherently protected by the combination of RBAC\nand namespaces.\n\nIn addition, OpenShift makes use of a number of key files as part\nof the operation of its components. This includes keys for control\nplace components like kube-apiserver, kube-controller-manager,\nkube-scheduler and etcd. These key files are protected using\ntraditional UNIX permissions as well as SELinux labels. Private\nkeys on the filesystem are checked using CaC rules that will be\nimported from the CIS profile. It is possible to check their\npermissions and SELinux labels by running:\n$ find /etc/kubernetes/static-pod-resources/ -name \\*.key -exec ls -lZ {} \\;"
                 }
               }
             },
             "ia-5.2_stmt.c": {
-              "uuid": "0bc48b29-44a3-402f-8bf4-891ed7bfaaeb",
+              "uuid": "2aaa505e-b4e1-4b28-8fc9-fc724877b437",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "541735ef-84f2-42fc-a606-f0ebd03a99e2",
+                  "uuid": "e120b3d8-976f-49ae-b269-947782c7ef06",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Engineering progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-327"
+                  "remarks": "\tThe customer is responsible for checking that no wildcard\ncertificates are being used."
                 }
               }
             },
             "ia-5.2_stmt.d": {
-              "uuid": "e6f5339f-55ea-49b8-8b36-6ca9d24cbd37",
+              "uuid": "98d950fc-c073-4fe0-95a3-814fab5467c7",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "541735ef-84f2-42fc-a606-f0ebd03a99e2",
+                  "uuid": "e9afe21d-dbb9-4cad-85ea-5592e400d72f",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Engineering progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-327"
+                  "remarks": "\tThere seems to be a gap where the certificates for IDPs are\nnot checked using OCSP or CRLS:\nhttps://issues.redhat.com/browse/CMP-977"
                 }
               }
             }
@@ -5582,7 +5582,7 @@
           }
         },
         {
-          "uuid": "278f0c10-7e86-45aa-82ce-665eaea8a519",
+          "uuid": "b1b81ba1-66df-4af5-841c-2a07fe1a4c4e",
           "control-id": "ia-6",
           "annotations": [
             {
@@ -5593,12 +5593,12 @@
           ],
           "statements": {
             "ia-6_stmt": {
-              "uuid": "df3f707c-10a3-4a47-b6bf-dd6577ba8230",
+              "uuid": "2348136e-b41a-4e9d-b491-d4585108d6df",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "9f69b9bf-bcc7-445b-b5c4-b713fe85b0c5",
+                  "uuid": "51e1ac9f-20a2-40f9-9274-5a2c7892d4c2",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tRed Hat OpenShift inherently meets this as the session key and account login\npasswords are obscured by not being displayed on output or by asterisks.\n\nThis is applicable to both the `oc` CLI and OpenShift's UI console."
+                  "remarks": "\tRed Hat OpenShift inherently meets this as the session key and account login\npasswords are obscured by not being displayed on output or by asterisks.\nThis control is inherently met.\n\nThis is applicable to both the `oc` CLI and OpenShift's UI console."
                 }
               }
             }
