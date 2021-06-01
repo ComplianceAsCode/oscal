@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="c3e08dcb-a3ec-4c34-9e4f-049b738d8268">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="45aa23e3-9c1d-4471-88bd-92dafd9f0d57">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-05-31T01:57:44.12+00:00</last-modified>
+    <last-modified>2021-06-01T02:17:49.12+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -1826,13 +1826,20 @@ outside the scope of OpenShift configuration.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="8f3651de-9640-4a2c-85b7-11ac36329a38" control-id="au-6.1">
+    <implemented-requirement uuid="7e5e6342-24d8-4c84-b32c-5e2849465d34" control-id="au-6.1">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="au-6.1_stmt" uuid="17f07aaa-cd19-4907-b660-672d4014657e">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="0829c1f9-bba9-4e1c-a268-31bdcebefe36">
+      <statement statement-id="au-6.1_stmt" uuid="c5f74f20-a5b9-4446-ae92-c87472edf03a">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="e5d235ae-4638-46d9-b4ea-596335961f8c">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Engineering progress can be tracked via:
-https://issues.redhat.com/browse/CMP-167
+          <remarks><p>In order to to integrate audit review, analysis, and reporting
+processes to support organizational processes for investigation
+and response to suspicious activities, make sure the Cluster
+Logging Operator is enabled.
+
+Documentation regarding how to forward cluster logs using the
+Cluster Logging Operator to specific endpoints can be found at:
+
+https://docs.openshift.com/container-platform/latest/logging/cluster-logging.html
 </p></remarks>
         </by-component>
       </statement>
