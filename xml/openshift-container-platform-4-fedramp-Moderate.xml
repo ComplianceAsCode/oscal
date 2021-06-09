@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="1b2503c6-6498-47bb-9e38-0d553bbdb9f3">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="5ab6ae8e-bb66-4824-bbea-677e581f1d9e">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-06-08T01:10:32.82+00:00</last-modified>
+    <last-modified>2021-06-09T00:51:01.41+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -1134,19 +1134,19 @@ https://issues.redhat.com/browse/CMP-125
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="317d48f2-c463-4fd9-a033-49c4ef0fa7d0" control-id="ac-10">
+    <implemented-requirement uuid="7f707ece-caf4-4505-822c-dac2f01f095e" control-id="ac-10">
       <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ac-10_stmt" uuid="3f970970-cbef-4fb6-a9b4-26b91e499a28">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="3aed70d9-b8b8-4e83-89c0-337f33551afc">
+      <statement statement-id="ac-10_stmt" uuid="c5b7f2eb-d44f-4b1f-9144-9ae8177c09e2">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="5c465f1f-e120-47f8-b0c7-598d0ef236c2">
           <description><p>Describe how is the software component satisfying the control.</p></description>
           <remarks><p>The customer will be responsible for limiting the number of
 concurrent sessions to the customer application as required.
 A successful control implemented will need to address the technical
 mechanism used to enforce this limit.
 
-A control response is planned. Progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-131
+At the moment, the OpenShift OAuth server does not support
+limiting the number of concurrent logins. This work is scheduled
+for OpenShift in https://issues.redhat.com/browse/RFE-48
 </p></remarks>
         </by-component>
       </statement>
@@ -4248,14 +4248,13 @@ OpenShift configuration.</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="a0eca32c-d306-4f23-8e9e-96b6402ed104" control-id="ia-5.4">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-5.4_stmt" uuid="9ffddd5e-d96b-41df-b35b-8dbf74ca432e">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c609ea35-e7b3-4483-9223-aa8bc09e7ff0">
+    <implemented-requirement uuid="ccf87c01-612e-41f6-a696-c8c29714f6b2" control-id="ia-5.4">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ia-5.4_stmt" uuid="061c2f35-e483-460c-9de2-d16344743b10">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="4ca64c45-6821-4c7a-a25f-50a46a9d9c9c">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Engineering progress can be tracked via:
-
-https://issues.redhat.com/browse/CMP-328</p></remarks>
+          <remarks><p>Checking password complexity should be set on the IDP side.
+The use of the htpasswd-based IDP is not allowed.</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>
