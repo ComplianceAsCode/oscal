@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "afe6af59-9455-4751-8e20-1b6f53783c78",
+    "uuid": "77e123ee-020f-4ae4-bcff-7dab02b399f1",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-07-05T00:42:09.44+00:00",
+      "last-modified": "2021-07-06T00:49:08.73+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -2306,43 +2306,43 @@
           }
         },
         {
-          "uuid": "ebf6c80d-ae1e-42f8-ad2f-67e668acd79c",
+          "uuid": "ed6492d6-0415-462d-b905-d037696685a0",
           "control-id": "cm-11",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "cm-11_stmt.a": {
-              "uuid": "dafb6e21-48a3-48d1-8fa6-068e39577177",
+              "uuid": "34940313-336f-4630-88de-7136ff861cd1",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "bf9ce949-de4c-41e8-8028-a32657381e46",
+                  "uuid": "678c7372-1249-4a96-bb2c-7832f20201c9",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-285\n"
+                  "remarks": "\tDeveloping, documenting, and disseminating an organizational policy\ngoverning the installation  of software by users\nis outside the scope of OpenShift configuration.\n"
                 }
               }
             },
             "cm-11_stmt.b": {
-              "uuid": "de36e5da-b64e-44fd-980c-889978e7567e",
+              "uuid": "e1c093e7-a8e2-4b2c-8f6d-6e6f1ab67603",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "bf9ce949-de4c-41e8-8028-a32657381e46",
+                  "uuid": "71dff8f9-0106-4e2b-a47b-570d66ec3f34",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-285\n"
+                  "remarks": "\tRed Hat OpenShift allows for configuring the platform in such a way\nthat only signed containers will be accepted for scheduling. [1] [2]\n\nRed Hat signs the images provided for running the platform, as well\nas the base images that are usable for building other workloads.\n\nCustomers should be careful to enforce image signing on their own images.\n\nIn addition, Red Hat OpenShift allows limiting he container image\nregistries from which normal users can import images by setting\nallowedRegistriesForImport[3]\n\n[1] https://docs.openshift.com/container-platform/4.7/security/container_security/security-container-signature.html\n[2] https://docs.openshift.com/container-platform/4.7/security/container_security/security-deploy.html#security-deploy-image-sources_security-deploy\n[3] https://docs.openshift.com/container-platform/4.7/openshift_images/image-configuration.html\n"
                 }
               }
             },
             "cm-11_stmt.c": {
-              "uuid": "88121617-6f41-4a5c-90c3-9406735c881d",
+              "uuid": "e61966e3-1a5b-42e8-8822-e8469cad27f6",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "bf9ce949-de4c-41e8-8028-a32657381e46",
+                  "uuid": "71dff8f9-0106-4e2b-a47b-570d66ec3f34",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA complete control response is planned. Progress can be\ntracked via:\n\nhttps://issues.redhat.com/browse/CMP-285\n"
+                  "remarks": "\tRed Hat OpenShift allows for configuring the platform in such a way\nthat only signed containers will be accepted for scheduling. [1] [2]\n\nRed Hat signs the images provided for running the platform, as well\nas the base images that are usable for building other workloads.\n\nCustomers should be careful to enforce image signing on their own images.\n\nIn addition, Red Hat OpenShift allows limiting he container image\nregistries from which normal users can import images by setting\nallowedRegistriesForImport[3]\n\n[1] https://docs.openshift.com/container-platform/4.7/security/container_security/security-container-signature.html\n[2] https://docs.openshift.com/container-platform/4.7/security/container_security/security-deploy.html#security-deploy-image-sources_security-deploy\n[3] https://docs.openshift.com/container-platform/4.7/openshift_images/image-configuration.html\n"
                 }
               }
             }

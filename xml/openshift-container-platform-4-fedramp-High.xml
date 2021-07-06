@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="0668a8dd-0c57-4aaf-a08d-e915d145309e">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="b848e040-ce27-4c50-8441-26f61c865c75">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-07-05T00:42:03.16+00:00</last-modified>
+    <last-modified>2021-07-06T00:49:02.42+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -3686,35 +3686,56 @@ is outside the scope of OpenShift configuration.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="ebf6c80d-ae1e-42f8-ad2f-67e668acd79c" control-id="cm-11">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-11_stmt.a" uuid="dafb6e21-48a3-48d1-8fa6-068e39577177">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="bf9ce949-de4c-41e8-8028-a32657381e46">
+    <implemented-requirement uuid="ed6492d6-0415-462d-b905-d037696685a0" control-id="cm-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cm-11_stmt.a" uuid="34940313-336f-4630-88de-7136ff861cd1">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="678c7372-1249-4a96-bb2c-7832f20201c9">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Progress can be
-tracked via:
-
-https://issues.redhat.com/browse/CMP-285
+          <remarks><p>Developing, documenting, and disseminating an organizational policy
+governing the installation  of software by users
+is outside the scope of OpenShift configuration.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-11_stmt.b" uuid="de36e5da-b64e-44fd-980c-889978e7567e">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="bf9ce949-de4c-41e8-8028-a32657381e46">
+      <statement statement-id="cm-11_stmt.b" uuid="e1c093e7-a8e2-4b2c-8f6d-6e6f1ab67603">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="71dff8f9-0106-4e2b-a47b-570d66ec3f34">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Progress can be
-tracked via:
+          <remarks><p>Red Hat OpenShift allows for configuring the platform in such a way
+that only signed containers will be accepted for scheduling. [1] [2]
 
-https://issues.redhat.com/browse/CMP-285
+Red Hat signs the images provided for running the platform, as well
+as the base images that are usable for building other workloads.
+
+Customers should be careful to enforce image signing on their own images.
+
+In addition, Red Hat OpenShift allows limiting he container image
+registries from which normal users can import images by setting
+allowedRegistriesForImport[3]
+
+[1] https://docs.openshift.com/container-platform/4.7/security/container_security/security-container-signature.html
+[2] https://docs.openshift.com/container-platform/4.7/security/container_security/security-deploy.html#security-deploy-image-sources_security-deploy
+[3] https://docs.openshift.com/container-platform/4.7/openshift_images/image-configuration.html
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-11_stmt.c" uuid="88121617-6f41-4a5c-90c3-9406735c881d">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="bf9ce949-de4c-41e8-8028-a32657381e46">
+      <statement statement-id="cm-11_stmt.c" uuid="e61966e3-1a5b-42e8-8822-e8469cad27f6">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="71dff8f9-0106-4e2b-a47b-570d66ec3f34">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Progress can be
-tracked via:
+          <remarks><p>Red Hat OpenShift allows for configuring the platform in such a way
+that only signed containers will be accepted for scheduling. [1] [2]
 
-https://issues.redhat.com/browse/CMP-285
+Red Hat signs the images provided for running the platform, as well
+as the base images that are usable for building other workloads.
+
+Customers should be careful to enforce image signing on their own images.
+
+In addition, Red Hat OpenShift allows limiting he container image
+registries from which normal users can import images by setting
+allowedRegistriesForImport[3]
+
+[1] https://docs.openshift.com/container-platform/4.7/security/container_security/security-container-signature.html
+[2] https://docs.openshift.com/container-platform/4.7/security/container_security/security-deploy.html#security-deploy-image-sources_security-deploy
+[3] https://docs.openshift.com/container-platform/4.7/openshift_images/image-configuration.html
 </p></remarks>
         </by-component>
       </statement>
@@ -7930,55 +7951,51 @@ that is out of scope for OpenShift configuration
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="23e70356-2035-4233-a7f4-8370b3d60157" control-id="sa-10">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sa-10_stmt.a" uuid="95684487-9444-4195-8dbb-962f685d5bd5">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="53ac6e51-7ce3-4f56-bc71-b6ee264973d3">
+    <implemented-requirement uuid="cb25dbb8-bd6b-4dcc-ae6f-1de52e0727ac" control-id="sa-10">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="sa-10_stmt.a" uuid="c99daf7c-d527-4d21-a6ea-5c0fc15a2c15">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c7cd2fed-b84b-4349-ab82-767779a710bb">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response to SA-10(a) is planned. Progress
-can be tracked at:
-
-https://issues.redhat.com/browse/CMP-369
+          <remarks><p>Red Hat uses git and github for development, so all changes including
+their authorship are tracked in SCMs and identifiable with a hash.
+Any downstream-specific changes are tracked in a special "midstream"
+repository. This makes the control inherently met.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="sa-10_stmt.b" uuid="3f0d837b-9027-4ba8-ac9e-9b4f1b9544a5">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="fa90dca2-ea44-4706-8cb9-2280b5d5f2d1">
+      <statement statement-id="sa-10_stmt.b" uuid="d39c34ea-2d15-4737-8dab-2984a1278392">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="3a0c52b8-ed16-4fa0-b5d0-fed282710665">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response to SA-10(b) is planned. Progress
-can be tracked at:
-
-https://issues.redhat.com/browse/CMP-369
+          <remarks><p>Red Hat uses git and github for development, so all changes including
+their authorship are tracked in SCMs and identifiable with a hash.
+Any downstream-specific changes are tracked in a special "midstream"
+repository.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="sa-10_stmt.c" uuid="40f2740d-7c38-4a52-aff6-f09b9240678b">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="fe37bd74-209c-4b2f-acfe-3da20c65069b">
+      <statement statement-id="sa-10_stmt.c" uuid="9239bf19-e665-4d47-b382-9a32a72de8e7">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="21425166-1a89-45ce-9d5f-f1b1dbca2648">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response to SA-10(c) is planned. Progress
-can be tracked at:
-
-https://issues.redhat.com/browse/CMP-369
+          <remarks><p>All commits to repositories must be peer-reviewed. In addition,
+changes are tracked in Jira where every Epic must be signed off.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="sa-10_stmt.d" uuid="a1e3cfe6-bafd-4bcf-add0-e2df6c385eda">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="51149b43-7746-4674-81e0-9343b6556130">
+      <statement statement-id="sa-10_stmt.d" uuid="30555627-1f99-4082-b0f0-6e5495b5b520">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="fe5a2a17-7ea2-41e9-8c98-cbbdddc539dc">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response to SA-10(d) is planned. Progress
-can be tracked at:
-
-https://issues.redhat.com/browse/CMP-369
+          <remarks><p>Each individual change goes through a peer review. Larger, system-wide
+changes are tracked with a PR against the enhancements repository
+(https://github.com/openshift/enhancements/). Each change tracked in
+Jira also requires a signoff by the documentation team.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="sa-10_stmt.e" uuid="1d119dee-e436-41b2-ab4d-2dbd8a87a222">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="b4b6d4be-f2c6-43b7-9f49-133379f30817">
+      <statement statement-id="sa-10_stmt.e" uuid="8dd048ad-ff49-4417-ac85-54f0c83e0961">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f0a94913-d854-4420-9687-c178eea6d7d6">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response to SA-10(e) is planned. Progress
-can be tracked at:
-
-https://issues.redhat.com/browse/CMP-369
+          <remarks><p>Official Red Hat CVE findings can be found at:
+https://access.redhat.com/security/security-updates/#/cve
 </p></remarks>
         </by-component>
       </statement>

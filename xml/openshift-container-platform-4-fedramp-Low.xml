@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="8b7f262c-2287-4c5c-8d04-267bef0cd70a">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="5663bcc9-12ef-4908-96a1-242acc9e9c56">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-07-05T00:42:02.96+00:00</last-modified>
+    <last-modified>2021-07-06T00:49:02.20+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -1719,35 +1719,56 @@ of OpenShift configuration.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="ebf6c80d-ae1e-42f8-ad2f-67e668acd79c" control-id="cm-11">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="cm-11_stmt.a" uuid="dafb6e21-48a3-48d1-8fa6-068e39577177">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="bf9ce949-de4c-41e8-8028-a32657381e46">
+    <implemented-requirement uuid="ed6492d6-0415-462d-b905-d037696685a0" control-id="cm-11">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="cm-11_stmt.a" uuid="34940313-336f-4630-88de-7136ff861cd1">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="678c7372-1249-4a96-bb2c-7832f20201c9">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Progress can be
-tracked via:
-
-https://issues.redhat.com/browse/CMP-285
+          <remarks><p>Developing, documenting, and disseminating an organizational policy
+governing the installation  of software by users
+is outside the scope of OpenShift configuration.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-11_stmt.b" uuid="de36e5da-b64e-44fd-980c-889978e7567e">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="bf9ce949-de4c-41e8-8028-a32657381e46">
+      <statement statement-id="cm-11_stmt.b" uuid="e1c093e7-a8e2-4b2c-8f6d-6e6f1ab67603">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="71dff8f9-0106-4e2b-a47b-570d66ec3f34">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Progress can be
-tracked via:
+          <remarks><p>Red Hat OpenShift allows for configuring the platform in such a way
+that only signed containers will be accepted for scheduling. [1] [2]
 
-https://issues.redhat.com/browse/CMP-285
+Red Hat signs the images provided for running the platform, as well
+as the base images that are usable for building other workloads.
+
+Customers should be careful to enforce image signing on their own images.
+
+In addition, Red Hat OpenShift allows limiting he container image
+registries from which normal users can import images by setting
+allowedRegistriesForImport[3]
+
+[1] https://docs.openshift.com/container-platform/4.7/security/container_security/security-container-signature.html
+[2] https://docs.openshift.com/container-platform/4.7/security/container_security/security-deploy.html#security-deploy-image-sources_security-deploy
+[3] https://docs.openshift.com/container-platform/4.7/openshift_images/image-configuration.html
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="cm-11_stmt.c" uuid="88121617-6f41-4a5c-90c3-9406735c881d">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="bf9ce949-de4c-41e8-8028-a32657381e46">
+      <statement statement-id="cm-11_stmt.c" uuid="e61966e3-1a5b-42e8-8822-e8469cad27f6">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="71dff8f9-0106-4e2b-a47b-570d66ec3f34">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A complete control response is planned. Progress can be
-tracked via:
+          <remarks><p>Red Hat OpenShift allows for configuring the platform in such a way
+that only signed containers will be accepted for scheduling. [1] [2]
 
-https://issues.redhat.com/browse/CMP-285
+Red Hat signs the images provided for running the platform, as well
+as the base images that are usable for building other workloads.
+
+Customers should be careful to enforce image signing on their own images.
+
+In addition, Red Hat OpenShift allows limiting he container image
+registries from which normal users can import images by setting
+allowedRegistriesForImport[3]
+
+[1] https://docs.openshift.com/container-platform/4.7/security/container_security/security-container-signature.html
+[2] https://docs.openshift.com/container-platform/4.7/security/container_security/security-deploy.html#security-deploy-image-sources_security-deploy
+[3] https://docs.openshift.com/container-platform/4.7/openshift_images/image-configuration.html
 </p></remarks>
         </by-component>
       </statement>
