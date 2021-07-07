@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="b848e040-ce27-4c50-8441-26f61c865c75">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="65d7292a-3312-4b8f-8149-f2f448d4a082">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-07-06T00:49:02.42+00:00</last-modified>
+    <last-modified>2021-07-07T00:47:52.73+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -8000,15 +8000,15 @@ https://access.redhat.com/security/security-updates/#/cve
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="4c64a19c-d9a6-4f5f-8362-95028e8a5a27" control-id="sa-10.1">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="sa-10.1_stmt" uuid="3893e7a9-f701-4695-bb10-3c715ec900de">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="34e5a26a-f4da-4af3-97c9-1b9cd4601ff9">
+    <implemented-requirement uuid="d59f340d-9ec9-4f6e-a995-329d85c5478d" control-id="sa-10.1">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="sa-10.1_stmt" uuid="dec363e1-4d39-4bab-bc08-fe3b05007704">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="5c846649-1064-4076-930a-a39c14b8bc56">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response to SA-10(1) is planned. Progress
-can be tracked at:
-
-https://issues.redhat.com/browse/CMP-373
+          <remarks><p>All containers comprising the OpenShift Container Platform are
+signed and from an authorized registry. Signature verification is
+done in the Container Runtime level before running the containers.
+Therefore, the OpenShift Platform inherently meets this control.
 </p></remarks>
         </by-component>
       </statement>

@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "aabebb62-4518-49c3-a521-9ebf3f97c2b9",
+    "uuid": "06ff3ef9-e0ec-4c01-8e14-1ee1aae0b1dc",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-07-06T00:49:08.83+00:00",
+      "last-modified": "2021-07-07T00:48:00.91+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -9606,23 +9606,23 @@
           }
         },
         {
-          "uuid": "4c64a19c-d9a6-4f5f-8362-95028e8a5a27",
+          "uuid": "d59f340d-9ec9-4f6e-a995-329d85c5478d",
           "control-id": "sa-10.1",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "sa-10.1_stmt": {
-              "uuid": "3893e7a9-f701-4695-bb10-3c715ec900de",
+              "uuid": "dec363e1-4d39-4bab-bc08-fe3b05007704",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "34e5a26a-f4da-4af3-97c9-1b9cd4601ff9",
+                  "uuid": "5c846649-1064-4076-930a-a39c14b8bc56",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response to SA-10(1) is planned. Progress\ncan be tracked at:\n\nhttps://issues.redhat.com/browse/CMP-373\n"
+                  "remarks": "\tAll containers comprising the OpenShift Container Platform are\nsigned and from an authorized registry. Signature verification is\ndone in the Container Runtime level before running the containers.\nTherefore, the OpenShift Platform inherently meets this control.\n"
                 }
               }
             }
