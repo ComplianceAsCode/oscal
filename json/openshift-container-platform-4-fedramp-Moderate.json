@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "06ff3ef9-e0ec-4c01-8e14-1ee1aae0b1dc",
+    "uuid": "ed120623-d20c-4c7f-8e57-0580cc9e5ee2",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-07-07T00:48:00.91+00:00",
+      "last-modified": "2021-07-08T00:44:11.59+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -3269,33 +3269,33 @@
           }
         },
         {
-          "uuid": "0d83447b-9daf-4a76-8521-2a6327fd9870",
+          "uuid": "f762e9b4-815b-43d6-8e53-ed2f0d8ee703",
           "control-id": "ca-9",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "partial"
+              "value": "complete"
             }
           ],
           "statements": {
             "ca-9_stmt.a": {
-              "uuid": "fa5fe87f-a834-4a5d-b458-0197740ca3b8",
+              "uuid": "456c2543-ee92-4d73-809c-d1d3a0b61cf9",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "a3322771-7d3a-4e43-b2ec-0216de5044be",
+                  "uuid": "2f8e28b2-1dde-4c29-8ee0-fa84c33ba726",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tEngineering progress can be tracked at:\n\nhttps://issues.redhat.com/browse/CMP-256\n"
+                  "remarks": "\tBy default, all of the control plane components in Red Hat OpenShift\nuse mutual-TLS to authenticate servers and clients. Thus, Red Hat\nOpenShift inherently meets this control.\n"
                 }
               }
             },
             "ca-9_stmt.b": {
-              "uuid": "3d7d9b31-e3be-4fc4-847b-8fbebcca9f5a",
+              "uuid": "19b9257f-f289-4e94-a28d-88c087896074",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "a3322771-7d3a-4e43-b2ec-0216de5044be",
+                  "uuid": "63131128-bb76-4394-9f4d-4a3db845b21f",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tEngineering progress can be tracked at:\n\nhttps://issues.redhat.com/browse/CMP-256\n"
+                  "remarks": "\tAll of Red Hat OpenShift's control plane components are managed by operators.\nA list of the control plane operators used for managing Red Hat OpenShift\nis available through the ClusterOperator object [1].\n\nRed Hat Advanced Cluster Security[2] provides the capability to visualize\nand discover network traffic, providing more visibility to the in-cluster\nnetworking.\n\n[1] https://docs.openshift.com/container-platform/4.7/installing/validating-an-installation.html#getting-cluster-version-and-update-details_validating-an-installation\n[2] https://www.redhat.com/en/resources/advanced-cluster-security-for-kubernetes-datasheet\n"
                 }
               }
             }

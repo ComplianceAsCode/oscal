@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="fed92b4c-5140-4b6d-b67c-d6e9c56defcf">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="45362a92-e40c-41fc-aefd-28f3a828c970">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-07-07T00:47:52.58+00:00</last-modified>
+    <last-modified>2021-07-08T00:44:05.81+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -2389,23 +2389,30 @@ guidance.
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="0d83447b-9daf-4a76-8521-2a6327fd9870" control-id="ca-9">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="partial"></annotation>
-      <statement statement-id="ca-9_stmt.a" uuid="fa5fe87f-a834-4a5d-b458-0197740ca3b8">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="a3322771-7d3a-4e43-b2ec-0216de5044be">
+    <implemented-requirement uuid="f762e9b4-815b-43d6-8e53-ed2f0d8ee703" control-id="ca-9">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ca-9_stmt.a" uuid="456c2543-ee92-4d73-809c-d1d3a0b61cf9">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="2f8e28b2-1dde-4c29-8ee0-fa84c33ba726">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>Engineering progress can be tracked at:
-
-https://issues.redhat.com/browse/CMP-256
+          <remarks><p>By default, all of the control plane components in Red Hat OpenShift
+use mutual-TLS to authenticate servers and clients. Thus, Red Hat
+OpenShift inherently meets this control.
 </p></remarks>
         </by-component>
       </statement>
-      <statement statement-id="ca-9_stmt.b" uuid="3d7d9b31-e3be-4fc4-847b-8fbebcca9f5a">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="a3322771-7d3a-4e43-b2ec-0216de5044be">
+      <statement statement-id="ca-9_stmt.b" uuid="19b9257f-f289-4e94-a28d-88c087896074">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="63131128-bb76-4394-9f4d-4a3db845b21f">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>Engineering progress can be tracked at:
+          <remarks><p>All of Red Hat OpenShift's control plane components are managed by operators.
+A list of the control plane operators used for managing Red Hat OpenShift
+is available through the ClusterOperator object [1].
 
-https://issues.redhat.com/browse/CMP-256
+Red Hat Advanced Cluster Security[2] provides the capability to visualize
+and discover network traffic, providing more visibility to the in-cluster
+networking.
+
+[1] https://docs.openshift.com/container-platform/4.7/installing/validating-an-installation.html#getting-cluster-version-and-update-details_validating-an-installation
+[2] https://www.redhat.com/en/resources/advanced-cluster-security-for-kubernetes-datasheet
 </p></remarks>
         </by-component>
       </statement>
