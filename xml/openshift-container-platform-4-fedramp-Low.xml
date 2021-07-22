@@ -1,8 +1,8 @@
-<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="f5caefaf-611b-4573-a7ec-c3d0f5783133">
+<system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="a53da58a-00a6-4684-a822-ef54dd736e1e">
   <metadata>
     <title></title>
     <published>2020-07-01T00:00:00.00-04:00</published>
-    <last-modified>2021-07-21T00:47:43.12+00:00</last-modified>
+    <last-modified>2021-07-22T00:47:25.51+00:00</last-modified>
     <version>0.0.1</version>
     <oscal-version>1.0.0-milestone3</oscal-version>
     <revision-history>
@@ -2388,14 +2388,21 @@ This is applicable to both the `oc` CLI and OpenShift's UI console.</p></remarks
         </by-component>
       </statement>
     </implemented-requirement>
-    <implemented-requirement uuid="15f30ea6-ea07-4a5e-8f4b-911b2b9913aa" control-id="ia-7">
-      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="planned"></annotation>
-      <statement statement-id="ia-7_stmt" uuid="8036c5d4-0735-4d3c-b75b-9a1e12ca4425">
-        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="f49ea9da-eda7-48e0-9efa-58caf64c9e50">
+    <implemented-requirement uuid="b53e82ec-fcfa-49ba-ba07-34f7156c3d35" control-id="ia-7">
+      <annotation name="implementation-status" ns="https://fedramp.gov/ns/oscal" value="complete"></annotation>
+      <statement statement-id="ia-7_stmt" uuid="a26e5030-3fca-4a22-b643-83500670c0d3">
+        <by-component component-uuid="bdba9d56-2be4-498d-8d31-b43cab6a44bd" uuid="c9b3e34a-425b-4124-80f4-3872801bdcd6">
           <description><p>Describe how is the software component satisfying the control.</p></description>
-          <remarks><p>A control response is planned. Engineering progress can be tracked via:
+          <remarks><p>FIPS mode can be enabled in OpenShift through a flag that
+can be set at installation time [1]. Follow the relevant
+documentation for the applicable cloud provider [2][3][4][5]
+for more information. But note that this is also applicable
+in on-prem deployments.
 
-https://issues.redhat.com/browse/CMP-334</p></remarks>
+[1] https://docs.openshift.com/container-platform/latest/installing/installing-fips.html
+[2] https://docs.openshift.com/container-platform/latest/installing/installing_aws/installing-aws-government-region.html#installation-configuration-parameters_installing-aws-government-region
+[3] https://docs.openshift.com/container-platform/4.7/installing/installing_azure/installing-azure-customizations.html
+[4] https://docs.openshift.com/container-platform/4.7/installing/installing_gcp/installing-gcp-customizations.html</p></remarks>
         </by-component>
       </statement>
     </implemented-requirement>

@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "622207ba-0dac-4c04-b9e2-ddef40191f0e",
+    "uuid": "d8910aa3-06d2-46bc-81d8-e36ff898f3d8",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-07-21T00:47:51.24+00:00",
+      "last-modified": "2021-07-22T00:47:32.28+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -5605,23 +5605,23 @@
           }
         },
         {
-          "uuid": "15f30ea6-ea07-4a5e-8f4b-911b2b9913aa",
+          "uuid": "b53e82ec-fcfa-49ba-ba07-34f7156c3d35",
           "control-id": "ia-7",
           "annotations": [
             {
               "name": "implementation-status",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned"
+              "value": "complete"
             }
           ],
           "statements": {
             "ia-7_stmt": {
-              "uuid": "8036c5d4-0735-4d3c-b75b-9a1e12ca4425",
+              "uuid": "a26e5030-3fca-4a22-b643-83500670c0d3",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "f49ea9da-eda7-48e0-9efa-58caf64c9e50",
+                  "uuid": "c9b3e34a-425b-4124-80f4-3872801bdcd6",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response is planned. Engineering progress can be tracked via:\n\nhttps://issues.redhat.com/browse/CMP-334"
+                  "remarks": "\tFIPS mode can be enabled in OpenShift through a flag that\ncan be set at installation time [1]. Follow the relevant\ndocumentation for the applicable cloud provider [2][3][4][5]\nfor more information. But note that this is also applicable\nin on-prem deployments.\n\n[1] https://docs.openshift.com/container-platform/latest/installing/installing-fips.html\n[2] https://docs.openshift.com/container-platform/latest/installing/installing_aws/installing-aws-government-region.html#installation-configuration-parameters_installing-aws-government-region\n[3] https://docs.openshift.com/container-platform/4.7/installing/installing_azure/installing-azure-customizations.html\n[4] https://docs.openshift.com/container-platform/4.7/installing/installing_gcp/installing-gcp-customizations.html"
                 }
               }
             }
