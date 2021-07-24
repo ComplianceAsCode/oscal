@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "f43a9811-a8ca-4991-a8af-f394476738f6",
+    "uuid": "eba0ab60-f9a3-4795-8a75-195596323de4",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-07-23T00:47:15.21+00:00",
+      "last-modified": "2021-07-24T00:46:13.24+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -5536,7 +5536,7 @@
           }
         },
         {
-          "uuid": "a80217f5-2e7e-492e-b63a-d015ffb4b031",
+          "uuid": "546eb674-0cbb-4e9f-a464-92e0b2414cf6",
           "control-id": "ia-5.7",
           "annotations": [
             {
@@ -5547,12 +5547,12 @@
           ],
           "statements": {
             "ia-5.7_stmt": {
-              "uuid": "dab7d254-8dfa-4536-9227-25dc1a71046f",
+              "uuid": "503c7db2-e710-4703-add0-e199293f4424",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "3422ee35-1c97-4e63-b358-ad7a35d6837b",
+                  "uuid": "caccc759-6f59-46a8-8cf4-95209cb4ad77",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tA control response for IA-5(7) is planned."
+                  "remarks": "\tEnsuring  that unencrypted static authenticators are not embedded\nin applications or access scripts or stored on function keys, is\nan organizational procedural requirement outside the scope of\nOpenShift configuration.\n\nSome general guidance can be provided for Kubernetes Secrets and\nprivate PKI keys stored on the filesystem.\n\nThe private PKI keys are only protected by a combination of UNIX\npermissions and SELinux labels, but otherwise they are stored\nunencrypted on the filesystem.\n\nRegarding Kubernetes secrets, as a general rule, it is recommended\nto check all Kubernetes manifests (typically YAML files) and\nensure that no secrets are embedded there. Likewise, the manifests\nshould not use Kubernetes secret objects as environment variables\nto avoid e.g. leaking them when the whole environment is printed\nduring debugging.\n\nKubernetes supports secrets as first-class objects, but care\nneeds to be taken to ensure that access to secrets is carefully\nlimited. Using an external secrets provider can ease the management\nof access to secrets, especially where secrets are used across\nboth Kubernetes and non-Kubernetes environments.\n\nEncrypting the etcd database ensures that secrets along with the\nrest of the database is encrypted at rest.\n\nIt might be prudent to consider the use of an external secrets\nstorage and management system, instead of using Kubernetes\nSecrets directly, if you have more complex secret management\nneeds. Ensure the solution requires authentication to access\nsecrets, has auditing of access to and use of secrets, and encrypts\nsecrets. Some solutions also make it easier to rotate secrets."
                 }
               }
             }
