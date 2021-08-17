@@ -1,10 +1,10 @@
 {
   "system-security-plan": {
-    "uuid": "1a1c9b0b-446e-4696-af08-91de7db40870",
+    "uuid": "80a1ff7f-e92c-465f-9c18-49c99f21febd",
     "metadata": {
       "title": "FedRAMP System Security Plan (SSP)",
       "published": "2020-07-01T00:00:00.00-04:00",
-      "last-modified": "2021-08-16T00:45:26.44+00:00",
+      "last-modified": "2021-08-17T00:45:37.39+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.0-milestone3",
       "revision-history": [
@@ -2602,7 +2602,7 @@
           }
         },
         {
-          "uuid": "136aecf6-492b-4b91-96c8-a314099a710c",
+          "uuid": "b618a1cf-525b-4b7b-9dc4-888d1b1f07b0",
           "control-id": "au-2",
           "annotations": [
             {
@@ -2613,12 +2613,12 @@
           ],
           "statements": {
             "au-2_stmt.a": {
-              "uuid": "3bb19343-2cd9-4340-ab3f-53d8ceec18a6",
+              "uuid": "5f9239b3-985f-4489-9ccd-d24f5cc4958c",
               "by-components": {
                 "bdba9d56-2be4-498d-8d31-b43cab6a44bd": {
-                  "uuid": "1e45ce8f-9fad-49b5-bc16-e01fa23b6984",
+                  "uuid": "48bf4cb1-d18e-4d83-b94d-6c902bad40c7",
                   "description": "\tDescribe how is the software component satisfying the control.",
-                  "remarks": "\tOpenShift enables auditing by default for the API Servers, the OAuth\nserver and the Linux hosts themselves. Auditing cannot be turned off\nwhich makes the control inherently met.\n\nMore documentation on Red Hat OpenShift auditing can be found at:\nhttps://docs.openshift.com/container-platform/4.7/security/audit-log-view.html\nand:\nhttps://docs.openshift.com/container-platform/4.7/security/audit-log-policy-config.html\n"
+                  "remarks": "\tOpenShift enables auditing by default for the API Servers, the OAuth\nserver and the Linux hosts themselves. Auditing cannot be turned off\nwhich makes the control inherently met.\n\nMore documentation on Red Hat OpenShift auditing can be found at:\nhttps://docs.openshift.com/container-platform/4.7/security/audit-log-view.html\nand:\nhttps://docs.openshift.com/container-platform/4.7/security/audit-log-policy-config.html\n\nNote that in order to correlate RHCOS audit.log entries that audit\nprocess activity with container workloads, the CRI-O container runtime\nis being enhanced to log the PID\u0026lt;-\u003econtainer relation:\n  https://github.com/cri-o/cri-o/pull/5134\n"
                 }
               }
             },
